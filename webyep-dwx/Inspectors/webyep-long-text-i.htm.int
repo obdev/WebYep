@@ -1,0 +1,30 @@
+include ../global.int
+
+output-format HTML
+Title
+Long Text
+Text
+
+ElementName
+Long Text
+Text
+
+FieldName
+Fieldname
+Feldname
+
+Global
+Content
+Inhalte
+
+ThisDoc
+for this doc only
+fuer diese Seite
+
+AllPages
+for all documents
+fuer alle Seiten
+
+HideEMail
+Encode EMail Links
+E-Mail-Links kodieren

@@ -1,0 +1,76 @@
+output-format ASCII
+version
+1.7.2
+1.7.2
+
+Copyright
+<!-- WebYep, (C) Objective Development Software GmbH, http://www.obdev.at -->
+<!-- WebYep, (C) Objective Development Software GmbH, http://www.obdev.at -->
+
+CopyrightJavaScript
+// WebYep, (C) Objective Development Software GmbH, http://www.obdev.at
+// WebYep, (C) Objective Development Software GmbH, http://www.obdev.at
+
+HelpFolder
+Shared/WebYep/Help/english
+Shared/WebYep/Help/deutsch
+
+HelpStart
+index.html
+index.html
+
+HelpInstallation
+installation.html
+installation.html
+
+HelpImage
+reference/image.html
+reference/image.html
+
+HelpLogon
+reference/logon-button.html
+reference/logon-button.html
+
+HelpShortText
+reference/short-text.html
+reference/short-text.html
+
+HelpLongText
+reference/long-text.html
+reference/long-text.html
+
+HelpRichText
+reference/rich-text.html
+reference/rich-text.html
+
+HelpLoop
+reference/loop.html
+reference/loop.html
+
+HelpMenu
+reference/menu.html
+reference/menu.html
+
+HelpAttachment
+reference/attachment.html
+reference/attachment.html
+
+HelpGallery
+reference/gallery.html
+reference/gallery.html
+
+HelpReadMore
+reference/read-more.html
+reference/read-more.html
+
+Yes
+Yes
+Ja
+
+No
+No
+Nein
+
+ElementUpdated
+The WebYep Element was updated to the current version
+Das WebYep Element wurde auf die aktuelle Version aktualisiert

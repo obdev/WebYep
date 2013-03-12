@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-german.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="stiles.css" rel="stylesheet" type="text/css">
+<link href="print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+<style type="text/css">
+<!--
+#menuMisc {
+	color: #000000;
+	text-decoration: underline;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuTreeReference {
+	display: none;
+}
+-->
+</style>
+
+
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuMiscConfiguration, #menuMiscConfigML {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="true" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="false" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint">
+	  <a name="pagetop"><img src="images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="images/nix.gif" width="150" height="4">
+	  <ul>
+        <li>
+          <a href="index.html" id="menuMisc">Allgemeines</a>
+          <ul id="menuTreeMisc">
+            <li><a href="principle.html" id="menuMiscPrinciple">Prinzip</a></li>
+            <li><a href="installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="configuration.html" id="menuMiscConfiguration">Konfiguration</a>
+                <ul id="mmc">
+                    <li><a href="config-multiple-logins.html" id="menuMiscConfigML">Multiple Logins</a></li>
+                    <li><a href="config-other-options.html" id="menuMiscConfigOO">Weitere Optionen</a></li>
+                </ul>
+            </li>
+            <li><a href="backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="system-requirements.html" id="menuMiscSystem">Systemvoraussetzungen</a></li>
+            <li><a href="white-labeled.html" id="menuMiscWhiteLabel">Eigenes Logo</a></li>
+          </ul>
+		</li>
+        <li><a href="tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="tutorials/first-steps.html" id="menuTutFirstSteps">Erste Schritte</a></li>
+            <li><a href="tutorials/simple-menu.html" id="menuTutSimpleMenu">Das Men&uuml;</a></li>
+            <li><a href="tutorials/loop.html" id="menuTutLoop">Die Schleife</a></li>
+          </ul>
+        </li>
+        <li><a href="reference/index.html" id="menuReference">Referenz</a>
+          <ul id="menuTreeReference">
+            <li><a href="reference/init-code.html" id="menuRefInitCode">Der Init Code</a></li>
+            <li><a href="reference/logon-button.html" id="menuRefLogonButton">Anmeldeknopf</a></li>
+            <li><a href="reference/short-text.html" id="menuRefShortText">Kurztext</a></li>
+            <li><a href="reference/long-text.html" id="menuRefLongText">Text (Flie&szlig;text)</a></li>
+            <li><a href="reference/rich-text.html" id="menuRefRichText">HTML-Text</a></li>
+            <li><a href="reference/image.html" id="menuRefImage">Bild</a></li>
+            <li><a href="reference/attachment.html" id="menuRefAttachment">Datei-Download</a></li>
+            <li><a href="reference/menu.html" id="menuRefMenu">Men&uuml;</a></li>
+            <li><a href="reference/loop.html" id="menuRefLoop">Schleife</a></li>
+            <li><a href="reference/gallery.html" id="menuRefGallery">Bildergalerie</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="images/nav-content-border.gif" class="menu"><img src="images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content">
+		<h1>Konfiguration</h1>
+
+        <p>Dieser Abschnitt beschreibt, wie man mehrere BenutzerInnen f&uuml;r WebYep anlegt. Sie k&ouml;nnen dies &uuml;berspringen, wenn Sie nur eine/n BenutzerIn haben.</p>
+
+        <h2>Mehrere BenutzerInnen (Multiple Logins)</h2>
+        <p>
+            <strong>$webyep_aMultiLoginName[]</strong><br>
+            <strong>$webyep_aMultiLoginPassword[]</strong><br>
+            <strong>$webyep_aMultiLoginURLPatterns[]</strong><br>
+            Mit diesen Optionen k&ouml;nnen Sie weitere BenutzerInnen anlegen.
+        </p>
+        <p>Sie k&ouml;nnen mehrere Name/Kennwort-Kombinationen (Logins) definieren um verschiedenen BenutzerInnen das Editieren
+            unterschiedlicher Seiten Ihrer Website zu erlauben.</p>
+        <p>Das oben definierte Login ist dann das <strong>Master Login</strong> - nach Anmelden mit diesem Namen und diesem Kennwort
+            k&ouml;nnen Sie <em>alle</em> WebYep-Inhalte der Website editieren.</p>
+        <p>Sie k&ouml;nnen mehrere Logins definieren, indem Sie einen oder mehrere  Bl&ouml;cke folgender Form in die Konfigurationsdatei einf&uuml;gen:</p>
+        <blockquote class="codeExample">$webyep_aMultiLoginName[] = &quot;<span class="emsource">einName</span>&quot;;<br>
+          $webyep_aMultiLoginPassword[] = &quot;<span class="emsource">einKennwort</span>&quot;;<br>
+          $webyep_aMultiLoginURLPatterns[] = &quot;<span class="emsource">/eineSeite.php /andereSeite.php</span>&quot;;</blockquote>
+        <p>Mit den ersten beiden Zeilen legen Sie eine neue Name/Kennwort-Kombination (ein neues Login) fest. Mit der dritten Zeile definieren Sie,
+            welche Seite(n) oder Seitengruppen (durch Platzhalter) dieses Login editieren darf, indem Sie die URL-Pfade f&uuml;r diese Seiten angeben.</p>
+        <p class="remark"><span class="remarkHeading">Wichtig:</span> Bitte beachten Sie die eckigen Klammern nach den Konfigurationsvariablen-Namen.
+            Dies ist ein Unterschied zu anderen Konfigurationsvariablen.</p>
+        <p>Im einfachsten Fall wird hier einfach nur der URL-Pfad zu einer Seite angegeben.</p>
+        <p>Sie k&ouml;nnen aber auch die Pfade f&uuml;r mehrere Seiten angeben, jeweils durch ein Leerzeichen getrennt. Bitte beachten Sie, dass
+            <strong>URL-Pfade eigentlich keine Leerzeichen</strong> oder andere Sonderzeichen enthalten d&uuml;rfen. Sonderzeichen m&uuml;ssen mit
+            der URL-Kodierung notiert werden (z.B. &quot;%20&quot; f&uuml;r ein Leerzeichen).</p>
+        <p>Sie k&ouml;nnen  auch Platzhalter in den Pfadangaben verwenden (&quot;*&quot;, den Stern) -  die Pfadangabe passt dann auf mehrere Seiten
+            oder ganze Seiten-Gruppen. Um zum Beispiel alle Seiten in einem bestimmten Ordner anzugeben, m&uuml;sste nur der Pfad zu dem Ordner,
+            gefolgt von einem Schr&auml;gstrich, gefolgt von einem Stern angegeben werden:</p>
+        <blockquote class="codeExample">$webyep_aMultiLoginURLPatterns[] = &quot;<span class="emsource">/einOrdner/*</span>&quot;; </blockquote>
+
+        <h3>Ein paar Worte zu URL-Pfaden</h3>
+
+        <p>Wenn Sie die Pfade f&uuml;r ein Login definieren, ist es wichtig, dass Sie sich &uuml;ber die Pfadstruktur Ihrer Website im Klaren sind.</p>
+        <p>Der Pfad-Teil eines URLs ist der Teil direkt hinter dem Hostnamen - z.B. im URL</p>
+        <blockquote class="codeExample">http://www.einewebsite.net/ordner/unterordner/seite.php</blockquote>
+        <p>w&auml;re der Pfad-Teil:</p>
+        <blockquote class="codeExample">/ordner/unterordner/seite.php</blockquote>
+        <p>Wenn Sie also einem Login das Editieren dieser Seite erlauben m&ouml;chten, so m&uuml;ssten Sie in die Konfigurationsvariable
+            $webyep_aMultiLoginURLPatterns[] folgendes eintragen:</p>
+        <blockquote class="codeExample">$webyep_aMultiLoginURLPatterns[] = &quot;<span class="emsource">/ordner/unterordner/seite.php</span>&quot;; </blockquote>
+        <p class="remark"><span class="remarkHeading">Wichtig:</span> Beachten Sie den Schr&auml;gstrich am Beginn der Pfadangabe. Wenn dieser weggelassen wird,
+            w&uuml;rde es sich um einen <em>relativen Pfad</em> handeln. Ein solcher Pfad w&uuml;rde auch auf alle Seiten-Pfade passen, die nur mit dieser
+            Zeichenfolge <strong>enden</strong>.</p>
+
+        <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+        <!-- hidefromprint -->
+        <div align="center" class="hideFromPrint">
+          <hr color="#0099CC" noshade width="80%" size="1">
+          <a href="#pagetop" title="To Top of Page"><img src="images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+        <!-- /hidefromprint -->
+        <!-- #EndLibraryItem -->
+
+        <h3>Beispiele f&uuml;r URL Pfadangaben</h3>
+
+        <p>Das Login soll...</p>
+        <p>...nur die beiden Seiten "/SeiteA.php" und "/SeiteB.php" editieren k&ouml;nnen:</p>
+        <blockquote class="codeExample">$webyep_aMultiLoginURLPatterns[] = "<span class="emsource">/SeiteA.php /SeiteB.php</span>"; </blockquote>
+        <p>...alle Seiten im Ordner "/workshops" <strong>sowie</strong> die Seite "/news.php" editieren k&ouml;nnen:</p>
+        <blockquote class="codeExample">$webyep_aMultiLoginURLPatterns[] = "<span class="emsource">/workshops/* /news.php</span>"; </blockquote>
+        <p>...alle Seiten im Ordner "/workshops" <strong>und seinen direkten Unterordnern</strong> editieren k&ouml;nnen:</p>
+        <blockquote class="codeExample">$webyep_aMultiLoginURLPatterns[] = "<span class="emsource">/workshops/* </span><span class="emsource">/workshops/*/*</span>";</blockquote>
+        <p>...alle Seiten mit dem Dateinamen "veranstaltungen.php" editieren k&ouml;nnen - egal in welchem Ordner sie liegen:</p>
+        <blockquote class="codeExample">$webyep_aMultiLoginURLPatterns[] = "<span class="emsource">veranstaltungen.php</span>"; </blockquote>
+        <p>(Beachten Sie den fehlenden Schr&auml;gstrich am Beginn! Dadurch wird dies zu einer <strong>relativen</strong> Pfadangabe, die auf alle Pfade passt, die auf ".../veranstaltungen.php" <strong>enden</strong>)</p>
+        <p>...alle Seiten, deren Dateiname mit "_oeffentlich.php" <strong>endet</strong>, egal in welchem Ordner sie liegen:</p>
+        <blockquote class="codeExample">$webyep_aMultiLoginURLPatterns[] = "<span class="emsource">*_oeffentlich.php</span>"; </blockquote>
+        <p class="remark"><span class="remarkHeading">Hinweis:</span> Um die passende Pfadangabe f&uuml;r eine Seite oder Seitengruppe zu finden,
+            definieren Sie am besten zuerst den Namen und das Kennwort f&uuml;r das Login. Melden Sie Sich dann im Web-Browser mit diesem Login an
+            und navigieren Sie zu der betreffenden Seite Ihrer Website. Erscheinen die Editier-Kn&ouml;pfe inaktiv, korrigieren Sie die Pfadangabe
+            und laden Sie die Seite neu (Reload) &mdash; bis die Editier-Kn&ouml;pfe aktiv erscheinen.<br>
+            <br>
+            Stellen Sie danach aber auch sicher, dass andere Logins die betreffende Seite <strong>nicht</strong> editieren k&ouml;nnen!</p>
+
+        <h3>Abmelden und mit anderem Login anmelden</h3>
+
+        <p>Einmal im Browser mit einem Login angemeldet, bleiben Sie in diesem Login f&uuml;r die gesamte Browser-Session (Laufzeit des Browsers).
+            BenutzerInnen wechseln ja &uuml;blicherweise nicht zwischen verschiedenen Logins.</p>
+        <p>Wenn Sie aber gerade die Logins konfigurieren, werden Sie doch zwischen den verschiedenen Logins wechseln wollen. Sie k&ouml;nnen dazu
+            einfach den Browser beenden und sich danach mit einem anderen Login anmelden.</p>
+        <p>Oder Sie halten die ALT- (Umschalt) und/oder SHIFT- (Gro&szlig;schreib) Taste Ihrer Tastatur, w&auml;hrend Sie auf das Ausloggen-Symbol von
+            WebYep klicken (offenes Schloss) - ja nach dem welchen Browser Sie verwenden: Beim Safari [1] verwenden Sie die SHIFT-Taste,
+            beim Firefox SHIFT und ALT gemeinsam und beim Internet Explorer nur die ALT-Taste.</p>
+        <p class="small">[1] Ab Safari 5.1 ist dies leider nicht mehr m&ouml;glich, da alle Zusatztasten in Kombination mit einem Klick bereits
+            eine andere Funktion besitzen.</p>
+
+        <h2>Weitere Login-Optionen</h2>
+
+        <p><strong>$webyep_bShowDisabledEditButtons</strong><br>
+        Wenn eine Seite editierbare Felder enth&auml;lt, aber der Benutzer hier nicht editieren darf, dann kann WebYep die Bearbeitungskn&ouml;pfe
+        ausgegraut (<code>true</code>) oder gar nicht (<code>false</code>) anzeigen.<br>
+        Standardwert: <code>true</code></p>
+
+        <p><strong>$webyep_bOtherLoginsMayEditGlobalData</strong><br>
+        Legt fest, ob andere BenutzerInnen au&szlig;er dem Administrator "globale" Felder editieren d&uuml;rfen.<br>
+        WebYep Elemente die als "global" gekennzeichnet sind (deren "Inhalte" Attribut auf "f&uuml;r alle Seiten" steht)  k&ouml;nnen &uuml;blicherweise
+        nur vom Master Login editiert werden.<br>
+        Standardwert: <code>false</code></p>
+        <p>Wenn Sie m&ouml;chten, dass auch alle anderen Logins globale Inhalte editieren k&ouml;nnen (sofern sie sich auch Seiten befinden, die diese editieren
+            d&uuml;rfen), dann &auml;ndern Sie folgende Konfigurationsvariable:</p>
+        <blockquote class="codeExample">$webyep_bOtherLoginsMayEditGlobalData = <span class="emsource" color="#990000">true</span>;</blockquote>
+
+
+
+        <div><img src="images/nix.gif" width="8" height="24"></div>
+    </td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2011, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

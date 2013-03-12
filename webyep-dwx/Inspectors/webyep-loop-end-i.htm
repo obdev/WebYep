@@ -1,0 +1,46 @@
+<!-- tag:*PHP*,priority:5,selection:exact, -->
+@@Copyright@@
+<html>
+<head>
+<title>@@Title@@</title>
+<script LANGUAGE="JavaScript" src="../shared/webyep/webyep.js">
+</script>
+<script LANGUAGE="JavaScript">
+
+	var rWebYepRegEx = /<\?[ph]{0,3}\s+\$webyep_oCurrentLoop->loopEnd\(\);\s+\}\s+\/\/ WebYepV1/;
+
+	function canInspectSelection()
+	{
+		var oDOM = dw.getDocumentDOM();
+		var oNode = oDOM.getSelectedNode();
+		var sHTML = oNode.data;
+		if (sHTML && rWebYepRegEx.exec(sHTML)) return true;
+		else return false;
+	}
+	
+	function inspectSelection()
+	{
+   }
+
+	function webyep_updateSource()
+	{
+	}
+
+	function displayHelp()
+	{
+		webyep_showHelpDocument("@@HelpLoop@@");
+	}
+</script>
+</head>
+
+<body>
+<span ID="image" style="position:absolute; width:23px; height:17px; z-index:16; left: 3px; top: 3px";><img src="webyep-loop-end-i.gif" width="36" height="36" name="interjectionImage"></span>
+<span ID="topLayer" style="position:absolute; z-index:1; left: 50px; top: 3px;">
+
+<div><strong>WebYep @@ElementName@@</strong></div>
+
+<div style="padding-top: 4px;">@@Description@@</div>
+
+</span>
+</body>
+</HTML>

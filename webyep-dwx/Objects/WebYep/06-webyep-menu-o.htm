@@ -1,0 +1,35 @@
+<!-- MENU-LOCATION=NONE -->
+@@Copyright@@
+<html>
+<head>
+<title>@@Title@@</title>
+<script language="JavaScript" src="../../shared/webyep/webyep.js">
+</script>
+<script language="JavaScript">
+	function isDOMRequired()
+	{ 
+		return true;
+	}
+	
+	function objectTag(assetArgs)
+	{
+		var sDocumentName = "";
+		var iSlashPos;
+		webyep_checkForInitCode();
+		sDocumentName = dreamweaver.getDocumentPath('document');
+		if (sDocumentName) {
+			iSlashPos = sDocumentName.lastIndexOf("/");
+			if (iSlashPos > 0) {
+				sDocumentName = sDocumentName.substr(iSlashPos + 1);
+			}
+			else sDocumentName = "";
+		}
+		if (sDocumentName == "") sDocumentName = "@@TargetPage@@";
+		return '<?php webyep_menu("@@FieldName@@", false, "' + sDocumentName + '", "", "", ""); // WebYepV1 ?>';
+	}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+</body>
+</html>

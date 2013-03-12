@@ -1,0 +1,96 @@
+<!-- MENU-LOCATION=NONE -->
+@@Copyright@@
+<html>
+<head>
+<title>@@PageTitle@@</title>
+<script language="JavaScript" src="../shared/webyep/webyep.js">
+</script>
+<script language="JavaScript">
+	function canAcceptCommand()
+	{
+		var aSelectedObjects;
+		
+		aSelectedObjects = site.getSelection();
+		return (dw.getFocus() == "site") &&
+		(aSelectedObjects.length > 0) && (aSelectedObjects[0].indexOf("webyep-system") != -1);
+	}
+
+	function activateWebYep()
+	{
+		var sRemoteRoot = "";
+		var sErrorMsg = "";
+		var sCommand = "";
+		var rExp;
+		var sPath = "";
+		var sFolder = "";
+
+		if (!site.remoteIsValid()) {
+			sErrorMsg = "@@NoFTPConfig@@";
+		}
+		else if (site.getFocus() != "remote") {
+			sErrorMsg = "@@SelectRemoteList@@";
+		}
+		else {
+			if (!site.getConnectionState()) {
+				site.setConnectionState(true);
+			}
+			if (!site.getConnectionState()) {
+				sErrorMsg = "NoFtpConnection";
+			}
+			else {
+				// we assume that the webyep system folder is selected
+				// it's checked in canAcceptCommand()
+				aSelectedObjects = site.getRemoteSelection();
+				sPath = aSelectedObjects[0];
+				sFolder = "@@DataFolder@@";
+				rExp = /^7.0.[0-9]{4}/;
+
+				while (true) { // dangerous!!
+					if (dreamweaver.appVersion.substr(0, 2) == "6.") { // DW MX
+						sCommand = "site chmod 777 " + sPath + "/" + sFolder;
+						iSendError = site.sendFTPCommand(sCommand);
+					}
+					else if (rExp.exec(dreamweaver.appVersion)) { // DW MX 2004 w/o updater
+						iSendError = -1;
+					}
+					else { // DW MX with update or newer
+						iSendError = site.setPermissions(sPath + "/" + sFolder, "777");
+					}
+					if (sFolder != "@@OtherDataFolder@@" && iSendError >= 400) {
+						// try again with other languages data folder name
+						sFolder = "@@OtherDataFolder@@";
+					}
+					else break;
+				}
+
+				if (typeof iSendError == 'undefined') {	// not ftp server
+					sErrorMsg = "@@JustForFTP@@";
+				}
+				else if (iSendError == 500) {	// command unknown
+					sErrorMsg = "@@CantActivate@@";
+				}
+				else if (iSendError >= 400) {	// failed
+					sErrorMsg = "@@ActivationError@@ " + iSendError + ").";
+				}
+				// 550: file not found
+				// 551: permission denied
+				else if (iSendError = -1) {
+					sErrorMsg = "@@UseMX2004Updater@@";
+				}
+				else {
+					alert("@@ActivationSucceeded@@");
+				}
+			}
+		}
+		if (sErrorMsg != "") {
+			if (confirm(sErrorMsg + "\n\n@@HelpWanted@@")) {
+				webyep_showHelpDocument("@@HelpInstallation@@");
+			}
+		}
+	}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" onLoad="activateWebYep();">
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-english.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../stiles.css" rel="stylesheet" type="text/css">
+<link href="../print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTutorials {
+	color: #000000;
+	text-decoration: underline;
+}
+#menuTreeReference {
+	display: none;
+}
+-->
+</style>
+
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuTutLoop {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="true" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="false" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint">
+	 <a name="pagetop"><img src="../images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../index.html" id="menuMisc">Introduction</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../principle.html" id="menuMiscPrinciple">Basics</a></li>
+            <li><a href="../installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../configuration.html" id="menuMiscConfiguration">Configuration</a></li>
+            <li><a href="../backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../system-requirements.html" id="menuMiscSystem">System
+                Requirements</a></li>
+            <li><a href="../white-labeled.html" id="menuMiscWhiteLabel">White Labeled Version</a></li>
+          </ul>
+		</li>
+        <li><a href="index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="first-steps.html" id="menuTutFirstSteps">First
+                Steps</a></li>
+            <li><a href="simple-menu.html" id="menuTutSimpleMenu">The Menu</a></li>
+            <li><a href="loop.html" id="menuTutLoop">The
+                Loop</a></li>
+          </ul>
+        </li>
+        <li><a href="../reference/index.html" id="menuReference">Reference</a>
+          <ul id="menuTreeReference">
+            <li><a href="../reference/init-code.html" id="menuRefInitCode">The Init Code</a></li>
+            <li><a href="../reference/logon-button.html" id="menuRefLogonButton">Logon
+                Button</a></li>
+            <li><a href="../reference/short-text.html" id="menuRefShortText">Short
+                Text</a></li>
+            <li><a href="../reference/long-text.html" id="menuRefLongText">Long
+                Text</a></li>
+            <li><a href="../reference/rich-text.html" id="menuRefRichText">Rich
+                Text</a></li>
+            <li><a href="../reference/image.html" id="menuRefImage">Image</a></li>
+            <li><a href="../reference/attachment.html" id="menuRefAttachment">Attachment</a></li>
+            <li><a href="../reference/menu.html" id="menuRefMenu">Menu</a></li>
+            <li><a href="../reference/loop.html" id="menuRefLoop">Loop</a></li>
+            <li><a href="../reference/gallery.html" id="menuRefGallery">Image Gallery</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../images/nav-content-border.gif" class="menu"><img src="../images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->The
+          Loop<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p class="small hideFromPrint">&lt;<a href="javascript:window.print();">print</a>&gt;</p>
+      <p>In this tutorial you will learn the use of the WebYep Loop Element.</p>
+      <p>Please use a website with WebYep installed for this tutorial (see <a href="../installation.html">Installation</a>).</p>
+      <h3>Creating the page, inserting the WebYep Elements</h3>
+      <p>1. Create a new document &quot;wy_loop.php&quot;. Please don't work
+        on unnamed/unsaved documents! Create the file and immediately save it
+      under the name &quot;wy_loop.php&quot; before continuing.</p>
+      <p>2. Insert two empty paragraphs.</p>
+      <p>3. Position the cursor in the first paragraph.</p>
+      <p>4. Insert a WebYep Logon Button (left most item in Dreamweaver's object
+        palette, category &quot;WebYep&quot;).</p>
+      <p>5. Position the cursor in the second paragraph.</p>
+      <p>6. Insert side by side a WebYep Image Element and a WebYep Short Text
+        Element (fourth and second from left in the object palette).</p>
+      <p>Your page should now look approximately like this &#8211; please make
+        sure that you have enabled the display of the &quot;Invisible Elements&quot; (see <a href="index.html">Tutorials
+        Introduction</a>):</p>
+      <p align="center"><img src="../pictures/tutorials/loop-1.gif" width="134" height="107"></p>
+      <p>7. Position the cursor in the second paragraph, <em>between</em> the two WebYep
+      Elements. </p>
+      <p>8. Select the whole paragraph by clicking the &lt;p&gt;-tag in the tag selector:</p>
+      <p align="center"><img src="../pictures/tutorials/loop-2.gif" width="177" height="152"></p>
+      <p>9. Press the &quot;cursor left&quot; key to position the cursor exactly <em>before</em>        the
+        paragraph. (see also &quot;<a href="index.html#positioning">Positioning
+        the cursor</a>&quot; in
+      the tutorial sections introduction)</p>
+      <p>10. Insert the WebYep Loop <em>Start</em> Element (third from right
+        in the object palette).</p>
+      <p>11. Position the cursor <em>exactly after</em> the paragraph by using
+        the method described above.</p>
+      <p>12. Insert the WebYep Loop <em>End</em> Element (second from right in
+      the object palette).</p>
+      <p>The paragraph is now enclosed in a loop element. Your page should
+        now look approximately like this:</p>
+      <p align="center"><img src="../pictures/tutorials/loop-3.gif" width="160" height="184"></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><h3 class="pageBreak">Configuring the WebYep Elements</h3>
+      <p>1. Select the WebYep Element in the second line (the Loop Start Element).</p>
+      <p>2. Enter &quot;Offers&quot; as the loop name in the inspector.</p>
+      <p>3. Select the left WebYep Element in the third line (the Image Element).</p>
+      <p>4. Enter &quot;Photo&quot; as the image name.</p>
+      <p>5. Select the right WebYep Element in the third line (the Short Text
+        Element).</p>
+      <p>6. Enter &quot;Text&quot; as the field name.</p>
+      <h3 class="pageBreak">Testing the page</h3>
+      <p>Please make sure you have transferred the webyep-system folder to your
+        web server and have prepared WebYep (see <a href="../installation.html">Installation</a>).</p>
+      <p>1. Transfer the page (wy_loop.php) to your web server (upload via FTP).</p>
+      <p>2. Open the page in your web browser by entering the appropriate address
+        (URL) - e.g.:</p>
+      <blockquote>
+        <p>http://www.mywebsite.com/wy_loop.php</p>
+      </blockquote>
+      <p align="center"><img src="../pictures/tutorials/first-steps-2.gif" width="174" height="159"></p>
+      <p>3. Click the lock icon in the page (the WebYep Logon Button).</p>
+      <p>4. When the logon window pops up, enter the username and password you
+        configured when installing WebYep (default is username &quot;admin&quot; and
+        no password).</p>
+      <p align="center"></p>
+      <p align="center"><img src="../pictures/tutorials/loop-4.gif" width="191" height="152"></p>
+      <p>5. Click the edit buttons to upload an image file (&quot;Photo&quot;) and enter
+        some text (&quot;Text&quot;).</p>
+      <p>6. Then click the &quot;+&quot; icon to add more loop blocks.</p>
+      <p align="center"><img src="../pictures/tutorials/loop-5.gif" width="238" height="237"></p>
+      <p>Click the trash icon to remove whole loop blocks, click the &quot;up&quot;/&quot;down&quot;
+        icons to rearrange the blocks.</p>
+      <p>In this example the loop block contains only WebYep Elements, but it
+        can contain any content: Static HTML code (like text or images) <em>and</em> WebYep
+        Elements.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2009, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

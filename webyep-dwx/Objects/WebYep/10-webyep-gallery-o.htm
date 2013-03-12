@@ -1,0 +1,24 @@
+<!-- MENU-LOCATION=NONE -->
+@@Copyright@@
+<html>
+<head>
+<title>@@Title@@</title>
+<script language="JavaScript" src="../../shared/webyep/webyep.js">
+</script>
+<script language="JavaScript">
+	function isDOMRequired()
+	{ 
+		return true;
+	}
+	
+	function objectTag(assetArgs)
+	{
+		webyep_checkForInitCode();
+		return '<?php webyep_gallery("@@GalleryName@@", false, 60, 60, 3, 600, 600, 100); // WebYepV1 ?>';
+	}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+</body>
+</html>

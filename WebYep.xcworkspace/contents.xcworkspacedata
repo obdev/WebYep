@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:demo">
+   </FileRef>
+   <FileRef
+      location = "group:release-building">
+   </FileRef>
+   <FileRef
+      location = "group:webyep-system">
+   </FileRef>
+   <FileRef
+      location = "group:webyep-dwx">
+   </FileRef>
+   <FileRef
+      location = "group:webyep-rwx">
+   </FileRef>
+   <FileRef
+      location = "group:webyep-rwx/WebYep-RWX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+</Workspace>

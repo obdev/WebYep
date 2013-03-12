@@ -1,0 +1,24 @@
+include ../../global.int
+output-format ASCII
+
+Confirm
+This file contains no WebYep initialization code!\r\nInsert it now?
+Diese Datei enthaelt noch keine WebYep-Initialisierung!\r\nSoll sie jetzt hinzugefuegt werden?
+
+LanFlagEn
+true
+false
+
+ErrorFolderNotFound
+webyep-system folder not found.
+webyep-system Ordner nicht gefunden.
+
+ProgramFolderName
+program
+programm
+
+output-format HTML
+
+MessageFolderNotFound
+This page can not be displayed \nProblem: The webyep-system folder was not found!
+Diese Seite kann leider nicht angezeigt werden \nProblem: Der webyep-system Ordner konnte nicht gefunden werden!

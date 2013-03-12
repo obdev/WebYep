@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-german.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../stiles.css" rel="stylesheet" type="text/css">
+<link href="../print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuReference {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuRefInitCode {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="true" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint"><a name="pagetop"><img src="../images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../index.html" id="menuMisc">Allgemeines</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../principle.html" id="menuMiscPrinciple">Prinzip</a></li>
+            <li><a href="../installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../configuration.html" id="menuMiscConfiguration">Konfiguration</a></li>
+            <li><a href="../backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../system-requirements.html" id="menuMiscSystem">Systemvoraussetzungen</a></li>
+            <li><a href="../white-labeled.html" id="menuMiscWhiteLabel">Eigenes Logo</a></li>
+          </ul>
+		</li>
+        <li><a href="../tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="../tutorials/first-steps.html" id="menuTutFirstSteps">Erste Schritte</a></li>
+            <li><a href="../tutorials/simple-menu.html" id="menuTutSimpleMenu">Das Men&uuml;</a></li>
+            <li><a href="../tutorials/loop.html" id="menuTutLoop">Die Schleife</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html" id="menuReference">Referenz</a>
+          <ul id="menuTreeReference">
+            <li><a href="init-code.html" id="menuRefInitCode">Der Init Code</a></li>
+            <li><a href="logon-button.html" id="menuRefLogonButton">Anmeldeknopf</a></li>
+            <li><a href="short-text.html" id="menuRefShortText">Kurztext</a></li>
+            <li><a href="long-text.html" id="menuRefLongText">Text (Flie&szlig;text)</a></li>
+            <li><a href="rich-text.html" id="menuRefRichText">HTML-Text</a></li>
+            <li><a href="image.html" id="menuRefImage">Bild</a></li>
+            <li><a href="attachment.html" id="menuRefAttachment">Datei-Download</a></li>
+            <li><a href="menu.html" id="menuRefMenu">Men&uuml;</a></li>
+            <li><a href="loop.html" id="menuRefLoop">Schleife</a></li>
+            <li><a href="read-more.html" id="menuRefReadMore">Weiterlesen</a></li>
+            <li><a href="gallery.html" id="menuRefGallery">Bildergalerie</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../images/nav-content-border.gif" class="menu"><img src="../images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Der WebYep Init Code <!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <div style="width: 600px">
+        <p>Jede Seite, die WebYep Elemente beinhaltet, ben&ouml;tigt eine PHP-Code-Fragment, mit dem das WebYep System initialisiert wird. Dieses Code-Fragment muss <strong>vor allem anderen</strong> im Code der Seite platziert sein &ndash; nicht einmal eine Leerzeile darf dem Init Code vorangestellt sein.</p>
+        <p>Der Init Code muss auch <strong>vor</strong> der &lt;DOCTYPE...-Direktive platziert sein. Obwohl diese Direktive eigentlich ebenfalls ganz am Beginn des Dokuments stehen muss, f&uuml;hrt dies <strong>nicht</strong> zu Problemen, weil das PHP-Code-Fragment bereits am Server abgearbeitet (und somit &quot;konsumiert&quot;) wird &ndash; im HTML-Code, der den Webbrowser erreicht, ist der PHP-Code nicht mehr vorhanden und somit die &lt;DOCTYPE&gt;-Direktive <strong>wieder ganz am Beginn</strong> des Dokuments.</p>
+        <p>Der Init Code wird <strong>automatisch in das Dokument eingef&uuml;gt</strong>, wenn Sie eines der unterst&uuml;tzten WebDesign-Programme (wie zB. Dreamweaver) und das dazugeh&ouml;rige <strong>WebYep Plugin</strong> bzw. die <strong>WebYep Extension</strong> verwenden. Wenn Sie aber Ihre Seiten &quot;von Hand&quot; codieren oder zumindest die PHP-Code-Fragmente f&uuml;r die WebYep-Elemente manuell einf&uuml;gen, so ist auch der WebYep Init Code manuell einzuf&uuml;gen.</p>
+        <p>Dies ist der WebYep Init Code:<br>
+          (Bitte kopieren Sie den <strong>gesamten</strong> Code, vom ersten &quot;&lt;?php&quot; bis zum letzten &quot;?&gt;&quot;) </p>
+      </div>
+      <hr size="1" noshade>
+        <pre>&lt;?php // WebYep init WebYepV1
+/* &gt;&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=white&gt;&lt;h2&gt;WebYep message: Error, PHP inactive&lt;/h2&gt;
+&lt;font color=red&gt;The PHP code in this page can not be executed!&lt;ul&gt;
+&lt;li&gt;Are you launching this page directly form your harddisc (e.g. via Dreamweavers
+&quot;Preview in Browser&quot instead of accessing it via a webserver?&lt;/li&gt;
+&lt;li&gt;Has this file the correct file extension for PHP scripts?
+WebYep pages must have the &quot;.php&quot; extension and &lt;b&gt;not&lt;/b&gt; ".html" or ".htm"!&lt;/li&gt;
+&lt;/ul&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;!--
+*/
+$webyep_sIncludePath = "./";
+$iDepth = 0;
+while (!file_exists($webyep_sIncludePath . "webyep-system")) {
+	$iDepth++;
+	if ($iDepth &gt; 10) {
+		error_log("webyep-system folder not found!", 0);
+		echo "&lt;html&gt;&lt;head&gt;&lt;title&gt;WebYep&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;b&gt;WebYep:&lt;/b&gt; This page can not be displayed &lt;br&gt;Problem: The webyep-system folder was not found!&lt;/body&gt;&lt;/html&gt;";
+		exit;
+	}
+	$webyep_sIncludePath = ($webyep_sIncludePath == "./") ? ("../"):("$webyep_sIncludePath../");
+}
+if (file_exists("${webyep_sIncludePath}webyep-system/programm")) $webyep_sIncludePath .= "webyep-system/programm";
+else $webyep_sIncludePath .= "webyep-system/program";
+include("$webyep_sIncludePath/webyep.php");
+// --&gt;?&gt;</pre><hr size="1" noshade>
+      <h2>Zusammenfassung</h2>
+      <div style="width: 600px">
+        <ul>
+          <li>Jede Seite, die WebYep-Elemente beinhaltet, ben&ouml;tigt auch den WebYep Init Code.</li>
+          <li>Der Init Code muss <strong>ganz am Beginn</strong> des Dokument-Codes platziert sein.</li>
+          <li>Wenn Sie eines der unterst&uuml;tzten WebDesign-Programme (wie zB. Dreamweaver) und das zugeh&ouml;rige <strong>Plugin bzw. die Extension f&uuml;r WebYep</strong> verwenden, wird der <strong>Init Code automatisch platziert</strong>.</li>
+        </ul>
+      </div>
+      <div style="width: 600px"><!-- #BeginLibraryItem "/Library/up.lbi" -->
+  <!-- hidefromprint -->
+        <div align="center" class="hideFromPrint">
+          <hr color="#0099CC" noshade width="80%" size="1">
+          <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+  <!-- /hidefromprint -->
+      <!-- #EndLibraryItem --></div>
+      <!-- InstanceEndEditable -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2009, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

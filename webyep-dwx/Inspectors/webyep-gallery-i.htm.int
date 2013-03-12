@@ -1,0 +1,54 @@
+include ../global.int
+
+output-format HTML
+Title
+Image Gallery
+Bildergalerie
+
+ElementName
+Image Gallery
+Bildergalerie
+
+GalleryName
+Gallery Name
+Galeriename
+
+Global
+Content
+Inhalte
+
+ThisDoc
+for this doc only
+fuer diese Seite
+
+AllPages
+for all documents
+fuer alle Seiten
+
+ThumbWidth
+Max. Thumbnail Width
+Max. Vorschaubreite
+
+ThumbHeight
+Max. Thumbnail Height
+Max. Vorschauhoehe
+
+ImageWidth
+Max. Image Width
+Max. Bildbreite
+
+ImageHeight
+Max. Image Height
+Max. Bildhoehe
+
+CellWidth
+Cell Width
+Zellenbreite
+
+NumCells
+Num. Cells
+Anz. Zellen
+
+e.g.
+e.g.
+zB.

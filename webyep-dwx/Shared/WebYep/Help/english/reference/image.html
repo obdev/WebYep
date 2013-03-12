@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-english.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../stiles.css" rel="stylesheet" type="text/css">
+<link href="../print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuReference {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuRefImage {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="true" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint">
+	 <a name="pagetop"><img src="../images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../index.html" id="menuMisc">Introduction</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../principle.html" id="menuMiscPrinciple">Basics</a></li>
+            <li><a href="../installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../configuration.html" id="menuMiscConfiguration">Configuration</a></li>
+            <li><a href="../backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../system-requirements.html" id="menuMiscSystem">System
+                Requirements</a></li>
+            <li><a href="../white-labeled.html" id="menuMiscWhiteLabel">White Labeled Version</a></li>
+          </ul>
+		</li>
+        <li><a href="../tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="../tutorials/first-steps.html" id="menuTutFirstSteps">First
+                Steps</a></li>
+            <li><a href="../tutorials/simple-menu.html" id="menuTutSimpleMenu">The Menu</a></li>
+            <li><a href="../tutorials/loop.html" id="menuTutLoop">The
+                Loop</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html" id="menuReference">Reference</a>
+          <ul id="menuTreeReference">
+            <li><a href="init-code.html" id="menuRefInitCode">The Init Code</a></li>
+            <li><a href="logon-button.html" id="menuRefLogonButton">Logon
+                Button</a></li>
+            <li><a href="short-text.html" id="menuRefShortText">Short
+                Text</a></li>
+            <li><a href="long-text.html" id="menuRefLongText">Long
+                Text</a></li>
+            <li><a href="rich-text.html" id="menuRefRichText">Rich
+                Text</a></li>
+            <li><a href="image.html" id="menuRefImage">Image</a></li>
+            <li><a href="attachment.html" id="menuRefAttachment">Attachment</a></li>
+            <li><a href="menu.html" id="menuRefMenu">Menu</a></li>
+            <li><a href="loop.html" id="menuRefLoop">Loop</a></li>
+            <li><a href="read-more.html" id="menuRefReadMore">Read More</a></li>
+            <li><a href="gallery.html" id="menuRefGallery">Image Gallery</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../images/nav-content-border.gif" class="menu"><img src="../images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Image<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="../pictures/image-palette.gif" width="224" height="32"><br>
+        <span class="picturetext">The Image Element icon in the Dreamweaver object
+      palette</span></p>
+      <p>By placing a WebYep Image Element instead of a normal image into your
+        page, you enable the users to change this image by uploading some other
+        GIF/JPG via their web browser.</p>
+      <p class="elementCodeHeading">This element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php webyep_image(&quot;Fieldname&quot;, false, &quot;&quot;, &quot;some_other_page.php&quot;, &quot;contentFrame&quot;, 700, 900, true, 70, 90); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Arguments for the <span class="codeExample">webyep_image()</span> PHP function call:<br>
+          <span class="small">(see &quot;Attributes of the Image Element&quot; below for details)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Fieldname&quot;</span>: A string &ndash; the field name for this element. </li>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; the scope for this element. <br>
+              <span class="codeExample">true</span> if the element should have the same content on <em>all</em> pages (global).<br>
+              <span class="codeExample">false</span> if it should have different content on each page it appears on.</li>
+            <li><span class="codeExample">&quot;&quot;</span>: A string &ndash; obsolete, pass an empty string (&quot;&quot;). </li>
+            <li><span class="codeExample">&quot;some_other_page.php&quot;</span>: A string (optional) &ndash; the URL of a page this image should link to. <br>
+              Can also be a full URL (http://...).<br>
+            If passed as an empty string (&quot;&quot;), the image is not a link initially, but still can be made one by the user. </li>
+            <li><span class="codeExample">&quot;contentFrame&quot;</span>: A string (optional) &ndash; the name of the frame, that should be the target of the link.<br>
+              Pass an empty string (&quot;&quot;) if you're not using frames and do not want to open the linked page in a new window.<br>
+              Use <span class="codeExample">&quot;_blank&quot;</span> for &quot;open in a new window&quot;.</li>
+            <li>700: An integer &ndash; the width of the image, or zero if it should not be considered.</li>
+            <li>900: An integer &ndash; the height of the image, or zero if it should not be considered.</li>
+            <li> <span class="codeExample">true/false</span>: A boolean &ndash; whether this image should be displayed as a thumbnail. <br>
+              <span class="codeExample">true</span> if the image should be displayed in the page as a thumbnail with a size specified by the width/height parameters. Clicking the thumbnail will display a popup window with the original image <br>
+              <span class="codeExample">false</span> if the image should be downsized to the dimensions specified by the width/height parameters.</li>
+            <li>70: An integer &ndash; the width of the thumbnail image.</li>
+            <li>90: An integer &ndash; the height of the thumbnail image.</li>
+          </ol>
+          <p>Please see &quot;Attributes of the Image Element&quot; below for details regarding the resizing and thumbnail generation. </p>
+      </div>
+      <p>Users can upload new images directly with the web browser with a simple
+          click on the &quot;Edit&quot; button beside a WebYep Image Element
+          in a web page. Clicking the &quot;Edit&quot; button opens the Change
+          Image Window which lets users upload a new  image file or
+          delete the current one.</p>
+        <p align="center"><img src="../pictures/image-inpage.jpg" width="381" height="421"><br>
+          <span class="picturetext">The Image Element in action - by clicking
+      the &quot;Edit&quot; button the user opens the Change Image Window</span></p>
+      <p align="center"><img src="../pictures/image-editor.gif" width="465" height="310"><br>
+      <span class="picturetext"> The Change Image Window</span></p>
+      <p>Users can also specify the URL of a page to be opened, if a visitor clicks on the image (if the image is not set to be a thumbnail and the designer as not already set a URL&ndash; see blow). Also the &quot;alt&quot; text (the value for the &lt;img&gt;-tag's &quot;alt&quot; attribute) can be specified, to increase  accessibility.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem -->
+      <h3><a name="Lightbox">Adding a lightbox effect</a></h3>
+      <p>The WebYep Image Element (as well as the Gallery Element) supports the third party JavaScript image zooming effects <em>Lightbox</em> (based on Prototype/Scriptaculous) and <em>FancyBox</em> (based on jQuery). If one of these is installed, the detail (zoomed) image of a WebYep Image or Gallery Element will not open in a separate window, but in the page itself as an overlay.</p>
+      <p>These effects are not bundled with WebYep but need to be downloaded from their creator's web sites and installed into WebYep's <span class="codeExample">opt</span> folder.      </p>
+      <h4>Installation of Lightbox</h4>
+      <p>At the time of writing, the Lightbox JavaScript library can be downloaded from: <a href="http://www.huddletogether.com/projects/lightbox2/" target="_blank">http://www.huddletogether.com/projects/lightbox2/</a></p>
+      <p>Download the ZIP file, unpack it, rename the resulting folder (that usually has the version number as part of its name) to <span class="codeExample">lightbox</span> and upload that folder into the <span class="codeExample"><strong>webyep-system/program/opt</strong></span> folder on the server.</p>
+      <p>For the configuration of the Lightbox script, please follow the instructions given on the web site where you downloaded Lightbox (see the link above).</p>
+      <p>You might for example want to edit the file <span class="codeExample">webyep-system/program/opt/lightbox/js/lightbox.js</span> to adapt the paths to the image files used by Lightbox for the &quot;close&quot; and &quot;loading&quot; images to:</p>
+      <p class="codeExample"> LightboxOptions = Object.extend({<br>
+&nbsp;&nbsp;        fileLoadingImage:        '/webyep-system/program/opt/lightbox/images/loading.gif', <br>
+&nbsp;&nbsp;&nbsp;fileBottomNavCloseImage: '/webyep-system/program/opt/lightbox/images/close.gif',</p>
+      <p>If your page already uses its own version of the Prototype and/or Scriptaculous library (on which Lightbox is based on), you can tell WebYep to <strong>not</strong> include it again. To do so, add this to WebYep's configuration file <span class="codeExample">config-inc.php</span>:</p>
+      <blockquote>
+        <p class="codeExample">$webyep_bDoNotIncludePrototype = true;</p>
+        <p>and/or</p>
+        <p class="codeExample">$webyep_bDoNotIncludeScriptaculous = true;</p>
+      </blockquote>
+      <h4>Installation of FancyBox</h4>
+      <p>At the time of writing, the FancyBox JavaScript library can be downloaded from: <a href="http://fancybox.net/" target="_blank">http://fancybox.net/</a></p>
+      <p>After extracting the downloaded archive you will get a folder with some files and subfolders in it. The <em>subfolder</em> named <span class="codeExample">fancybox</span> is the one that needs to be uploaded into the <span class="codeExample">webyep-system/program/opt</span> folder on the server.</p>
+      <p>You will also find a file named <span class="codeExample">jquery-x.x.x.min.js</span> (where x.x.x is the version number) &ndash; this is the jQuery library FancyBox is based on. You can install this also into the <span class="codeExample">webyep-system/program/opt</span> folder on the server, but do not have to. If you don't, the jQuery library will be fetched from the Google code archive.</p>
+      <p>If your page already uses its own version of the jQuery library (on which FancyBox is based on), you can tell WebYep to <strong>not</strong> include it again. To do so, add this to WebYep's configuration file <span class="codeExample">config-inc.php</span>:</p>
+      <blockquote>
+        <p class="codeExample">$webyep_bDoNotIncludejQuery = true;</p>
+      </blockquote>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+      <!-- /hidefromprint -->
+      <!-- #EndLibraryItem -->
+    <h2>Attributes of the Image Element</h2>
+      <p align="center"><img src="../pictures/image-inspector.png" width="591" height="85"><br>
+        <span class="picturetext">The Dreamweaver inspector showing the Image Element's attributes</span></p>
+
+      <h3>Image name</h3>
+      <p>A distinctive name for that element. This name will be displayed in
+        the page in edit mode to give the user a hint on what this elements content
+        stands for and to distinguish the different WebYep Elements in a page.</p>
+
+      <h3>Content</h3>
+      <p>When set to &quot;for this doc only&quot; the elements content is unique
+        for this page - even if another element on a different page has the same
+        name. If set to &quot;for all documents&quot; the content will be the
+        same on all pages for elements of this kind that use the same name.</p>
+
+      <h3>Width / Height</h3>
+      <p>The width and/or height of the image. Leave blank, if the uploaded image should not be changed.</p>
+      <p>If you specify one of them, WebYep will make sure that the image will not exceed the width or height given.</p>
+      <p>If you specify both, WebYep will make sure that neither the width nor the height of the resulting image will exceed the given dimensions.</p>
+      <p>Resizing is always done proportional (the aspect ration is kept the same).</p>
+      <p class="remark"><span class="remarkHeading">Note:</span> Resizing can only be done, if the
+        <strong>&quot;GD&quot; extension for PHP</strong> is installed on the server. If not, the Change Image Window
+        in the browser will display a warning and images will only be <strong>displayed</strong> in the specified sizes,
+        but not actually be downsized (and therefore the <strong>file size</strong> will stay the same).</p>
+
+      <h3>Thumbnail</h3>
+      <p>If this  is checked, the image will be displayed in the page as a thumbnail with a size specified by the thumbnail
+        width and/or height parameters (see below). Clicking the thumbnail will display a popup window with the original image.</p>
+      <p>If it is <strong>not</strong> checked, the image will just be downsized to the dimensions specified by the width
+        and/or height parameters and then displayed in the page &ndash; clicking the image will then <strong>not</strong> open a popup window.</p>
+
+      <h3>Thumbnail width / height</h3>
+      <p>The width and/or height of the thumbnail image.</p>
+
+      <h3>Page (URL)</h3>
+      <p>The URL (or filename) of a page to be shown when a visitor clicks the image.
+        By setting this attribute you promote  this Image Element into a link.</p>
+      <p>If the Image Element is positioned inside a Loop Element (see <a href="./loop.html">WebYep
+        Loop Element</a>) and you assign a URL to it, the Image Elements behaves much like a WebYep
+        Menu Element's item: The page shown when clicking the image can have different WebYep content
+        depending on which image (in which loop row) the visitor clicked on.</p>
+      <p>So one could for example create a loop (WebYep Loop Element) of brief product descriptions
+        with a product title (Short Text Element), a short description (Long Text Element) and a
+        thumbnail image (Image Element) in the looped block.
+        By assigning the URL of a detail page to the thumbnails Image Element visitors
+        can click on the thumbnail to see the detail page for that product.</p>
+
+      <h3>Target frame - when using frames</h3>
+      <p>If the page which URL you entered in the &quot;Page&quot; attribute should
+        be opened in another HTML frame you can enter this frame's name here.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+    <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2011, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

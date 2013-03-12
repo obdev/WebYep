@@ -1,0 +1,1 @@
+../en/partners.php

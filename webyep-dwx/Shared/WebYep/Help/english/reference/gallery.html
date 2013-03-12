@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-english.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../stiles.css" rel="stylesheet" type="text/css">
+<link href="../print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuReference {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuRefGallery {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="true" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint">
+	 <a name="pagetop"><img src="../images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../index.html" id="menuMisc">Introduction</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../principle.html" id="menuMiscPrinciple">Basics</a></li>
+            <li><a href="../installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../configuration.html" id="menuMiscConfiguration">Configuration</a></li>
+            <li><a href="../backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../system-requirements.html" id="menuMiscSystem">System
+                Requirements</a></li>
+            <li><a href="../white-labeled.html" id="menuMiscWhiteLabel">White Labeled Version</a></li>
+          </ul>
+		</li>
+        <li><a href="../tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="../tutorials/first-steps.html" id="menuTutFirstSteps">First
+                Steps</a></li>
+            <li><a href="../tutorials/simple-menu.html" id="menuTutSimpleMenu">The Menu</a></li>
+            <li><a href="../tutorials/loop.html" id="menuTutLoop">The
+                Loop</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html" id="menuReference">Reference</a>
+          <ul id="menuTreeReference">
+            <li><a href="init-code.html" id="menuRefInitCode">The Init Code</a></li>
+            <li><a href="logon-button.html" id="menuRefLogonButton">Logon
+                Button</a></li>
+            <li><a href="short-text.html" id="menuRefShortText">Short
+                Text</a></li>
+            <li><a href="long-text.html" id="menuRefLongText">Long
+                Text</a></li>
+            <li><a href="rich-text.html" id="menuRefRichText">Rich
+                Text</a></li>
+            <li><a href="image.html" id="menuRefImage">Image</a></li>
+            <li><a href="attachment.html" id="menuRefAttachment">Attachment</a></li>
+            <li><a href="menu.html" id="menuRefMenu">Menu</a></li>
+            <li><a href="loop.html" id="menuRefLoop">Loop</a></li>
+            <li><a href="read-more.html" id="menuRefReadMore">Read More</a></li>
+            <li><a href="gallery.html" id="menuRefGallery">Image Gallery</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../images/nav-content-border.gif" class="menu"><img src="../images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Image Gallery<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="../pictures/gallery-palette.gif" width="278" height="32"><br>
+        <span class="picturetext">The Image Gallery Element icon in the Dreamweaver object
+      palette</span></p>
+      <p>The WebYep Image Gallery Element displays a tabular list of thumbnails that, when clicked on, open the original image/photo. The thumbnails can be rearranged and the user can also add a caption for each uploaded image.</p>
+      <p>The original image will normally be opened in a separate window, but you can also use <em>Lightbox</em> to open it in the same window (<a href="#Lightbox">see below</a>).</p>
+      <p>You can place several Image Gallery Elements on a page, or combine it with the WebYep Loop Element.</p>
+      <p class="elementCodeHeading">This element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php webyep_gallery(&quot;GalleryName&quot;, false, 60, 70, 3, 600, 700, 100); // WebYepV1 ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem -->
+      <div id="elementCodeDetails">Arguments for the <span class="codeExample">webyep_gallery()</span> PHP function call:<br>
+          <span class="small">(see &quot;Attributes of the Image Gallery Element&quot; below for details)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;GalleryName&quot;</span>: A string &ndash; the field name for this element. </li>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; the scope for this element. <br>
+              <span class="codeExample">true</span> if the element should have the same content on <em>all</em> pages (global).<br>
+              <span class="codeExample">false</span> if it should have different content on each page it appears on.</li>
+            <li><span class="codeExample">60</span>: An integer &ndash; the maximum width of the  thumbnail.</li>
+            <li><span class="codeExample">70</span>: An integer &ndash; the maximum height of the  thumbnail.</li>
+            <li><span class="codeExample">3</span>: An integer &ndash; the number of columns for listing the gallery image thumbnails.</li>
+            <li><span class="codeExample">600</span>: An integer &ndash; the maximum width of the image, or zero if it should not be limited.</li>
+            <li><span class="codeExample">700</span>: An integer &ndash; the maximum height of the image, or zero if it should not be limited.</li>
+            <li><span class="codeExample">100</span>: An integer &ndash; the width, in pixels, of the thumbnail columns.</li>
+        </ol>
+        <p>Please see &quot;Attributes of the Image Gallery Element&quot; below for details regarding the resizing and thumbnail generation. </p>
+      </div>
+      <p>Users can upload new images directly with the web browser.
+          Clicking the <em>plus</em> button  will add a new image after the one the plus button belongs to. Clicking the &quot;Edit&quot; button lets the user change the image or the caption.</p>
+        <p align="center"><img src="../pictures/gallery-inpage.jpg" width="602" height="416"><br>
+          <span class="picturetext">The Image Gallery Element in action.<br>
+          By clicking the +/- buttons the user can add/remove images.<br>
+          By clicking the left/right arrow buttons the user can change the order of the images.<br>
+          By clicking
+      the &quot;Edit&quot; button the user opens the Change Gallery Image Window.</span></p>
+      <p align="center"><img src="../pictures/gallery-editor.gif" width="472" height="411"><br>
+      <span class="picturetext"> The Change Gallery Image Window</span></p>
+      <p>Depending on the web browser used you can upload multiple images at once by holding down the <em>Command</em> key (on Mac OS) or the <em>Ctrl</em> key (on Windows) to select multiple files in the file selection dialog.  Firefox 3 and Safari 5 support this feature, Internet Explorer 8 does not.</p>
+      <p>The description entered will  be used for all uploaded images - but you can of course edit the description afterwards.</p>
+<!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem -->
+      <h3><a name="Lightbox"></a>Adding a lightbox effect</h3>
+      <p>The WebYep Gallery Element supports opening the detail images with a lightbox effect. Please see the <a href="image.html#Lightbox">Image Element's reference</a> for details.</p>
+      <h3>Formatting the gallery</h3>
+      <p>WebYep assigns special CSS style classes to the Image Gallery Element's items. By defining styles for these CSS classes in your page's stylesheet, you have detailed control of the look of your WebYep Menu.</p>
+      <h4>List of CSS classes:</h4>
+      <table border="1" cellspacing="0" cellpadding="0" class="description">
+        <tr>
+          <td><strong>CSS Class Name</strong></td>
+          <td><strong>Assigned, to....</strong></td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryContainer</td>
+          <td><p>the &lt;table&gt; tag containing the whole gallery.</p>
+            <p>You can style the rows and cells of that table with the CSS selectors:<br>
+              <span class="codeExample">.WebYepGalleryContainer tr</span><br>
+              and<br>
+              <span class="codeExample">.WebYepGalleryContainer td</span></p></td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryFirstRow</td>
+          <td><p>the <em>first</em> &lt;tr&gt; tag in the gallery.</p></td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryFirstColumn</td>
+          <td><p>the <em>first</em> &lt;td&gt; tag in a row.</p></td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryImage</td>
+          <td> the &lt;div&gt; tag surrounding the thumbnail image.
+            <p>You can style the actual image with the CSS selector:<br>
+                <span class="codeExample">.WebYepGalleryImage img</span></p></td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryText</td>
+          <td>the &lt;div&gt; tag surrounding the caption.</td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <h2>Attributes of the Image Gallery Element</h2>
+      <p align="center"><img src="../pictures/gallery-inspector.png" width="504" height="75"><br>
+        <span class="picturetext">The Dreamweaver inspector showing the Gallery
+      Element's attributes</span></p>
+      <h3>Gallery Name</h3>
+      <p>A distinctive name for that element. This name will be displayed in
+        the page in edit mode to give the user a hint on what this elements content
+        stands for and to distinguish the different WebYep Elements in a page.</p>
+      <h3>Content</h3>
+      <p>When set to &quot;for this doc only&quot; the elements content is unique
+        for this page - even if another element on a different page has the same
+         name. If set to &quot;for all documents&quot; the content will
+        be the same on all pages for elements of this kind that use the same
+        name.</p>
+      <h3>Maximum Thumbnail Width/Height</h3>
+      <p>The thumbnails for each image will be generated so that they are not wider/higher than specified here - they are resized according to the image's proportions. The resulting thumbnail will have exactly either the specified width or height.</p>
+      <h3>Maximum Image Width/Height</h3>
+      <p>If specified, the uploaded image will be proportionally resized so that it is not wider than the max. width setting and not higher than the max height setting. If not specified, the uploaded image will be left unchanged.</p>
+      <p class="remark"><span class="remarkHeading">Note:</span> Resizing can only be done, if the <strong>&quot;GD&quot; extension for PHP</strong> is installed on the server. If not, the uploaded images and the thumbnails will only be <strong>displayed</strong> in the specified sizes, but not actually be downsized (and therefore the <strong>file size</strong> will stay the same). This is especially unfavorable for the thumbnails - the Image Gallery thus should only be used if the GD extension is available.</p>
+      <h3>Number of Cells</h3>
+      <p>The thumbnails of all images will be shown in a table - the number of columns of that table can be specified with the &quot;Number of Cells&quot; attribute. </p>
+      <h3>Cell Width</h3>
+      <p>The thumbnail cells' width in pixels - should usually be wider than the maximum width of the thumbnail and wide enough to hold the typical image caption.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+    <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2009, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

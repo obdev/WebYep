@@ -1,0 +1,25 @@
+<!-- MENU-LOCATION=NONE -->
+@@Copyright@@
+<html>
+<head>
+<title>@@PageTitle@@</title>
+<script language="JavaScript" src="../shared/webyep/webyep.js">
+</script>
+<script language="JavaScript">
+	function canAcceptCommand()
+	{
+		return true;
+	}
+
+	function showWebYepHelp()
+	{
+		var sPath = dreamweaver.getConfigurationPath();
+
+		dreamweaver.browseDocument(sPath + "/@@HelpFolder@@/@@HelpStart@@");
+	}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" onLoad="showWebYepHelp();">
+</body>
+</html>

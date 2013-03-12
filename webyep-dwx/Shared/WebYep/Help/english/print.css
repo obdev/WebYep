@@ -1,0 +1,24 @@
+.hideFromPrint {
+	display: none;
+}
+#hideFromPrint {
+	display: none;
+}
+.pageBreak {
+}
+p { page-break-inside: avoid }
+ul { page-break-inside: avoid }
+h1 { page-break-after: avoid }
+h2 { page-break-after: avoid }
+h3 { page-break-after: avoid }
+h3 { page-break-after: avoid }
+#elementCodeDetails {
+	display: block;
+}
+.elementCodeLink {
+	display: none;
+}
+.content {
+	color: #000000;
+	border-bottom-width: 0px;
+}

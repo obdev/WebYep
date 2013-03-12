@@ -1,0 +1,10 @@
+include ../../global.int
+
+output-format ASCII
+Title
+Image Gallery
+Bildergalerie
+
+GalleryName
+Gallery Name
+Galeriename

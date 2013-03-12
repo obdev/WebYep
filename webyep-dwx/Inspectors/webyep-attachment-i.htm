@@ -1,0 +1,98 @@
+<!-- tag:*PHP*,priority:5,selection:exact -->
+@@Copyright@@
+<!DOCTYPE HTML SYSTEM "-//Adobe//DWExtension layout-engine 10.0//pi">
+<html>
+<head>
+<title>@@Title@@</title>
+<script LANGUAGE="JavaScript" src="../shared/webyep/webyep.js">
+</script>
+<script LANGUAGE="JavaScript">
+
+	var rWebYepRegEx1 = /<\?[ph]{0,3} webyep_attachment\("([^"]*)"\); \/\/ WebYepV1 /;
+	var rWebYepRegEx2 = /<\?[ph]{0,3} webyep_attachment\("([^"]*)", ((true)|(false))\); \/\/ WebYepV1 /;
+
+	function canInspectSelection()
+	{
+		var oDOM = dw.getDocumentDOM();
+		var oNode = oDOM.getSelectedNode();
+		var sHTML = oNode.data;
+		if (sHTML && rWebYepRegEx2.exec(sHTML)) return true;
+		if (sHTML && rWebYepRegEx1.exec(sHTML)) return true;
+		else return false;
+	}
+	
+	function inspectSelection()
+	{
+		var oDOM = dw.getDocumentDOM();
+		var oNode = oDOM.getSelectedNode();
+		var sHTML = oNode.data;
+		var aResults;
+		var sFieldName = "";
+		var bGlobal = false;
+	
+		aResults = rWebYepRegEx2.exec(sHTML);
+		if (aResults) {
+         sFieldName = aResults[1];
+			bGlobal = aResults[2] == "true";
+		}
+		else {
+         aResults = rWebYepRegEx1.exec(sHTML);
+         sFieldName = aResults[1];
+         bGlobal = false;
+		}
+		document.topLayer.document.topLayerForm.fieldName.value = sFieldName;
+		document.topLayer.document.topLayerForm.isGlobal.selectedIndex = bGlobal ? 1:0;
+	}
+	
+	
+	function webyep_updateSource()
+	{
+		if (!canInspectSelection()) return;
+		var oDOM = dw.getDocumentDOM();
+		var oNode = oDOM.getSelectedNode();
+		var sHTML = "";
+		var sFieldName = "";
+		var sGlobal = "";
+	
+		sFieldName = document.topLayer.document.topLayerForm.fieldName.value;
+		sGlobal = document.topLayer.document.topLayerForm.isGlobal.options[document.topLayer.document.topLayerForm.isGlobal.selectedIndex].value;
+		sHTML = "<?php webyep_attachment(\"" + sFieldName + "\", " + sGlobal + "); // WebYepV1 ?>";
+		oNode.data = sHTML;
+		webyep_checkForInitCode(false);
+	}
+	
+	function displayHelp()
+	{
+		webyep_showHelpDocument("@@HelpAttachment@@");
+	}
+</script>
+</head>
+
+<body>
+<span ID="image" style="position:absolute; width:23px; height:17px; z-index:16; left: 3px; top: 3px;"><img src="webyep-attachment-i.gif" width="36" height="36" name="interjectionImage"></span>
+<span ID="topLayer" style="position:absolute; z-index:1; left: 50px; top: 3px;">
+<form name="topLayerForm">
+
+<div><strong>WebYep @@ElementName@@ Element</strong></div>
+
+<table border="0" cellpadding="0" cellspacing="1">
+   <tr valign="middle">
+      <td nowrap align="right">@@Fieldname@@:&nbsp;</td>
+      <td nowrap><input type="text" name="fieldName" onBlur="webyep_updateSource();" style="width:120px; height:15px"></td>
+   </tr>
+   <tr valign="middle">
+      <td nowrap align="right">@@Global@@:&nbsp;</td>
+      <td nowrap>
+      <select name="isGlobal" onChange="webyep_updateSource();">
+         <option value="false" selected>@@ThisDoc@@</option>
+         <option value="true">@@AllPages@@</option>
+      </select>
+      </td>
+   </tr>
+</table>
+
+</form>
+</span>
+
+</body>
+</HTML>

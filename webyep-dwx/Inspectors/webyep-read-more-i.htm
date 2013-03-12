@@ -1,0 +1,113 @@
+<!-- tag:*PHP*,priority:5,selection:exact -->
+@@Copyright@@
+<!DOCTYPE HTML SYSTEM "-//Adobe//DWExtension layout-engine 10.0//pi">
+<html>
+<head>
+<title>@@Title@@</title>
+<script LANGUAGE="JavaScript" src="../shared/webyep/webyep.js">
+</script>
+<script LANGUAGE="JavaScript">
+
+	var rWebYepRegEx1 = /<\?[hp]{0,3} webyep_readMore\("([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)"\); \/\/ WebYepV1 /;
+
+	function canInspectSelection()
+	{
+		var oDOM = dw.getDocumentDOM();
+		var oNode = oDOM.getSelectedNode();
+		var sHTML = oNode.data;
+		if (sHTML && rWebYepRegEx1.exec(sHTML)) return true;
+		else return false;
+	}
+	
+	function inspectSelection()
+	{
+		var oDOM = dw.getDocumentDOM();
+		var oNode = oDOM.getSelectedNode();
+		var sHTML = oNode.data;
+		var aResults;
+		var sFieldName = "";
+		var sLinkText = "";
+                var sTargetPage = "";
+                var sTargetFrame = "";
+	
+		aResults = rWebYepRegEx1.exec(sHTML);
+		if (aResults) {
+			sFieldName = aResults[1];
+                        sLinkText = aResults[2];
+                        sTargetPage = aResults[3];
+                        sTargetFrame = aResults[4];
+		}
+
+		document.topLayer.document.topLayerForm.fieldName.value = sFieldName;
+		document.topLayer.document.topLayerForm.linkText.value = sLinkText;
+		document.topLayer.document.topLayerForm.targetPage.value = sTargetPage;
+		document.topLayer.document.topLayerForm.targetFrame.value = sTargetFrame;
+	}
+	
+	
+	function webyep_updateSource()
+	{
+		if (!canInspectSelection()) return;
+		var oDOM = dw.getDocumentDOM();
+		var oNode = oDOM.getSelectedNode();
+		var sHTML = "";
+		var sFieldName = "";
+		var sLinkText = "";
+                var sTargetPage = "";
+                var sTargetFrame = "";
+	
+		sFieldName = document.topLayer.document.topLayerForm.fieldName.value;
+		sLinkText = document.topLayer.document.topLayerForm.linkText.value;
+		sTargetPage = document.topLayer.document.topLayerForm.targetPage.value;
+		sTargetFrame = document.topLayer.document.topLayerForm.targetFrame.value;
+		sHTML = '<?php webyep_readMore("' + sFieldName + '", "' + sLinkText + '", "' + sTargetPage + '", "' + sTargetFrame + '"); // WebYepV1 ?>';
+		oNode.data = sHTML;
+		webyep_checkForInitCode(false);
+	}
+	
+	function webyep_chooseURL()
+	{
+		var sURL;
+		
+		sURL = dreamweaver.browseForFileURL('select', '@@TargetPage@@', false, true);
+		if (sURL && sURL != "") {
+			document.topLayer.document.topLayerForm.targetPage.value = sURL;
+			webyep_updateSource();
+		}
+	}
+
+	function displayHelp()
+	{
+		webyep_showHelpDocument("@@HelpReadMore@@");
+	}
+</script>
+</head>
+
+<body>
+<span ID="image" style="position:absolute; width:23px; height:17px; z-index:16; left: 3px; top: 3px;"><img src="webyep-read-more-i.gif" width="36" height="36" name="interjectionImage"></span>
+<span ID="topLayer" style="position:absolute; z-index:1; left: 50px; top: 3px;"> 
+<form name="topLayerForm">
+
+<div><strong>WebYep @@ElementName@@ Element</strong></div>
+
+<table border="0" cellpadding="0" cellspacing="2">
+   <tr valign="middle">
+      <td nowrap align="right">@@FieldName@@:&nbsp;</td>
+      <td nowrap colspan="2"><input type="text" name="fieldName" onBlur="webyep_updateSource();" style="width:140px; height:15px"></td>
+      <td nowrap align="right">&nbsp;&nbsp;@@LinkText@@:&nbsp;</td>
+      <td nowrap><input type="text" name="linkText" onBlur="webyep_updateSource();" style="width:120px; height:15px"></td>
+   </tr>
+   <tr valign="middle">
+      <td nowrap align="right">@@TargetPage@@:&nbsp;</td>
+      <td nowrap><input type="text" name="targetPage" onBlur="webyep_updateSource();" style="width:120px; height:15px"></td>
+      <td nowrap>&nbsp;<input type="image" border="0" align="bottom" src="../Shared/WebYep/Images/browsefolder.gif" onClick="webyep_chooseURL();" name="image"></td>
+      <td nowrap align="right">&nbsp;&nbsp;@@TargetFrame@@:&nbsp;</td>
+      <td nowrap><input type="text" name="targetFrame" onBlur="webyep_updateSource();" style="width:120px; height:15px"></td>
+   </tr>
+</table>
+
+</form>
+</span>
+
+</body>
+</HTML>

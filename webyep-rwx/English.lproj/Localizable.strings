@@ -1,0 +1,16 @@
+
+"PluginName" = "WebYep";
+"PluginDescription" = "Create a page which can be edited online via the web browser, using the web content management system \"WebYep\".\n\nThis page style requires PHP to be installed on your web server, your page must also have a .php extension.\n\nIt will not function on .Mac";
+// "TidyAlertText" = "Please set the output mode to \"Default\" in the page inspector for all WebYep pages.\n\nAny other output mode will destroy the PHP code output by this page type!";
+"FilenameAlertText" = "Please set the filename extension of all WebYep pages to \".php\"!";
+"AlertOKButton" = "OK";
+"LogonButtonHover" = "WebYep Logon";
+"UTF8ConfigWarningTitle" = "Character Encoding in WebYep Pages";
+"UTF8ConfigWarningMessage" = "Your're using a character encoding other than \"utf-8\" in your page - please be sure to also configure this encoding (e.g. iso-8859-1) in the WebYep configuration file. See the WebYep help for details.";
+"DontWarnAgain" = "Don't warn me again";
+"Upgrade1_2WarningTitle" = "This project was created for a WebYep version prior to 1.2";
+"Upgrade1_2WarningMessage" = "If you edit and save this project using this version of the WebYep RapidWeaver Plugin, you also need to upgrade the webyep-system on the server to at least version 1.2.\n\nIf you do not want that, please reinstall the WebYep RapidWeaver Plugin version 1.1.14 to edit this project.";
+"unchanged" = "original";
+"CSSInfoTitle" = "Example CSS code generated";
+"CSSInfoMessage" = "An example CSS code to style the text, images, image gallery and sidebar menu was generated. Please see the Page Inspector's Header / CSS field to edit this CSS code and style this page's elements.";
+"DontInfoAgain" = "Don't inform me again";

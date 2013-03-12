@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebYep Help</title>
+<style type="text/css">
+body {
+	font-family: Verdana, Geneva, sans-serif;
+}
+h1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+p {
+	font-size: 12px;
+}
+h2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+h3 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.picture {
+	text-align: center;
+}
+.filename {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+	white-space: nowrap;
+}
+.sourcecode {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+}
+p.sourcecode {
+	margin-left: 20px;
+}
+</style>
+</head>
+
+<body>
+<p class="picture"><img src="logo.png" width="251" height="119" alt="logo"></p>
+<h1>How to install WebYep on your web server<br>
+</h1>
+<h2>Using the WebYep Online Installer</h2>
+<p>You can use the WebYep Online Installer <a href="https://secure.obdev.at/WebYepInstaller/">https://secure.obdev.at/WebYepInstaller/</a> to install the webyep-system folder on your web server.<br>
+</p>
+<h2>Manually installing WebYep</h2>
+<h3>Installation of the webyep-system folder</h3>
+<p>The package that contained the WebYep RapidWeaver Plugin (WebYep.rwplugin) also contained a folder named webyep-system.</p>
+<p>To install WebYep on your web server, simply upload the <span class="filename">webyep-system</span> folder onto your web server (usually via FTP) to the root of your web site (where your home page's file, index.html, is located).<br>
+</p>
+<h3>Preparing the webyep-system folder on the server</h3>
+<p>To prepare WebYep, you need to change the access privileges of the &quot;<span class="filename">data</span>&quot; folder inside the uploaded <span class="filename">webyep-system</span> folder on the web server to the access mode &quot;777&quot; (&quot;read, write and execute&quot; for &quot;owner, group and others&quot;).</p>
+<p><strong>Here's an example using CyberDuck as the FTP application:</strong></p>
+<p>Navigate to the data folder inside the <span class="filename">webyep-system</span> folder, Control (or right) click it, and choose &quot;Info&quot; from the appearing context menu.</p>
+<p>In the appearing info panel, set the access permissions and click &quot;Apply&quot;.</p>
+<p class="picture"><img src="permissions.png" width="454" height="389" alt="setting permissions"></p>
+<p>Please also read the WebYep documentation regarding installation and preparation of WebYep - especially regarding any <em>security concerns</em> about setting the access permissions this way!<br>
+</p>
+<h2>Configuration</h2>
+<p>The <span class="filename">webyep-system</span> folder contains a file named config-inc.php. Open this file in some text editor (like TextEdit.app) to setup WebYep. Adopt the following entries to your needs:</p>
+<p>The username of the editor user which must be entered to start editing the page's content:</p>
+<p class="sourcecode"> $webyep_sAdminName = &quot;admin&quot;;<br>
+</p>
+<p>The password which must be entered to start editing the page's content:</p>
+<p class="sourcecode"> $webyep_sAdminPassword = &quot;&quot;;<br>
+</p>
+<p>The character set used in your pages:</p>
+<p class="sourcecode"> $webyep_sCharset = &quot;utf-8&quot;;</p>
+<p>As RapidWeaver usually uses the utf-8 character set for its pages, you can also leave this setting to &quot;utf-8&quot;.</p>
+<p>After making the changes, don't forget to upload the file onto the web server again.<br>
+  See the WebYep documentation for details on the other configuration settings.<br>
+</p>
+<h2>Adding an HTML in-browser editor</h2>
+<p>The WebYep Rich Text Element supports the third party in-browser HTML Editors <em>TinyMCE</em> and <em>CKeditor</em>. Those editors <strong>are not bundled</strong> with WebYep. To use one of them, simply download the editor package from the its creator's web site and place it into WebYep's <span class="filename">opt</span> folder - WebYep will then automatically recognize its existence and use it for the Rich Text Element's editor window.</p>
+<p>For details in the installation of one of these in-browser HTML editors, please see the <a href="http://www.obdev.at/goto.php?t=webyep_docu&p=/reference/rich-text.html&a=WYSIWYG_Editor&l=en">reference of the Rich Text Element in WebYep's online documentation</a>.<br>
+</p>
+<h2>Adding a lightbox effect</h2>
+<p>The WebYep Image Element (as well as the Gallery Element) supports the third party JavaScript image zooming effects <em>Lightbox</em> (based on Prototype/Scriptaculous) and <em>FancyBox</em> (based on jQuery). If one of these is installed, the detail (zoomed) image of a WebYep Image or Gallery Element will not open in a separate window, but in the page itself as an overlay.</p>
+<p>These effects are not bundled with WebYep but need to be downloaded from their creator's web sites and installed into WebYep's <span class="filename">opt</span> folder. </p>
+<p>For details on the installation of one of these effects, please see the <a href="http://www.obdev.at/goto.php?t=webyep_docu&p=/reference/image.html&a=Lightbox&l=en">reference of the Image Element in WebYep's online documentation</a>.<br>
+</p>
+<h2>Styling the WebYep page's content</h2>
+<p>You can define the look of each element of the WebYep page by defining appropriate CSS styles for the page. Each element has it's own CSS classes. When creating a new WebYep page, an example CSS code is copied to the page's custom CSS field - use the Page Inspector (Head tab) to edit this CSS code:</p>
+<p class="picture"><img src="css.png" width="344" height="596" alt="defining css"></p>
+<p>See the WebYep Documentation for details on the WebYep Elements and their CSS classes.<br>
+</p>
+<h2>Placing the Logon Button manually</h2>
+<p>You can place the WebYep Logon Button (like any other WebYep Element!) into any styled text page or sidebar by inserting the following PHP code fragment:</p>
+<p class="sourcecode"> &lt;?php webyep_logonButton(true); // WebYepV1 ?&gt;</p>
+<p>To make the button invisible, simple change the true to <span class="sourcecode">false</span>.</p>
+<p><strong>Important:</strong> You need to make sure the page's filename extension is set to &quot;.php&quot; and the page's Page Prefix Code contains the same PHP code as a standard WebYep page does (simply copy it over from some WebYep page in the Page Inspector, &quot;Page Header&quot; tab, &quot;Prefix&quot; field).</p>
+<p><strong>Note:</strong> You will not see the WebYep Logon Button in RapidWeaver's preview - publish the page to the web server and open it with your web browser to see the button.</p>
+<p>See the WebYep Documentation for details on the PHP code fragments of other WebYep Elements.<br>
+</p>
+<h2>More Documentation</h2>
+<h3>Documentation for the web designer</h3>
+<p>The WebYep Documentation containing detailed information on each WebYep Element, installation, backup and more (also technical PHP details) can be downloaded and viewed online at the <a href="http://www.obdev.at/webyep/docu.html">Objective Development Web Site</a>.</p>
+<h3>Help for users (the content editors)</h3>
+<p>In every editor window of WebYep in the web browser users can click the question mark at the lower left corner to get online help for the current editor.</p>
+<p><em>© 2011, Objective Development Software GmbH, <a href="http://www.obdev.at">http://www.obdev.at</a></em></p>
+</body>
+</html>

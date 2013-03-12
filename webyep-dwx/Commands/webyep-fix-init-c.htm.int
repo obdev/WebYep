@@ -1,0 +1,22 @@
+include ../global.int
+output-format ASCII
+
+PageTitle
+Fix WebYep init code
+WebYep Initialisierungs-Code korrigieren
+
+NotFoundConfirm
+This document does not contain the WebYep init code\n(at least not within the first 512 characters)\n\nInsert WebYep init code?
+Diese Datei enthaelt keinen WebYep-Initialisierungs-Code.\n(zumindest nicht innerhalb der ersten 512 Zeichen)\n\nSoll der WebYep-Initialisierungs-Code hinzugefuegt werden?
+
+InitCodeCorrect
+The WebYep init code is correct and positioned right.
+Der WebYep-Initialisierungs-Code dieser Datei ist korrekt positioniert.
+
+CodeFound
+There is some HTML code preceding the WebYep init code in this document - please remove all code before the WebYep init code:
+Vor dem WebYep-Initialisierungs-Code dieser Datei befindet sich folgender HTML-Code (bitte entfernen sie jeglichen HTML-Code vor dem WebYep-Init-Code):
+
+Corrected
+The WebYep init code in this document has been corrected.
+Der WebYep-Initialisierungs-Code dieser Datei wurde korrigiert.

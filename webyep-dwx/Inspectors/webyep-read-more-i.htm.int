@@ -1,0 +1,26 @@
+include ../global.int
+
+output-format HTML
+Title
+Read More
+Weiterlesen
+
+ElementName
+Read More
+Weiterlesen
+
+FieldName
+Fieldname
+Feldname
+
+LinkText
+Link text
+Linktext
+
+TargetPage
+Page (URL)
+Seite (URL)
+
+TargetFrame
+Target frame
+Zielframe

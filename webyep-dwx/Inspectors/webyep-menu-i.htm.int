@@ -1,0 +1,43 @@
+include ../global.int
+
+output-format HTML
+Title
+Menu
+Menue
+
+ElementName
+Menu
+Menue
+
+MenuName
+Menu name
+Menuename
+
+Global
+Content
+Inhalte
+
+ThisDoc
+for this doc only
+fuer diese Seite
+
+AllPages
+for all documents
+fuer alle Seiten
+
+Attributes
+HTML attributes
+HTML-Attribute
+
+URL
+Page (URL)
+Seite (URL)
+
+Frame
+Target frame
+Ziel (frame)
+
+output-format ASCII
+DeprecatedAPI_Style
+This page uses a deprecated WebYep menu function (from verison 1.0.x)! Do you want to update it the the current version (this will remove the CSS style assignment)?
+Diese Seite nutzt eine veraltete WebYep-Menue-Funktion (von Version 1.0.x). Moechten Sie die Funktion aktualisieren (dabei geht die Zuweisung des CSS-Stiles verloren)?

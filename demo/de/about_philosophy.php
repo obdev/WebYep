@@ -1,0 +1,1 @@
+../en/about_philosophy.php

@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- TemplateEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../Shared/WebYep/Help/english/stiles.css" rel="stylesheet" type="text/css">
+<link href="../Shared/WebYep/Help/english/print.css" rel="stylesheet" type="text/css" media="print">
+<!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+<!-- TemplateBeginIf cond="MenuTreeMisc" -->
+<style type="text/css">
+<!--
+#menuMisc {
+	color: #000000;
+	text-decoration: underline;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuTreeReference {
+	display: none;
+}
+-->
+</style>
+<!-- TemplateEndIf -->
+<!-- TemplateBeginIf cond="MenuTreeTutorials" -->
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTutorials {
+	color: #000000;
+	text-decoration: underline;
+}
+#menuTreeReference {
+	display: none;
+}
+-->
+</style>
+<!-- TemplateEndIf -->
+<!-- TemplateBeginIf cond="MenuTreeReference" -->
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuReference {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- TemplateEndIf -->
+<!-- TemplateBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+-->
+</style>
+<!-- TemplateEndEditable --><!-- TemplateParam name="MenuTreeMisc" type="boolean" value="true" --><!-- TemplateParam name="MenuTreeTutorials" type="boolean" value="true" --><!-- TemplateParam name="MenuTreeReference" type="boolean" value="false" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint">
+	 <a name="pagetop"><img src="../Shared/WebYep/Help/english/images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../Shared/WebYep/Help/english/images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../Shared/WebYep/Help/english/index.html" id="menuMisc">Introduction</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../Shared/WebYep/Help/english/principle.html" id="menuMiscPrinciple">Basics</a></li>
+            <li><a href="../Shared/WebYep/Help/english/installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../Shared/WebYep/Help/english/configuration.html" id="menuMiscConfiguration">Configuration</a></li>
+            <li><a href="../Shared/WebYep/Help/english/backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../Shared/WebYep/Help/english/system-requirements.html" id="menuMiscSystem">System
+                Requirements</a></li>
+            <li><a href="../Shared/WebYep/Help/english/white-labeled.html" id="menuMiscWhiteLabel">White Labeled Version</a></li>
+          </ul>
+		</li>
+        <li><a href="../Shared/WebYep/Help/english/tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="../Shared/WebYep/Help/english/tutorials/first-steps.html" id="menuTutFirstSteps">First
+                Steps</a></li>
+            <li><a href="../Shared/WebYep/Help/english/tutorials/simple-menu.html" id="menuTutSimpleMenu">The Menu</a></li>
+            <li><a href="../Shared/WebYep/Help/english/tutorials/loop.html" id="menuTutLoop">The
+                Loop</a></li>
+          </ul>
+        </li>
+        <li><a href="../Shared/WebYep/Help/english/reference/index.html" id="menuReference">Reference</a>
+          <ul id="menuTreeReference">
+            <li><a href="../Shared/WebYep/Help/english/reference/init-code.html" id="menuRefInitCode">The Init Code</a></li>
+            <li><a href="../Shared/WebYep/Help/english/reference/logon-button.html" id="menuRefLogonButton">Logon
+                Button</a></li>
+            <li><a href="../Shared/WebYep/Help/english/reference/short-text.html" id="menuRefShortText">Short
+                Text</a></li>
+            <li><a href="../Shared/WebYep/Help/english/reference/long-text.html" id="menuRefLongText">Long
+                Text</a></li>
+            <li><a href="../Shared/WebYep/Help/english/reference/rich-text.html" id="menuRefRichText">Rich
+                Text</a></li>
+            <li><a href="../Shared/WebYep/Help/english/reference/image.html" id="menuRefImage">Image</a></li>
+            <li><a href="../Shared/WebYep/Help/english/reference/attachment.html" id="menuRefAttachment">Attachment</a></li>
+            <li><a href="../Shared/WebYep/Help/english/reference/menu.html" id="menuRefMenu">Menu</a></li>
+            <li><a href="../Shared/WebYep/Help/english/reference/loop.html" id="menuRefLoop">Loop</a></li>
+            <li><a href="../Shared/WebYep/Help/english/reference/gallery.html" id="menuRefGallery">Image Gallery</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../Shared/WebYep/Help/english/images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../Shared/WebYep/Help/english/images/nav-content-border.gif" class="menu"><img src="../Shared/WebYep/Help/english/images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- TemplateBeginEditable name="Title" -->Title<!-- TemplateEndEditable --></h1>
+      <!-- TemplateBeginEditable name="Content" -->Content<!-- TemplateEndEditable -->
+      <div><img src="../Shared/WebYep/Help/english/images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2009, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+</html>

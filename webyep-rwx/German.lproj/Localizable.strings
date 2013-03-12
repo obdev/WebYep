@@ -1,0 +1,17 @@
+"PluginName" = "WebYep";
+"PluginDescription" = "Erstellen Sie mit dem Content Management System \"WebYep\" Seiten, deren Inhalte online im Web Browser geändert werden können.\n\nDieser Seitentyp benötigt PHP am Web Server, die Seite muss auch die Dateinamenserweiterung \".php\" aufweisen.\n\nSeiten dieses Typs können nicht in Ihrem .Mac Web Space verwendet werden!";
+"FilenameAlertText" = "Bitte vergeben Sie für alle WebYep Seiten die Dateinamenserweiterung \".php\"!";
+"AlertOKButton" = "OK";
+"LogonButtonHover" = "WebYep Anmeldung";
+"UTF8ConfigWarningTitle" = "Zeichencodierung für WebYep Seiten";
+"UTF8ConfigWarningMessage" = "Sie verwenden für Ihre WebYep Seite nicht die Zeichencodierung \"utf-8\" - bitte stellen Sie sicher, dass die verwendete Codierung (zB. iso-8859-1) auch in der WebYep Konfigurationsdatei eingestellt ist.\n\nSiehe auch: Hilfe Text nach Klick auf den \"Hilfe\" Knopf auf der Bearbeiten Seite.";
+"DontWarnAgain" = "Diese Warnung nicht mehr anzeigen";
+"Upgrade1_2WarningTitle" = "Dieses Projekt wurde für eine WebYep Version vor 1.2 erstellt";
+"Upgrade1_2WarningMessage" = "Wenn Sie dieses Projekt mit dieser Version des WebYep RapidWeaver Plugins editieren und speichern, müssen Sie auch das webyep-system am Server auf mindestens die Version 1.2 aktualisieren.\n\nWenn Sie das nicht möchten, re-installieren Sie bitte die Version 1.1.14 des WebYep RapidWeaver Plugins um dieses Projekt zu editieren.";
+"unchanged" = "original";
+"Upgrade2_3WarningTitle" = "Bitte setzen Sie die WebYep-Feldnamen für dieses Projekt";
+"Upgrade2_3WarningMessage" = "Aufgrund der lange fehlenden Internationalisierung von RapidWeaver 4, wurden einige WebYep-Projekte mit englischen Feldnamen exportiert. Sollten nach einem Export der Website die WebYep-Daten nicht angezeigt werden, stellen Sie bitte die Sprache für die Feldnamen für jede Seite um.";
+"CSSInfoTitle" = "Beispiel-CSS-Code erzeugt";
+"CSSInfoMessage" = "Ein Beispiel-CSS-Code zum Gestalten der Textteile, Bilder, Bildergalerie und des Seitenleistenmenüs wurde erzeugt. Um die Gestaltung der Elemente dieser Seite zu ändern, adaptieren Sie bitte den CSS-Code im Seiteninspektor, \"Header / CSS\"-Feld.";
+"DontInfoAgain" = "Diese Information nicht mehr anzeigen";
+"Image Gallery" = "Bildergalerie";

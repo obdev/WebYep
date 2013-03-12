@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-german.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../stiles.css" rel="stylesheet" type="text/css">
+<link href="../print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuReference {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuRefLogonButton {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="true" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint"><a name="pagetop"><img src="../images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../index.html" id="menuMisc">Allgemeines</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../principle.html" id="menuMiscPrinciple">Prinzip</a></li>
+            <li><a href="../installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../configuration.html" id="menuMiscConfiguration">Konfiguration</a></li>
+            <li><a href="../backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../system-requirements.html" id="menuMiscSystem">Systemvoraussetzungen</a></li>
+            <li><a href="../white-labeled.html" id="menuMiscWhiteLabel">Eigenes Logo</a></li>
+          </ul>
+		</li>
+        <li><a href="../tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="../tutorials/first-steps.html" id="menuTutFirstSteps">Erste Schritte</a></li>
+            <li><a href="../tutorials/simple-menu.html" id="menuTutSimpleMenu">Das Men&uuml;</a></li>
+            <li><a href="../tutorials/loop.html" id="menuTutLoop">Die Schleife</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html" id="menuReference">Referenz</a>
+          <ul id="menuTreeReference">
+            <li><a href="init-code.html" id="menuRefInitCode">Der Init Code</a></li>
+            <li><a href="logon-button.html" id="menuRefLogonButton">Anmeldeknopf</a></li>
+            <li><a href="short-text.html" id="menuRefShortText">Kurztext</a></li>
+            <li><a href="long-text.html" id="menuRefLongText">Text (Flie&szlig;text)</a></li>
+            <li><a href="rich-text.html" id="menuRefRichText">HTML-Text</a></li>
+            <li><a href="image.html" id="menuRefImage">Bild</a></li>
+            <li><a href="attachment.html" id="menuRefAttachment">Datei-Download</a></li>
+            <li><a href="menu.html" id="menuRefMenu">Men&uuml;</a></li>
+            <li><a href="loop.html" id="menuRefLoop">Schleife</a></li>
+            <li><a href="read-more.html" id="menuRefReadMore">Weiterlesen</a></li>
+            <li><a href="gallery.html" id="menuRefGallery">Bildergalerie</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../images/nav-content-border.gif" class="menu"><img src="../images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Anmeldeknopf<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="../pictures/logonbutton-palette.gif" width="224" height="32"><br>
+      <span class="picturetext">Das Symbol f&uuml;r den Anmelde-Knopf in der Objektpalette </span></p>
+      <p>Wenn die BenutzerInnen der Website eine Seite im Webbrowser bearbeiten wollen, m&uuml;ssen sie sich erst mittels <em>Name und Kennwort</em> anmelden: Durch Klick auf den an <em>beliebiger Stelle</em> einer Seite platzierten Anmeldeknopf, wird vom Webbrowser eine Eingabemaske f&uuml;r Name und Kennwort angezeigt. Erst nach erfolgreicher &Uuml;berpr&uuml;fung von Name und Kennwort wird die Seite im &quot;Bearbeiten&quot;-Modus angezeigt.</p>
+      <p class="elementCodeHeading">Dieses WebYep Element wird durch folgenden PHP Code repr&auml;sentiert:</p>
+      <p class="elementCode">&lt;?php webyep_logonButton(true); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail.lbi" --> <span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">Details...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-de.lbi" -->
+      <noscript>
+      <div class="javaScriptWarning">Sie k&ouml;nnen die "Details..." nicht sehen, da JavaScript in Ihrem Browser deaktiviert ist!</div>
+      </noscript>
+      <!-- #EndLibraryItem -->
+      <div id="elementCodeDetails">Parameter der PHP Funktion <span class="codeExample">webyep_logonButton()</span>:<br>
+          <span class="small">(siehe auch &quot;Eigenschaften des Anmeldeknopfes &quot; weiter unten)</span>
+          <ol>
+            <li><span class="codeExample">true/false</span>: Ein boolscher Wert &ndash; gibt an, ob der Anmeldeknopf sichtbar sein soll. <br>
+                <span class="codeExample">true</span> wenn er sichtbar sein soll. <br>
+                <span class="codeExample">false</span> wenn nicht &ndash; der Anmeldeknopf ist dann aber immer noch vorhanden und kann angeklickt werden (wenn man wei&szlig;, wo er liegt).<br>
+            Unabh&auml;ngig davon ist aber immer die Eingabe von Benutzername und Kennwort erforderlich!</li>
+          </ol>
+      </div>
+      <p> Zur Konfiguration von Benutzername und Kennwort siehe auch das Kapitel &quot;<a href="../installation.html#configuration">WebYep konfigurieren</a>&quot;.</p>
+      <p align="center"><img src="../pictures/logonbutton-inpage.gif" width="353" height="304"><br>
+      <span class="picturetext">Rechts unten der WebYep-Anmeldeknopf</span></p>
+      <p>Der Anmeldeknopf kann, <em>aber muss nicht auf jeder bearbeitbaren
+          Seite</em> einer Website platziert werden. Ein Anmeldeknopf auf einer
+          Seite gen&uuml;gt - nach erfolgreicher Anmeldung sind alle Seiten bearbeitbar,
+          da die Anmeldedaten mittels <em>Cookies</em> im Webbrowser (verschl&uuml;sselt)
+          gespeichert werden. Personen, die Webseiten mittels WebYep bearbeiten
+          wollen (BenutzerInnen), sollten
+          daher in ihren Webbrowsern die Cookies nicht deaktivieren!</p>
+      <p class="remark"><span class="remarkHeading">Technischer Hinweis:</span> Name
+        und Kennwort werden in Cookies im Browser gespeichert, nicht aber auf
+        der Festplatte, sondern nur im Arbeitsspeicher (Session-Cookie)! Das
+        Kennwort wird dabei zus&auml;tzlich in Kombination mit dem aktuellen
+        Datum verschl&uuml;sselt, sodass selbst im Falle eines &quot;Cookie-Diebstahls&quot; dieses
+        Cookie nur einen Tag lang zum Bearbeiten der Seite berechtigen w&uuml;rde.
+        Da die Eingabe im Logon-Formular aber von den Browsern unverschl&uuml;sselt &uuml;bertragen
+        wird (au&szlig;er bei einer SSL-verschl&uuml;sselten Kommunikation via
+        https), ist ein &quot;Abh&ouml;ren&quot; des Kennwortes theoretisch technisch denkbar. </p>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem --><h2>Eigenschaften des Anmeldeknopfes</h2>
+      <p align="center"><img src="../pictures/logonbutton-inspector.png" width="395" height="80"><br>
+          <span class="picturetext">Das Eigenschaftsfenster f&uuml;r den Anmeldeknopf</span></p>
+      <h3>sichtbar</h3>
+      <p>Wenn diese Option <em>deaktiviert</em> wird, dann versteckt WebYep das
+        Schloss-Symbol - der Anmelde-Knopf ist somit unsichtbar. Die BenutzerInnen
+      m&uuml;ssen dann den Platz des Anmeldeknopfes auf der Webseite kennen (zB.
+      direkt unterhalb des Firmenlogos) - wenn sie mit der Maus an diese Stelle
+      klicken, erfolgt wie gewohnt die Anmeldung.</p>
+      <p>Das Ausblenden des Anmeldeknopfes macht das Anmelden zwar etwas zum Minensuchspiel, aber daf&uuml;r ist die Wahrscheinlichkeit, dass herk&ouml;mmliche BesucherInnen der Website mit dem Schloss-Symbol &quot;herumspielen&quot; und vielleicht versuchen das Kennwort zu erraten, weniger gro&szlig;...</p>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2009, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

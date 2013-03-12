@@ -1,0 +1,22 @@
+include ../global.int
+
+output-format HTML
+Title
+WebYep Logon Button
+WebYep Anmeldeknopf
+
+ElementName
+Logon Button
+Anmeldeknopf
+
+Feldname
+Fieldname
+Feldname
+
+Description
+By clicking the Logon Button users can enter the "edit"-mode.
+Durch Klicken auf deb Anmeldeknopf koennen die AnwenderInnen\nin den "Bearbeiten"-Modus gelangen.
+
+visible
+visible
+sichtbar

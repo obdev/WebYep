@@ -1,0 +1,1 @@
+../en/legal_notice.php

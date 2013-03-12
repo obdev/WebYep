@@ -1,0 +1,16 @@
+.DS_Store
+._*
+xcuserdata
+/Builds
+/*.css
+/*.gif
+/*.html
+/*.jpg
+/*.php
+/*.png
+/*.zip
+/webyep-system/config-inc.php
+/webyep-system/daten/*
+!/webyep-system/daten/readme.html
+/webyep-system/programm/opt
+/webyep-rwx/Builds

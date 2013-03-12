@@ -1,0 +1,30 @@
+<!-- Gallery: ========================================= -->
+<?php
+	$wy_iNumImages = ##GalleryNumImages##;
+	$wy_iCellsPerRow = ##GalleryCellsPerRow##;
+	$wy_iNumCells = (int)(ceil($wy_iNumImages / $wy_iCellsPerRow) * $wy_iCellsPerRow);
+	$wy_iCellWidth = ##GalleryCellWidth##;
+	$wy_iTNWidth = ##GalleryTNWidth##;
+	$wy_iTNAltWidth = (int)floor($wy_iTNWidth*0.8);
+	$wy_iTNHeight = ##GalleryTNHeight##;
+	$wy_iTNAltHeight = (int)floor($wy_iTNHeight*0.8);
+	$wy_sImageURLs[0] = "##ExamplePhoto1URL##";
+	$wy_sImageURLs[1] = "##ExamplePhoto2URL##";
+	$wy_sImageURLs[2] = "##ExamplePhoto3URL##";
+?>
+<table class="WebYepGalleryContainer" border="0" cellpadding="0" cellspacing="0" align="center" summary="Image Gallery">
+<?php
+	$wy_i = 0;
+	while ($wy_i < $wy_iNumCells) {
+		if ($wy_i % $wy_iCellsPerRow == 0) printf("    <tr%s>\n", $wy_i < $wy_iCellsPerRow ? " class=\"WebYepGalleryFirstRow\"":"");
+		printf("        <td style=\"width:%dpx\"%s>", $wy_iCellWidth, $wy_i % $wy_iCellsPerRow == 0 ? " class=\"WebYepGalleryFirstColumn\"":"");
+		if ($wy_i < $wy_iNumImages) {
+			printf("<div class=\"WebYepGalleryImage\"><a href=\"javascript:void(0)\"><img src=\"%s\" %s></a></div>", $wy_sImageURLs[$wy_i % 3], $wy_i % 2 == 0 ? "width=$wy_iTNWidth height=$wy_iTNAltHeight":"width=$wy_iTNAltWidth height=$wy_iTNHeight");
+			printf("<div class=\"WebYepGalleryText\">%s</div>", substr("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed", 0, mt_rand(10, 50)) . "...");
+		}
+		printf("</td>\n");
+		$wy_i++;
+		if ($wy_i % $wy_iCellsPerRow == 0) printf("    </tr>\n");
+	}
+?>
+</table>

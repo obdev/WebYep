@@ -1,0 +1,289 @@
+body {
+    font-family:        Verdana, Geneva, sans-serif;
+    font-size:          12px;
+    background-color:   #fff;
+    color:              #000;
+    margin:             0;
+    padding:            0;
+}
+.pageTitle {
+	font-size:          20px;
+	font-weight:        bold;
+	color:              #0099CC
+}
+h1 {
+	font-size:          24px;
+	font-weight:        bold;
+	color:              #0099CC;
+}
+img {
+    border:             none;
+}
+.response {
+	font-size:          18px;
+	font-weight:        bold;
+	color:              #00CC00;
+}
+.textButton {
+	font-size:          12px;
+	font-weight:        bold;
+	color:              #000000;
+	text-decoration:    none;
+}
+
+.textButton a:link {
+	color:              #000000;
+	text-decoration:    none;
+}
+
+.textButton a:visited {
+	color:              #000000;
+	text-decoration:    none;
+}
+
+.textButton a:active {
+	color:              #000000;
+	text-decoration:    none;
+}
+
+.formFieldTitle {
+	font-size:          12px;
+	font-weight:        bold;
+}
+.formButton {
+	font-family:        Verdana, Geneva, sans-serif;
+	font-size:          12px;
+	font-weight:        bold;
+	color:              #000000;
+}
+.warning {
+	font-size:          18px;
+	color:              #CC0000;
+}
+.remark {
+	font-size:          10px;
+}
+a:link {
+	color:              #006587;
+}
+a:active {
+	color:              #006587;
+}
+a:visited {
+	color:              #0084B0;
+}
+.helpLink {
+	font-size:          12px;
+	font-weight:        bold;
+	color:              #0099CC;
+	text-decoration:    none;
+}
+
+.helpLink a:link {
+	color:              #0099CC;
+	text-decoration:    none;
+}
+
+.helpLink a:visited {
+	color:              #0099CC;
+	text-decoration:    none;
+}
+
+.helpLink a:active {
+	color:              #0099CC;
+	text-decoration:    none;
+}
+
+.codeExample {
+	font-family:        "Courier New", Courier, mono;
+}
+
+.editorTitle {
+	font-size:          18px;
+	color:              gray;
+}
+.debugBorder {
+    border:             dotted 1px #888;
+}
+.left {
+    text-align:         left !important;
+}
+.center {
+    text-align:         center;
+}
+.right {
+    text-align:         right !important;
+}
+.onlineHelp {
+    background-color:   #ffffff;
+    color:              #000000;
+    padding:            5px;
+}
+.onlineHelp h4 {
+    margin: 15px 0 0 0;
+}
+.onlineHelp p {
+    margin: 5px 0;
+}
+table.description {
+    font-size:          12px;
+}
+table.description td {
+    vertical-align:     top;
+    padding:            6px;
+}
+#WY_EditArea {
+   height:              300px;
+   padding:             0;
+   border:              solid 1px black;
+   background-color:    #fff;
+   overflow-x:          hidden;
+   overflow-y:          scroll;
+}
+#WY_InputArea {
+   position:            absolute;
+   top:                 320px;
+   left:                10px;
+   width:               318px;
+   border:              solid 1px #999;
+   border-radius:       .5em;
+   -moz-border-radius:  .5em;
+   padding:             5px;
+}
+#WY_EditorButtonPanel1 {
+    width:              100px;
+    margin:             30px auto 10px;
+}
+#WY_EditorPostArea {
+    display:            none;
+}
+.WY_EditorButtonRow {
+    text-align:         center;
+}
+
+.WY_EditorInputField {
+    margin:             0 0 5px 0;
+}
+.WY_EditorInputField label {
+    font-size:          .9em;
+}
+.WY_EditMenu {
+    width:              230px;
+}
+.vSpace {
+    margin-top:         10px;
+}
+
+.placeholder {
+    background-color:   #cfcfcf;
+    border-left:        solid 1px #888;
+}
+
+.ui-nestedSortable-error {
+   background-color:    #fbe3e4;
+   background-image:    url(./images/stop.gif);
+   background-repeat:   no-repeat;
+   background-position: 5px 50%;
+   color:               #8a1f11;
+}
+
+.hideChildren ul {
+    display:    none;
+}
+
+ul.sortable, ul.sortable ul {
+   margin: 0 0 0 20px;
+   padding: 0;
+   list-style-type: none;
+}
+
+ul.sortable {
+   margin: 0 0 0 3px;
+}
+
+.sortable li {
+   margin: 0;
+   padding: 0;
+}
+
+.sortable li div  {
+   border-bottom: 1px solid #fff;
+   background-color: #f0f0f0;
+   background: -moz-linear-gradient(#f8f8f8, #f0f0f0);
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#f0f0f0));
+   border-radius:      .3em 0 0 .3em;
+   -moz-border-radius: .3em 0 0 .3em;
+   padding: 2px 7px 0 7px;
+   cursor: move;
+   min-height:  16px;
+   line-height: 12px;
+}
+
+.WY_EditorMenuItem span.link {
+   font-size:  smaller;
+   font-style: italic;
+   color: #666;
+}
+.hidden span.link {
+   color: #888;
+}
+
+.sortable li div:hover  {
+   background-color: #e8e8e8;
+   background: -moz-linear-gradient(#f0f0f0, #e8e8e8);
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f0f0f0), to(#e8e8e8));
+}
+
+.sortable li div.hidden {
+   background-color: #f0f0f0;
+   background: -moz-linear-gradient(#f8f8f8, #f0f0f0);
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#f0f0f0));
+   color: #808080;
+   font-style: italic;
+}
+.sortable li div.hidden:hover {
+   background-color: #e8e8e8;
+   background: -moz-linear-gradient(#f0f0f0, #e8e8e8);
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f0f0f0), to(#e8e8e8));
+}
+.sortable li div.selected {
+   background-color: #fc0 !important;
+   background: -moz-linear-gradient(#FFF8A3, #FCE093) !important;
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF8A3), to(#FCE093)) !important;
+}
+.sortable li div.selected:hover {
+   background-color: #fc0 !important;
+   background: -moz-linear-gradient(#FFF8A3, #FCE093) !important;
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFF8A3), to(#FCE093)) !important;
+}
+
+li div span.toggle {
+   width:   13px;
+   height:  13px;
+   display: block;
+   float:   right;
+   margin:  1px;
+   cursor:  pointer;
+}
+li div span.toggle {
+   background-image:    url(./images/minus-button.gif);
+   background-repeat:   no-repeat;
+}
+li.hideChildren div span.toggle {
+   background-image:    url(./images/plus-button.gif);
+   background-repeat:   no-repeat;
+}
+
+.helpLinkNew {
+   color:               #0099CC;
+   font-size:           14px;
+   line-height:         16px;
+   font-weight:         bold;
+   display:             block;
+   float:               left;
+   text-decoration:     none;
+   background-image:    url(./images/help.gif);
+   background-position: top left;
+   background-repeat:   no-repeat;
+   padding:             0 0 0 20px;
+}

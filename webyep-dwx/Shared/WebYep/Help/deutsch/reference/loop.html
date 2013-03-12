@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-german.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../stiles.css" rel="stylesheet" type="text/css">
+<link href="../print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuReference {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuRefLoop {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="true" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint"><a name="pagetop"><img src="../images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../index.html" id="menuMisc">Allgemeines</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../principle.html" id="menuMiscPrinciple">Prinzip</a></li>
+            <li><a href="../installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../configuration.html" id="menuMiscConfiguration">Konfiguration</a></li>
+            <li><a href="../backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../system-requirements.html" id="menuMiscSystem">Systemvoraussetzungen</a></li>
+            <li><a href="../white-labeled.html" id="menuMiscWhiteLabel">Eigenes Logo</a></li>
+          </ul>
+		</li>
+        <li><a href="../tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="../tutorials/first-steps.html" id="menuTutFirstSteps">Erste Schritte</a></li>
+            <li><a href="../tutorials/simple-menu.html" id="menuTutSimpleMenu">Das Men&uuml;</a></li>
+            <li><a href="../tutorials/loop.html" id="menuTutLoop">Die Schleife</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html" id="menuReference">Referenz</a>
+          <ul id="menuTreeReference">
+            <li><a href="init-code.html" id="menuRefInitCode">Der Init Code</a></li>
+            <li><a href="logon-button.html" id="menuRefLogonButton">Anmeldeknopf</a></li>
+            <li><a href="short-text.html" id="menuRefShortText">Kurztext</a></li>
+            <li><a href="long-text.html" id="menuRefLongText">Text (Flie&szlig;text)</a></li>
+            <li><a href="rich-text.html" id="menuRefRichText">HTML-Text</a></li>
+            <li><a href="image.html" id="menuRefImage">Bild</a></li>
+            <li><a href="attachment.html" id="menuRefAttachment">Datei-Download</a></li>
+            <li><a href="menu.html" id="menuRefMenu">Men&uuml;</a></li>
+            <li><a href="loop.html" id="menuRefLoop">Schleife</a></li>
+            <li><a href="read-more.html" id="menuRefReadMore">Weiterlesen</a></li>
+            <li><a href="gallery.html" id="menuRefGallery">Bildergalerie</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../images/nav-content-border.gif" class="menu"><img src="../images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Schleife<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="../pictures/loop-start-palette.gif" width="224" height="32" align="absmiddle"><img src="../images/nix.gif" width="32" height="8" align="absmiddle"><img src="../pictures/loop-end-palette.gif" width="224" height="32" align="absmiddle"><br>
+          <span class="picturetext">Die Symbole f&uuml;r das Schleifen-Element in der Objektpalette:<br>
+  Links &quot;Schleifen-Start&quot;, rechts &quot;Schleifen-Ende&quot;</span></p>
+      <p>Einen <em>Block von Elementen</em> auf einer Seite <em>beliebieg oft
+          zu wiederholen</em> ist der Sinn der WebYep-Schleife. Die wiederholten
+          Elemente k&ouml;nnen dabei WebYep-Elemente (Kurztext-Element, Bild-Element,
+          ...), aber auch herk&ouml;mmliche HTML-Elemente (Texte, Abs&auml;tze,
+          Bilder, Tabellen, ...) sein. Alles was sich zwischen dem <em>Schleifen-Start-</em> und
+          dem <em>Schleifen-End-Element</em> befindet, bildet einen Block, der
+          einfach nach Wunsch wiederholt wird. Das Entscheidende aber ist: WebYep-Elemente
+          innerhalb des sich wiederholenden Blocks k&ouml;nnen bei <em>jeder
+          Wiederholung andere Inhalte</em> haben!</p>
+      <p class="elementCodeHeading">Das Schleifen-Start-Element wird durch folgenden PHP Code repr&auml;sentiert:</p>
+      <p class="elementCode">&lt;?php foreach (WYLoopElement::aLoopIDs(<span style="color: red">&quot;Schleifenname&quot;</span>) as $webyep_oCurrentLoop-&gt;iLoopID) { $webyep_oCurrentLoop-&gt;loopStart(<span style="color: red">true</span>); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail.lbi" --> <span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">Details...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-de.lbi" --><noscript>
+      <div class="javaScriptWarning">Sie können die "Details..." nicht sehen, da JavaScript in Ihrem Browser deaktiviert ist!</div>
+      </noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Parameter der PHP Funktion <span class="codeExample">aLoopIDs()</span>:<br>
+          <span class="small">(siehe auch &quot;Eigenschaften des Schleifen-Elementes&quot; weiter unten)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Schleifenname&quot;</span>: Ein Text &ndash; der Name f&uuml;r dieses Element. </li>
+          </ol>
+          Parameter der PHP Funktion <span class="codeExample">loopStart()</span>:<br>
+          <span class="small">(siehe auch &quot;Eigenschaften des Schleifen-Elementes&quot; weiter unten)</span>
+          <ol>
+            <li><span class="codeExample">true/false</span>: Ein boolscher Wert &ndash; gibt an, ob die Schleifen-Editier-Kn&ouml;pfe automatisch eingebunden werden sollen. <br>
+                <span class="codeExample">true</span> wenn die Editier-Kn&ouml;pfe automatisch am Beginn jedes Blocks eingef&uuml;gt werden sollen.<br>
+                <span class="codeExample">false</span> wenn nicht. Sie m&uuml;ssen dann den PHP-Code f&uuml;r diese Editier-Kn&ouml;pfe manuell an der gew&uuml;nschten Stelle einf&uuml;gen &ndash; siehe dazu auch &quot;<a href="#eigenschaften">Autom. Edit-Kn&ouml;pfe</a>&quot; weiter unten. </li>
+          </ol>
+      </div>
+      <p class="elementCodeHeading">Das Schleifen-Ende-Element wird durch folgenden PHP Code repr&auml;sentiert:</p>
+      <p class="elementCode">&lt;?php $webyep_oCurrentLoop-&gt;loopEnd(); } ?&gt; </p>
+      <h3>Einsatz des Schleifen-Elementes</h3>
+      <p>Um das Schleifen-Element anzuwenden, erzeugen Sie in Ihrer Seite einfach einige HTML- und/oder WebYep-Elemente (den Schleifen-Inhalt). Setzen Sie dann den Schleifen-Start vor diese Elemente und das Schleifen-Ende nach diese Elemente:</p>
+      <p align="center"><img src="../pictures/loop-dw.gif" width="501" height="278"></p>
+      <p>&nbsp;</p>
+      <p>In der Website pr&auml;sentiert sich die Schleife dann f&uuml;r die
+        BetrachterInnen so als w&uuml;rde sich der Schleifen-Block einfach mehrmals
+        wiederholen, jedes mal mit anderen Inhalten allerdings:</p>
+      <p align="center"><img src="../pictures/loop-inpage-1.gif" width="341" height="448"></p>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><p align="left">Im &quot;Bearbeiten&quot;-Modus im Webbrowser werden <em>oberhalb
+          jedes Blocks</em> bis zu vier Symbole eingeblendet, mit denen die Bl&ouml;cke
+          ver&auml;ndert werden k&ouml;nnen:</p>
+      <p align="center"><img src="../pictures/loop-inpage-2.gif" width="341" height="448"></p>
+      <p><a name="edit_buttons"></a>Wobei die einzelnen Symbole folgende Funktion haben:</p>
+      <table border="0" align="center" cellpadding="6" cellspacing="0">
+        <tr>
+          <td align="left" valign="top"><img src="../pictures/loop-button-plus.gif" width="33" height="26"></td>
+          <td align="left" valign="middle"><p>Neuen Block darunter hinzuf&uuml;gen.</p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><img src="../pictures/loop-button-trash.gif" width="33" height="26"></td>
+          <td align="left" valign="middle"><p>Block l&ouml;schen</p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><img src="../pictures/loop-button-up.gif" width="33" height="26"></td>
+          <td align="left" valign="middle"><p>Block Richtung Anfang verschieben</p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><img src="../pictures/loop-button-down.gif" width="33" height="26"></td>
+          <td align="left" valign="middle"><p>Block Richtung Ende verschieben</p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><img src="../pictures/loop-button-disable.gif" width="33" height="22">
+		  <img src="../pictures/loop-button-enable.gif" width="33" height="22"></td>
+          <td align="left" valign="middle"><p>Block ein-/ausblenden</p></td>
+        </tr>
+      </table>
+      <h3 align="left">Positionierung von Schleifen-Start und -Ende</h3>
+      <p align="left">Wenn Sie ein HTML-Element (wie einen Absatz &quot;&lt;p&gt;&quot; oder
+        eine Tabelle &quot;&lt;table&gt;&quot;) wiederholen wollen, m&uuml;ssen
+        Sie nur darauf achten, dass Sie den Start exakt vor das Element und das
+        Ende exakt nach das Element setzen - siehe dazu &quot;<a href="../tutorials/index.html#positioning">Positionierung
+        im Dokument</a>&quot; in der Einleitung zu den Tutorials.</p>
+      <p align="left">In manchen F&auml;llen kann es n&ouml;tig sein, den Schleifen-Start
+        und das Schleifen-Ende im HTML-Code genauer zu platzieren um exakt festzulegen,
+        <em>was</em> wiederholt werden soll. Sie k&ouml;nnen die PHP-Bl&ouml;cke f&uuml;r den
+        Schleifen-Start und das -Ende (jeweils durch &quot;&lt;?php&quot; und &quot;?&gt;&quot; eingegrenzt)
+        im HTML-Code beliebig verschieben.</p>
+      <p align="left">Zur &Uuml;berpr&uuml;fung k&ouml;nnen Sie Ihre Seite im Webbrowser aufrufen
+        und im Webbrowser den HTML-Quellcode anzeigen lassen - dort sehen Sie
+        eindeutig, welcher HTML-Code durch das Schleifen-Element aufgrund Ihrer
+        Positionierung erstellt wird.</p>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><h2><a name="eigenschaften"></a>Eigenschaften des Schleifen-Start-Elementes</h2>
+      <p align="center"><img src="../pictures/loop-inspector.png" width="285" height="75"><br>
+      <span class="picturetext">Das Eigenschaftsfenster f&uuml;r das Schleifen-Start-Element</span></p>
+      <h3>Bezeichnung</h3>
+      <p>  Eine Bezeichnung f&uuml;r das Schleifen-Element. Wird nicht in der Seite angezeigt, ist aber f&uuml;r die interne Untscheidung erforderlich, wenn mehrere Schleifen auf einer Seite platziert werden.<br>
+  Bitte <em>immer</em> einen eindeutigen Namen angeben!</p>
+      <h3>Autom. Edit-Kn&ouml;pfe</h3>
+      <p>Die <a href="#edit_buttons">Symbole</a> zum Bearbeiten der Bl&ouml;cke werden im &quot;Bearbeiten&quot;-Modus &uuml;berhalb des jeweiligen Blocks nur eingeblendet, wenn dieses H&auml;kchen gesetzt ist (standard).</p>
+      <p>Wenn Sie in speziellen F&auml;llen den Schleifen-Start an eine Stelle
+        des HTML-Codes setzen wollen, an dem die Symbole (aus HTML-syntaktischen
+        Gr&uuml;nden) nicht eingef&uuml;gt werden d&uuml;rfen, sollten Sie dieses
+        H&auml;kchen ausschalten. Sie m&uuml;ssen dann aber an geeigneter Stelle
+        innerhalb des Blocks folgenden Code in den HTML-Code einf&uuml;gen:</p>
+      <blockquote class="codeExample">
+        <p class="codeExample">&lt;?php $webyep_oCurrentLoop-&gt;showEditButtons(); ?&gt;</p>
+      </blockquote>
+      <p>Ein typisches Beispiel hierf&uuml;r w&auml;re, wenn Sie den Schleifen-Start
+        zwischen &lt;table&gt;-Tag und &lt;tr&gt;-Tag setzen, um nur die Tabellenzeilen
+        und nicht die ganze Tabelle zu wiederholen. Das Schleifen-Ende m&uuml;sste
+        in diesem Fall zwischen &lt;/tr&gt;-Tag und &lt;/table&gt;-Tag gesetzt
+        werden. Innerhalb einer der Tabellenzellen m&uuml;sste dann obiges Code-Fragment
+        platziert werden.</p>
+      <h2>Eigenschaften des Schleifen-Ende-Elementes</h2>
+      <p>Das Schleifen-Ende-Element hat keine einstellbaren Eigenschaften.</p>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2009, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

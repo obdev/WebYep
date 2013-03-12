@@ -1,0 +1,6 @@
+include ../../global.int
+
+output-format ASCII
+Title
+Logon Button
+Anmeldeknopf

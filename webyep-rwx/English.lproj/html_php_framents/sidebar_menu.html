@@ -1,0 +1,151 @@
+<!-- Sidebar Menu: ========================================= -->
+<script type="text/javascript">
+//<![CDATA[
+var webyep_dOpenMenuTrees;
+
+function webyep_sGetCSSClass(o)
+{
+   var sClass = "";
+   sClass = o.getAttribute("class");
+   if (sClass == undefined) sClass = o.getAttribute("className");
+	if (sClass == undefined) sClass = "";
+   return sClass;
+}
+
+function webyep_setCSSClass(o, sClass)
+{
+   o.setAttribute("class", sClass);
+   o.setAttribute("className", sClass);
+}
+
+function webyep_bHasCSSClass(o, sClass)
+{
+   var sCurrentClass = webyep_sGetCSSClass(o);
+
+   return sCurrentClass.indexOf(sClass) != -1;
+}
+
+function webyep_addCSSClass(o, sClass)
+{
+	var sCurrentClass = webyep_sGetCSSClass(o);
+	webyep_setCSSClass(o, sCurrentClass + " " + sClass);
+}
+
+function webyep_removeCSSClass(o, sClass)
+{
+   var sCurrentClass = webyep_sGetCSSClass(o);
+	var iPos = sCurrentClass.indexOf(sClass);
+	if (iPos > 0) {
+      var r = new RegExp(sClass);
+      sCurrentClass = sCurrentClass.replace(r, "");
+      sCurrentClass = sCurrentClass.replace(/  +/, " "); // remove double spaces
+      webyep_setCSSClass(o, sCurrentClass);
+	}
+}
+
+function webyep_getElementsByClassName(sClassName, sTag)
+{
+	var aElements, i, iC, iR = 0, aResult = [];
+	aElements = document.getElementsByTagName(sTag);
+	iC = aElements.length;
+	for (i = 0; i < iC; i++) {
+		oElement = aElements[i];
+		if (webyep_sGetCSSClass(oElement).indexOf(sClassName) != -1) aResult[iR++] = oElement;
+	}
+	return aResult;
+}
+
+function webyep_showHideMenuTree(iMenuID, iItemID)
+{
+   var aElements, i, oElement, sClass, oTitleItem, oTitleLink, oTreeElement;
+   var sExpandedClass = "WebYepMenuTitleExpanded";
+	var bAutoClose = false;
+   var bDidOpen = false;
+
+   oTitleItem = document.getElementById("WYMUTITLE" + iMenuID + iItemID);
+   oTitleLink = oTitleItem.getElementsByTagName("a")[0];
+	oTreeElement = document.getElementById("WYMUTREE_" + iMenuID + "_" + iItemID);
+   if (webyep_bHasCSSClass(oTitleItem, sExpandedClass)) {
+		webyep_removeCSSClass(oTitleItem, sExpandedClass);
+		webyep_removeCSSClass(oTitleLink, sExpandedClass);
+		oTreeElement.style.display = "none";
+	}
+   else {
+		if (bAutoClose) {
+			aElements = webyep_getElementsByClassName("WYMUTREE_" + iMenuID, "ul");
+			for (i = 0; i < aElements.length; i++) {
+				aElements[i].style.display = "none";
+			}
+			aElements = webyep_getElementsByClassName(sExpandedClass, "li");
+			for (i = 0; i < aElements.length; i++) {
+				webyep_removeCSSClass(aElements[i], sExpandedClass);
+			}
+			aElements = webyep_getElementsByClassName(sExpandedClass, "a");
+			for (i = 0; i < aElements.length; i++) {
+				webyep_removeCSSClass(aElements[i], sExpandedClass);
+			}
+		}
+
+		webyep_addCSSClass(oTitleItem, sExpandedClass);
+		webyep_addCSSClass(oTitleLink, sExpandedClass);
+		oTreeElement.style.display = "block";
+
+      bDidOpen = true;
+	}
+
+   return bDidOpen;
+}
+
+function webyep_menuItemClick(iMenuID, sURL, sTarget)
+{
+   var aElements, i, sQuery, sClass, oElement, sURL, oTarget;
+
+   sQuery = "";
+   aElements = document.all||document.getElementsByTagName("ul");
+   sClass = "WYMUTREE_" + iMenuID;
+   for (i = 0; i < aElements.length; i++) {
+      var oElement = aElements[i];
+      if (webyep_sGetCSSClass(oElement).indexOf(sClass) != -1) {
+         if (oElement.style.display != undefined && oElement.style.display!= "none") {
+            sQuery += oElement.id + "|";
+         }
+      }
+   }
+
+   sURL = sURL + (sQuery ? ("&OPENTREES="+sQuery):"");
+   if (sTarget == undefined || sTarget == "" || sTarget == "_self") document.location = sURL;
+   else {
+      oTarget = document.getElementById(sTarget);
+      if (oTarget != undefined && oTarget.document != undefined) oTarget.document.location = sURL;
+      else if (parent.frames != undefined && parent.frames[sTarget] != undefined) parent.frames[sTarget].document.location = sURL;
+      else {
+	      var oW = window.open(sURL, sTarget, "");
+	      oW.focus();
+      }
+   }
+}
+//]]>
+</script>
+<div class="WebYepMenu">
+<ul>
+  <li class="WebYepMenuTitle WebYepMenuFirstItem WebYepMenuTitleExpanded" id="WYMUTITLE013"><a class="WebYepMenuTitle WebYepMenuFirstItem WebYepMenuTitleExpanded" href="javascript:void(0)" onclick="webyep_showHideMenuTree(0, 13); return false;">Tree 1</a>
+    <ul class="WYMUTREE_0" id="WYMUTREE_0_13">
+      <li class="WebYepMenuItem WebYepMenuFirstItem"><a class="WebYepMenuItem WebYepMenuFirstItem" href="new_menu.php?WEBYEP_DI=2" onclick="webyep_menuItemClick(0, 'new_menu.php?WEBYEP_DI=2', ''); return false;">Subitem 1/1</a></li>
+      <li class="WebYepMenuItem"><a class="WebYepMenuItem" href="new_menu.php?WEBYEP_DI=3" onclick="webyep_menuItemClick(0, 'new_menu.php?WEBYEP_DI=3', ''); return false;">Subitem 1/2</a></li>
+      <li class="WebYepMenuItem"><a class="WebYepMenuItem" href="new_menu.php?WEBYEP_DI=12" onclick="webyep_menuItemClick(0, 'new_menu.php?WEBYEP_DI=12', ''); return false;">Subitem 1/3</a></li>
+    </ul>
+  </li>
+  <li class="WebYepMenuTitle WebYepMenuTitleExpanded" id="WYMUTITLE05"><a class="WebYepMenuTitle WebYepMenuTitleExpanded" href="javascript:void(0)" onclick="webyep_showHideMenuTree(0, 5); return false;">Tree 2</a>
+    <ul class="WYMUTREE_0" id="WYMUTREE_0_5">
+      <li class="WebYepMenuItem WebYepMenuFirstItem"><a class="WebYepMenuItem WebYepMenuFirstItem" href="new_menu.php?WEBYEP_DI=15" onclick="webyep_menuItemClick(0, 'new_menu.php?WEBYEP_DI=15', ''); return false;">Subitem 2/1</a></li>
+      <li class="WebYepMenuItem"><a class="WebYepMenuItem" href="new_menu.php?WEBYEP_DI=16" onclick="webyep_menuItemClick(0, 'new_menu.php?WEBYEP_DI=16', ''); return false;">Subitem 2/2</a></li>
+    </ul>
+  </li>
+  <li class="WebYepMenuItem"><a class="WebYepMenuItem" href="new_menu.php?WEBYEP_DI=14" onclick="webyep_menuItemClick(0, 'new_menu.php?WEBYEP_DI=14', ''); return false;">Item 3</a></li>
+</ul>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+webyep_showHideMenuTree(0, 13);webyep_showHideMenuTree(0, 5);
+//]]>
+</script>

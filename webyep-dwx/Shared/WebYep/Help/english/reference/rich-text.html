@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-english.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../stiles.css" rel="stylesheet" type="text/css">
+<link href="../print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuReference {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuRefRichText {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="true" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint">
+	 <a name="pagetop"><img src="../images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../index.html" id="menuMisc">Introduction</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../principle.html" id="menuMiscPrinciple">Basics</a></li>
+            <li><a href="../installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../configuration.html" id="menuMiscConfiguration">Configuration</a></li>
+            <li><a href="../backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../system-requirements.html" id="menuMiscSystem">System
+                Requirements</a></li>
+            <li><a href="../white-labeled.html" id="menuMiscWhiteLabel">White Labeled Version</a></li>
+          </ul>
+		</li>
+        <li><a href="../tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="../tutorials/first-steps.html" id="menuTutFirstSteps">First
+                Steps</a></li>
+            <li><a href="../tutorials/simple-menu.html" id="menuTutSimpleMenu">The Menu</a></li>
+            <li><a href="../tutorials/loop.html" id="menuTutLoop">The
+                Loop</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html" id="menuReference">Reference</a>
+          <ul id="menuTreeReference">
+            <li><a href="init-code.html" id="menuRefInitCode">The Init Code</a></li>
+            <li><a href="logon-button.html" id="menuRefLogonButton">Logon
+                Button</a></li>
+            <li><a href="short-text.html" id="menuRefShortText">Short
+                Text</a></li>
+            <li><a href="long-text.html" id="menuRefLongText">Long
+                Text</a></li>
+            <li><a href="rich-text.html" id="menuRefRichText">Rich
+                Text</a></li>
+            <li><a href="image.html" id="menuRefImage">Image</a></li>
+            <li><a href="attachment.html" id="menuRefAttachment">Attachment</a></li>
+            <li><a href="menu.html" id="menuRefMenu">Menu</a></li>
+            <li><a href="loop.html" id="menuRefLoop">Loop</a></li>
+            <li><a href="read-more.html" id="menuRefReadMore">Read More</a></li>
+            <li><a href="gallery.html" id="menuRefGallery">Image Gallery</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../images/nav-content-border.gif" class="menu"><img src="../images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Rich
+          Text Element<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="../pictures/rich-text-palette.gif" width="251" height="32"><br>
+      <span class="picturetext">The Rich Text icon in the Dreamweaver object
+      palette</span></p>
+      <p>This element is useful for long text passages like product descriptions
+        or news articles - or even whole pages. The text content of this element
+        can be formatted by the user by either entering raw HTML code or by using one of the supported WYSIWYG HTML in-browser editors &quot;TinyMCE&quot;, &quot;FCKeditor&quot; or &quot;CKEditor&quot;. </p>
+      <p class="elementCodeHeading">This element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php webyep_richText(&quot;Fieldname&quot;, false, &quot;../styles.css&quot;, true); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Arguments for the <span class="codeExample">webyep_richText()</span> PHP function call:<br>
+          <span class="small">(see &quot;Attributes of the Rich Text Element&quot; below for details)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Fieldname&quot;</span>: A string &ndash; the field name for this element. </li>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; the scope for this element. <br>
+                <span class="codeExample">true</span> if the element should have the same content on <em>all</em> pages (global).<br>
+                <span class="codeExample">false</span> if it should have different content on each page it appears on.</li>
+            <li><span class="codeExample">&quot;../styles.css&quot;</span>: A string &ndash; the URL to a CSS file to be used in the WYSIWYG editor - this URL can be relative to the current document. </li>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; whether email links should be encoded. <br>
+                <span class="codeExample">true</span> if email links inserted into the text should be encoded using JavaScript.<br>
+                <span class="codeExample">false</span> if they should be simply output as  HTML.</li>
+          </ol>
+      </div>
+      <p align="center"><img src="../pictures/rich-text-inpage.jpg" width="347" height="393"><br>
+          <span class="picturetext">The Rich Text Element in action - by clicking
+      the &quot;Edit&quot; button the Rich Text Editor window opens</span></p>
+      <p align="center"><img src="../pictures/rich-text-editor.gif" width="618" height="550"><br>
+      <span class="picturetext"> The Rich Text Editor window, using the TinyMCE in-browser HTML editor </span></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><h3><a name="WYSIWYG_Editor">Choosing a WYSIWYG in-browser Editor</a></h3>
+      <p>The WebYep Rich Text Element supports the third party in-browser HTML Editors <em>TinyMCE</em> and <em>CKeditor</em>. Those editors <strong>are not bundled</strong> with WebYep. To use one of them, simply download the editor package from its creator's web site and place it into WebYep's <span class="codeExample">opt</span> folder - WebYep will then automatically recognize its existence and use it for the Rich Text Element's editor window.</p>
+      <p>The TinyMCE editor can, at the time of writing, be downloaded from: <a href="http://tinymce.moxiecode.com/" target="_blank">http://tinymce.moxiecode.com/</a></p>
+      <p>The CKeditor  can, at the time of writing, be downloaded from: <a href="http://ckeditor.com/" target="_blank">http://ckeditor.com/</a></p>
+      <p>Download and extract the  package  (ZIP or TAR) an extract it. When extracting the TinyMCE package you should get a folder named <span class="codeExample">tinymce</span>. When extracting the CKeditor package you should get a folder named <span class="codeExample">ckeditor</span>.</p>
+      <p>Then place that  folder <strong>into the <span class="codeExample">opt</span> subfolder</strong> of the <span class="codeExample">webyep-system/program</span> directory on the web server. The next time you open the Rich Text Editor window in the browser, WebYep will use that WYSIWYG HTML editor.</p>
+      <p class="remark"><span class="remarkHeading">Note about browser compatibility:</span><br>
+      Please note that not all browsers are supported by these editors. To find out which browsers are currently supported by which editor, please consult each WYSIWYG editor's website.</p>
+      <p><strong>Important:</strong> The WYSIWYG editors give the user the opportunity to format the entered text. Some of them also offer to paste already formatted text in &ndash; text that was already formatted in some word processing application. It turned out that doing so is not a good idea. Most word processing applications tend to create (to put it nice) disadvantageous HTML code. Even pasting non formatted text from such applications will transfer (bad) HTML code. So the user should either enter the text directly into the WYSIWYG editor or create it in some pure ASCII editor (like Notepad on Windows or TextEdit, in Plain Text Mode, on the Mac).</p>
+      <h3>Setting up the WYSIWYG editor</h3>
+      <p>Each WYSIWG editor has its own unique features and way to set them up. <strong>Please refer to the WYSIWYG editors web site</strong> to learn about this setup. To apply these settings, you can create an optional setup file within the <strong>webyep-system/program/opt</strong> folder. The file needs to be named <span class="codeExample"><a href="tinymce_init.php.html" target="_blank">tinymce_init.php</a></span> for TinyMCE and <span class="codeExample"><a href="ckeditor_init.php.html" target="_blank">ckeditor_init.php</a></span> for CKEditor (click the file's name for an example for that file's content).      </p>
+      <p>For CKEditor there is the additional possibility to configure its <em>Styles</em> popup menu. The style definitions must be placed in a file named <span class="codeExample"><a href="ckeditor_styles.js.html" target="_blank">ckeditor_styles.js</a></span> inside the <strong>webyep-system/program/opt</strong> folder (click the file's name for an example for that file's content). For details about the syntax of these style definitions please see CKEditor's website (URL above).</p>
+      <h3><a name="WYSIWYG_Filemanager">Adding optional file managers</a></h3>
+      <p>There are optional file managers for each supported WYSIWYG editor, enabling users to upload and manage images from the WYSIWYG editor's interface.</p>
+      <p>Currently the following file managers are supported by WebYep:<br>
+        For <strong>CKEditor</strong> use the commercial add-on <a href="http://ckfinder.com" target="_blank">CKFinder</a>.<br>
+        For <strong>TinyMCE</strong> use the commercial add-on <a href="http://tinymce.moxiecode.com/enterprise/mcimagemanager.php" target="_blank">MCImageManager</a>.
+      </p>
+      <p class="remark"><span class="remarkHeading">Important:</span> Please note, that those are <u>third party products</u>. Objective Development is in no way associated with their respective vendors and therefore can't be held responsible for any issues you might have with this software. Every file manager has its own strengths and weaknesses and we can't determine which one will suit your needs.</p>
+      <p>If you want to use one of the above mentioned file managers with WebYep, you can find detailed installation instructions here:
+        <ul style="list-style-type: circle;">
+          <li><a href="rich-text-w-ckfinder.html">Integrating CKFinder into CKEditor</a></li>
+          <li><a href="rich-text-w-mcimagemanager.html">Integrating MCImageManager into TinyMCE</a></li>
+        </ul>
+      </p>
+      <h3>Placing the Rich Text Element</h3>
+      <p>Please always remember that the Rich Text Elements produces HTML code!
+        When the user creates a bullet list for example the Rich Text Elements
+        creates &lt;ul&gt; and&lt;li&gt; HTML tags. Thus it is important to place
+        the Rich Text Element at a position in your page where such HTML tags
+        are allowed!</p>
+      <p>The safest place is inside a &lt;div&gt; tag.
+        Not ideal would be a paragraph (&lt;p&gt; tag), as HTML does not allow certain HTML code <em>inside</em> a paragraph.</p>
+      <p>To determine the HTML tag in which you have placed the Rich Text Element
+        simply click the PHP icon representing the Rich Text Element and take
+        a look at Dreamweaver's Tag Selector (at the bottom of the document window):
+        The right most listed tag is the tag that encloses your Rich Text
+        Element.</p>
+      <p>If you find your Rich Text Element placed inside a &lt;p&gt; tag you can change
+        it into a &lt;div&gt; tag by clicking the &lt;p&gt; tag in the Tag Selector with
+        the right mouse button and choose &quot;Edit Tag...&quot;.</p>
+<!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --></p>
+      <h2>Attributes of the Rich Text Element</h2>
+      <p align="center"><img src="../pictures/rich-text-inspector.png" width="476" height="59"><br>
+        <span class="picturetext">The Dreamweaver inspector showing the Rich
+      Text Element's attributes</span></p>
+      <h3>Fieldname</h3>
+      <p>A distinctive name for that element. This name will be displayed in
+        the page in edit mode to give the user a hint on what this elements content
+        stands for and to distinguish the different WebYep Elements in a page.</p>
+      <h3>Content</h3>
+      <p>When set to &quot;for this doc only&quot; the elements content is unique
+        for this page - even if another element on a different page has the same
+         name. If set to &quot;for all documents&quot; the content will
+        be the same on all pages for elements of this kind that use the same
+        name.</p>
+      <h3>CSS</h3>
+      <p>With this attribute  you can define a CSS file to be used for the HTML WYSIWYG in-browser editor.</p>
+      <p>If you want the text displayed in the editor window to look like the final text in the page, you need to let the editor know the CSS you're using in your page. So you could create a reduced version of the CSS file you have attached to your pages (by removing all not text related attributes) and use it for this Rich Text Element attribute. </p>
+      <p>You can enter the relative path to the CSS file into the text field or click the folder icon to its right, to select the file. </p>
+      <h3><a name="hidemaillinks">Encode EMail Links</a></h3>
+      <p>If a user inserts an email link (&quot;mailto&quot; link) into  a Rich Text Element,
+        WebYep can encode (or obfuscate) this email address. If you enable the &quot;Encode EMail Links&quot; option, WebYep will <em>encode</em> the
+        links to <em>keep SPAM spiders</em> from collecting the email addresses.</p>
+      <p>Do do so, WebYep uses a JavaScript based encoding. If the visitors
+        of your website have <em>deactivated JavaScript</em>, they will only
+        see these email addresses in the form:</p>
+      <blockquote class="codeExample">name(_AT_)domain.com</blockquote>
+      <p>and the email addresses will then not be clickable.      
+      <p>For this to work, the link inserted must be a  &quot;mailto:&quot; link and it must have the email address as the link text.
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="../images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --></p>
+      <!-- InstanceEndEditable -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2011, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

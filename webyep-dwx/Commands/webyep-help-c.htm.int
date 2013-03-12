@@ -1,0 +1,6 @@
+include ../global.int
+output-format ASCII
+
+PageTitle
+WebYep Documentation
+WebYep-Anleitung

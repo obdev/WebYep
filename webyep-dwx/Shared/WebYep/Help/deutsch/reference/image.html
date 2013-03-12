@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-german.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../stiles.css" rel="stylesheet" type="text/css">
+<link href="../print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuReference {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuRefImage {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="true" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint"><a name="pagetop"><img src="../images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../index.html" id="menuMisc">Allgemeines</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../principle.html" id="menuMiscPrinciple">Prinzip</a></li>
+            <li><a href="../installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../configuration.html" id="menuMiscConfiguration">Konfiguration</a></li>
+            <li><a href="../backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../system-requirements.html" id="menuMiscSystem">Systemvoraussetzungen</a></li>
+            <li><a href="../white-labeled.html" id="menuMiscWhiteLabel">Eigenes Logo</a></li>
+          </ul>
+		</li>
+        <li><a href="../tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="../tutorials/first-steps.html" id="menuTutFirstSteps">Erste Schritte</a></li>
+            <li><a href="../tutorials/simple-menu.html" id="menuTutSimpleMenu">Das Men&uuml;</a></li>
+            <li><a href="../tutorials/loop.html" id="menuTutLoop">Die Schleife</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html" id="menuReference">Referenz</a>
+          <ul id="menuTreeReference">
+            <li><a href="init-code.html" id="menuRefInitCode">Der Init Code</a></li>
+            <li><a href="logon-button.html" id="menuRefLogonButton">Anmeldeknopf</a></li>
+            <li><a href="short-text.html" id="menuRefShortText">Kurztext</a></li>
+            <li><a href="long-text.html" id="menuRefLongText">Text (Flie&szlig;text)</a></li>
+            <li><a href="rich-text.html" id="menuRefRichText">HTML-Text</a></li>
+            <li><a href="image.html" id="menuRefImage">Bild</a></li>
+            <li><a href="attachment.html" id="menuRefAttachment">Datei-Download</a></li>
+            <li><a href="menu.html" id="menuRefMenu">Men&uuml;</a></li>
+            <li><a href="loop.html" id="menuRefLoop">Schleife</a></li>
+            <li><a href="read-more.html" id="menuRefReadMore">Weiterlesen</a></li>
+            <li><a href="gallery.html" id="menuRefGallery">Bildergalerie</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../images/nav-content-border.gif" class="menu"><img src="../images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Bild<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="../pictures/image-palette.gif" width="224" height="32"><br>
+      <span class="picturetext">Das Symbol f&uuml;r das Bild-Element in der Objektpalette </span></p>
+      <p>Indem Sie statt eines herk&ouml;mmlichen Bildes ein WebYep-Bild-Element in einer Webseite platzieren, geben Sie den BenutzerInnen der Webseite die M&ouml;glichkeit, das Bild selbst (im Webbrowser) durch eigene GIF- oder JPEG-Dateien zu ersetzen. </p>
+      <p class="elementCodeHeading">Dieses WebYep Element wird durch folgenden PHP Code repr&auml;sentiert:</p>
+      <p class="elementCode">&lt;?php webyep_image(&quot;Feldname&quot;, false, &quot;&quot;, &quot;eine_andere_seite.php&quot;, &quot;andererFrame&quot;, 700, 900, true, 70, 90); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail.lbi" --> <span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">Details...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-de.lbi" -->
+      <noscript>
+      <div class="javaScriptWarning">Sie k&ouml;nnen die "Details..." nicht sehen, da JavaScript in Ihrem Browser deaktiviert ist!</div>
+      </noscript>
+      <!-- #EndLibraryItem -->
+      <div id="elementCodeDetails">Parameter der PHP Funktion <span class="codeExample">webyep_image()</span>:<br>
+          <span class="small">(siehe auch &quot;Eigenschaften des Bild-Elementes&quot; weiter unten)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Feldname&quot;</span>: Ein Text &ndash; der Name f&uuml;r dieses Element. </li>
+            <li><span class="codeExample">true/false</span>: Ein boolscher Wert &ndash; der G&uuml;ltigkeitsbereich dieses Elementes. <br>
+                <span class="codeExample">true</span> wenn das Element in <em>allen</em> Seiten den selben Inhalt haben soll (global).<br>
+                <span class="codeExample">false</span> wenn es auf jeder Seite, auf der es platziert ist, andere Inhalte haben soll.</li>
+            <li><span class="codeExample">&quot;&quot;</span>: Ein Text &ndash; nicht mehr verwendet. Geben Sie einen Leertext (&quot;&quot;) an.</li>
+            <li><span class="codeExample">&quot;eine_andere_seite.php&quot;</span>: Ein Text (optional) &ndash; der URL einer Seite, auf die das Bild verweisen soll (Link). Kann auch ein absoluter URL sein (http://...).<br>
+      Wenn ein Leertext (&quot;&quot;) angegeben wird, ist das Bild initial kein Link, kann aber von den BenutzerInnen noch beim Editieren der Seite verlinkt werden. </li>
+            <li><span class="codeExample">&quot;andererFrame&quot;</span>: Ein Text (optional) &ndash; der Name eines Frames (Rahmen), der ggf. f&uuml;r den Link als &quot;target&quot; (Ziel) fungieren soll.<br>
+      Geben Sie einen Leertext (&quot;&quot;) ein, wenn Sie kein Frameset verwenden und die verlinkte Seite nicht in einem neuen Fenster ge&ouml;ffnet werden soll.<br>
+      Geben Sie <span class="codeExample">&quot;_blank&quot;</span> an, um die verlinkte Seite in einem neuen Fenster zu &ouml;ffnen.</li>
+            <li>700: Eine Zahl &ndash; die Breite des Bildes bzw. des Vorschaubildes, oder Null, wenn der Parameter ignoriert werden soll.</li>
+            <li>900: Eine Zahl &ndash; die H&ouml;he des Bildes bzw. des Vorschaubildes, oder Null, wenn der Parameter ignoriert werden soll.</li>
+            <li><span class="codeExample">true/false</span>: Ein boolscher Wert &ndash; gibt an, ob f&uuml;r das Bild ein Vorschaubild erzeugt werden soll.<br>
+                <span class="codeExample">true</span>, wenn ein Vorschaubild erzeugt werden soll. Breite bzw. H&ouml;he des Vorschaubildes werden durch die n&auml;chsten
+                beiden Parameter definiert. Ein Klick auf das Vorschaubild im Webbrowser &ouml;ffnet dann das Original-Bild in einem Popup-Fenster.<br>
+              <span class="codeExample">false</span>, wenn kein Vorschaubild berechnet werden soll. Die Parameter f&uuml;r Breite und H&ouml;he gelten dann f&uuml;r das Bild selbst, das in dieser Gr&ouml;&szlig;e dann direkt in der Seite angezeigt wird.</li>
+            <li>70: Eine Zahl &ndash; die Breite des Vorschaubildes.</li>
+            <li>90: Eine Zahl &ndash; die H&ouml;he des Vorschaubildes.</li>
+          </ol>
+          <p>Bitte beachten Sie auch die Details unter &quot;Eigenschaften des Bild-Elementes&quot; weiter unten bzgl. Gr&ouml;&szlig;enangaben und Vorschaubild-Erstellung!</p>
+      </div>
+      <p>Die Bilddateien k&ouml;nnen von den BenutzerInnen direkt im Webbrowser
+          zum Webserver gesendet werden. Im WebYep Bild-&Auml;ndern-Fenster  wird
+          im
+          Webbrowser einfach eine GIF- oder JPEG-Datei ausgew&auml;hlt und
+          durch Klick auf &quot;Speichern&quot; wird die Datei zum Webserver
+          gesendet und von WebYep gespeichert.</p>
+      <p align="center"><img src="../pictures/image-inpage.gif" width="325" height="365"><br>
+          <span class="picturetext">Das Bild-Element in Aktion - durch Klicken
+          auf den Bearbeiten-Knopf (&quot;Foto bearbeiten&quot;)<br>
+&ouml;ffnet sich das Bild-&Auml;ndern-Fenster</span></p>
+      <p align="center"><img src="../pictures/image-editor.gif" width="529" height="307"><br>
+      <span class="picturetext"> Das Bild-&Auml;ndern-Fenster</span></p>
+      <p>Die BenutzerInnen k&ouml;nnen im Bild-&Auml;ndern-Fenster auch den URL einer Seite angeben, auf die das Bild verlinken soll (wenn nicht ein Vorschaubild erstellt wurde oder der/die WebDesignerIn nicht schon einen URL vorgegeben hat). Zus&auml;tzlich kann auch der &quot;Alt&quot;-Text (der Wert f&uuml;r das &quot;alt&quot;-Attribut des &lt;img&gt;-Tags) angegeben werden.</p>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem -->
+      <h3><a name="Lightbox">Einen Lightbox-Effekt hinzuf&uuml;gen</a></h3>
+      <p>Das WebYep Bild-Element (wie auch das Galerie-Element) unterst&uuml;tzt die verbreitete JavaScript-Effekt-Bibliotheken<strong> &quot;Lightbox&quot;</strong> (basierend auf Prototype/Scriptaculous) und<strong> &quot;FancyBox&quot;</strong> (basierend auf jQuery). Wenn Sie eine dieser Bibliothek herunterladen und im &quot;<span class="codeExample">opt</span>&quot;-Ordner von WebYep installieren, wird das Bild-Element automatisch diese Bibliothek verwenden. Anstatt ein Popup-Fenster zu &ouml;ffnen, wenn auf ein Vorschaubild geklickt wird, wird WebYep dann das Originalbild direkt in der Seite mit einem Lightbox-Effekt anzeigen.</p>
+      <h4>Installation der &quot;Lightbox&quot;</h4>
+      <p>Zum Zeitpunkt der Erstellung dieser Dokumentation kann die Lightbox-Bibliothek unter der folgender Adresse heruntergeladen werden: <a href="http://www.lokeshdhakar.com/projects/lightbox2/" target="_blank">http://www.lokeshdhakar.com/projects/lightbox2/</a></p>
+      <p>Nach dem Herunterladen des ZIP-Archivs, ist dieses zu entpacken und der resultierende <strong>Ordner</strong> (der &uuml;blicherweise die Versionsnummer im Namen tr&auml;gt) einfach auf <span class="codeExample">lightbox</span> umzubenennen. Dieser Ordner ist dann in den Ordner <span class="codeExample">webyep-system/programm/opt</span> am Server hochzuladen.</p>
+      <p>Um die Konfiguration der Lightbox anzupassen, folgen Sie bitte den Anleitungen auf deren Website - siehe Link oben.</p>
+      <p>Sie werden z.B. die Datei <span class="codeExample">webyep-system/programm/opt/lightbox/js/lightbox.js</span> anpassen wollen, um die Pfade zu den Bilddateien f&uuml;r die &quot;schlie&szlig;en&quot;- und &quot;l&auml;dt&quot;-Bilder anzupassen:</p>
+      <p class="codeExample"> LightboxOptions = Object.extend({<br>
+  &nbsp;&nbsp;        fileLoadingImage:        '/webyep-system/programm/opt/lightbox/images/loading.gif', <br>
+  &nbsp;&nbsp;&nbsp;fileBottomNavCloseImage: '/webyep-system/programm/opt/lightbox/images/close.gif',</p>
+<p>Wenn Ihre Seite bereits aus anderen Gr&uuml;nden die Prototype- und/oder Scriptaculous-Bibliothek verwendet, sollten Sie WebYep mitteilen, diese <strong>nicht erneut einzubinden</strong>. Dies erfolgt in WebYeps Konfigurationsdatei <span class="codeExample">konfiguration.php</span> mittels:</p>
+      <blockquote>
+        <p class="codeExample">$webyep_bDoNotIncludePrototype = true;</p>
+        <p>und/oder</p>
+        <p class="codeExample">$webyep_bDoNotIncludeScriptaculous = true;</p>
+      </blockquote>
+      <h4>Installation der &quot;FancyBox&quot;</h4>
+      <p>Zum Zeitpunkt der Erstellung dieser Dokumentation kann die FancyBox-Bibliothek unter der folgenden Adresse heruntergeladen werden: <a href="http://fancybox.net/" target="_blank">http://fancybox.net/</a></p>
+      <p>Nach dem Herunterladen des ZIP-Archivs, ist dieses zu entpacken. Dabei entsteht ein Ordner mit einigen Unterordnern. Der Unterordner namens <span class="codeExample">fancybox</span> ist derjenige, der auf den Server in das <span class="codeExample">webyep-system/programm/opt</span>-Verzeichnis hochzuladen ist.</p>
+      <p>Sie werden im Stammordner des ZIP-Archivs auch eine Datei namens <span class="codeExample">jquery-x.x.x.min.js</span> finden (wobei x.x.x f&uuml;r die Versionsnummer steht) &ndash; hierbei handelt es sich um die jQuery-Bibliothek, auf der die FancyBox basiert. Sie <em>k&ouml;nnen</em> diese Datei ebenfalls auf den Server in das <span class="codeExample">webyep-system/programm/opt</span>-Verzeichnis hochladen, m&uuml;ssen das aber nicht unbedingt. Wenn Sie dies nicht tun, wird die jQuery-Bibliothek einfach aus dem Google Code-Archiv geladen.</p>
+      <p>Wenn Ihre Seite bereits aus anderen Gr&uuml;nden die jQuery-Bibliothek verwendet, sollten Sie WebYep mitteilen, diese <strong>nicht erneut einzubinden</strong>. Dies erfolgt in WebYeps Konfigurationsdatei <span class="codeExample">konfiguration.php</span> mittels:</p>
+      <blockquote>
+        <p class="codeExample">$webyep_bDoNotIncludejQuery = true;</p>
+      </blockquote>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+      <!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+      <!-- /hidefromprint -->
+      <!-- #EndLibraryItem -->
+      <p></p>
+      <h2>Eigenschaften des Bild-Elementes</h2>
+      <p align="center"><img src="../pictures/image-inspector.png" width="670" height="85"><br>
+      <span class="picturetext">Das Eigenschaftsfenster f&uuml;r das Bild-Element</span></p>
+
+      <h3>Bildname</h3>
+      <p>  Ein Name f&uuml;r das Bild-Element. Der Bildname wird in der Webseite
+        im &quot;Bearbeiten&quot;-Modus angezeigt, damit die BenutzerInnen bei
+        der Eingabe die verschiedenen Bild-Elemente unterscheiden k&ouml;nnen.</p>
+
+      <h3>Inhalte</h3>
+      <p>Ist hier &quot;f&uuml;r diese Seite&quot; eingestellt, so ist dieses Bild-Element
+        von den Bild-Elementen <em>anderer Seiten</em> <em>unabh&auml;ngig</em>, auch wenn
+        diese den <em>gleichen Bildnamen</em> aufweisen. Wenn Sie m&ouml;chten, dass die
+        Bild-Elemente mit diesem Bildnamen auf <em>allen Seiten</em> den <em>gleichen Inhalt</em>
+        aufweisen, ist dieses Popupmen&uuml; auf &quot;für alle Seiten&quot; zu setzen.</p>
+
+      <h3>Breite / H&ouml;he</h3>
+      <p>Gibt die Breite bzw. H&ouml;he des Bildes an (siehe Eigenschaft &quot;Vorschaubild&quot;).
+        Wenn keine Gr&ouml;&szlig;en&auml;nderung am hochgeladenen Bild vorgenommen werden soll,
+        k&ouml;nnen diese Eigenschaften leer gelassen werden.</p>
+      <p>Wenn eine dieser Eigenschaften angegeben wird, sorgt WebYep daf&uuml;r, dass das Bild
+        die angegebene Breite oder H&ouml;he nicht &uuml;berschreitet.</p>
+      <p>Wenn beide Eigenschaften angegeben werden, wird das verkleinerte Bild weder die angegebene
+      H&ouml;he noch die angegebene Breite &uuml;berschreiten.</p>
+      <p>Das Seitenverh&auml;ltnis des Bildes bleibt dabei immer unangetastet. </p>
+      <p class="remark"><span class="remarkHeading">Hinweis:</span> Die Gr&ouml;&szlig;en&auml;nderung
+        (Verkleinerung) des Bildes kann nur durchgef&uuml;hrt werden, wenn am Webserver die
+        <strong>PHP-Erweiterung &quot;GD&quot;</strong> installiert ist. Wenn nicht, so wird im
+        Bild-&Auml;ndern-Fenster ein Warnhinweis angezeigt und das Bild wird nur in den entsprechenden
+        Dimensionen <strong>angezeigt</strong> aber nicht tats&auml;chlich umgerechnet (die
+        <strong>Datenmenge</strong> bleibt also unver&auml;ndert). </p>
+
+      <h3>Vorschaubild</h3>
+      <p>Ist diese Option aktiviert, dann wird ein Vorschaubild berechnet, das anstelle des Originals
+        in der Seite dargestellt wird. Die Gr&ouml;&szlig;e des Vorschaubildes wird durch die Eigenschaften
+        &quot;H&ouml;he des Vorschaubildes&quot; und/oder &quot;Breite des Vorschaubildes&quot; bestimmt.
+        Ein Klick auf dieses Vorschaubild im Webbrowser &ouml;ffnet dann das Originalbild in einem Popup-Fenster.</p>
+      <p>Ist die Option nicht aktiviert, so wird kein Vorschaubild berechnet und stattdessen das Originalbild auf
+        die durch H&ouml;he und/oder Breite definierte Gr&ouml;&szlig;e verkleinert (wenn eine dieser Eigenschaften
+        angegeben wurde). Ein Klick auf das Bild im Webbrowser &ouml;ffnet dann auch kein Popup-Fenster.</p>
+
+      <h3>Breite / H&ouml;he des Vorschaubildes</h3>
+      <p>Gibt die Breite bzw. H&ouml;he des Vorschaubildes an (siehe Eigenschaft &quot;Vorschaubild&quot;).</p>
+
+      <h3>Seite (URL)</h3>
+      <p>Der URL (bzw. Dateiname) einer Seite, auf die beim Klick auf dieses
+        Bild verwiesen werden soll. Dadurch wird dieses Bild-Element zum Link.</p>
+      <p>Bei Verwendung dieser Option f&uuml;r Bild-Elemente die sich in einer Schleife
+        (<a href="./loop.html">WebYep-Schleifen-Element</a>)
+        befinden (um mehrere Bilder zB. untereinander darzustellen), verh&auml;lt
+        sich der Bild-Link dann wie ein WebYep-Men&uuml;-Element: Die Seite auf die
+        verwiesen wird kann unterschiedliche Inhalte aufweisen, je nachdem welches
+        der Bilder in der Schleife angeklickt wurde. So kann mit Schleife und
+        Bild ein grafisches Men&uuml; aufgebaut werden.</p>
+
+      <h3>Ziel (frame) - bei Verwendungen von Rahmen (target frame)</h3>
+      <p>Wenn die unter der Eigenschaft &quot;Seite (URL)&quot; angegebene Seite
+        beim Klick auf das Bild in einem <em>anderen Rahmen</em> dargestellt
+        werden soll, ist bei der Eigenschaft &quot;Ziel (frame)&quot; der Name
+        des betreffenden Rahmens anzugeben.</p>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+    <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2011, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

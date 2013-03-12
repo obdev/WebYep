@@ -1,0 +1,10 @@
+include ../../global.int
+
+output-format ASCII
+Title
+Long Text
+Text
+
+FieldName
+Fieldname
+Feldname

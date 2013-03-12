@@ -1,0 +1,310 @@
+body {
+	background-image: url(images/page_pattern.gif);
+	margin: 0px;
+}
+
+a:link {
+	color: #4A521A;
+}
+
+a:visited {
+	color: #4A521A;
+}
+
+a:active {
+	color: #4A521A;
+}
+
+#languageSelector {
+	width: 896px;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: right;
+}
+
+#mainContainer {
+	width: 896px;
+	border: 2px solid #C0D445;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 10px;
+	background-color: #FCFCF0;
+}
+
+#menuItemsContainer {
+	width:  896px;
+}
+
+.menuItem {
+	float: left;
+}
+
+#contentContainer {
+	clear: both;
+	padding-top: 30px;
+	padding-bottom: 0px;
+	padding-left: 19px;
+	padding-right: 19px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #4A521A;
+}
+
+#footerContainer {
+	text-align: right;
+	padding-right: 40px;
+	clear: both;
+}
+
+#subNavContainer {
+	float:  left;
+	width:  182px;
+	background-image: url(images/subnav_bg.gif);
+}
+
+#subNav {
+	padding-top: 10px;
+	padding-left: 14px;
+	padding-right: 17px;
+	padding-bottom: 40px;
+	font-size: 11px;
+}
+
+#subNav .subMenuItem {
+	font-size: 12px;
+	padding-top: 12px;
+}
+
+#subNav .subMenuItem.selected {
+	font-weight: bold;
+}
+
+#subNav .divider {
+	height: 1px;
+	overflow: hidden;
+	line-height: 1px;
+	background-color: #4A521A;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+#subNav h1 {
+	font-size: 12px;
+	margin-top: 0;
+}
+
+#subNav h2 {
+	font-size: 11px;
+	margin-top: 5;
+}
+
+#subNav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+#subNav p {
+	font-size: 11px;
+	line-height: 15px;
+}
+
+#subNav li.WebYepMenuTitle {
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	border-bottom: 1px solid #4A521A;
+	font-weight: bold;
+	background: url(images/submenu_bullet.gif) no-repeat left 50%;
+}
+
+#subNav li.WebYepMenuTitleExpanded {
+	background: url(images/submenu_bullet_ex.gif) no-repeat left 1.2em;
+}
+
+#subNav li.WebYepMenuItem {
+	font-size: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #4A521A;
+}
+
+#subNav li li.WebYepMenuItem {
+	font-weight: normal;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: none;
+	padding-left: 10px;
+}
+
+#subNav li li.WebYepMenuFirstItem {
+	padding-top: 10px;
+}
+
+#subNav li.WebYepMenuCurrentItem {
+	font-weight: bold;
+}
+
+#subNav li li.WebYepMenuCurrentItem {
+	font-weight: bold;
+}
+
+#subNav a:link {
+	text-decoration: none;
+}
+#subNav a:visited {
+	text-decoration: none;
+}
+#subNav a:active {
+	text-decoration: none;
+}
+
+#subNav .subSubNav li.WebYepMenuItem {
+	font-size: 11px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	border: none;
+}
+
+#subNav .subSubNav li.WebYepMenuCurrentItem {
+	font-size: 11px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	border: none;
+	font-weight: bold;
+}
+
+#subNav .subSubNav li.WebYepMenuTitle {
+	font-size: 12px;
+	padding-top: 15px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+	border-top: 1px solid #4A521A;
+	border-bottom: none;
+	margin-left: 0;
+	font-weight: bold;
+	margin-top: 6px;
+	color: gray;
+}
+
+#mainContent {
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 0;
+}
+
+#mainContent.noSidebar {
+	width: 600px;
+}
+
+.noSubMenu {
+	padding-left: 165px;
+	margin-left: 0;
+	float: none;
+}
+
+#mainContent h1 {
+	margin-top: -2px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#mainContent.noSidebar h1 {
+	widthx: 440px;
+}
+
+#mainContent h2 {
+	margin-top: -2px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#mainContent p {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+#mainContent td {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+#sidebarRight {
+	float: right;
+	width: 195px;	
+}
+
+#sidebarRight img {
+	border: 1px solid #C0D445;
+}
+
+#sidebarLeft {
+	float: left;
+	width: 120px;
+	margin-left: 20px;
+	margin-right: -10px;
+}
+
+#sidebarLeft img {
+	border: 1px solid #C0D445;
+}
+
+img.bordered {
+	border: 1px solid #C0D445;
+}
+
+img.zoomable {
+	cursor: -moz-zoom-in;
+}
+
+#teamAttributes td {
+	border-bottom: 1px solid gray;
+	padding-bottom: 6px;
+	padding-top: 6px;
+}
+
+.imageCaption {
+	margin-top: 6px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	font-style: italic;
+}
+
+.loopControls {
+	white-space: nowrap;
+}
+
+.WebYepGalleryContainer {
+	border-collapse: collapse;
+}
+
+.WebYepGalleryContainer td {
+	text-align: center;
+	vertical-align: top;
+	padding: 12px 6px;
+	border: 1px solid #4a521a;
+}
+
+.WebYepGalleryText {
+	font-size: 11px;
+	line-height: 14px;
+	margin-top: 4px;
+}
+
+.fieldLabel {
+	font-weight: bold;
+	text-align: right;
+	vertical-align: top;
+	padding-right: 10px;
+	white-space: nowrap;
+}
+
+.clearer {
+	clear: both;
+}
+

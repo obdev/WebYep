@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-german.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="stiles.css" rel="stylesheet" type="text/css">
+<link href="print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+<style type="text/css">
+<!--
+#menuMisc {
+	color: #000000;
+	text-decoration: underline;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuTreeReference {
+	display: none;
+}
+-->
+</style>
+
+
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuMiscPrinciple {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="true" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="false" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint"><a name="pagetop"><img src="images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="index.html" id="menuMisc">Allgemeines</a>
+          <ul id="menuTreeMisc">
+            <li><a href="principle.html" id="menuMiscPrinciple">Prinzip</a></li>
+            <li><a href="installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="configuration.html" id="menuMiscConfiguration">Konfiguration</a></li>
+            <li><a href="backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="system-requirements.html" id="menuMiscSystem">Systemvoraussetzungen</a></li>
+            <li><a href="white-labeled.html" id="menuMiscWhiteLabel">Eigenes Logo</a></li>
+          </ul>
+		</li>
+        <li><a href="tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="tutorials/first-steps.html" id="menuTutFirstSteps">Erste Schritte</a></li>
+            <li><a href="tutorials/simple-menu.html" id="menuTutSimpleMenu">Das Men&uuml;</a></li>
+            <li><a href="tutorials/loop.html" id="menuTutLoop">Die Schleife</a></li>
+          </ul>
+        </li>
+        <li><a href="reference/index.html" id="menuReference">Referenz</a>
+          <ul id="menuTreeReference">
+            <li><a href="reference/init-code.html" id="menuRefInitCode">Der Init Code</a></li>
+            <li><a href="reference/logon-button.html" id="menuRefLogonButton">Anmeldeknopf</a></li>
+            <li><a href="reference/short-text.html" id="menuRefShortText">Kurztext</a></li>
+            <li><a href="reference/long-text.html" id="menuRefLongText">Text (Flie&szlig;text)</a></li>
+            <li><a href="reference/rich-text.html" id="menuRefRichText">HTML-Text</a></li>
+            <li><a href="reference/image.html" id="menuRefImage">Bild</a></li>
+            <li><a href="reference/attachment.html" id="menuRefAttachment">Datei-Download</a></li>
+            <li><a href="reference/menu.html" id="menuRefMenu">Men&uuml;</a></li>
+            <li><a href="reference/loop.html" id="menuRefLoop">Schleife</a></li>
+            <li><a href="reference/gallery.html" id="menuRefGallery">Bildergalerie</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="images/nav-content-border.gif" class="menu"><img src="images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Prinzip<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p>Im Prinzip geht es bei Web Content Management Systemen darum, Teile einer Webseite f&uuml;r BernutzerInnen direkt im Webbrowser editierbar zu machen. Sie als WebDesignerIn k&ouml;nnen dies den BenutzerInnen erm&ouml;glichen, indem Sie WebYep in die betreffende Website integrieren und WebYep-Elemente in die betreffenden Webseiten einbauen. </p>
+      <h3>Website vorbereiten:</h3>
+      <ol>
+        <li> Wenn Sie Dreamweaver verwenden, die WebYep Dreamweaver
+          Extension installieren: Doppelklick auf webyep.mxp, weiter laut dem
+          dadurch gestarteten
+
+          Extension
+          Manager</li>
+        <li>Den webyep-system Ordner in das Stammverzeichnis der Website kopieren (wo auch die Startseite - index.html - liegt) </li>
+        <li>In der Datei konfiguration.php  Benutzername und Kennwort definieren (schalten Sie ggf. im Dreamweaver auf die Code-Ansicht  &ndash; diese Datei besteht nur aus PHP Code) </li>
+        <li>Den webyep-system Ordner zum Server hinaufladen (per FTP) </li>
+        <li>WebYep einrichten (siehe: <a href="#activation">Was bedeutet &quot;Einrichten&quot;?</a>) </li>
+      </ol>
+      <h3>Seiten erstellen:</h3>
+      <ol>
+        <li>Eine normale HTML-Seite erstellen, aber als Dateiendung nicht &quot;.html&quot; sondern &quot;.php&quot; verwenden. </li>
+        <li>Normale (statische) Inhalte einf&uuml;gen um die Seite zu gestalten.</li>
+        <li>Wo immer Text oder Bilder editierbar sein sollen, stattdessen  das entsprechende WebYep-Element  in die Seite einf&uuml;gen.
+          <br>
+          Im  Dreamweaver
+          k&ouml;nnen Sie dazu aus der Objektpalette unter &quot;WebYep&quot; das gew&uuml;nschte WebYep Element ausw&auml;hlen. In anderen Editoren setzen Sie den entprechenden PHP Code von Hand ein &ndash; siehe dazu die <a href="reference/index.html">Referenzen</a> der einzelnen WebYep Elemente, vor allem auch f&uuml;r den &quot;<a href="reference/init-code.html">Init Code</a>&quot;) .       </li>
+        <li>Irgendwo in der Seite auch einen WebYep-Anmeldeknopf einf&uuml;gen.</li>
+        <li>Die Seite zum Server hinaufladen (per FTP). </li>
+        <li>Die hochgeladene Seite im WebBrowser aufrufen.</li>
+      </ol>
+      <p>Weitere Beschreibungen finden Sie unter &quot;<a href="tutorials/index.html">Tutorials</a>&quot; bzw. &quot;<a href="reference/index.html">Referenz</a>&quot; </p>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem --><h2>Technische Details</h2>
+      <h3><a name="activation">Was bedeutet &quot;Einrichten&quot;?</a></h3>
+      <p>Im Dreamweaver wird das Einrichten in der Remote-Ansicht des Dateifensters durch rechten Klick auf den webyep-system Ordner und Anw&auml;hlen des Men&uuml;punktes &quot;WebYep einrichten&quot; durchgef&uuml;hrt. Details und Infos zum Einrichten mittels anderer Programme finden Sie unter &quot;<a href="javascript:void(0)" onclick="javascript:window.open('activation-details.html', 'ActivationDetails', 'width=680,height=790')">Einrichten, Technische Details</a>&quot; und &quot;<a href="installation.html">Installation</a>&quot; </p>
+
+      <h3>Was sind die WebYep-Elemente?</h3>
+      <p>Die WebYep-Elemente sind kleine PHP-Code-Fragmente die in den HTML-Code
+        eingebettet werden. Im Dreamweaver werden diese Elemente &uuml;ber
+        die Objektpalette (Kategorie &quot;WebYep&quot;) eingef&uuml;gt. Aber Sie k&ouml;nnen auch in jedem anderen WebSeiten-Editor die entsprechenden PHP-Code-Fragmente manuell einf&uuml;gen &ndash; Details dazu finden Sie in den <a href="reference/logon-button.html">Referenzen</a> der einzelnen WebYep Elemente.</p>
+      <h3>Aufbau des webyep-system Ordners</h3>
+      <ul>
+        <li><b>webyep-system</b>
+          <ul>
+            <li>konfiguration.php (hier wird Benutzername und Passwort konfiguriert)</li>
+            <li>info.php (zeigt Systeminformationen an) </li>
+            <li><b>programm</b> beinhaltet alle WebYep Programmdateien</li>
+            <li><b>daten</b>
+(beinhaltet alle WebYep Daten)
+  <ul>
+                <li>documents (Liste der WebYep-Seiten) </li>
+                <li>license (Lizenzcodes)</li>
+                <li>... diverse Dateien, die die eingegebenen Texte, Bilder,
+                  etc. beinhalten</li>
+  </ul>
+            </li>
+          </ul>
+        Der &quot;daten&quot; Ordner beinhaltet alle von den Benutzern eingegebenen Daten und sollte daher von Zeit zu Zeit gesichert werden (siehe &quot;<a href="backup.html">Backup</a>&quot;). </li>
+      </ul>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+      <div><img src="images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2009, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

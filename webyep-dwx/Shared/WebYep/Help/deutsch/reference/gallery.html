@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-german.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../stiles.css" rel="stylesheet" type="text/css">
+<link href="../print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+
+
+<style type="text/css">
+<!--
+#menuTreeMisc {
+	display: none;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuReference {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuRefGallery {
+	color: #000000;
+	text-decoration: underline;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="true" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint"><a name="pagetop"><img src="../images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="../images/nix.gif" width="150" height="4">      <ul>
+        <li>
+          <a href="../index.html" id="menuMisc">Allgemeines</a>
+          <ul id="menuTreeMisc">
+            <li><a href="../principle.html" id="menuMiscPrinciple">Prinzip</a></li>
+            <li><a href="../installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="../configuration.html" id="menuMiscConfiguration">Konfiguration</a></li>
+            <li><a href="../backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="../system-requirements.html" id="menuMiscSystem">Systemvoraussetzungen</a></li>
+            <li><a href="../white-labeled.html" id="menuMiscWhiteLabel">Eigenes Logo</a></li>
+          </ul>
+		</li>
+        <li><a href="../tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="../tutorials/first-steps.html" id="menuTutFirstSteps">Erste Schritte</a></li>
+            <li><a href="../tutorials/simple-menu.html" id="menuTutSimpleMenu">Das Men&uuml;</a></li>
+            <li><a href="../tutorials/loop.html" id="menuTutLoop">Die Schleife</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html" id="menuReference">Referenz</a>
+          <ul id="menuTreeReference">
+            <li><a href="init-code.html" id="menuRefInitCode">Der Init Code</a></li>
+            <li><a href="logon-button.html" id="menuRefLogonButton">Anmeldeknopf</a></li>
+            <li><a href="short-text.html" id="menuRefShortText">Kurztext</a></li>
+            <li><a href="long-text.html" id="menuRefLongText">Text (Flie&szlig;text)</a></li>
+            <li><a href="rich-text.html" id="menuRefRichText">HTML-Text</a></li>
+            <li><a href="image.html" id="menuRefImage">Bild</a></li>
+            <li><a href="attachment.html" id="menuRefAttachment">Datei-Download</a></li>
+            <li><a href="menu.html" id="menuRefMenu">Men&uuml;</a></li>
+            <li><a href="loop.html" id="menuRefLoop">Schleife</a></li>
+            <li><a href="read-more.html" id="menuRefReadMore">Weiterlesen</a></li>
+            <li><a href="gallery.html" id="menuRefGallery">Bildergalerie</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="../images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="../images/nav-content-border.gif" class="menu"><img src="../images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Bildergalerie<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="../pictures/gallery-palette.gif" width="278" height="32"><br>
+      <span class="picturetext">Das Symbol f&uuml;r das Bildergalerie-Element in der Objektpalette </span></p>
+      <p>Das WebYep Bildergalerie-Element fasst mehrere Bilder (wie z.B. Fotos) zu einer Galerie zusammen und zeigt diese in tabellarische Form als Vorschaubilder an. Ein Klick auf ein Vorschaubild &ouml;ffnet dass das Originalbild - entweder in einem neuen Fenster, oder im selben Fenster mit dem Ligbtbox-Effekt, siehe <a href="#Lightbox">weiter unten</a>.</p>
+      <p>Die Bilder k&ouml;nnen mit einem Bildtext versehen werden und ihre Reihenfolge kann ver&auml;ndert werden. Es k&ouml;nnen auch mehrere Bildergalerie-Elemente auf einer Seite platziert  bzw. mit dem Schleifen-Element kombiniert werden.</p>
+      <p class="elementCodeHeading">Dieses WebYep Element wird durch folgenden PHP Code repr&auml;sentiert:</p>
+      <p class="elementCode">&lt;?php webyep_gallery(&quot;Galeriename&quot;, false, 60, 70, 3, 600, 700, 100); // WebYepV1 ?&gt;<!-- #BeginLibraryItem "/Library/code_detail.lbi" --> <span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">Details...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-de.lbi" -->
+      <noscript>
+      <div class="javaScriptWarning">Sie k&ouml;nnen die "Details..." nicht sehen, da JavaScript in Ihrem Browser deaktiviert ist!</div>
+      </noscript>
+      <!-- #EndLibraryItem -->
+      <div id="elementCodeDetails">Parameter der PHP Funktion <span class="codeExample">webyep_gallery()</span>:<br>
+          <span class="small">(siehe auch &quot;Eigenschaften des Bild-Elementes&quot; weiter unten)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Galeriename&quot;</span>: Ein Text &ndash; der Name f&uuml;r dieses Element. </li>
+            <li><span class="codeExample">true/false</span>: Ein boolscher Wert &ndash; der G&uuml;ltigkeitsbereich dieses Elementes. <br>
+                <span class="codeExample">true</span> wenn das Element in <em>allen</em> Seiten den selben Inhalt haben soll (global).<br>
+                <span class="codeExample">false</span> wenn es auf jeder Seite, auf der es platziert ist, andere Inhalte haben soll.</li>
+            <li><span class="codeExample">60</span>: Eine Zahl &ndash; die maximale Breite des Vorschaubildes.</li>
+            <li><span class="codeExample">70</span>: Eine Zahl &ndash; die maximale H&ouml;he des Vorschaubildes.</li>
+            <li><span class="codeExample">3</span>: Eine Zahl &ndash; die Anzahl der Spalten f&uuml;r die tabellarische Anzeige der Vorschaubilder.</li>
+            <li><span class="codeExample">600</span>: Eine Zahl &ndash; die maximale Breite des Bildes, oder 0 (Null), wenn das Bild nicht ver&auml;ndert werden soll.</li>
+            <li><span class="codeExample">700</span>: Eine Zahl &ndash;die maximale H&ouml;he des Bildes, oder 0 (Null), wenn das Bild nicht ver&auml;ndert werden soll.</li>
+            <li><span class="codeExample">100</span>: Eine Zahl &ndash; die Breite (in Pixel) der Spalten f&uuml;r die tabellarische Anzeige der Vorschaubilder.</li>
+          </ol>
+          <p>Bitte beachten Sie auch die Details unter &quot;Eigenschaften des Bildergalerie-Elementes&quot; weiter unten bzgl. Gr&ouml;&szlig;enangaben und Vorschaubild-Erstellung!</p>
+      </div>
+      <p>Die Bilddateien k&ouml;nnen von den BenutzerInnen direkt im Webbrowser
+          zum Webserver gesendet werden. Im  Galeriebild-&Auml;ndern-Fenster  wird
+          im
+          Webbrowser einfach eine GIF- oder JPEG-Datei ausgew&auml;hlt und
+          durch Klick auf &quot;Speichern&quot; wird die Datei zum Webserver
+          gesendet und von WebYep gespeichert.</p>
+      <p align="center"><img src="../pictures/gallery-inpage.jpg" width="641" height="362"><br>
+          <span class="picturetext">Das Bildergalerie-Element in Aktion.<br>
+Durch Klicken auf die +/- Kn&ouml;pfe k&ouml;nnen Bilder hinzugef&uuml;gt und gel&ouml;scht werden.<br>
+Durch Klicken auf die links/rechts Kn&ouml;pfe kann die Reihenfolge der Bilder ver&auml;ndert werden.<br>
+Durch Klicken auf den &quot;Bearbeiten&quot;-Knopf &ouml;ffnet sich das Galeriebild-&Auml;ndern-Fenster.</span></p>
+      <p align="center"><img src="../pictures/gallery-editor.jpg" width="496" height="417"><br>
+      <span class="picturetext"> Das Galeriebild-&Auml;ndern-Fenster</span></p>
+      <p>Anh&auml;ngig davon, welcher Web-Browser verwendet wird, k&ouml;nnen auch mehrere Bilder gleichzeitig hochgeladen werden, in dem  im Dateiauswahl-Dialog die Cmd-Taste (unter Mac OS) bzw. die Ctrl-Taste (unter Windows) beim Ausw&auml;hlen der Dateien gedr&uuml;ckt wird. Firefox 3 und Safari 5 unterst&uuml;tzen diese Funktion, Internet Explorer 8 nicht.</p>
+      <p>Die Eingegebene Beschreibung wird f&uuml;r alle hochgeladenen Bilder verwendet, kann aber nat&uuml;rlich im Nachhinhein ver&auml;ndert werden.</p>
+<!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem -->
+      <h3><a name="Lightbox"></a>Einen Lightbox-Effekt hinzuf&uuml;gen</h3>
+      <p>Das WebYep Bildergalerie-Element unterst&uuml;tzt das &Ouml;ffnen der Originalbilder mittels eines Lightbox-Effekts. Details dazu finden Sie in der  <a href="image.html#Lightbox">Referenz zum Bild-Element</a>.</p>
+      <h3>Gestalten der Galerie</h3>
+      <p>WebYep vergibt beim generieren des HTML-Codes f&uuml;r die Galerie diverse CSS-Klassen. Indem Sie in Ihrem Stylesheet oder direkt in Ihrer Seite CSS-Stile f&uuml;r diese Klassen definieren, k&ouml;nnen Sie das Aussehen der Galerie detailliert beeinflussen.</p>
+      <h4>Liste der CSS-Klassen:</h4>
+      <table border="1" cellspacing="0" cellpadding="0" class="description">
+        <tr>
+          <td><strong>CSS Klassenname</strong></td>
+          <td><strong>wird zugewiesen</strong></td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryContainer</td>
+          <td><p>dem &lt;table&gt;-Tag, der die gesamte Galerie beinhaltet.</p>
+            <p>Sie k&ouml;nnen die Zeilen und Zellen dieser Tabelle &uuml;ber folgende CSS-Selektoren gestalten:<br>
+              <span class="codeExample">.WebYepGalleryContainer tr</span><br>
+              <span class="codeExample">.WebYepGalleryContainer td</span></p></td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryFirstRow</td>
+          <td><p>dem &lt;tr&gt;-Tag der <em>ersten</em> Zeile der Galerie.</p>          </td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryFirstColumn</td>
+          <td><p>dem &lt;td&gt;-Tag der jeweils <em>ersten</em> Zelle einer Zeile.</p></td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryImage</td>
+          <td> dem &lt;div&gt;-Tag, der das Vorschaubild umschlie&szlig;t.
+            <p>Sie k&ouml;nnen das eigentliche Bild &uuml;ber folgenden CSS-Selektor gestalten:<br>
+                <span class="codeExample">.WebYepGalleryImage img</span></p></td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepGalleryText</td>
+          <td>dem &lt;div&gt;-Tag, der den Bildtext umschlie&szlig;t.</td>
+        </tr>
+      </table>
+      <p></p>
+      <h2>Eigenschaften des Bildergalerie-Elementes</h2>
+      <p align="center"><img src="../pictures/gallery-inspector.png" width="480" height="80"><br>
+      <span class="picturetext">Das Eigenschaftsfenster f&uuml;r das Bildergalerie-Element</span></p>
+      <h3>Galeriename</h3>
+      <p>  Ein Name f&uuml;r das Bildergalerie-Element. Der Galeriename wird in der Webseite
+        im &quot;Bearbeiten&quot;-Modus angezeigt, damit die BenutzerInnen bei
+        der Eingabe die verschiedenen Bildergalerie-Elemente unterscheiden k&ouml;nnen.</p>
+      <h3>Inhalte</h3>
+      <p>
+  Ist hier &quot;f&uuml;r diese Seite&quot; eingestellt, so ist dieses Bildergalerie-Element
+  von den Bildergalerie-Elementen <em>anderer Seiten</em> <em>unabh&auml;ngig</em>, auch
+  wenn diese den <em>gleichen Galerienamen</em> aufweisen. Wenn Sie m&ouml;chten,
+  dass die Bildergalerie-Elemente mit diesem Galerienamen auf <em>allen Seiten</em> den <em>gleichen
+  Inhalt</em> aufweisen, ist dieses Popup-Men&uuml; auf &quot;für alle Seiten&quot; zu
+  setzen.</p>
+      <h3>Maximale Vorschaubreite/-h&ouml;he</h3>
+      <p>Die Vorschaubilder (Thumbnails) f&uuml;r die Bilder der Galerie werden so von WebYep erstellt, dass sie die hier vorgegebene maximale H&ouml;he bzw. Breite nicht &uuml;berschreiten. Die Bilder werden dabei ihren Proportionen entsprechend verkleinert.</p>
+      <h3>Maximale Bildbreite/-h&ouml;he</h3>
+      <p>Wenn diese angegeben werden, so werden die hochgeladenen Bilder ggf. verkleinert, um die maximale Breite bzw. H&ouml;he nicht zu &uuml;berschreiten. Die Bilder werden dabei ihren Proportionen entsprechend verkleinert.</p>
+      <p>Werden diese Attribute nicht angegeben, dann werden die hochgeladenen Bilder nicht ver&auml;ndert.</p>
+      <p class="remark"><span class="remarkHeading">Hinweis:</span> Die Gr&ouml;&szlig;en&auml;nderung (Verkleinerung) des Bildes kann nur durchgef&uuml;hrt werden, wenn am Webserver die <strong>PHP-Erweiterung &quot;GD&quot;</strong> installiert ist. Wenn nicht, so wird im Galeriebild-&Auml;ndern-Fenster ein Warnhinweis angezeigt und das Bild wird nur in den entsprechenden Dimensionen <strong>angezeigt</strong> aber nicht tats&auml;chlich umgerechnet (die <strong>Datenmenge</strong> bleibt also unver&auml;ndert). </p>
+      <h3>Anzahl Zellen</h3>
+      <p>Gibt an, wie viele Tabellenzellen bei der tabellarischen Auflistung der Vorschaubilder nebeneinander angezeigt werden sollen.</p>
+      <h3>Zellenbreite</h3>
+      <p>Gibt an, wie breit (in Pixeln) diese Zellen sein sollen. Die Zellenbreite sollte jedenfalls gr&ouml;&szlig;er als die maximale Breite der Vorschaubilder gew&auml;hlt werden - meist aber deutlich breiter, damit die Zellen auch den Bildtext aufnehmen  k&ouml;nnen.</p>
+      <!-- #BeginLibraryItem "/Library/up.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="Seitenanfang"><img src="../images/up.gif" alt="Seitenanfang" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint --><!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+    <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2009, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

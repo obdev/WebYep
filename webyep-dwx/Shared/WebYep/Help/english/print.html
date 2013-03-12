@@ -1,0 +1,1692 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>WebYep</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="stiles.css" rel="stylesheet" type="text/css">
+<link href="print.css" rel="stylesheet" type="text/css" media="print">
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div align="center"><img src="images/logo-print.gif" width="384" height="181"></div>
+<div align="center" style="font-size: 32px; font-weight: bold">Documentation</div>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Introduction<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p>WebYep is a &quot;Web Content Management System&quot; - it enables people
+        without web design knowledge to edit the content of web pages, just using
+        the
+        web browser. By incorporating WebYep into your website every person
+        that can use a web browser is able to edit the content of the website's
+        pages.</p>
+      <p>To incorporate WebYep into your website, you as the web designer need
+        to install WebYep into the webspace and insert WebYep elements into
+        the web pages that need to be editable.</p>
+      <p>One main difference to other web content management systems is, that
+        you do not need to create your whole website with WebYep. You can take
+        any &quot;normal&quot; website and just make some parts of some pages &quot;editable&quot;,
+        by replacing the static content with the appropriate WebYep Elements.</p>
+      <p>This documentation is intended to give you all necessary information
+        for adding WebYep to your website, inserting and setting up the WebYep
+        elements in your pages.</p>
+      <h3>WebYep in action</h3>
+      <p>To see WebYep in action, how it works when integrated in a website
+        and how it is used by the &quot;users&quot; (the ones who edit the content),
+        you can take a look at the <a href="http://www.obdev.at/webyep/demo.html" target="_blank">WebYep
+        Online Demo</a>.</p>
+      <p class="remark"><span class="remarkHeading">Important:</span> This documentation
+        partly assumes that you are using the WebYep Extension for <em><!-- #BeginLibraryItem "/Library/dreamweaver.lbi" -->
+Adobe<span class="registered">&reg;</span> Dreamweaver<span class="registered">&reg;</span><!-- #EndLibraryItem --></em> to
+        create your website. It refers to version MX 2004 of Dreamweaver, although
+        the WebYep Dreamweaver Extension
+        will also work with other version of Dreamweaver (see <a href="system-requirements.html">System
+        Requirements</a>).</p>
+      <p class="remark"><span class="remarkHeading">Not using Dreamweaver?</span><br>In the <a href="reference/logon-button.html">Reference</a> section all WebYep Elements are described along with their PHP code fragments so you can also insert them into your pages <em>with any other web page editor</em> that allows direct entering HTML/PHP code.</p>
+      <!-- InstanceEndEditable -->
+      <div><img src="images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Basics<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p>The basic intend of WebYep is to make parts of a web page editable for
+        a &quot;user&quot; - someone accessing the page using a web browser,
+        who provided the right username/password. You as the web designer only
+        need to insert the appropriate WebYep element in place of a static text
+        or image in the page and install the webyep-system folder in your website.</p>
+      <h3>Quick setup guide:</h3>
+      <ol>
+        <li> If you're using <!-- #BeginLibraryItem "/Library/dreamweaver.lbi" --> Adobe<span class="registered">&reg;</span> Dreamweaver<span class="registered">&reg;</span><!-- #EndLibraryItem -->, install the WebYep Dreamweaver
+        Extension: Double click the webyep.mxp file coming with the WebYep package.
+          This will launch the 
+          Extension
+          Manager and start the installation.        </li>
+        <li>Copy the webyep-system folder coming with the WebYep package into
+          the root folder of your website (where your homepage - index.html -
+          resides).</li>
+        <li>Set  the username and password in the file config-inc.php
+          inside the webyep-system folder (switch to Code View after opening
+          it with Dreamweaver - this file is PHP code only!) and save it.</li>
+        <li>Upload the whole webyep-system folder to your webspace (via FTP).</li>
+        <li>Activate WebYep (see <a href="#activation">What does &quot;Activation&quot; mean?</a>)</li>
+      </ol>
+      <h3>Creating pages - a quick guide:</h3>
+      <ol>
+        <li>Create a normal HTML page but use &quot;.php&quot; as the file's
+          extension, not &quot;.html&quot;.</li>
+        <li>Insert any static (non-editable) content to design the page.</li>
+        <li>In place of text or images that should be editable, insert the
+          appropriate WebYep Elements.<br>
+          When using Dreamweaver, choose the WebYep Elements from its object palette,
+          category &quot;WebYep&quot;. Otherwise insert the appropriate PHP code fragment manually &ndash; see <a href="reference/index.html">Reference</a> section, especially also the item about &quot;<a href="reference/init-code.html">The Init Code</a>&quot;) .        </li>
+        <li>Also insert the WebYep Element &quot;Logon Button&quot; somewhere
+          in your page.</li>
+        <li>Save and upload your page to the webspace (via FTP).</li>
+        <li>Open the uploaded page up in your web browser.        </li>
+      </ol>
+      <p>More under &quot;<a href="reference/index.html">Reference</a>&quot; and &quot;<a href="tutorials/index.html">Tutorials</a>&quot;.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <h3><a name="activation">What does &quot;Activation&quot; mean?</a></h3>
+      <p>To &quot;activate&quot; WebYep in Dreamweaver, <strong>right</strong> click
+        the webyep-system folder in the <strong>Remote Site</strong> file list
+        and choose &quot;Activate WebYep&quot; in the appearing popup menu. To see how to activate WebYep using other applications, see &quot;<a href="javascript:window.open('activation-details.html', 'ActivationDetails', 'width=600,height=600')">Activation, Technical Details</a>&quot;, for further details see &quot;<a href="installation.html">Installation</a>&quot;.</p>
+      <h3>What are &quot;WepYep Elements&quot;?</h3>
+      <p>WebYep Elements are little  fragments of PHP code, that are embedded
+        in the HTML code. When using Dreamweaver and the WebYep Dreamweaver Extension
+        these Elements can be inserted by using the object palette (tab &quot;WebYep&quot;)
+        or the &quot;Insert&quot; menu. But you can also insert the necessary PHP code fragments directly  - see the <a href="reference/logon-button.html">reference</a> for each WebYep Element for details. </p>
+      <h3>Layout of the webyep-system folder</h3>
+      <ul>
+        <li><b>webyep-system</b>
+          <ul>
+            <li>config-inc.php (this is where you set up the username and password)</li>
+            <li>info.php (shows system information, installed licenses and WebYep
+              status) </li>
+            <li><b>program</b> contains all WebYep program scripts and data</li>
+            <li><b>data</b>
+(contains the data entered/uploaded by the users)           
+  <ul>
+                <li>documents (list of pages using WebYep) </li>
+                <li>license (license codes)</li>
+                <li>... various files containing all data entered by the users
+                  (texts, images, ...)</li>
+  </ul>
+            </li>
+          </ul>
+        The &quot;data&quot; folder should be backed up from time to time (see &quot;<a href="backup.html">Backup</a>&quot;). </li>
+      </ul>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Installation<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <h2> WebYep Dreamweaver Extension</h2>
+      <p>If you are using <span class="registered"><!-- #BeginLibraryItem "/Library/dreamweaver.lbi" -->
+Adobe<span class="registered">&reg;</span> Dreamweaver<span class="registered">&reg;</span><!-- #EndLibraryItem --></span> to
+        create your web pages, you can also use the WebYep Dreamweaver Extension.</p>
+      <p>The WebYep Dreamweaver Extension is  the file <em>&quot;webyep.mxp&quot;</em> -
+        install it by simply double clicking it. This will start the <em>&quot;Extension Manager&quot;</em> - just follow its instructions to install
+        the extension.</p>
+      <p>&nbsp;</p>
+      <p align="center"><img src="pictures/extension-manager.gif" width="521" height="314"><br>
+      <span class="picturetext">The Extension Manager with installed
+      WebYep Dreamweaver Extension</span></p>
+      <blockquote>
+        <p><span class="notice">Remark:</span> If you have installed more than
+          one Adobe&reg; application, be sure to select the right application
+          before installing. You can also transfer extensions from one application
+          to another with the &quot;File / Import Extensions...&quot; menu command.</p>
+      </blockquote>
+      <h2>The webyep-system folder</h2>
+      <p>The core of WebYep is a set of PHP scripts contained in a folder named
+        <em>&quot;webyep-system&quot;</em>. This webyep-system folder must be <em>uploaded</em>  onto
+        your webspace (like all other pages/images of your website) - usually
+        into
+        the <em>root folder</em> of your website, where your homepage (index.html
+        or index.php) resides.</p>
+      <p align="center"><img src="pictures/install-local.gif" width="392" height="224"><br>
+      <span class="picturetext">The webyep-system folder in the root folder of
+      a website</span></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p>Before uploading the webyep-system folder to your webspace you should
+        setup the configuration: Whenever a user (the person who is editing
+        the content of the website) wants to change the website's content, he/she
+        has to login with username and password (by clicking the WebYep Logon
+        Button in a  page). This username and password are the
+        only configuration
+        settings you have to take care of:</p>
+      <p></p>
+      <ol>
+        <li>Open the config-inc.php file inside the webyep-system folder.</li>
+        <li>Switch to &quot;code view&quot; in Dreamweaver to read it - this file contains
+          only PHP source code!</li>
+        <li>Enter your desired username and password inside the quotes after          <span class="codeExample">webyep_sAdminName</span> and <span class="codeExample">webyep_sAdminPassword</span>.</li>
+      </ol>
+      <p>e.g.:</p>
+      <blockquote class="codeExample"> 	// Username and password for edit mode.<br>
+// You can freely choose these and they must be entered by<br>
+// 
+users after clicking the lock icon to logon before being<br>
+// 
+allowed to start editing.<br>
+  $webyep_sAdminName = &quot;<b><span class="emsource" color="#990000">admin</span></b>&quot;;<br>
+  $webyep_sAdminPassword = &quot;<b><span class="emsource" color="#990000">test</span></b>&quot;;</blockquote>
+      <h3>Support for special character sets</h3>
+      <p>You can also set the configuration variable <span class="codeExample">$webyep_sCharset</span> to
+      an HTML character set.</p>
+      <p> If you have set a character set in your web pages
+        (with the &quot;Content-Type&quot; meta
+        tag), you should also set this character set in this configuration variable
+        (e.g. &quot;iso-8859-2&quot; for
+eastern european languages, or &quot;utf-8&quot;). This will make sure, WebYep displays the special
+        characters using this character
+set. But it will also stop WebYep from converting texts to HTML entities! WebYep
+        will instead
+ insert the meta tag  in each of its editor pages.</p>
+      <h2><a name="server_installation">Installation on the web server</a></h2>
+      <p>To install WebYep on your web server simply upload the webyep-system
+        folder like all your pages and images via FTP. You can this with any FTP appication or directly from Dreamweaver's site window with the
+        &quot;put&quot; command.</p>
+      <p align="center"><img src="pictures/upload.gif" width="280" height="245"><br>
+      <span class="picturetext">Upload (&quot;put&quot;) the webyep-system folder with
+       your other files into the server</span></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p>To enable WebYep (and thus PHP) to store data on the web server on most
+        server systems you must give PHP permission to do so by setting the unix
+        file
+        permissions
+        for the folder PHP should store data in.</p>
+      <p>To see how to activate WebYep with other applications than Dreamweaver, please see &quot;<a href="javascript:window.open('activation-details.html', 'ActivationDetails', 'width=600,height=600')">Activation, Technical Details</a>&quot;.</p>
+      <p>From within Dreamweaver the activation can be accomplished 
+        by  choosing the &quot;Activate WebYep&quot; command from the context
+        menu showed when right clicking the webyep-system folder in the list
+        of remote files
+        in Dreamweaver.</p>
+      <p>List the remote files in the site window (or &quot;files&quot; panel), by choosing
+        &quot;Remote view&quot; in the upper right popup menu. Then right click the &quot;webyep-system&quot;
+        folder and choose &quot;Activate WebYep&quot; in the appearing context menu.</p>
+      <p align="center"><img src="pictures/activate.gif" width="277" height="425"><br>
+        <span class="picturetext">The list of remote files (the files on the
+        server).<br>
+  Right click the webyep-system folder in this list and choose &quot;Activate WebYep&quot;.</span></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p>Whether the activation of WebYep was successful can be verified by calling
+        the WebYep status/info page:</p>
+      <blockquote>
+        <p>http://<i>www.mywebsite.com</i>/webyep-system/info.php</p>
+      </blockquote>
+      <h2>Summary</h2>
+      <ul>
+        <li><b>The  Dreamweaver Extension:</b><br>
+  A file named &quot;webyep.mxp&quot; - it contains forms, inspectors, etc. for
+   inserting and setting up the WebYep Elements in your web pages using
+  Dreamweaver<span class="registered">&reg;</span>.
+  Install by simply double clicking it and following the instructions of the
+  thereby launched Extension Manager.</li>
+        <li><b>The webyep-system folder:</b><br>
+  A folder named &quot;webyep-system&quot; with various PHP scripts etc. - the
+  core of the WebYep system.<br>
+  This folder should be put in the root directory of your website (where your
+  homepage &#8211; index.html or index.php &#8211; resides).</li>
+              <li><b>Configuration:</b><br>
+    Set username and password in config-inc.php.</li>
+              <li><b>Installation on the web server:</b><br>
+    Upload the webyep-system folder
+      like the other files of your website to your web
+      server (usually directly with Dreamweaver via FTP).</li>
+        <li><b>Activation:</b><br>
+          in Dreamweaver: Right click the webyep-system folder in the list of remote files (&quot;Remote
+        view&quot; in the site window) and choose &quot;Activate WebYep&quot;. Or use any other FTP/SCP application to set the access priviliges for the &quot;data&quot; folder inside the webyep-system folder accordingly. </li>
+        <li><b>Checking:</b><br>
+  You can check the status of your WebYep installation via the URL<br>
+  http://<i>www.mywebsite.com</i>/webyep-system/info.php</li>
+      </ul>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <!-- InstanceEndEditable -->
+      <div><img src="images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<div class="content">  <h2>Activation, Technical Details </h2>
+  <p>From a technical point of view by &quot;Activating&quot; WebYep, the Unix access rights for the &quot;<em>data</em>&quot; subfolder inside the webyep-system folder are set to &quot;read, write and execute by everyone&quot; - this correspond to the Unix mode &quot;<em>0777</em>&quot;. </p>
+  <p class="remark"><span class="remarkHeading">Warning:</span> A weak PHP configuration by your webspace provider might lead to security problems. If your provider does not set access restrictions like &quot;open_base_dir&quot; properly, PHP scripts from other web sites on the provider's server might be able to modify or delete your WebYep data! Also PHP settings like &quot;register_globals&quot; and &quot;allow_url_fopen&quot; should be turned off, as they represent a potential security risk. This does not relate to WebYep only but to <em>all PHP scripts of your web site</em>! Please make sure your web space provider has set up PHP securely!</p>
+  <p>To activate WebYep without Dreamweaver, upload the webyep-system folder to your webspace's home directory (where your homepage index.html or index.php is located) using your favorite FTP application. Then change the access privileges of the &quot;data&quot; folder accordingly.</p>
+  <p>Here's an example using the application CyberDuck for FTP upload:</p>
+  <p align="center"><img src="pictures/activate_any_ftp.jpg" width="454" height="389"></p>
+  <p>Select the &quot;data&quot; folder inside the webyep-system folder and  press Command &quot;I&quot; to bring up the info panel. In there set the permissions and click &quot;Apply&quot;. </p>
+</div>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Backup<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p>WebYep saves the texts and images entered and uploaded by the users
+        in a folder on the server. Although your provider should create backups
+        of your whole website every day, it is a good idea to create backups
+        of the WebYep data
+        by yourself.</p>
+      <h2>Where does WebYep safe its data?</h2>
+      <p>When looking at the files of your website <em>on the server</em> (by
+        connecting via FTP) you will find a folder called &quot;data&quot; inside
+        the webyep-system folder. In this folder WebYep stores all texts entered
+        or images uploaded
+        by the users.</p>
+      <p>To create a backup simply download the whole &quot;data&quot; folder.</p>
+      <h2>How do I restore data from a backup?</h2>
+      <ol>
+        <li>Remove the whole webyep-system folder in the server (if data was
+          lost or distorted chances are that the webyep system  was damaged also).</li>
+        <li>Reinstall WebYep (see <a href="installation.html#server_installation">Installation
+            on the server</a>).</li>
+        <li>Replace the &quot;data&quot; folder inside the webyep-system folder on the
+          server by your backup copy (e.g. by removing the folder on the server
+          and uploading the backup copy).</li>
+        <li>Activate WebYep again (see <a href="installation.html#activation">Installation
+        on the server</a>).</li>
+        <li>When accessing you website you might have to reenter the license
+          code.</li>
+      </ol>
+      <p>Be sure to use the same version when reinstalling WebYep -
+        not all versions of WebYep are data compatible. You can check the installed
+        version by accessing the WebYep status info page:</p>
+      <blockquote>
+        <p>http://<i>www.mywebsite.com</i>/webyep-system/info.php</p>
+      </blockquote>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->System
+          Requirements<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p>To integrate WebYep into your website you don't need any additional
+        tools - the applications you usually use to build websites are sufficient
+        to integrate WebYep. But for<!-- #BeginLibraryItem "/Library/dreamweaver.lbi" -->
+Adobe<span class="registered">&reg;</span> Dreamweaver<span class="registered">&reg;</span><!-- #EndLibraryItem -->there
+        is an <em>extension</em> coming with WebYep, which makes it 
+        more easy to
+        insert and adjust the WebYep Elements.</p>
+      <p>If you want to use the WebYep Dreamweaver Extension, you'll need <span class="registered"><!-- #BeginLibraryItem "/Library/dreamweaver.lbi" -->
+Adobe<span class="registered">&reg;</span> Dreamweaver<span class="registered">&reg;</span><!-- #EndLibraryItem --></span> MX, MX 2004 or 8 (Mac or PC). To use the the Extension
+        with Dreamweaver MX
+          2004 (=&nbsp;Version&nbsp;7.0), you will need to update 
+      to version 7.0.1 (this update is free and recommended anyway). </p>
+      <p>
+      The webspace your website will be installed in, needs PHP support  (min.
+      PHP 4.1) </p>
+      <ul>
+        <li><small>The PHP support must be &quot;as usual&quot;. If it is reduced
+            in some kind, WebYep might not function properly.</small></li>
+        <li><small>It must be possible to give PHP the right to create, change
+            and delete files in a certain directory (which is usually no problem!)</small></li>
+        <li><small>Windows web servers are supported as long as the above is true -
+          but there have been some problems reported from users trying to use
+          WebYep
+            (and other PHP scripts) on Windows servers...</small></li>
+      </ul>
+      <p>WebYep does not need any database (like MySQL)!</p>
+      <h2>Summary:</h2>
+      <p>System requirements on your PC/Mac:</p>
+      <ul>
+        <li>None</li>
+        <li>To use the WebYep Dreamweaver Extension you need <span class="registered"><!-- #BeginLibraryItem "/Library/dreamweaver.lbi" -->
+Adobe<span class="registered">&reg;</span> Dreamweaver<span class="registered">&reg;</span><!-- #EndLibraryItem --></span> MX, MX 2004 (updated to 7.0.1) or 8 (Mac or PC).</li>
+      </ul>
+      <p>System requirements on the web server:</p>
+      <ul>
+        <li>Full PHP support (Version 4.1 or newer)</li>
+        <li>No database needed!</li>
+      </ul>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->White Labeled Version <!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p>If you optained the white label option when purchasing your WebYep license, you can present WebYep as you own product, with your corporate design and your own logo.</p>
+      <p>Usually you are only allowed to change graphical components of WebYep (like images and the style sheet), to adopt the visual appearance of WebYep to your website's design. But changing the WebYep logo or removing the copyright notice is not allowed.</p>
+      <p>By optaining the &quot;white label&quot; option when purchasing WebYep, you may also change these components of WebYep.
+      You will  receive a special license code that will enable this option in WebYep.</p>
+
+      <h2>How WebYep becomes &quot;your product&quot;</h2>
+      <p>To give WebYep your corporate design and present it as &quot;your product&quot;, you can perform the following changes:</p>
+      <h3>Change the WebYep logo</h3>
+      <p>The WebYep logo is located in the file <span class="codeExample">logo.gif</span> in the &quot;<span class="codeExample">program/images</span>&quot; subfolder of the webyep-system folder. Simply replace it with your personal logo.</p>
+      <h3>Button icons, etc.</h3>
+      <p>The &quot;<span class="codeExample">program/images</span>&quot; subfolder also contains several icons used for various buttons in the WebYep user inteface. Change/replace these as needed.</p>
+      <h3>Fonts, colors, etc. </h3>
+      <p>The subfolder &quot;<span class="codeExample">program</span>&quot; of the webyep-system folder contains the style sheet <span class="codeExample">styles.css</span> used for all WebYep editor windows and help pages. Change its content to adopt font faces, colors etc.</p>
+      <h3>Product name</h3>
+      <p>To change to product name from &quot;WebYep&quot; to your personal produkt name, open the configuration file <span class="codeExample">config-inc.php</span> in the webyep-system folder. In there you will find the line</p>
+
+      <blockquote class="codeExample"> $webyep_sProductName = 'MyProduct';</blockquote>
+      <p>Change the text between the single quotes, but be sure to leave the single quotes intact and to not use any single quotes as part of the product name!</p>
+
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p>To use a WebYep system modified that way, you need a WebYep license with the white label option for the domain (URL or address) the website is accessed under.</p>
+      <p>For <strong>testing</strong> and during <strong>development</strong> you usually run WebYep via a local web server (on your desktop or on a server machine in you local network). If the web server running WebYep is <strong>not</strong> accessible from the internet (has a local IP address), then you do not need to install a WebYep license with white label option.</p>
+      <p>But if you install your modified WebYep system on a public web server, you will need to install a proper WebYep license with white label option (matching the host name by which that server is accessed) to use it.</p>
+
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<div align="center"><img src="images/logo-print.gif" width="384" height="181"></div>
+<div align="center" style="font-size: 32px; font-weight: bold">Tutorials</div>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Tutorials<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p>Here you can find some examples of using WebYep which can help you get
+        a deeper insight of how to apply WebYep to your pages. These tutorials
+        assume that you are using <span class="registered"><!-- #BeginLibraryItem "/Library/dreamweaver.lbi" -->
+Adobe<span class="registered">&reg;</span> Dreamweaver<span class="registered">&reg;</span><!-- #EndLibraryItem --></span> to
+        build your web pages and thus can make use of the WebYep Dreamweaver
+        Extension.</p>
+      <div class="importantHeading">Important hints regarding Dreamweaver usage:</div>
+      <h2>The Dreamweaver Object Palette:</h2>
+      <p>Dreamweaver's object palette (menu &quot;Window&quot;, item &quot;Insert&quot;)
+        is where you can find icons for inserting various elements like tables,
+        images
+        etc.</p>
+      <p>After installing the WebYep Dreamweaver Extension, this palette is extended
+        by the category &quot;WebYep&quot; which contains icons for inserting the WebYep
+        Elements.</p>
+      <p>        <img src="pictures/pallette-selection.gif" width="403" height="272"></p>
+      <h2>Make all invisible elements visible</h2>
+      <p>As the WebYep Elements are tiny pieces of PHP code, they can be made
+        visible in Dreamweaver by enabling (making visible) the &quot;Invisible
+        Elements&quot;:</p>
+      <ul>
+        <li>Go to menu &quot;Edit&quot;, item &quot;Preferences&quot;</li>
+        <li>Switch to category &quot;Invisible
+                  Elements&quot; </li>
+        <li> Enable all listed elements.</li>
+      </ul>
+      <p>The WebYep-Elements in your page should then look like this: </p>
+      <blockquote>
+        <p><img src="pictures/php.gif" width="17" height="15"></p>
+      </blockquote>
+      <p>You can quickly hide/show these &quot;Invisible Elements&quot; by choosing
+        menu
+        &quot;View&quot;, submenu &quot;Visual Aids&quot;, item &quot;Hide All&quot; (or. &quot;Show
+        All&quot;).</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p>Positioning the text cursor by clicking somewhere inside the Dreamweaver
+        document is good enough  most of the time. But if you want to place the
+        text cursor <em>exactly before or after</em> a specific part of your
+        document (before or after a tag or HTML element), using the &quot;tag selector&quot;
+        (at the lower left corner of a Dreamweaver document) would be preferable:</p>
+      <p align="center"><img src="pictures/tag-selector.gif" width="314" height="131"></p>
+      <p>Clicking somewhere inside the bold sentence will show a <em>hierarchy
+          of tags</em> in the tag selector as shown in the picture above: The cursor  is
+        inside a &lt;b&gt; tag, which is inside a &lt;p&gt; tag, which is inside a &lt;body&gt;
+        tag.</p>
+      <p>Clicking the &quot;&lt;b&gt;&quot; tag in the tag selector would then select <em>the
+        whole bold sentence</em>. Pressing the &quot;cursor left&quot; (or &quot;cursor right&quot;)
+        key afterwards would place the text cursor exactly before (or after)
+        the &lt;b&gt; tag (and thus the bold sentence).</p>
+      <p>If your try to achieve this by simply clicking at the end of the sentence,
+        chances are good that you end up <em>inside</em> the &lt;b&gt; tag instead
+        of after it.</p>
+      <h2>Assigning CSS styles</h2>
+      <p>You can also use the tag selector to assign CSS styles to an HTML tag.</p>
+      <p>To do so, position the text cursor somewhere <em>inside</em> the tag
+        you want to assign a style to. The tag selector will show the tag hierarchy
+        that leads to the current position.</p>
+      <p>Now click the tag in the tag selector to which you want to assign
+        the style to <em>with the right mouse button</em> and in the context
+        menu popping up look in the submenu &quot;Set Class&quot; for your desired
+        style and choose it.</p>
+      <p align="center"><img src="pictures/assign-css-stile.gif" width="262" height="198"></p>
+      <p>That way you can easily assign CSS styles to tags that surround WebYep
+        Elements - e.g. a Paragraph (&lt;p&gt; tag) with a WebYep Short Text
+        Element inside it, thereby defining the look of the WebYep Element itself.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->First
+          Steps<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p class="small hideFromPrint">&lt;<a href="javascript:window.print();">print</a>&gt;</p>
+      <p>In this tutorial you will learn how to use the basic WebYep elements,
+        how to apply them to an example page and how to test this example page.</p>
+      <p>Please use a website with WebYep installed for this tutorial (see <a href="../installation.html">Installation</a>).</p>
+      <h3>Creating the page, inserting the WebYep Elements</h3>
+      <p>1. Create a new document called &quot;wy-yesy.php&quot;.</p>
+      <p>2. Insert three empty paragraphs.</p>
+      <p>3. Position the cursor in the first line.</p>
+      <p>4. Click the WebYep Short Text Element in Dreamweaver's Object Palette
+        (category &quot;WebYep&quot;). This will insert that element into your
+        page at the current cursor position.</p>
+      <p>5. Position the cursor in the second line.</p>
+      <p>6. Insert (right one after the other) a WebYep Image Element (fourth
+        from left in the object palette) and a WebYep Text Element (third from
+        left).</p>
+      <p>7. Position the cursor in the third line.</p>
+      <p>8. Insert a WebYep Logon Button (left most in the object palette).</p>
+      <p>You should now see four WebYep Elements in your page (tiny yellow/orange
+        icons) - please make sure that you have enabled the display of the &quot;Invisible
+        Elements&quot; (see <a href="index.html">Tutorials Introduction</a>).</p>
+      <p align="center"><img src="pictures/tutorials/first-steps-1.gif" width="116" height="129"></p>
+		<h3 class="pageBreak">Configuring the WebYep Elements</h3>
+      <p>1. Click on the WebYep Element (the yellow icon) in the first line:
+        The Short Text Element.</p>
+      <p>2. In the inspector panel (menu &quot;Windows&quot;, item &quot;Properties&quot;) the properties
+        of the WebYep Short Text Element are displayed.</p>
+      <p>3. Enter &quot;Title&quot; as the &quot;Fieldname&quot;.</p>
+      <p>4. Click the first WebYep Element in the second line: The Image Element</p>
+      <p>5. Enter &quot;Photo&quot; as the image name. For &quot;HTML-Attributes&quot;
+        enter:</p>
+      <blockquote>
+        <p class="codeExample">align=&quot;left&quot; hspace=&quot;20&quot;</p>
+      </blockquote>
+      <p>6. Click the second WebYep element in the second line: The Long Text
+        Element.</p>
+      <p>7. Enter &quot;Text&quot; as the fieldname.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p>Please make sure you have transferred the webyep-system folder to your
+        web server and have activated WebYep (see <a href="../installation.html">Installation</a>).</p>
+      <p>1. Transfer the page (wy-test.php) to your web server (upload via FTP).</p>
+      <p>2. Open the page in your web browser by entering the appropriate address
+        (URL) - e.g.:</p>
+      <blockquote>
+        <p>http://www.mywebsite.com/wy-test.php</p>
+      </blockquote>
+      <p align="center"><img src="pictures/tutorials/first-steps-2.gif" width="174" height="159"></p>
+      <p>3. Click the lock icon in the page (the WebYep Logon Button).</p>
+      <p>4. When the logon window pops up, enter the username and password you
+        configured when installing WebYep (default is username &quot;admin&quot; and no
+        password).</p>
+      <p align="center"><img src="pictures/tutorials/first-steps-3.gif" width="174" height="159"></p>
+      <p>5. Several edit icons (with a pen symbol) should appear - click them
+        to edit the content of your page.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->The
+          Menu Element<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p class="small hideFromPrint">&lt;<a href="javascript:window.print();">print</a>&gt;</p>
+      <p>In this tutorial you will learn how to use the WebYep Menu Element.</p>
+      <p>Please use a website with WebYep installed for this tutorial (see <a href="../installation.html">Installation</a>).</p>
+      <h3>Creating the page, inserting the WebYep Elements</h3>
+      <p>1. Create a new document &quot;wy_menu.php&quot;. Please don't work
+        on unnamed/unsaved documents! Create the file and immediately save it
+        under
+        the name &quot;wy_menu.php&quot;
+        before continuing.</p>
+      <p>2. Insert two empty paragraphs.</p>
+      <p>3. Position the cursor in the first paragraph.</p>
+      <p>4. Insert a WebYep Logon Button (left most item in Dreamweaver's object
+        palette, category &quot;WebYep&quot;).</p>
+      <p>5.. Position the cursor in the second paragraph.</p>
+      <p>6. Insert a table: one row, two columns, 10 pixels cellpadding.</p>
+      <p>Your page should now look approximately like this &#8211; please make sure
+        that you have enabled the display of the &quot;Invisible Elements&quot; (see <a href="index.html">Tutorials
+        Introduction</a>):</p>
+      <p align="center"><img src="pictures/tutorials/simple-menu-1.gif" width="441" height="142"></p>
+      <p>7. Position the cursor in the left table column.</p>
+      <p>8. Insert a WebYep Menu Element (fifth icon from the left in the object
+        palette).</p>
+      <p>9. Position the cursor in the right table column.</p>
+      <p>10. Insert two empty paragraphs.</p>
+      <p>11. Position the cursor in the first of these two paragraphs.</p>
+      <p>12. In the inspector choose &quot;Format: Heading 1&quot; for this paragraph.</p>
+      <p>13. Insert a WebYep Short Text Element (second from left in the object
+        palette).</p>
+      <p>14. Position the cursor in the second paragraph (of the right table
+        column).</p>
+      <p>15. Insert a WebYep Long Text Element (third from left in the object
+      palette).</p>
+      <p>Your page should now look approximately like this:</p>
+      <p align="center"><img src="pictures/tutorials/simple-menu-2.gif" width="578" height="160"></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p>1. Click the WebYep Element in the left table column (the Menu Element).</p>
+      <p>2. Enter &quot;Products&quot; as the menu name in the inspector. Please make sure
+        that &quot;wy_menu.php&quot; is listed as &quot;Page (URL)&quot;.</p>
+      <p>3. Click the upper WebYep Element in the right table column (the Short
+        Text Element).</p>
+      <p>4. Enter &quot;Title&quot; as the fieldname in the inspector.</p>
+      <p>5. Click the lower WebYep Element in the right table column (the Long
+        Text Element).</p>
+      <p>6. Enter &quot;Text&quot; as the fieldname.</p>
+      <h3 class="pageBreak">Testing the page</h3>
+      <p>Please make sure you have transferred the webyep-system folder to your
+      web server and have activated WebYep (see <a href="../installation.html">Installation</a>).</p>
+      <p>1. Transfer the page (wy_menu.php) to your web server (upload via FTP).</p>
+      <p>2. Open the page in your web browser by entering the appropriate address
+      (URL) - e.g.:</p>
+      <blockquote>
+        <p>http://www.mywebsite.com/wy_menu.php</p>
+      </blockquote>
+      <p align="center"><img src="pictures/tutorials/first-steps-2.gif" width="174" height="159"></p>
+      <p>3. Click the lock icon in the page (the WebYep Logon Button).</p>
+      <p>4. When the logon window pops up, enter the username and password you
+        configured when installing WebYep (default is username &quot;admin&quot; and
+        no password).</p>
+      <p align="center"><img src="pictures/tutorials/simple-menu-4.gif" width="461" height="205"></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+        &quot;Products&quot; (left table column) to edit the menu.</p>
+      <p>6. The menu editor window will pop up (see &quot;<a href="../reference/menu.html">Reference
+      / Menu</a>&quot;).</p>
+      <p>7. Create three menu items by entering each items title in the textfield
+        at the bottom of the window and clicking &quot;add&quot;.</p>
+      <p align="center"><img src="pictures/tutorials/simple-menu-5.gif" width="368" height="140"></p>
+      <p>8. Save the menu by clicking &quot;Save&quot;.</p>
+      <p align="center"><img src="pictures/tutorials/simple-menu-6.gif" width="397" height="185"></p>
+      <p>9. Click one of the menu items.</p>
+      <p>10. Enter title and text for this page by clicking the edit buttons
+        beneath &quot;Title&quot; and &quot;Text&quot;.</p>
+      <!-- #BeginLibraryItem "/Library/webyep_di-en.lbi" --><div class="remark">
+        <p><span class="remarkHeading">Notice: </span>You can manually create links to a menu item's target page 
+          by adding the following to the URL of the link:</p>
+        <blockquote>
+          <p class="codeExample">?WEBYEP_DI=x</p>
+        </blockquote>
+        <p>where &quot;x&quot; stands for the ID of the menu item - e.g.:</p>
+        <blockquote>
+          <p class="codeExample">some_menu_item_page.php?WEBYEP_DI=1</p>
+        </blockquote>
+        <p>You can find out the ID of a menu item by simply clicking the menu item and observing
+          the URL displayed in your browsers address field. At the end of the
+          displayed URL you should see the &quot;WEBYEP_DI=xxx&quot;.</p>
+        <p>The ID of a menu item has nothing to do with it's position in the menu (order)!</p>
+        </div>
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->The
+          Loop<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p class="small hideFromPrint">&lt;<a href="javascript:window.print();">print</a>&gt;</p>
+      <p>In this tutorial you will learn the use of the WebYep Loop Element.</p>
+      <p>Please use a website with WebYep installed for this tutorial (see <a href="../installation.html">Installation</a>).</p>
+      <h3>Creating the page, inserting the WebYep Elements</h3>
+      <p>1. Create a new document &quot;wy_loop.php&quot;. Please don't work
+        on unnamed/unsaved documents! Create the file and immediately save it
+      under the name &quot;wy_loop.php&quot; before continuing.</p>
+      <p>2. Insert two empty paragraphs.</p>
+      <p>3. Position the cursor in the first paragraph.</p>
+      <p>4. Insert a WebYep Logon Button (left most item in Dreamweaver's object
+        palette, category &quot;WebYep&quot;).</p>
+      <p>5. Position the cursor in the second paragraph.</p>
+      <p>6. Insert side by side a WebYep Image Element and a WebYep Short Text
+        Element (fourth and second from left in the object palette).</p>
+      <p>Your page should now look approximately like this &#8211; please make
+        sure that you have enabled the display of the &quot;Invisible Elements&quot; (see <a href="index.html">Tutorials
+        Introduction</a>):</p>
+      <p align="center"><img src="pictures/tutorials/loop-1.gif" width="134" height="107"></p>
+      <p>7. Position the cursor in the second paragraph, <em>between</em> the two WebYep
+      Elements. </p>
+      <p>8. Select the whole paragraph by clicking the &lt;p&gt;-tag in the tag selector:</p>
+      <p align="center"><img src="pictures/tutorials/loop-2.gif" width="177" height="152"></p>
+      <p>9. Press the &quot;cursor left&quot; key to position the cursor exactly <em>before</em>        the
+        paragraph. (see also &quot;<a href="index.html#positioning">Positioning
+        the cursor</a>&quot; in
+      the tutorial sections introduction)</p>
+      <p>10. Insert the WebYep Loop <em>Start</em> Element (third from right
+        in the object palette).</p>
+      <p>11. Position the cursor <em>exactly after</em> the paragraph by using
+        the method described above.</p>
+      <p>12. Insert the WebYep Loop <em>End</em> Element (second from right in
+      the object palette).</p>
+      <p>The paragraph is now enclosed in a loop element. Your page should
+        now look approximately like this:</p>
+      <p align="center"><img src="pictures/tutorials/loop-3.gif" width="160" height="184"></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p>1. Select the WebYep Element in the second line (the Loop Start Element).</p>
+      <p>2. Enter &quot;Offers&quot; as the loop name in the inspector.</p>
+      <p>3. Select the left WebYep Element in the third line (the Image Element).</p>
+      <p>4. Enter &quot;Photo&quot; as the image name.</p>
+      <p>5. Select the right WebYep Element in the third line (the Short Text
+        Element).</p>
+      <p>6. Enter &quot;Text&quot; as the field name.</p>
+      <h3 class="pageBreak">Testing the page</h3>
+      <p>Please make sure you have transferred the webyep-system folder to your
+        web server and have activated WebYep (see <a href="../installation.html">Installation</a>).</p>
+      <p>1. Transfer the page (wy_loop.php) to your web server (upload via FTP).</p>
+      <p>2. Open the page in your web browser by entering the appropriate address
+        (URL) - e.g.:</p>
+      <blockquote>
+        <p>http://www.mywebsite.com/wy_loop.php</p>
+      </blockquote>
+      <p align="center"><img src="pictures/tutorials/first-steps-2.gif" width="174" height="159"></p>
+      <p>3. Click the lock icon in the page (the WebYep Logon Button).</p>
+      <p>4. When the logon window pops up, enter the username and password you
+        configured when installing WebYep (default is username &quot;admin&quot; and
+        no password).</p>
+      <p align="center"></p>
+      <p align="center"><img src="pictures/tutorials/loop-4.gif" width="191" height="152"></p>
+      <p>5. Click the edit buttons to upload an image file (&quot;Photo&quot;) and enter
+        some text (&quot;Text&quot;).</p>
+      <p>6. Then click the &quot;+&quot; icon to add more loop blocks.</p>
+      <p align="center"><img src="pictures/tutorials/loop-5.gif" width="238" height="237"></p>
+      <p>Click the trash icon to remove whole loop blocks, click the &quot;up&quot;/&quot;down&quot;
+        icons to rearrange the blocks.</p>
+      <p>In this example the loop block contains only WebYep Elements, but it
+        can contain any content: Static HTML code (like text or images) <em>and</em> WebYep
+        Elements.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<div align="center"><img src="images/logo-print.gif" width="384" height="181"></div>
+<div align="center" style="font-size: 32px; font-weight: bold">Reference</div>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Reference<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+         <p>WebYep Elements are little fragments of PHP code, that are embedded in the page's HTML code. When using Dreamweaver and the WebYep Dreamweaver Extension these elements can be inserted by using the object palette (tab &quot;WebYep&quot;) or the &quot;Insert&quot; menu.</p>
+         <p>But you can also insert them using any other web page editor that allows inserting PHP code - see the reference for each WebYep Element for details. </p>
+      <p>Please remember that pages that are to contain WebYep Elements must have the file <em>filename extension &quot;.php&quot;</em> instead of &quot;.html&quot;!</p>
+      <hr size="1" noshade>
+      <p>When using the WebYep Dreamweaver Extension, the different WebYep Elements are placed inside your pages via icons
+        in Dreamweavet's <em>Object Palette.</em> By choosing the <em>&quot;WebYep&quot;
+        category</em>        in the object palette's popup menu, you can see
+        the icons for the various WebYep Elements.</p>
+      <p align="center"><img src="pictures/pallette-selection.gif" width="403" height="272"></p>
+      <p>When clicking one of the WebYep Element icons in the object palette,
+        the corresponding WebYep Element gets inserted into the page at the current
+        cursor position:</p>
+      <p>The inserted WebYep Element is displayed as a &quot;PHP&quot; icon -
+        when selecting this icon, the Dreamweaver inspector panel will show the
+        attributes of
+        this element.</p>
+      <p align="center"><img src="pictures/webyep-elements.gif" width="290" height="282"><br>
+        <span class="picturetext">Inserted WebYep Elements appear as &quot;PHP&quot;-icons</span></p>
+      <p align="center"><img src="pictures/image-inspector.gif" width="426" height="87"><br>
+        <span class="picturetext">The inspector showing the attributes of the
+      WebYep Image Element</span></p>
+      <p class="remark"><span class="remarkHeading">Important notice:</span> Please
+        make sure that the &quot;Invisible Elements&quot; are made visible in
+        Dreamweaver: Menu &quot;View / Visual Aids / Invisible Elements&quot;.
+        And also make sure the PHP icons are activated in the preferences: Menu
+        &quot;Edit / Preferences&quot; category &quot;Invisible
+        Elements&quot;, checkboxes &quot;Visual Server Markup&quot; and &quot;Nonvisual
+        Server Markup&quot; must be checked.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+          with any other elements, text or images. You can for example format
+          a WebYep Short Text Element via CSS with any normal text:</p>
+        <p align="center"><img src="pictures/designing-elements.gif" width="405" height="277"><br>
+          <span class="picturetext">The WebYep Element can be formatted with
+          other text e.g. via CSS<br>
+          like you would do with any other content in
+      your page.</span></p>
+      <p>&nbsp;</p>
+      <h2>Summary</h2>
+      <ul>
+          <li>WebYep Elements are small pieced of PHP code. </li>
+        <li>When using the WebYep Dreamweaver Extension, they are inserted into your page by clicking one of the
+          icons in Dreamweaver's object palette, &quot;WebYep&quot; category.</li>
+        <li>Pages containing WebYep Elements must have the filename extension
+          &quot;.php&quot; instead of &quot;.html&quot;.</li>
+        <li>WebYep elements are displayed as &quot;PHP&quot; icons in your page (if the
+          &quot;Invisible Element&quot;  are enabled in the &quot;View&quot; menu
+          and the &quot;Visual/Nonvisual Server Markup&quot; are enabled in the
+          preferences).</li>
+        <li>When selecting one of these &quot;PHP&quot; icons, the Dreamweaver inspector
+          panel shows the attributes of the selected WebYep Element.</li>
+        <li>You can format WebYep elements like any other content in your page
+          (e.g. via CSS).</li>
+      </ul>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->The WebYep Init Code <!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+         <div style="width: 600px">
+             <p>Every page containing WebYep Elements needs a piece of PHP code that sets up the whole WebYep system. This code must be located at the very beginning of the document, before <strong>anything</strong> else &ndash; there must not even be an empty line before it in the document file. </p>
+             <p>It must also be located <strong>before</strong> the &lt;DOCTYPE&gt; directive. Allthough that directive also must be the first thing in the document, this will <strong>not</strong> cause any problems, as the PHP code <strong>does not reach</strong> the browser! The PHP code is processed (and &quot;consumed&quot;) by the server and in the HTML code reaching the browser, the &lt;DOCTYPE&gt; will again be the first thing.</p>
+             <p>The Init Code is <strong>inserted automatically</strong> if you are using any of the supported web design apps (like Dreamweaver) and their <strong>WebYep plugin or extension</strong>. But if you are creating your pages &quot;by hand&quot; or at least are inserting the WebYep PHP code fragments manually, you also need to place the WebYep Init Code manually.</p>
+         </div>
+         <p>This is the WebYep Init Code:<br>
+           (Please make sure to copy <strong>all</strong> the code, from the first &quot;&lt;?php&quot; to the last &quot;?&gt;&quot;) </p>
+         <hr size="1" noshade><pre>&lt;?php // WebYep init WebYepV1
+/* &gt;&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=white&gt;&lt;h2&gt;WebYep message: Error, PHP inactive&lt;/h2&gt;
+&lt;font color=red&gt;The PHP code in this page can not be executed!&lt;ul&gt;
+&lt;li&gt;Are you launching this page directly form your harddisc (e.g. via Dreamweavers
+&quot;Preview in Browser&quot instead of accessing it via a webserver?&lt;/li&gt;
+&lt;li&gt;Has this file the correct file extension for PHP scripts?
+WebYep pages must have the &quot;.php&quot; extension and &lt;b&gt;not&lt;/b&gt; ".html" or ".htm"!&lt;/li&gt;
+&lt;/ul&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;!--
+*/
+$webyep_sIncludePath = "./";
+$iDepth = 0;
+while (!file_exists($webyep_sIncludePath . "webyep-system")) {
+	$iDepth++;
+	if ($iDepth &gt; 10) {
+		error_log("webyep-system folder not found!", 0);
+		echo "&lt;html&gt;&lt;head&gt;&lt;title&gt;WebYep&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;b&gt;WebYep:&lt;/b&gt; This page can not be displayed &lt;br&gt;Problem: The webyep-system folder was not found!&lt;/body&gt;&lt;/html&gt;";
+		exit;
+	}
+	$webyep_sIncludePath = ($webyep_sIncludePath == "./") ? ("../"):("$webyep_sIncludePath../");
+}
+if (file_exists("${webyep_sIncludePath}webyep-system/programm")) $webyep_sIncludePath .= "webyep-system/programm";
+else $webyep_sIncludePath .= "webyep-system/program";
+include("$webyep_sIncludePath/webyep.php");
+// --&gt;?&gt;
+</pre><hr size="1" noshade>
+      <h2>Summary</h2>
+      <div style="width: 600px">
+        <ul>
+            <li>Every page using WebYep Elements also needs the WebYep Init Code. </li>
+          <li>The Init Code must be the <strong>very first thing</strong> in the document.</li>
+          <li>You <strong>do not need to care</strong> about the Init Code, if you are using one of the supported web design apps and the corresponding <strong>WebYep plugin or extension</strong> &ndash; it is placed automatically.</li>
+        </ul>
+      </div>
+      <div style="width: 600px"><!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --></div>
+      <!-- InstanceEndEditable -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Logon
+          Button<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="pictures/logonbutton-palette.gif" width="224" height="32"><br>
+      <span class="picturetext">The Logon Button icon in the Dreamweaver object
+      palette</span></p>
+      <p>When a user wants to edit the content of a page, he or she must authenticate
+        with a <em>username and a password</em>: By clicking the WebYep Logon
+        Button, which can be placed anywhere in any  page, a popup
+        window containing the logon form opens. After entering the right username/password,
+        that pages appear in edit mode.</p>
+      <p class="elementCodeHeading">This element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php webyep_logonButton(true); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Arguments for the <span class="codeExample">webyep_logonButton()</span> PHP function call:<br>
+          <span class="small">(see &quot;Attributes of the  Logon Button&quot; below for details)</span>
+          <ol>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; whether the logon button should be visible. <br>
+                <span class="codeExample">true</span> if it should be visible. <br>
+                <span class="codeExample">false</span> if not &ndash; the button will still be there and clickable (if you know where to click).<br>
+            Independently of this setting, logging in still requires the correct username and password!</li>
+          </ol>
+      </div>
+      <p>See also <a href="../installation.html#configuration">Configuring WebYep</a> on
+        how to configure this username and password.</p>
+      <p align="center"><img src="pictures/logonbutton-inpage.jpg" width="300" height="447"><br>
+      <span class="picturetext">The Logon Button placed at the lower left corner
+      below the navigation.</span></p>
+      <p>The Logon Button does <em>not</em> have to be placed on <em>every editable
+      page</em>. Placing it on <em>one page is enough</em> - after successful
+      logon every editable page will be display in edit mode until the user
+      logs off by clicking the Logon Button again (which will look a bit different
+      when logged in).</p>
+      <p>This is accomplished by setting some (partially encrypted) Cookies in
+        the users web browser - thus it is necessary to enable Cookies in
+        your web browser to edit the pages content with WebYep.</p>
+      <p class="remark"><span class="remarkHeading">Technical notice:</span> Username
+        and password are temporarily stored in Cookies in the users computer
+        memory, not permanently on the harddisc (Session Cookies)! The password
+        is stored encrypted in a way that is only valid for one day - so even
+        if
+        someone
+        gets hold
+        of
+        the users computer and is able to read out the browsers memory, this
+        attacker wont know the password and the stolen cookie will not be of
+        any use the day after the user entered the password.<br>
+        <br>
+        Nevertheless username and password are transferred unencrypted when logging
+        in - so if some hacker is able to listen to the users network communication
+        while logging in, he/she can get hold of the login credentials. The only
+        way to avoid this, is to use an encrypted HTTP connection (https, SSL). </p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p align="center"><img src="pictures/logonbutton-inspector.gif" width="406" height="107"><br>
+          <span class="picturetext">The Dreamweaver inspector showing the Logon
+          Button's attributes</span></p>
+      <h3>visible</h3>
+      <p>If this attribute is <em>deactivated</em> (the checkbox is unchecked),
+        the button will not be displayed as the lock icon, but instead as a <em>fully
+        transparent</em>        (thus invisible) image. That way the user can
+        only click it, if she/he knows where it is! Usually you might place it
+        that way right beside or
+        below a logo or other easily locatable elements in a page.</p>
+      <p>Hiding the Logon Button that way makes logging in a bit like mine detection,
+        but might keep some &quot;curious&quot; website visitors from playing
+        around with the logon window. But if you have configured a save, not
+        easily guessable
+        password, this should not be necessary.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Short
+          Text<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="pictures/short-text-palette.gif" width="224" height="32"><br>
+        <span class="picturetext">The Short Text icon in the Dreamweaver object
+      palette</span></p>
+      <p>The WebYep Short Text Element is useful for short text passages like
+        headlines, product names or prices. Contrary to the Long Text Element
+        the user can not format the content of this element. So the web designer
+        is in full control over  the look of the Short Text's content.</p>
+      <p class="elementCodeHeading">This element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php webyep_shortText(&quot;Fieldname&quot;, false); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Arguments for the <span class="codeExample">webyep_shortText()</span> PHP function call:<br>
+          <span class="small">(see &quot;Attributes of the Short Text Element&quot; below for details)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Fieldname&quot;</span>: A string &ndash; the field name for this element. </li>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; the scope for this element. <br>
+                <span class="codeExample">true</span> if the element should have the same content on <em>all</em> pages (global).<br>
+                <span class="codeExample">false</span> if it should have different content on each page it appears on.</li>
+          </ol>
+      </div>
+      <p align="center"><img src="pictures/short-text-inpage.jpg" width="406" height="398"><br>
+          <span class="picturetext">The Short Text Element in action - by clicking
+      the &quot;Edit&quot; button, the Short Text Editor window opens</span></p>
+      <p align="center"><img src="pictures/short-text-editor.gif" width="460" height="308"><br>
+      <span class="picturetext"> The Short Text Editor window</span></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p align="center"><img src="pictures/short-text-inspector.gif" width="430" height="107"><br>
+      <span class="picturetext">The Dreamweaver inspector showing the Short Text
+      Element's attributes</span></p>
+      <h3>Field name</h3>
+      <p>A distinctive name for that element. This name will be displayed in
+        the page in edit mode to give the user a hint on what this elements content
+        stands for and to distinguish the different WebYep Elements in a page.</p>
+      <h3>Content</h3>
+      <p>When set to &quot;for this doc only&quot;  the elements content is unique
+        for this page - even if another element on a different page has the same
+         name. If set to &quot;for all documents&quot; the content will
+        be the same on all pages for elements
+        of
+        this
+        kind
+        that use the same 
+        name.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Long
+          Text Element<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="pictures/long-text-palette.gif" width="224" height="32"><br>
+      <span class="picturetext">The Long Text icon in the Dreamweaver object
+      palette</span></p>
+      <p>This element is useful for long text passages like product descriptions
+        or news articles - or even whole pages. The text content of this element
+        can be formatted by the user with some rudimental formatting options
+        (like bold text or bullet lists).</p>
+      <p>The possibilities of formatting the text are limited within the Long Text Element (see below). That is why it is especially useful if you as the web designer want to stay in control of the styling of the text.</p>
+      <p>If you want to give more control over the text's styling to the editors, the Rich Text Element might be more useful.</p>
+      <p class="elementCodeHeading">This element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php webyep_longText(&quot;Fieldname&quot;, false, &quot;&quot;, false); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Arguments for the <span class="codeExample">webyep_longText()</span> PHP function call:<br>
+          <span class="small">(see &quot;Attributes of the Long Text Element&quot; below for details)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Fieldname&quot;</span>: A string &ndash; the field name for this element. </li>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; the scope for this element. <br>
+                <span class="codeExample">true</span> if the element should have the same content on <em>all</em> pages (global).<br>
+                <span class="codeExample">false</span> if it should have different content on each page it appears on.</li>
+            <li><span class="codeExample">&quot;&quot;</span>: A string &ndash; obsolete, pass  an empty string (&quot;&quot;). </li>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; whether email links should be encoded. <br>
+                <span class="codeExample">true</span> if email addresses entered in the text element should be encoded using JavaScript.<br>
+                <span class="codeExample">false</span> if they should be simply output as  HTML.</li>
+          </ol>
+      </div>
+      <p align="center"><img src="pictures/long-text-inpage.jpg" width="347" height="393"><br>
+          <span class="picturetext">The Long Text Element in action - by clicking
+      the &quot;Edit&quot; button the Long Text Editor window opens</span></p>
+      <p align="center"><img src="pictures/long-text-editor.gif" width="530" height="508"><br>
+      <span class="picturetext"> The Long Text Editor window</span></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+        entered:</p>
+      <table border="0" cellspacing="0" cellpadding="6">
+        <tr>
+          <td align="left" valign="top" bgcolor="#CCCCCC"><p><b><font color="black">when
+                  entering the text</font></b></p></td>
+          <td align="left" valign="top" bgcolor="#CCCCCC"><p><font color="black"><b>the
+                  text will be displayed as</b></font></p></td>
+          <td align="left" valign="top" bgcolor="#CCCCCC"><p><font color="black"><b> e.g.:</b></font></p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p>http://www.test.com</p></td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p>A link to www.test.com
+              - the target page will be displayed in a new browser window (target
+              = &quot;_blank&quot;)!</p>          </td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p><a href="http://www.test.com" target="_blank" class="externalLink">http://www.test.com</a></p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p>test@company.com</p></td>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p>A link to the entered
+              email address (a &quot;mailto&quot; link). The link might be encoded to keep
+              SPAM spiders from steeling the email addresses. See <a href="#hidemaillinks">Encoding
+              mail links</a> for details.</p>          </td>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p><a href="mailto:test@firma.com" class="externalLink">test@company.com</a></p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p><nobr>&lt;LINK:someotherpage.php&nbsp;</nobr>Click
+              here to get to the other page<nobr>&gt;</nobr></p></td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p>The text &quot;Click
+              here to get to the other page&quot; as a link to &quot;someotherpage.php&quot;.
+              The user can also enter full URLs (&quot;http://xxx.yyy.com/xxx/yyy.html&quot;).
+              Note the space between the URL and the link text! No new browser
+              window will be opened - the target page will be displayed in the
+              same window.</p>          </td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p><a href="javascript:alert('This link would jump to some other page.');" class="externalLink">Click
+                here to get to the other page</a></p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p><nobr>&lt;BOLD</nobr> Some
+              bold text<nobr>&gt;</nobr></p></td>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p>The text &quot;Some
+              bold text&quot; formatted in bold font (using the <span class="codeExample">&lt;strong&gt;</span> tag)</p></td>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p><b>Some bold text</b></p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p><nobr>&lt;EXAMPLE</nobr> Some
+              text in a special style<nobr>&gt;</nobr></p></td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p>The text &quot;Some
+              text in a special style&quot; formatted with the CSS style &quot;EXAMPLE&quot;
+              (using <span class="codeExample">&lt;span class=&quot;EXAMPLE&quot;&gt;</span>...)</p>
+            <p>This way you as the web designer can create any CSS style to be
+              used by the users (that edit the content) - just remember that
+              the
+              style name must be all uppercase!</p>          </td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p><span class="styleExample">Some
+                text in a special style</span></p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p>---</p></td>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p>A horizontal ruler.
+              The three dashes must appear at the very beginning of a line!</p>          </td>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><hr width="200">          </td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p>* First list item<br>
+            ** A subitem
+            <br>
+        * Second list item with a quite long text<br>
+        * Third list item<nobr></nobr></p></td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p>By placing an asterisk
+              (or the  bullet symbol)              at the beginning
+              of a text line, this line gets formatted as a bullet list item.
+              The bullet will be displayed
+              as a small black dot or (via CSS)
+              as some arbitrary GIF or JPG image. See &quot;<a href="#listformat">Formatting
+               lists</a>&quot;
+              below.</p>
+            <p>The user can also span list items across several lines (inserting
+              line breaks in an item) if the consecutive lines start with a
+              space character.</p></td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><ul>
+              <li>First list item
+                <ul>
+                  <li>A subitem </li>
+                </ul>
+              </li>
+              <li>Second list item with a quite long text</li>
+              <li>Third list item<nobr></nobr></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><nobr></nobr>
+            <p>* First item<br>
+&nbsp;&nbsp;This is all part of the first list item.<br>
+    * Second item</p></td><td align="left" valign="top" bgcolor="#FFFFFF"><p>You can place several lines of text into a single list item by placing two spaces at the beginning of the line.</p>
+          </td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><ul>
+              <li>First item<br>
+        This is all text of the first list item. </li>
+              <li>Second item<nobr></nobr></li>
+          </ul></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><nobr></nobr>
+            <p>* &lt;BOLD First item&gt;<br>
+&nbsp;&nbsp;This is all part of the first list item.<br>
+    * Second item<br>
+    ...</p></td><td align="left" valign="top" bgcolor="#FFFFFF"><p>You can also combine different formatting commands.</p>
+          </td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><ul>
+              <li><strong>First item</strong><br>
+        This is all text of the first list item. </li>
+              <li>Second item<nobr></nobr></li>
+          </ul></td>
+        </tr>
+        <tr bgcolor="#FFFFFF">
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p>+ First list item<br>
+      ++ A subitem <br>
+      + Second list item with a quite long text<br>
+      + Third list item<nobr></nobr></p></td>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><p>By using a &quot;+&quot; (plus) instead of the asterisk, an ordered list is created. How to list is numbered (and other visual attributes) depends on the CSS stiles for the &lt;ol&gt; and &lt;li&gt; tags you set up for the page. See &quot;<a href="#listformat">Formatting lists</a>&quot; below. </p>          </td>
+          <td align="left" valign="top" bgcolor="#EEEEEE"><ol style="list-style: upper-roman; margin: 0; margin-left: 30px; padding: 0px">
+              <li>First list item
+                <ol style="list-style: lower-roman; margin: 0; margin-left: 30px; padding: 0px">
+                    <li>A&nbsp;subitem</li>
+                </ol>
+              </li>
+              <li>Second list item with a quite long text</li>
+              <li>Third list item<nobr></nobr></li>
+          </ol></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p>aaa | bbb | ccc<br>
+      111 | 222 | 333<nobr></nobr></p>          </td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><p>By using the &quot;|&quot; symbol
+              you can create simple tables. The &quot;|&quot; serves as the column
+              delimiter.</p>
+              <p>The look of the table must be defined by creating CSS stiles
+                for the &lt;table&gt; and/or &lt;td&gt; tags &#8211; see &quot;<a href="#tableformat">Formatting
+                tables</a>&quot; below.</p>          </td>
+          <td align="left" valign="top" bgcolor="#FFFFFF"><table border="0" cellspacing="0" cellpadding="6">
+              <tr>
+                <td>aaa</td>
+                <td>bbb</td>
+                <td>ccc</td>
+              </tr>
+              <tr>
+                <td>111</td>
+                <td>222</td>
+                <td>333</td>
+              </tr>
+            </table>          </td>
+        </tr>
+      </table>
+      <p>The formatting option <span class="codeExample">&lt;EXAMPLE Some
+      text in a special style<nobr></nobr>&gt;</span> assumes that you have defined
+      a <em>CSS
+      style</em> &quot;<span class="codeExample">.EXAMPLE</span>&quot; in your
+      page/website. It is important to use only uppercase letters in such CSS
+      styles.</p>
+      <h3>Placing the Text Element</h3>
+      <p>Please always remember that the Long Text Elements produces HTML code!
+        When the user creates a bullet list for example the Long Text Elements
+        creates &lt;ul&gt; and&lt;li&gt; HTML tags. Thus it is important to place
+        the Long Text Element at a position in your page where such HTML tags
+        are allowed!</p>
+      <p>The safest place is inside a &lt;div&gt; tag.
+        Not ideal would be a paragraph (&lt;p&gt; tag) as HTML does not allow
+        bullet lists
+        <em>inside</em> a paragraph.</p>
+      <p>To determine the HTML tag in which you have placed the Long Text Element
+        simply click the PHP icon representing the Long Text Element and take
+        a look at Dreamweaver's Tag Selector (at the bottom of the document window):
+        The right most listed tag is the tag that encloses your Long Text
+        Element.</p>
+      <p>If you find your Long Text Element placed inside a &lt;p&gt; tag you can change
+        it into a &lt;div&gt; tag by clicking the &lt;p&gt; tag in the Tag Selector with
+         the right mouse button and choose &quot;Edit Tag...&quot;.</p>
+      <h3> <a name="listformat">Formatting  lists</a></h3>
+      <p>The Long Text Element creates bullet lists by using
+        the &lt;ul&gt;
+        and &lt;li&gt; HTML tags. Therefore you can format these lists by defining
+        CSS styles for these tags.</p>
+      <p>For example you could create a style:</p>
+      <blockquote class="codeExample">ul { list-style-position: outside; list-style-image:
+        url(bullet.gif); }</blockquote>
+      <p>to define the image &quot;bullet.gif&quot; as the bullet symbol used in all lists.</p>
+      <p>If you want your stile to only change the look of lists <em>inside</em> the
+        WebYep Text Element (and not all lists in the page), embed the Text
+        Element in a &lt;div&gt; tag, give that tag a CSS class (<span class="codeExample">class=&quot;someclassname&quot;</span>)
+        and change the name of the above stile from &quot;<span class="codeExample">ul</span>&quot; to &quot;<span class="codeExample">.someclassname
+        ul</span>&quot;.</p>
+      <p>To only stile list items of a specific indention level, you need to repeat the tag name (&quot;ul&quot;) in the CSS style's name (selector):</p>
+      <blockquote class="codeExample">.someclassname ul ul { .....; }</blockquote>
+      <p>for instance would only define the stile for second level items and deeper, but not the main items.</p>
+      <p>To style <strong>ordered lists</strong> created with the &quot;+&quot; sign, use the &quot;ol&quot; tag name instead of &quot;ul&quot; in the style names above. </p>
+      <h3><a name="tableformat" id="tableformat">Formatting tables</a> </h3>
+      <p>To change the look of tables, you simply create the usual CSS stiles
+        for the &lt;table&gt; and/or &lt;td&gt; tag - e.g.:</p>
+      <blockquote class="codeExample"> table {
+          <blockquote> margin: 0px;<br>
+    padding: 0px;<br>
+    border-top: 1px solid black;<br>
+    border-left: 1px solid black; </blockquote>
+          }<br>
+          <br>
+  td {
+  <blockquote> margin: 0px;<br>
+    padding: 6px;<br>
+    border-bottom: 1px solid black;<br>
+    border-right: 1px solid black;</blockquote>
+  }<br>
+      </blockquote>
+      <p>If you want your stiles to only change the look of tables <em>inside</em> the
+        WebYep Text Element (and not all tables in the page), embed the Text
+        Element in a &lt;div&gt; tag, give that tag a CSS class (<span class="codeExample">class=&quot;someclassname&quot;</span>)
+        and change the name of the above stiles from &quot;<span class="codeExample">table</span>&quot; to&quot;<span class="codeExample">.someclassname
+        table</span>&quot; and from &quot;<span class="codeExample">td</span>&quot; to &quot;<span class="codeExample">.someclassname
+        td</span>&quot;.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <h2>Attributes of the Long Text Element</h2>
+      <p align="center"><img src="pictures/long-text-inspector.gif" width="455" height="106"><br>
+        <span class="picturetext">The Dreamweaver inspector showing the Long
+      Text Element's attributes</span></p>
+      <h3>Fieldname</h3>
+      <p>A distinctive name for that element. This name will be displayed in
+        the page in edit mode to give the user a hint on what this elements content
+        stands for and to distinguish the different WebYep Elements in a page.</p>
+      <h3>Content</h3>
+      <p>When set to &quot;for this doc only&quot; the elements content is unique
+        for this page - even if another element on a different page has the same
+         name. If set to &quot;for all documents&quot; the content will
+        be the same on all pages for elements of this kind that use the same
+        name.</p>
+      <h3><a name="hidemaillinks">Encode EMail Links</a></h3>
+      <p>If a user enters an email address into  a Long Text Element,
+        WebYep will display it as a clickable link (&quot;mailto&quot; link).</p>
+      <p>If you enable the &quot;Encode EMail Links&quot; option, WebYep will <em>encode</em> these
+        links to <em>keep SPAM spiders</em> from collecting the email addresses.</p>
+      <p>Do do so, WebYep uses a JavaScript based encoding. If the visitors
+         of your website have <em>deactivated JavaScript</em>, they will only
+         see these email addresses in the form:</p>
+      <blockquote class="codeExample">name(_AT_)domain.com</blockquote>
+      <p>and the email addresses will then not be clickable.<!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <!-- InstanceEndEditable -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Image<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="pictures/image-palette.gif" width="224" height="32"><br>
+        <span class="picturetext">The Image Element icon in the Dreamweaver object
+      palette</span></p>
+      <p>By placing a WebYep Image Element instead of a normal image into your
+        page, you enable the users to change this image by uploading some other
+        GIF/JPG via their web browser.</p>
+      <p class="elementCodeHeading">This element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php webyep_image(&quot;Fieldname&quot;, false, 'vspace=&quot;100&quot;', &quot;some_other_page.php&quot;, &quot;contentFrame&quot;, 70, 90, true); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Arguments for the <span class="codeExample">webyep_image()</span> PHP function call:<br>
+          <span class="small">(see &quot;Attributes of the Image Element&quot; below for details)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Fieldname&quot;</span>: A string &ndash; the field name for this element. </li>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; the scope for this element. <br>
+              <span class="codeExample">true</span> if the element should have the same content on <em>all</em> pages (global).<br>
+              <span class="codeExample">false</span> if it should have different content on each page it appears on.</li>
+            <li><span class="codeExample">'vspace=&quot;10&quot;'</span>: A string (optional) &ndash; HTML attributes for the <span class="codeExample">&lt;img&gt;</span> tag. <br>
+              Can hold arbitrary attributes/values for the HTML image tag - e.g.: <span class="codeExample">'hspace=&quot;10&quot; align=&quot;left&quot;'</span>.<br>
+            Be careful with the quotes - double quotes inside (for HTML), single quotes  outside (for PHP)!</li>
+            <li><span class="codeExample">&quot;some_other_page.php&quot;</span>: A string (optional) &ndash; the URL of a page this image should link to. <br>
+              Can also be a full URL (http://...).<br>
+            If passed as an empty string (&quot;&quot;), the image is not a link initially, but still can be made one by the user. </li>
+            <li><span class="codeExample">&quot;contentFrame&quot;</span>: A string (optional) &ndash; the name of the frame, that should be the target of the link.<br>
+              Pass an empty string (&quot;&quot;) if you're not using frames and do not want to open the linked page in a new window.<br>
+              Use <span class="codeExample">&quot;_blank&quot;</span> for &quot;open in a new window&quot;.</li>
+            <li>70: An integer &ndash; the width of the image or it's thumbnail, or zero if it should not be considered.</li>
+            <li>90: An integer &ndash; the height of the image or it's thumbnail, or zero if it should not be considered.</li>
+            <li> <span class="codeExample">true/false</span>: A boolean &ndash; whether this image should be displayed as a thumbnail. <br>
+              <span class="codeExample">true</span> if the image should be displayed in the page as a thumbnail with a size specified by the width/height parameters. Clicking the thumbnail will display a popup window with the original image <br>
+              <span class="codeExample">false</span> if the image should be downsized to the dimensions specified by the width/height parameters.</li>
+          </ol>
+          <p>Please see &quot;Attributes of the Image Element&quot; below for details regarding the resizing and thumbnail generation. </p>
+      </div>
+      <p>Users can upload new images directly with the web browser with a simple
+          click on the &quot;Edit&quot; button beside a WebYep Image Element
+          in a web page. Clicking the &quot;Edit&quot; button opens the Change
+          Image Window which lets users upload a new  image file or
+          delete the current one.</p>
+        <p align="center"><img src="pictures/image-inpage.jpg" width="381" height="421"><br>
+          <span class="picturetext">The Image Element in action - by clicking
+      the &quot;Edit&quot; button the user opens the Change Image Window</span></p>
+      <p align="center"><img src="pictures/image-editor.gif" width="465" height="310"><br>
+      <span class="picturetext"> The Change Image Window</span></p>
+      <p>Users can also specify the URL of a page to be opened, if a visitor clicks on the image (if the image is not set to be a thumbnail and the designer as not already set a URL&ndash; see blow). Also the &quot;alt&quot; text (the value for the &lt;img&gt;-tag's &quot;alt&quot; attribute) can be specified, to increase  accessibility.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p align="center"><img src="pictures/image-inspector.gif" width="500" height="116"><br>
+        <span class="picturetext">The Dreamweaver inspector showing the Image
+      Element's attributes</span></p>
+      <h3>Image name</h3>
+      <p>A distinctive name for that element. This name will be displayed in
+        the page in edit mode to give the user a hint on what this elements content
+        stands for and to distinguish the different WebYep Elements in a page.</p>
+      <h3>Content</h3>
+      <p>When set to &quot;for this doc only&quot; the elements content is unique
+        for this page - even if another element on a different page has the same
+         name. If set to &quot;for all documents&quot; the content will
+        be the same on all pages for elements of this kind that use the same
+        name.</p>
+      <h3>Thumbnail</h3>
+      <p>If this  is checked, the image will be displayed in the page as a thumbnail with a size specified by the width and/or height parameters. Clicking the thumbnail will display a popup window with the original image. </p>
+      <p>If it is <strong>not</strong> checked, the            image just should be downsized to the dimensions specified by the width and/or height parameters and then displayed in the page &ndash; clicking the image will then <strong>not</strong> open a popup window.</p>
+      <h3>Width / Height </h3>
+      <p>The width and/or height of the image or it's thumbnail. Leave blank, if the uploaded image should not be changed and WebYep should not create a thumbnail for it. </p>
+      <p>If you specify one of them, WebYep will make sure that the image or thumbnail (depending on the &quot;Thumbnail&quot; parameter) will not exceed the width or height given. </p>
+      <p> If you specify both, WebYep will make sure  that neither the width nor the height of the resulting image will exceed the given dimensions.</p>
+      <p>Resizing is always done proportional (the aspect ration is kept the same). </p>
+      <p class="remark"><span class="remarkHeading">Note:</span> Resizing can only be done, if the <strong>&quot;GD&quot; extension for PHP</strong> is installed on the server. If not, the Change Image Window in the browser will display a warning and images will only be <strong>displayed</strong> in the specified sizes, but not actually be downsized (and therefore the <strong>file size</strong> will stay the same). </p>
+      <h3>HTML attributes</h3>
+      <p>Here you can enter all HTML attributes suitable for an HTML &lt;img&gt; tag.
+        These attributes will then be applied to the &lt;img&gt; tag the Image
+        Element generates to place the image inside the page.</p>
+      <blockquote> Example: <span class="codeExample">align=&quot;left&quot; hspace=&quot;20&quot; </span></blockquote>
+      <p>This would make all following text flow around the left aligned image and the horizontal padding between the image and the text would be 20 pixels. </p>
+      <h3>Page (URL)</h3>
+      <p>The URL (or filename) of a page to be shown when a visitor clicks the
+        image. By setting this attribute you promote  this Image Element into
+        a link.</p>
+      <p>If the Image Element is positioned inside a Loop Element (see <a href="/loop.html">WebYep
+          Loop Element</a>) and you assign a URL to it, the Image Elements behaves
+          much like a WebYep Menu Element's item: The page shown when clicking
+          the image can have different WebYep content depending on which image
+          (in
+          which
+          loop row) the visitor clicked on.</p>
+      <p>So one could for example create a loop (WebYep Loop Element) of brief
+        product descriptions with a product title (Short Text Element), a short
+        description
+        (Long
+        Text Element) and a thumbnail image (Image Element) in the looped block.
+        By assigning the URL of a detail page
+        to the
+        thumbnails
+        Image Element
+        visitors
+        can click on the thumbnail to see the detail page for that
+        product.</p>
+      <h3>Target frame - when using frames</h3>
+      <p>If the page which URL you entered in the &quot;Page&quot; attribute
+        should be opened in another HTML frame you can enter this frame's name
+        here.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Attachment<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="pictures/attachment-palette.gif" width="224" height="32"><br>
+        <span class="picturetext">The Attachment  icon in the Dreamweaver
+        object palette</span></p>
+      <p>With this WebYep Element you can attach arbitrary documents to a web
+        page, offering them for download. The user can upload some document (a
+        Word&copy; document or PDF file) and the Attachment Element will create
+        a download link (using the document filename) for it - by clicking
+        on it, visitors can download the document.</p>
+      <p class="elementCodeHeading">This element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php webyep_attachment(&quot;Fieldname&quot;); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+<!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Arguments for the <span class="codeExample">webyep_attachment()</span> PHP function call:<br>
+        <span class="small">(see &quot;Attributes of the Attachment Element&quot; below for details)</span>        
+        <ol>
+        <li>  &quot;Fieldname&quot;: A string, the field name for this element. </li>
+      </ol></div>
+		<p>WebYep does its best to make sure that browsers really <em>download</em> the
+        document and do not display it directly, which is what they tend to
+        do, if a suitable
+        plugin is installed, but is not what is wanted here. Unfortunately not
+        all browser conform to the relevant internet standards (defined in the
+        HTT protocol specification) and thus some of them (e.g. Safari pre Mac
+        OS X 10.4) might nevertheless
+        <em>display</em> the document instead of starting a download.</p>
+      <h3>File size</h3>
+      <p>The size of the uploaded file is limited by two parameters:</p>
+      <p>1. The PHP configuration of your provider. The provider running the
+        webserver can set various limits to uploads done via PHP. Usually they
+        are set
+        around 2MB - WebYep tries to figure out that limit and displays it
+        in the file upload window.</p>
+      <p>2. The internet connection speed. If an upload takes too long (due to
+        rate if file size to internet connection speed), the browser or server
+        might interrupt the upload process. What exactly &quot;too long&quot; means,
+        depends on a lot of factors (which browser, which version, which OS,
+        etc.), but
+        a file size
+        of 1-2MB can be considered save in most situations. It is also important
+        to note that this limit affects <em>only the upload by the user</em>,
+        not the download done by the visitors.</p>
+      <p align="center"><img src="pictures/attachment-inpage.jpg" width="583" height="282"><br>
+        <span class="picturetext">The Attachment Element in action.<br>
+      Clicking the &quot;Edit&quot; button opens the File Upload Window.</span></p>
+      <p align="center"><img src="pictures/attachment-editor.gif" width="498" height="249"><br>
+      <span class="picturetext"> The File Upload Window.</span></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><h2>Attributes of the Attachment Element</h2>
+      <p align="center"><img src="pictures/attachment-inspector.gif" width="422" height="70"><br>
+        <span class="picturetext">The Dreamweaver inspector showing the Attachment
+        Element's attributes</span></p>
+      <h3>Fieldname</h3>
+      <p>A distinctive name for that element. This name will be displayed in
+        the page in edit mode to give the user a hint on what this elements content
+        stands for and to distinguish the different WebYep Elements in a page.</p>
+      <p>When displaying the download link for the document, WebYep will <em>not</em>        use
+        this name as the link text, but will instead use the filename of the
+        uploaded document.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Menu<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="pictures/menu-palette.gif" width="224" height="32"><br>
+      <span class="picturetext">The Menu Element icon in the Dreamweaver object
+      palette</span></p>
+      <p>The Menu Element can be used to build simple menu structures. It is
+        not intended to be used for main navigation, but for a subnavigation
+        like
+        for a &quot;products&quot; submenu.</p>
+      <p>A click on a Menu Elements item causes a to jump
+        to a configurable &quot;detail&quot; or &quot;target&quot; page. The target page file is
+        always the same, regardless which menu
+        item was clicked, but the contents of its WebYep Elements will be different!</p>
+      <p>So by linking a WebYep Menu Element with a page that contains WebYep
+        Elements (by simply setting the &quot;Page&quot; attribute of the Menu
+        Element) you can build a simple navigation. The target page's WebYep
+        Elements (like
+        Long Text or Image Element etc.) will then show different content depending
+        on which menu item was clicked.</p>
+      <p class="elementCodeHeading">This element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php webyep_menu(&quot;Fieldname&quot;, false, &quot;some_page.php&quot;, &quot;contentFrame&quot;, &quot;&quot;, &quot;&quot;); ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Arguments for the <span class="codeExample">webyep_menu()</span> PHP function call:<br>
+          <span class="small">(see &quot;Attributes of the Menu Element&quot; below for details)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Fieldname&quot;</span>: A string &ndash; the field name for this element. </li>
+            <li><span class="codeExample">true/false</span>: A boolean &ndash; the scope for this element. <br>
+                <span class="codeExample">true</span> if the element should have the same content on <em>all</em> pages (global).<br>
+                <span class="codeExample">false</span> if it should have different content on each page it appears on.</li>
+            <li><span class="codeExample">&quot;some_page.php&quot;</span>: A string &ndash; the URL of a page that the menu's items should link to. </li>
+            <li><span class="codeExample">&quot;contentFrame&quot;</span>: A string (optional) &ndash; the name of the frame, that should be the target of the links.<br>
+  Pass an empty string (&quot;&quot;) if you're not using frames.</li>
+            <li><span class="codeExample">&quot;&quot;</span>: A string &ndash; obsolete, pass an empty string (&quot;&quot;). </li>
+            <li><span class="codeExample">&quot;&quot;</span>: A string &ndash; obsolete, pass an empty string (&quot;&quot;). </li>
+          </ol>
+      </div>
+      <p>The menu items can be edited by the user by simply clicking the &quot;Edit&quot;
+        button beside the menu in the webpage (when in edit mode). This will
+        open the Edit Menu Window, in which the user can add/remove menu items,
+        change their order and create simple hierarchies (by placing section
+          titles and indenting items).</p>
+      <p align="center"><img src="pictures/menu-inpage.jpg" width="376" height="419"><br>
+          <span class="picturetext">The Menu Element in action - by clicking
+      the &quot;Edit&quot; button beside the menu, the Edit Menu Window opens</span></p>
+      <p align="center"><a name="EditWindow"><img src="pictures/menu-editor.gif" width="480" height="548"></a><br>
+      <span class="picturetext"> The Edit Menu Window</span></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><p>&nbsp;</p>
+      <h3>Defining hierarchical menus</h3>
+      <p>The users can create indented items (submenu items) by simply prefixing the item's text with one or more spaces (or underscores). They can also create submenu titles (preceding the submenu items) by prefixing an item's text with a hash sign (&quot;#&quot;).</p>
+      <p>So a typical menu might look like this:</p>
+      <blockquote class="codeExample"> First main menu item<br>
+        Second main menu item<br>
+        #A submenu title<br>
+        _First submenu item<br>
+        _Second submenu item<br>
+        Third main menu item</blockquote>
+      <h3>Dynamic or static menu</h3>
+      <p>A WebYep Menu is  represented as an unordered list using the &lt;ul&gt; and &lt;li&gt; HTML tags. Submenu trees are  represented by nesting such lists. Submenus  can be expanded/collapsed by clicking on the submenu's title, if the WebYep Menu is configured to use JavaScript (the default) in the WebYep configuration file config-inc.php:</p>
+      
+      <blockquote class="codeExample">        $webyep_sMenuType = &quot;listJS&quot;;</blockquote>
+      <p>Use a value of <span class="codeExample">&quot;list&quot;</span> instead, if you do not want to use JavaScript and want a static menu instead.</p>
+      <p>Note that the <span class="codeExample">listJS</span> style uses JavaScript in backward compatible way so that when JavaScript is not available, a static menu (with all subtrees expanded) will be presented. This is also to ensure the menu's accessibility.</p>
+      <h3><a name="aussehen"></a>Formatting the menu</h3>
+      <p>WebYep assigns special CSS style classes to the Menu Element's items,
+      depending on what kind of item it is (a normal menu item or a submenu title) and its state (e.g. the currently selected item or an expanded submenu's title). By defining styles for these CSS classes in your page's stylesheet, you have detailed control of the look of your WebYep Menu.</p>
+      <h4>List of CSS classes:</h4>
+      <table border="1" cellspacing="0" cellpadding="0" class="description">
+        <tr>
+          <td><strong>CSS Class Name</strong></td>
+          <td><strong>Assigned, if....</strong></td>
+        </tr>
+
+        <tr>
+          <td class="codeExample">WebYepMenuItem</td>
+          <td>the item is a normal menu item (not a submenu title).</td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepMenuTitle</td>
+          <td> the item is a submenu title.</td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepMenuCurrentItem</td>
+          <td> the item is the currently selected menu item.</td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepMenuTitleExpanded</td>
+          <td> the item is a submenu title and its tree is currently expanded.</td>
+        </tr>
+        <tr>
+          <td class="codeExample">WebYepMenuFirstItem</td>
+          <td> the item is the first item in its tree (used e.g. for separation lines)</td>
+        </tr>
+      </table>
+      <p>Every menu item is a list item (&lt;li&gt;) that has a link (&lt;a&gt;) inside. The CSS classes are assigned to both, the &lt;li&gt; and the &lt;a&gt; tag. Sometimes there are assigned more than one class. For example the title of an expanded submenu will have the two classes &quot;WebYepMenuTitle&quot; and &quot;WebYepMenuTitleExpanded assigned.</p>
+      <p class="remark"><span class="remarkHeading">Important:</span> Please also look out for <strong>examples</strong> on how to use CSS to design a WebYep Menu on our website: <a href="http://www.obdev.at/webyep/" target="_blank">http://www.obdev.at/webyep/</a></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><h2><a name="eigenschaften">Attributes of the Menu Element</a></h2>
+<p align="center"><img src="pictures/menu-inspector.gif" width="445" height="107"><br>
+    <span class="picturetext">The Dreamweaver inspector showing the Menu Element's
+    attributes</span></p>
+<h3>Menu name</h3>
+<p>A distinctive name for that element. This name will be displayed in the page
+  in edit mode to give the user a hint on what this elements content stands for
+  and to distinguish the different WebYep Elements in a page.</p>
+<h3><a name="gueltig">Content</a></h3>
+<p> When set to &quot;for this doc only&quot; the elements content is unique
+  for this page - even if another element on a different page has the same 
+  name. If set to &quot;for all documents&quot; the content will be the same
+  on all pages for elements of this kind that use the same  name.</p>
+<h3><a name="pageURL"></a>Page (URL)</h3>
+<p>Name (or full URL) of the page that is to be opened when a visitor clicks
+  a menu item. Usually this will be the same page the Menu Element is on (thus &quot;reloading&quot;
+  the same page, just with different content).</p>
+<h3><a name="targetFrame"></a>Target frame - when using framesets</h3>
+<p>If you want the target page (&quot;Page&quot; attribute) to opened in a different browser
+  window or frame, set this attribute to the frames name. See the description
+  of the &quot;Page (URL)&quot; attribute above.</p>
+<!-- #BeginLibraryItem "/Library/webyep_di-en.lbi" --><div class="remark">
+        <p><span class="remarkHeading">Notice: </span>You can manually create links to a menu item's target page 
+          by adding the following to the URL of the link:</p>
+        <blockquote>
+          <p class="codeExample">?WEBYEP_DI=x</p>
+        </blockquote>
+        <p>where &quot;x&quot; stands for the ID of the menu item - e.g.:</p>
+        <blockquote>
+          <p class="codeExample">some_menu_item_page.php?WEBYEP_DI=1</p>
+        </blockquote>
+        <p>You can find out the ID of a menu item by simply clicking the menu item and observing
+          the URL displayed in your browsers address field. At the end of the
+          displayed URL you should see the &quot;WEBYEP_DI=xxx&quot;.</p>
+        <p>The ID of a menu item has nothing to do with it's position in the menu (order)!</p>
+        </div>
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+<!-- hidefromprint -->
+      <div align="center" class="hideFromPrint">
+        <hr color="#0099CC" noshade width="80%" size="1">
+        <a href="#pagetop" title="To Top of Page"><img src="images/up.gif" alt="To Top of Page" width="15" height="15" border="0"></a></div>
+<!-- /hidefromprint -->
+<!-- #EndLibraryItem --><!-- InstanceEndEditable -->
+    <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<div style="page-break-before: always"></div>
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+    <td width="100%" align="left" valign="top" class="content"><h1><!-- InstanceBeginEditable name="Title" -->Loop<!-- InstanceEndEditable --></h1>
+      <!-- InstanceBeginEditable name="Content" -->
+      <p align="center"><img src="pictures/loop-start-palette.gif" width="224" height="32" align="absmiddle"><img src="../images/nix.gif" width="32" height="8" align="absmiddle"><img src="pictures/loop-end-palette.gif" width="224" height="32" align="absmiddle"><br>
+          <span class="picturetext">The  icons for the Loop Start and Loop End
+        Elements in the Dreamweaver object palette</span></p>
+      <p>To repeat a block of HTML content and/or WebYep Elements in a page you
+        can use the Loop Element. The user can define the number and order of
+        the blocks, which can contain <em>any HTML, JavaScript or PHP content</em> like
+        static text, images <em>or any WebYep Element</em>. Of course the <em>content
+        of the repeated WebYep Elements will be different for every repetition</em>.</p>
+      <p class="elementCodeHeading">The Loop Start Element  is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php foreach (WYLoopElement::aLoopIDs(<span style="color: red">&quot;Loopname&quot;</span>) as $webyep_oCurrentLoop-&gt;iLoopID) { $webyep_oCurrentLoop-&gt;loopStart(<span style="color: red">true</span>);  ?&gt; <!-- #BeginLibraryItem "/Library/code_detail-en.lbi" --><span class="elementCodeLink"><a href="javascript:toggleCodeDetails()">more...</a></span><!-- #EndLibraryItem --></p>
+      <!-- #BeginLibraryItem "/Library/noscript_warning-en.lbi" --><noscript><div class="javaScriptWarning">You cannot see the "more..." info, because JavaScript is disabled in your browser!</div></noscript><!-- #EndLibraryItem --><div id="elementCodeDetails">Arguments for the <span class="codeExample">aLoopIDs()</span> PHP function call:<br>
+          <span class="small">(see &quot;Attributes of the Loop Element&quot; below for details)</span>
+          <ol>
+            <li> <span class="codeExample">&quot;Loopname&quot;</span>: A string &ndash; the field name for this element. </li>
+          </ol>
+      Arguments for the <span class="codeExample">loopStart()</span> PHP function call:<br>
+      <span class="small">(see &quot;Attributes of the Loop Element&quot; below for details)</span> 
+      <ol>
+        <li><span class="codeExample">true/false</span>: A boolean &ndash; whether the loop control buttons should be inserted automatically. <br>
+            <span class="codeExample">true</span> if the loop controls should be inserted automatically at the top of each block.<br>
+          <span class="codeExample">false</span> if not. You then need to insert the PHP code for these control buttons manually &ndash; see &quot;Automatic controls&quot; below. </li>
+        </ol>
+      </div>
+      <p class="elementCodeHeading">The Loop  End Element is represented by the following PHP code:</p>
+      <p class="elementCode">&lt;?php $webyep_oCurrentLoop-&gt;loopEnd(); } ?&gt; </p>
+      <h3>Using the Loop Element</h3>
+      <p>To use the Loop Element, create some content in you page that is to
+        be repeated and then place a Loop Start <em>before</em> and a Loop End
+        Element
+        <em>after that content</em>.</p>
+      <h3 align="left">Exactly positioning the Loop Element is important:</h3>
+      <p align="left">When repeating content in your page it is important to
+        make sure the resulting HTML code is valid! Repeating a &lt;p&gt; tag
+        without the closing &lt;/p&gt; tag for example would result in invalid
+        HTML which will be rendered incorrectly by the browser.</p>
+      <p align="left">By using the positioning technique described in the introduction
+        to the tutorials (&quot;<a href="../tutorials/index.html#positioning">Positioning
+        the cursor</a>&quot;) you can place the Loop Start/End Elements <em>exactly
+        before and after</em> a specific HTML tag and thus make sure the <em>whole
+        HTML tag</em> (including its end element) gets repeated.</p>
+      <p align="left">In rare cases it might be necessary to position the Start/End
+        Elements &quot;by hand&quot; in Dreamweaver's code view. The Elements
+        are tiny PHP code blocks enclosed in &quot;&lt;?php&quot; and &quot;?&gt;&quot; and
+        can be moved wherever you need them in code view.</p>
+      <p align="left">In these rare cases when the result of a loop seams wrong,
+        it is a good idea to check the validity of the resulting HTML code: Simply
+        open the page in a browser, go to WebYep edit mode and create some loop
+        blocks. Then leave edit mode and take a look at the resulting HTML code
+        by viewing the code directly in the browser. Maybe also copy the HTML
+        code
+        and paste
+        it into
+        an empty Dreamweaver document: Dreamweaver can check the HTML code for
+        you...</p>
+      <p align="center"><img src="pictures/loop-dw.jpg" width="550" height="656"></p>
+      <p>&nbsp;</p>
+      <p>For the visitor the content simply repeats with different content for
+        all WebYep Elements inside the loop for every repetition:</p>
+      <p align="center"><img src="pictures/loop-inpage-1.jpg" width="596" height="490"></p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+        with the <em>loop controls</em> that usually appear<em> above each block</em> when
+        in <em>edit
+        mode</em>:</p>
+      <p align="center"><img src="pictures/loop-inpage-2.jpg" width="480" height="329"></p>
+      <p>The icons of the loop controls mean:</p>
+      <table border="0" align="center" cellpadding="6" cellspacing="0">
+        <tr>
+          <td align="left" valign="top"><a name="edit_symbole"></a><img src="pictures/loop-button-plus.gif" width="33" height="26"></td>
+          <td align="left" valign="middle"><p>Add new block below this one</p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><img src="pictures/loop-button-trash.gif" width="33" height="26"></td>
+          <td align="left" valign="middle"><p>Delete this block</p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><img src="pictures/loop-button-up.gif" width="33" height="26"></td>
+          <td align="left" valign="middle"><p>Move block up (towards page
+              start)</p></td>
+        </tr>
+        <tr>
+          <td align="left" valign="top"><img src="pictures/loop-button-down.gif" width="33" height="26"></td>
+          <td align="left" valign="middle"><p>Move block down (towards page end)</p></td>
+        </tr>
+      </table>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <p align="center"><img src="pictures/loop-inspector.gif" width="346" height="107"><br>
+        <span class="picturetext">The Dreamweaver inspector showing the Loop
+        Start Elements attributes</span></p>
+      <h3>Loop name</h3>
+      <p>A distinctive name for that element. This name will be displayed in
+        the page in edit mode to give the user a hint on what this elements content
+        stands for and to distinguish the different WebYep Elements in a page.</p>
+      <p class="remark"><span class="remarkHeading">Important:</span> If you
+        need <em>more
+          than one Loop Element</em> on a page, you have
+        to make sure that the WebYep Elements inside the two loops do not share
+          the same names. Use <em>different names for all WebYep Elements</em> in
+          all Loops of one page!</p>
+      <h3>Automatic controls</h3>
+      <p>The loop controls are usually placed automatically at the top of each
+        loop block, right where the Loop Start is positioned. In some situations
+        this is not appropriate, as the Loop Start might be in a place where
+        no content (like the loop control button icons) is allowed -
+        e.g. between a &lt;table&gt; tag and a &lt;tr&gt; tag.</p>
+      <p>In theses cases you should uncheck the &quot;Automatic controls&quot; attribute
+        and place the controls &quot;by hand&quot; by inserting the following piece of
+        PHP code:</p>
+      <blockquote class="codeExample">
+        <p class="codeExample">&lt;?php $webyep_oCurrentLoop-&gt;showEditButtons(); ?&gt;</p>
+      </blockquote>
+      <h2>Attributes of the Loop End Element</h2>
+      <p>The Loop End Element has no adjustable attributes.</p>
+      <!-- #BeginLibraryItem "/Library/up-en.lbi" -->
+      <div><img src="../images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+</body>
+</html>

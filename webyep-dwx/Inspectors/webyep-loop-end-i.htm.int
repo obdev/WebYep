@@ -1,0 +1,18 @@
+include ../global.int
+
+output-format HTML
+Title
+Loop End
+Schleife, Ende
+
+ElementName
+Loop
+Schleife
+
+LoopEnd
+Loop End
+Schleifenende
+
+Description
+The Loop End Element has no attributes
+Das Schleifenende-Element hat keine Attribute

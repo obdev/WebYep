@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><!-- InstanceBegin template="/Templates/main-english.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>WebYep</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="stiles.css" rel="stylesheet" type="text/css">
+<link href="print.css" rel="stylesheet" type="text/css" media="print">
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+
+<style type="text/css">
+<!--
+#menuMisc {
+	color: #000000;
+	text-decoration: underline;
+}
+#menuTreeTutorials {
+	display: none;
+}
+#menuTreeReference {
+	display: none;
+}
+-->
+</style>
+
+
+
+<!-- InstanceBeginEditable name="localCSS" -->
+<style type="text/css">
+<!--
+#menuMiscConfiguration {
+	color: #000000;
+	text-decoration: underline;
+}
+.option {
+    padding: 0 10px;
+    text-align: center;
+}
+.section {
+    padding: 0 0 10px 0;
+}
+-->
+</style>
+<!-- InstanceEndEditable --><!-- InstanceParam name="MenuTreeMisc" type="boolean" value="true" --><!-- InstanceParam name="MenuTreeTutorials" type="boolean" value="false" --><!-- InstanceParam name="MenuTreeReference" type="boolean" value="false" -->
+<script type="text/javascript">
+function toggleCodeDetails()
+{
+	var o, s;
+
+	o = document.getElementById("elementCodeDetails");
+	if (o) {
+		s = o.style.display;
+		if (s == "block") s = "none";
+		else s = "block";
+		o.style.display = s;
+	}
+}
+</script>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" border="0" cellspacing="0" cellpadding="6">
+  <tr>
+<!-- hidefromprint -->
+    <td width="1%" align="left" valign="top" nowrap class="menu" id="hideFromPrint">
+	  <a name="pagetop"><img src="images/logo.gif" width="100" height="54" border="0"></a><br>
+      <img src="images/nix.gif" width="150" height="4">
+      <ul>
+        <li>
+          <a href="index.html" id="menuMisc">Introduction</a>
+          <ul id="menuTreeMisc">
+            <li><a href="principle.html" id="menuMiscPrinciple">Basics</a></li>
+            <li><a href="installation.html" id="menuMiscInstallation">Installation</a></li>
+            <li><a href="configuration.html" id="menuMiscConfiguration">Configuration</a>
+                <ul id="mmc">
+                    <li><a href="config-multiple-logins.html" id="menuMiscConfigML">Multiple Logins</a></li>
+                    <li><a href="config-other-options.html" id="menuMiscConfigOO">Other Options</a></li>
+                </ul>
+            </li>
+            <li><a href="backup.html" id="menuMiscBackup">Backup</a></li>
+            <li><a href="system-requirements.html" id="menuMiscSystem">System Requirements</a></li>
+            <li><a href="white-labeled.html" id="menuMiscWhiteLabel">White Labeled Version</a></li>
+          </ul>
+		</li>
+        <li><a href="tutorials/index.html" id="menuTutorials">Tutorials</a>
+          <ul id="menuTreeTutorials">
+            <li><a href="tutorials/first-steps.html" id="menuTutFirstSteps">First Steps</a></li>
+            <li><a href="tutorials/simple-menu.html" id="menuTutSimpleMenu">The Menu</a></li>
+            <li><a href="tutorials/loop.html" id="menuTutLoop">The Loop</a></li>
+          </ul>
+        </li>
+        <li><a href="reference/index.html" id="menuReference">Reference</a>
+          <ul id="menuTreeReference">
+            <li><a href="reference/init-code.html" id="menuRefInitCode">The Init Code</a></li>
+            <li><a href="reference/logon-button.html" id="menuRefLogonButton">Logon Button</a></li>
+            <li><a href="reference/short-text.html" id="menuRefShortText">Short Text</a></li>
+            <li><a href="reference/long-text.html" id="menuRefLongText">Long Text</a></li>
+            <li><a href="reference/rich-text.html" id="menuRefRichText">Rich Text</a></li>
+            <li><a href="reference/image.html" id="menuRefImage">Image</a></li>
+            <li><a href="reference/attachment.html" id="menuRefAttachment">Attachment</a></li>
+            <li><a href="reference/menu.html" id="menuRefMenu">Menu</a></li>
+            <li><a href="reference/loop.html" id="menuRefLoop">Loop</a></li>
+            <li><a href="reference/gallery.html" id="menuRefGallery">Image Gallery</a></li>
+          </ul>
+        </li>
+    </ul>
+    <img src="images/nix.gif" width="50" height="12"></td>
+    <td width="1%" align="left" valign="top" nowrap background="images/nav-content-border.gif" class="menu"><img src="images/nix.gif" width="4" height="100"></td>
+<!-- /hidefromprint -->
+    <td width="100%" align="left" valign="top" class="content">
+        <h1>Configuration</h1>
+		<p>Before uploading the webyep-system folder to your webspace you should set up the configuration.
+            <b>Most important: The username and password.</b> Whenever a user  wants to change the website's content, he/she
+            has to login with username and password (by clicking the WebYep Logon Button in a  page). This username and password
+            are the first configuration settings you should take care of.</p>
+        <p>The configuration is stored in a text file named <span class="codeExample">config-inc.php</span> inside the webyep-system
+            folder. To edit the configuration file, open it in any text editor, or directly in Dreamweaver (just be sure to switch to
+            <em>code view</em> - this file contains only PHP source code).</p>
+        <p class="remark"><span class="remarkHeading">Note:</span> The configuration file is UTF-8 encoded to properly display special
+            characters. Some text editors tend to add an invisible character sequence at the very start of an UTF-8 file when saving it:
+            The UTF-8 BOM (Byte Order Mark). This will unfortunately break the configuration file (PHP then refuses to send HTTP headers).
+            Please make sure to switch off this feature in your editor or use an editor that does not add the BOM.</p>
+
+    <h2>Username and Password</h2>
+    <p>These options determine who can log in to WebYep. You should at least set the administrator's password.</p>
+
+    <p><strong>$webyep_sAdminName</strong><br>
+    This is the main editor's user name (master login). The Administrator can edit every WebYep field.</p>
+    <p><strong>$webyep_sAdminPassword</strong><br>
+    The Administrator's password.
+    </p>
+    <p>To set up the username and password, change the content between the quotes in this block of the configuration file:</p>
+    <blockquote class="codeExample">$webyep_sAdminName = &quot;<b><span class="emsource" color="#990000">admin</span></b>&quot;;<br>
+    $webyep_sAdminPassword = &quot;<b><span class="emsource" color="#990000">test</span></b>&quot;;</blockquote>
+    <p>Please note that both username and password are case sensitive!</p>
+
+    <div><img src="images/nix.gif" width="8" height="24"></div></td>
+  </tr>
+</table>
+<!-- hidefromprint -->
+<a href="http://www.obdev.at/" target="_blank" class="footer">&copy; 2011, Objective Development</a>
+<!-- /hidefromprint -->
+</body>
+<!-- InstanceEnd --></html>

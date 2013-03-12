@@ -1,0 +1,71 @@
+include ../global.int
+
+output-format HTML
+Title
+Image
+Bild
+
+ElementName
+Image
+Bild
+
+ImageName
+Image name
+Bildname
+
+Global
+Content
+Inhalte
+
+ThisDoc
+for this doc only
+fuer diese Seite
+
+AllPages
+for all documents
+fuer alle Seiten
+
+Attributes
+HTML attributes
+HTML-Attribute
+
+Width
+Width
+Breite
+
+Height
+Height
+Hoehe
+
+IsThumb
+Thumbnail
+Vorschaubild
+
+ThumbnailWidth
+Thumbnail width
+Breite d. Vorschaubildes
+
+ThumbnailHeight
+Thumbnail height
+Hoehe d. Vorschaubildes
+
+e.g.
+e.g.
+zB.
+
+URL
+Page (URL)
+Seite (URL)
+
+Frame
+Target frame
+Ziel (frame)
+
+output-format ASCII
+ElementUpdated
+A WebYep Image Element in this page was updated from a WebYep version prior to 1.2.\n\nPlease be sure to also update the webyep-system on the server to at least version 1.2.
+Ein WebYep Bild-Element in dieser Seite wurde von einer Version vor 1.2 aktualisiert.\n\nBitte stellen Sie sicher, dass auch das webyep-system am Web-Server auf mindestens die Version 1.2 aktualisiert wird.
+
+ElementUpdated17
+A WebYep Image Element in this page was updated from a WebYep version prior to 1.7.\n\nPlease be sure to also update the webyep-system on the server to at least version 1.7.
+Ein WebYep Bild-Element in dieser Seite wurde von einer Version vor 1.7 aktualisiert.\n\nBitte stellen Sie sicher, dass auch das webyep-system am Web-Server auf mindestens die Version 1.7 aktualisiert wird.

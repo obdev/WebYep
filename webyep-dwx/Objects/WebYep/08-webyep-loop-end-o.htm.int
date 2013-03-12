@@ -1,0 +1,6 @@
+include ../../global.int
+
+output-format ASCII
+Title
+Loop End
+Schleife, Ende
