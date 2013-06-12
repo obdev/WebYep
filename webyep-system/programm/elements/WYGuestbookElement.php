@@ -227,7 +227,7 @@ class WYGuestbookElement extends WYElement
             $dEditorQuery = $this->dEditorQuery;
             $dEditorQuery[WY_QK_GB_ID] = $iID;
 				$goApp->setActionInQuery($dEditorQuery, WY_QV_GB_REMOVE);
-				$oURL->setQuery($dEditorQuery);
+				$oURL->setQuery(array_merge($oURL->dQuery, $dEditorQuery));
 				$oLink = new WYLink($oURL, WYTS("GuestbookRemoveButton"));
 				$oImgURL->addComponent("remove-button.gif");
 				$oImg = new WYImage($oImgURL);
