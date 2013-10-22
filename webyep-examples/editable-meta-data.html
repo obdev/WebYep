@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebYep Examples - Making Meta-Data editable with WebYep</title>
+<link rel="stylesheet" href="common.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel='stylesheet' href='examples.css' type='text/css' />
+</head>
+
+<body>
+<div class="box pageContent">
+<a href="index.html" class="backlink">&lt;&lt; back to overview</a>
+<img src="logo+claim.gif" alt="WebYep - The Shiny Tiny WebCMS" alt-de="WebYep - Das feine kleine WebCMS">
+
+<div class="introduction" style="width:730px">
+    This is one of a series of articles about WebYep and web design. Things are under development right now, so appearance and content may change over time.
+</div>
+<div id="page">
+
+<h1>Making Meta-Data editable with WebYep</h1>
+<p>Usually you will use WebYep to make your page's content editable, but sometimes it might be necessary to edit the page's meta data (i.e. title, keywords, etc). Since a browser displays only the contents of the <code>&lt;body&gt;</code> tag, we can't simply put a WebYep ShortText element in our page's <code>&lt;title&gt;</code>.</p>
+<p>But we <i>can</i> use the WebYep API to retrieve the <i>content of a WebYep element</i>! All we've got to do is define an element somewhere on the page and display its content somewhere else.</p>
+<h2>Preparing the page</h2>
+<p>For this example we will make the page title editable. The first step is easy: create a ShortText element (important: not global!) somewhere on the page:</p>
+<pre class="css">&lt;?php webyep_shortText("PageTitle", false); ?&gt;</pre>
+
+<p>Step 2: output the content of this ShortText element in your <code>&lt;title&gt;</code> tag.</p>
+<pre class="css"><span class="grey">&lt;title&gt;</span>&lt;?php echo webyep_sShortTextContent("PageTitle", false); ?&gt;<span class="grey">&lt;/title&gt;</span></pre>
+<p>This function returns the content of the specified element (in this case "PageTitle") and the PHP function <code>echo</code> prints it.</p>
+<p>From now on the page title is editable. There is only one drawback: the ShortText field is clearly visible on the page.</p>
+
+<h2>Hiding the input field in in non-edit mode</h2>
+<p>Since this is meta data we only want to display the WebYep element in non-edit mode. Normal visitors shall not see it.</p>
+<p>To achive this we have to wrap the WebYep field and any HTML we used to distinguish it from regular content in PHP code like this:</p>
+<pre class="css">&lt;?php if (webyep_bIsEditMode()) { ?&gt;</pre>
+<pre class="css">&lt;?php } ?&gt;</pre>
+<p>Everything between those 2 code snippets will only be visible in edit mode.</p>
+<p>Take a look at the <a href="editableMetaData.zip">example</a> to see this in action (this will require a server with PHP and WebYep installed).</p>
+
+</div>
+</div>
+</body>
+</html>

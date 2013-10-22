@@ -1,0 +1,432 @@
+/*
+  Most of this CSS is not used in the WebYep examples - it's the CSS from the website.
+  But some is and I do not have the time to sort it out...
+*/
+
+/* general styles */
+
+body {
+    font-family:            "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+    font-size:              12px;
+    color:                  #4c4c4c;
+    background:             url("images/page-bg.png") #e2e5e8;
+    text-align:             left;
+    -webkit-text-size-adjust: none;
+}
+a {
+    color:                  inherit;
+    text-decoration:        none;
+}
+a:hover {
+    text-decoration:        underline;
+}
+img {
+    border:                 none;
+}
+/* background colors */
+.bgWhite {
+    background-color:       white;
+}
+.bgYellow {
+    background-color:       #f5eed9;
+}
+
+/* page wrapper */
+#pageWrapper {
+    width:                  809px;
+    margin:                 0 auto;
+}
+.pageContent {
+    background-color:       white;
+    padding:  3em;
+}
+
+/* header section */
+#pageHeader {
+    margin:                 19px -2px 20px 0px;
+	padding:                0 0 0 5px;
+	width: 					804px;
+	height:                 39px;
+	-moz-border-radius:     6px;
+	-webkit-border-radius:  6px;
+	border-radius:          6px;
+	background-color:       #939faa;
+	background-image:       -moz-linear-gradient(top, #9aa4af, #8c97a1 50%, #84909a 50%, #97a3ad);
+	background-image:       -webkit-linear-gradient(top, #9aa4af, #8c97a1 50%, #84909a 50%, #97a3ad);
+	box-shadow:             0 1px 2px rgba(0, 0, 0, 0.18);	
+} 
+#pageHeader ul {
+    list-style-type:        none;
+    list-style-image:       none;
+    float:                  right;
+    margin:                 10px 0;
+}
+#pageHeader ul li {
+    float:                  left;
+    margin:                 0 20px 0 0;
+}
+#pageHeader {
+    font-size:              15px;
+    color:                  white;
+    text-shadow:            0 1px 0 #555;
+}
+#pageHeader a {
+    color:                  white;
+    text-decoration:        none;
+}
+#pageHeader a:hover {
+    color:                  #e6e6e6;
+}
+#pageHeader .logo img {
+    border:                 none;
+    margin:                 7px 0 0 4px;
+}
+#pageHeader-cartLink img {
+    margin-right:           6px;
+}
+#pageHeader-cartCount {
+    font-size:              12px;
+}
+
+/* sub header section */
+#subHeader {
+    margin:                 7px 0 7px 7px;
+    text-shadow:            0 1px 0 #fff;
+    height:                 25px;
+}
+#subHeader h1 {
+    float:                  left;
+    font-size:              20px;
+    font-weight:            normal;
+    padding:                0;
+    margin:                 -3px 0 0 0;
+}
+#subHeader ul {
+    float:                  right;
+    list-style-type:        none;
+    list-style-image:       none;
+    margin:                 0;
+    line-height:            22px;
+}
+#subHeader ul li {
+    float:                  left;
+    margin:                 0 10px 0 7px;
+    font-size:              13px;
+    vertical-align:         middle;
+}
+#subHeader ul li.subHeaderButton {
+    margin:                 0 0 0 8px;
+}
+#subHeader a {
+    text-decoration:        none;
+    color:                  #000;
+}
+#subHeader a:hover {
+    color:                  #006;
+    text-shadow:            0 1px 2px #fff;
+}
+#language-warning {
+    margin:                 -20px -20px 10px -40px;
+    border-radius:          6px 6px 0 0;
+    padding:                3px 10px;
+    border-bottom:          1px solid #a6b1c2;
+    background-color:       #fff7c4;
+    color:                  #164495;
+    font-weight:            bold;
+    text-align:             center;
+}
+
+/* content */
+table, tbody, tr, th, td {
+    margin:                 0;
+    padding:                0;
+    border:                 none;
+    font-family:            "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+    font-size:              12px;
+}
+table {
+    width:                  100%;
+    border-collapse:        collapse;
+}
+table.catalog, .order-form fieldset table {
+    border-collapse:        separate;
+    border-spacing:         0 2px;
+}
+tr {
+}
+td {
+    height:                 100%;
+}
+.txtCenter {
+    text-align:             center;
+}
+.hidden {
+    display:                none;
+}
+.thin {
+    font-weight:            normal;
+}
+.noBreak {
+    white-space:            nowrap;
+}
+
+#simple-page {
+    margin:                 32px 0 0 0; /* moved this from BODY to #simple-page */
+}
+#simple-page #page-content {
+    border-radius:          16px;
+    border:                 solid 3px #8B9199;
+}
+#pageWrapper div.box {
+    border:                 none; /*solid 1px #ccc;*/
+    margin:                 0 0 10px 0;
+    padding:                0;
+    -moz-border-radius:     4px;
+    -webkit-border-radius:  4px;
+    border-radius:          4px;
+    min-height:             inherit !important;
+    box-shadow:             0 1px 3px rgba(0, 0, 0, 0.3);
+}
+#pageWrapper form .box { /* fix for old content with new DTD */
+    margin:                 12px 0 18px;
+    padding:                8px 10px;
+}
+#pageWrapper form .box,
+#pageWrapper .highlights.rounded.gray.box { /* fix for old content */
+    border:                 1px solid #cdcdcd; /*#e8e8e8;*/
+    box-shadow:             0 1px 3px rgba(0, 0, 0, 0.15);
+}
+#pageWrapper form .gray.rounded.titled.box { /* fix for old content with new DTD */
+    padding:                0;
+}
+form.feedback td {
+    vertical-align:         middle !important;
+}
+#pageWrapper .large.code.box {
+    padding-left:           8px;
+    padding-right:          8px;
+    border-color:           #D9C68C;
+}
+#pageWrapper .large.gray.code.box {
+    border-color:           #bbb;
+}
+#pageWrapper div.box.large { /* fix for old content with new layout classes */
+    border:                 solid 1px;
+    border-left-width:      8px !important;
+    padding-bottom:         8px;
+    padding-top:            8px;
+}
+#pageWrapper div.alert.box { /* fix for old content with new layout classes */
+    margin:                 12px 0 18px;
+    padding:                8px 12px;
+    background-color:       #FFEE80;
+    border-color:           #DDCC60;
+}
+#pageWrapper form table { /* fix for old content with table layout */
+    border-collapse:        separate;
+}
+#pageWrapper div.box.pageContent {
+    -moz-border-radius:     6px !important;
+    -webkit-border-radius:  6px !important;
+    border-radius:          6px !important;
+}
+#content {
+    clear:                  both;
+    /*border:                 solid 1px red;*/
+}
+#content td {
+    vertical-align:         top;
+}
+#content div.box {
+    border:                 none; /*solid 1px #ccc;*/
+    margin:                 0 0 10px 0;
+    padding:                0;
+    -moz-border-radius:     4px;
+    -webkit-border-radius:  4px;
+    border-radius:          4px;
+    min-height:             inherit !important;
+    box-shadow:             0 1px 3px rgba(0, 0, 0, 0.3);
+}
+#content div.box div.box { /* inner boxes have lighter shadow */
+    border:                 solid 1px #cdcdcd;
+    box-shadow:             0 1px 2px rgba(0, 0, 0, 0.15);
+}
+#content td + td div.box { /* subsequent cells have also margin-left */
+    margin:                 0 0 10px 10px;
+}
+#content td + td form div.gray.rounded.titled.box { /* ...with exception of forms */
+    margin:                 0;
+}
+#content .oldContent td + td div.box { /* old content boxes don't */
+    margin:                 0 0 10px 0;
+}
+#content div.boxHeader {
+    margin:                 0;
+    padding:                3px 7px;
+    min-height:             .1em !important;
+    font-size:              12px;
+    font-weight:            bold;
+    text-shadow:            0 1px 0 #fff;
+    border:                 none;
+    border-bottom:          solid 1px #d8d8d8;
+    box-shadow:             none;
+    letter-spacing:         .01em;
+    -moz-border-radius:     0;
+    -webkit-border-radius:  0;
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-radius:          3px 3px 0 0;
+    /*background:             -moz-linear-gradient(top, #fff, #eee);
+    background:             -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));*/
+    background-image:       url("images/titlebar-gradient.png");
+}
+#content div.boxContent {
+
+}
+#LSVideo {
+    margin-top:             20px;
+}
+.oldContent {
+    padding:                20px 20px 25px 40px;
+}
+.newContent {
+    padding:                20px 20px 25px 20px;
+}
+.noPadding {
+    padding:                0;
+}
+.stdPadding {
+    padding:                20px 40px;
+}
+.wideScreen {
+    width:                  807px;
+    /* dummy styles for testing purposes: */
+    height:                 50px;
+    padding-top:            30px;
+    background-color:       #f4f4ff;
+    font-size:              1.5em;
+    text-align:             center;
+    text-shadow:            0 0 1px #abcdef;
+}
+.oldContent > .wideScreen, .newContent > .wideScreen, .roundTopCorners { /* round upper corners if wideScreen is on top */
+    -moz-border-radius:     3px 3px 0 0;
+    -webkit-border-radius:  3px 3px 0 0;
+    border-radius:          3px 3px 0 0;
+}
+.oldContent .wideScreen { /* neutralize .oldContent padding */
+    margin-top:             -20px;
+    margin-right:           0;
+    margin-bottom:          15px;
+    margin-left:            -40px;
+}
+.newContent .wideScreen { /* neutralize .oldContent padding */
+    margin-top:             -20px;
+    margin-right:           0;
+    margin-bottom:          15px;
+    margin-left:            -20px;
+}
+.left-column {
+    padding-right:          40px;
+}
+.odRow .right-column {
+    padding-right:          20px;
+}
+.oldContent .right-column-td .right-column {
+    margin-left:            0;
+}
+.oldContent p {
+    margin:                 0.5em 0 1em;
+}
+#content div.boxPadded {
+    padding:                5px 7px;
+}
+.boxPaddedMore {
+    padding:                0.7em 1.2em 1.3em;
+}
+.quickLinks {
+    background-color:       #eee;
+    /*background:             url(images/titlebar-gradient.png) left bottom repeat-x #eee;*/
+    background-image:       -moz-linear-gradient(top, #eee, #eee 80%, #dadada);
+    background-image:       -webkit-linear-gradient(top, #eee, #eee 80%, #dadada);
+}
+.quickLinks h5 {
+    font-size:              11px;
+    margin:                 0 0 0.4em;
+    text-shadow:            0 1px 0 #fff;
+}
+.quickLinks ul {
+    font-size:              12px;
+    line-height:            1.3em;
+    list-style-image:       url("images/triangle.png");
+    margin:                 0 0 1.1em;
+    padding:                0 0 0 14px;
+}
+
+/* ------ misc classes ------ */
+
+.catalog-box {
+    padding: 6px 12px;
+	border-radius: 4px;
+    background: #f5f5f5;
+}
+
+.free-ebook-box {
+    padding: 1em;
+    background: #ffeab8;
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+.free-ebook-box h3 {
+    margin-top: 0;
+    font-size: 13px;
+}
+.free-ebook-box p {
+    margin-bottom: 0;
+}
+
+/* ------ footer ------ */
+
+#pageFooter {
+    margin:                 12px 10px;
+    font-size:              11px;
+    color:                  #aaa;
+    padding:                0 0 10px 0;
+    line-height:            1.4em;
+}
+#pageFooter .language {
+    float:                  right;
+    font-size:              13px;
+}
+#pageFooter .left {
+    padding:                1px 0 0;
+}
+#pageFooter a:link,
+#pageFooter a:visited,
+#pageFooter a:active {
+    color:                  #789dbb;
+}
+
+/* === BackOffice === */
+table.search-dialog {
+    width:                  auto;
+}
+table.search-dialog th,
+table.search-dialog td {
+    padding-bottom:          2px;
+}
+.search-form input {
+  border:                   1px solid #ccc !important;
+  padding:                  0 !important;
+  width:                    280px !important;
+}
+.search-form select {
+  border:                   1px solid #ccc !important;
+  width:                    282px !important;
+}
+.box.titled.gray.rounded div.title {
+    border-radius:          4px 4px 0 0;
+}

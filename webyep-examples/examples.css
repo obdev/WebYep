@@ -1,0 +1,93 @@
+#page {
+  margin: 0 auto;
+}
+h1 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  page-break-after: avoid;
+}
+#page h2 {
+  margin: 15px 0 5px;
+  font-size: 1.1em;
+  page-break-after: avoid;
+}
+p {
+  margin: 5px 0;
+  text-align: justify;
+}
+li p, #page p {
+  margin: 0 0 5px 0;
+}
+pre {
+  color: #008;
+  page-break-inside: avoid;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+pre.css {
+  background-color: #f8f8f8;
+  border: solid 1px #ccc;
+  margin: 7px 0;
+  padding: 3px;
+  page-break-inside: avoid;
+  line-height: 1.3em;
+}
+pre strike {
+  color: #aaa;
+}
+ol.code {
+  background-color: #f8f8f8;
+  color: #aaa;
+  font: 12px/16px monospace;
+  margin: 7px 0;
+  padding: 2px 0 2px 34px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  list-style-type: decimal-leading-zero;
+  background-image: -moz-linear-gradient(left, #ccc 0, #ccc 21px, #aaa 21px, #aaa 22px, #f8f8f8 23px, #f8f8f8);
+  background-image: -moz-linear-gradient(left, #ccc 0, #ccc 20px, #aaa 21px, #aaa 22px, #bbb 23px, #f8f8f8 23px, #f8f8f8);
+  background-image: -webkit-linear-gradient(left, #ccc, #ccc 20px, #aaa 20px, #aaa 22px, #f8f8f8 22px, #f8f8f8);
+}
+.red {
+  color: #900;
+}
+.green {
+  color: #080;
+}
+.blue {
+  color: #008;
+}
+.grey {
+  color: #aaa;
+}
+code {
+  color: #222;
+  background-color: #f4f4f8;
+}
+a {
+  color: #008;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.backlink {
+  width: 150px;
+  float: right;
+  margin: 50px 0;
+}
+p + .footnote {
+    border-top: dotted 1px #888;
+    margin: 10px 0;
+}
+.footnote {
+    font-size: 10px;
+}
+.RapidWeaver {
+    background-image: url(/Images/webyep/examples/RapidWeaverIcon.png);
+    background-repeat:  no-repeat;
+    background-position: left top;
+    min-height: 55px;
+    padding-left:   60px;
+    margin-bottom:  20px;
+}

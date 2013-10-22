@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Horizontal menues with CSS</title>
+<style type="text/css">
+#page {
+  margin: 0 auto;
+  width: 800px;
+  font-size: 14px;
+}
+#myMenu ul {
+  list-style-type: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#myMenu ul li {
+  float: left;
+}
+#myMenu ul li a {
+  display: block;
+  padding: 3px 10px 1px;
+  background-color: #444;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+#myMenu ul li a:hover {
+  color: #9c9;
+}
+
+#myContent {
+  clear: both;
+  padding: 10px 0;
+}
+h1 {
+  font-family: sans-serif;
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
+p {
+  margin: 5px 0;
+}
+</style>
+</head>
+<body>
+<div id="page">
+  <div id="myMenu">
+    <ul>
+      <li><a href="#">Menu 1</a></li>
+      <li><a href="#">Menu 2</a></li>
+      <li><a href="#">Menu 3</a></li>
+    </ul>
+  </div>
+  <div id="myContent">
+    <h1>Lorem ipsum dolor sit amet</h1>
+    <p>Cras ultrices velit quis felis dictum eget laoreet velit adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis, lectus nec fringilla pretium; eros lectus placerat metus, sed iaculis nisl quam quis odio. Duis posuere purus sit amet sapien faucibus feugiat. Sed pretium, nisl id dapibus fermentum, justo sapien placerat elit, sed imperdiet augue sem eget velit. Phasellus feugiat ultrices accumsan. Mauris in massa dolor, vitae malesuada mauris. Sed vulputate dolor eget purus condimentum tristique. Vivamus mauris orci, fringilla in sollicitudin vitae, rutrum quis diam. Aenean malesuada rutrum risus quis consequat. Etiam fermentum tellus sagittis ipsum lacinia id congue mi scelerisque. Suspendisse volutpat lacus eget mi vehicula mollis. Duis vestibulum varius libero et adipiscing. Donec leo diam, imperdiet quis interdum sit amet, tempus eu velit! Praesent turpis lorem, dignissim non vehicula a, tempus eget diam.</p>
+
+    <h1>Curabitur rhoncus laoreet dolor id hendrerit</h1>
+    <p>Sed sed leo dolor. Etiam feugiat ullamcorper arcu non fermentum. Vestibulum orci urna, auctor et varius sit amet, placerat sit amet libero. Vivamus quis lobortis ante. Nunc auctor imperdiet lacus. Vivamus a tristique nulla. Nulla convallis; lorem nec pretium pretium, augue massa suscipit quam, et accumsan dolor neque et metus. Maecenas eu pretium lacus. Phasellus quis elit nisi, a dapibus neque. Duis tincidunt sapien ut orci rutrum posuere quis vitae lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+    <h1>Aliquam erat volutpat</h1>
+    <p>Nunc tempus suscipit erat, a mollis tellus bibendum sit amet? Fusce auctor dapibus euismod. Donec feugiat nunc at libero lacinia consequat. Integer sed elit enim. Donec vel lectus vel justo tempor adipiscing vitae at sem? Proin scelerisque ipsum nec ligula iaculis in scelerisque eros cursus. Donec vitae lectus eu nibh dictum pellentesque sed eget leo. Sed nunc dolor, iaculis sed lobortis non, aliquam id ligula! Duis sit amet leo sem. Nulla eleifend lacus non neque faucibus porta. In ultricies, augue eu tincidunt vehicula, tellus elit venenatis elit, eget molestie est orci in eros. Donec vel iaculis quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in velit odio, sit amet pulvinar arcu. Aliquam erat volutpat. In hac habitasse platea dictumst.</p>
+  </div>
+</div>
+</body>
+</html>

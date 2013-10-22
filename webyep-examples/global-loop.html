@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebYep Examples - How to implement a global loop in WebYep</title>
+<link rel="stylesheet" href="common.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel='stylesheet' href='examples.css' type='text/css' />
+</head>
+
+<body>
+<div class="box pageContent">
+<a href="index.html" class="backlink">&lt;&lt; back to overview</a>
+<img src="logo+claim.gif" alt="WebYep - The Shiny Tiny WebCMS" alt-de="WebYep - Das feine kleine WebCMS">
+
+<div class="introduction" style="width:730px">
+    This is one of a series of articles about WebYep and web design. Things are under development right now, so appearance and content may change over time.
+</div>
+<div id="page">
+
+<h1>How to implement a global loop in WebYep</h1>
+
+<h2>Intro</h2>
+<p>A WebYep-Loop is used to create blocks of content which can be repeated, rearranged, hidden and deleted by the user.
+Unfortunately the Loop doesn't have a <code>global</code> attribute like for example the ShortText element has. A possible use case for a global loop would be a news ticker which is shown on several pages. When the user changes its contents (add, modify and/or delete entries) those changes shall reflect on every instance of this ticker.</p>
+
+
+
+<h2>The container</h2>
+<p>In order to achieve this, we'll use a few tricks. WebYep finds its contents by looking for the document ID (a unique number which identifies a page). All we've got to do is make WebYep think the 'global loop' is located in another document. The following code will do this:</p>
+
+<pre class="css">&lt;?php
+  $oCurrentDocument = $goApp-&gt;oDocument;
+  $goApp-&gt;oDocument = new WYDocument(new WYURL(basename(__FILE__)));
+  $goApp-&gt;oDocument-&gt;setDocumentInstance(0);
+  foreach (WYLoopElement::aLoopIDs("globalLoop") as $webyep_oCurrentLoop-&gt;iLoopID) {
+    $webyep_oCurrentLoop-&gt;loopStart(true);
+?&gt;
+
+<span style="color:#888;">&lt;!-- Loop content goes here (replace this line with your content) --&gt;</span>
+
+&lt;?php
+    $webyep_oCurrentLoop-&gt;loopEnd();
+  }
+  $goApp-&gt;oDocument = $oCurrentDocument;
+?&gt;</pre>
+
+<p>Save this in a file called <code>globalLoop.php</code>. Now we've got our container for the loop. You can use this as a template for your own experiments.<br />
+Note that the loop will take care of its controls in edit mode. Sometimes this is not desired (e.g. when you put a <code>&lt;table&gt;</code> around the loop and repeat the <code>&lt;tr&gt;</code> inside the loop). In this case you can start the loop like this (last line in the first block):</p>
+
+<pre>$webyep_oCurrentLoop-&gt;loopStart(false);</pre>
+
+<p>and place the controls manually with this piece of code:</p>
+
+<pre>&lt;?php $webyep_oCurrentLoop-&gt;showEditButtons(); ?&gt;</pre>
+
+<h2>The content</h2>
+
+<p>So far we've only got the container for the loop items so lets add something useful to display. To keep things simple, I'll just use a WebYep LongText element but you can use any valid HTML with any number of WebYep elements of course.<br />
+Add this instead of the HTML comment in <code>globalLoop.php</code>.<br />
+Since we want to create a simple news ticker, a WebYep LongText element wrapped in a <code>&lt;div&gt;</code> will be sufficient:</p>
+
+<pre class="css">&lt;div&gt;
+  &lt;?php webyep_longText("Text", false, "", true); // WebYepV1 ?&gt;
+&lt;/div&gt;</pre>
+
+<p>Note that all WebYep elements you put inside the loop must not be global.</p>
+
+
+
+<h2>Adding the loop to your pages</h2>
+
+<p>We can now add our global loop anywhere we want. Use the following piece of code in your regular web page to include it:</p>
+
+<pre>&lt;?php include('globalLoop.php'); ?&gt;</pre>
+
+<p>This assumes that <code>globalLoop.php</code> is located in the same directory as the page including it. If this is not the case you must provide a path relative to the including page.</p>
+
+<p>Technically our global loop is a separate document, not related to any other page. This means it has an own document ID, even if it is not a complete HTML document. The trick is to switch the current document while the loop is processed so we actually have 2 documents in 1.</p>
+
+<p>We've put together a small example site with 2 different global loops, one using <code>&lt;div&gt;</code>s and the other a <code>&lt;table&gt;</code>. You can download it <a href="globalLoop.zip">here</a>.<br />
+Please note that it needs to be run on a web server with a working WebYep installation!</p>
+
+</div>
+</div>
+</body>
+</html>

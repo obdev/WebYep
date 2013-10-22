@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebYep Examples - Accordion Effekt with WebYep</title>
+<link rel="stylesheet" href="common.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel='stylesheet' href='examples.css' type='text/css' />
+</head>
+
+<body>
+<div class="box pageContent">
+<a href="index.html" class="backlink">&lt;&lt; back to overview</a>
+<img src="logo+claim.gif" alt="WebYep - The Shiny Tiny WebCMS" alt-de="WebYep - Das feine kleine WebCMS">
+
+<div class="introduction" style="width:730px">
+    This is one of a series of articles about WebYep and web design. Things are under development right now, so appearance and content may change over time.
+</div>
+<div id="page">
+
+<h1>Creating a slideshow with a WebYep Loop</h1>
+<h2>The basic idea</h2>
+<p>There are many solutions for creating an automatic slideshow on the web. In this tutorial we'll focus on a jQuery plugin called
+   <a href="http://jquery.malsup.com/cycle/" target="_blank">Cycle</a> to animate images in a WebYep Loop. The basic idea is to have
+   an image element in a loop, so the user can add/delete/reorder images for the slideshow.</p>
+<p>In edit mode the edit buttons for the loop and all images shall be visible. In non-edit mode only one image at a time shall be visible.</p>
+
+<h2>Interfering libraries</h2>
+<p>Let's assume you already have the image viewer Lightbox installed which uses scriptaculous together with the prototype library.</p>
+<p>The ones among you frequently using different JavaScript libraries will probably ask how this is supposed to work. jQuery's
+   $-function will clash with the one from prototype so you can either use prototype/scriptaculous OR jQuery, right?</p>
+<p>Well, not quite... We'll use a feature called namespacing to create a private instance of jQuery which will be completely
+   independant of any other library. More on this below.</p>
+
+<h2>Basic steps</h2>
+<p>Create your web page like you always do and add a <code>&lt;div class="WY_Slideshow"&gt;</code> to hold the slideshow.</p>
+<p>Add a WebYep Loop to this <code>&lt;div&gt;</code> and in this loop place a WebYep Image element.</p>
+<p>This should like the following example code:</p>
+<pre class="css"><span class="grey">&lt;!-- the HTML/WebYep part of the slideshow --&gt;</span>
+&lt;div class="WY_Slideshow"&gt;
+    &lt;?php foreach (WYLoopElement::aLoopIDs('<span class="red">SlideshowLoop</span>') as $webyep_oCurrentLoop-&gt;iLoopID) {
+        $webyep_oCurrentLoop-&gt;loopStart(true);
+        webyep_image('<span class="red">SlideshowImage</span>', false, '', '', '', <span class="red">640</span>, <span class="red">480</span>, false);
+        $webyep_oCurrentLoop-&gt;loopEnd();
+    } ?&gt;
+&lt;/div&gt;</pre>
+<p>You may want to change the field names of the Loop and Image elements as well as the dimensions of the image. Those are marked in red.</p>
+<p>In the page's <code>&lt;head&gt;</code> include the following javascripts (in this order):</p>
+&bull; The jQuery library<br />
+&bull; The jQuery Cycle plugin<br />
+&bull; Some custom code to remove jQuery from the global scope (namespacing):<br />
+<ol class="code">
+  <li>&lt;!-- namespacing jQuery and all plugins loaded so far --&gt;</li>
+  <li><span class="blue">&lt;script type="text/javascript"&gt;</span><span class="green">/*&lt;![CDATA[*/</span></li>
+  <li>&nbsp;&nbsp;<span class="blue">var WY = window.WY || {}; WY.$ = jQuery.noConflict(true);</span></li>
+  <li><span class="green">/*]]&gt;*/</span><span class="blue">&lt;/script&gt;</span></li>
+</ol>
+<p>This moves the jQuery library (and all plugins loaded so far) to the namespace <code>WY</code>. From now on we must use <code>WY.$()</code>
+   instead of just <code>$()</code> but the great thing is that other libraries can now use their own $-function without problems.</p>
+&bull; Some code that waits for the document to finish loading and then initializes the slideshow:<br />
+<ol class="code">
+  <li>&lt;!-- initialize the slideshow when the DOM is ready --&gt;</li>
+  <li><span class="blue">&lt;script type="text/javascript"&gt;</span><span class="green">/*&lt;![CDATA[*/</span></li>
+  <li>&nbsp;&nbsp;<span class="blue">WY.$(document).ready(function() {</span></li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">if (!WY.$('.WY_Slideshow').find('.WebYepLoopAddButton').length) {</span></li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">WY.$('.WY_Slideshow').cycle({<span class="red">fx:'fade'</span>});</span></li>
+  <li>&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">}</span></li>
+  <li>&nbsp;&nbsp;<span class="blue">});</span></li>
+  <li><span class="green">/*]]&gt;*/</span><span class="blue">&lt;/script&gt;</span></li>
+</ol>
+<p>This is the init code for the slideshow. Note how we use the namespaced jQuery library (<code>WY.$</code> instead of <code>$</code>).
+   When the page is loaded, this code looks for elements with the class <code>WY_Slideshow</code> and checks whether there are elements
+   present with a class <code>WebYepLoopAddButton</code> (indicating WebYep edit mode). If not, it then applies the 'cycle effekt' to
+   the container thus starting the slideshow.</p>
+<p>The code marked in red configures the cycle plugin. You may want to change this depending on your needs. A complete list of options
+   can be found <a href="http://jquery.malsup.com/cycle/options.html" target="_blank">here</a>.</p>
+
+<h2>Example page</h2>
+<p>There is an example WebYep page with a slideshow and an additional gallery and image. A pager has been added to the slideshow and
+   the gallery and image element below should work fine with Lightbox or Fancybox.<br /> You can
+   <a href="slideshow.zip">download it here</a>. Please note that this example requires a working WebYep installation!</p>
+
+</div>
+</div>
+</body>
+</html>

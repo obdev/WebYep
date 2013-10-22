@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebYep Examples - Integrating a free file manager into TinyMCE</title>
+<link rel="stylesheet" href="common.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel='stylesheet' href='examples.css' type='text/css' />
+</head>
+
+<body>
+<div class="box pageContent">
+<a href="index.html" class="backlink">&lt;&lt; back to overview</a>
+<img src="logo+claim.gif" alt="WebYep - The Shiny Tiny WebCMS" alt-de="WebYep - Das feine kleine WebCMS">
+
+<div class="introduction" style="width:730px">
+    This is one of a series of articles about WebYep and web design. Things are under development right now, so appearance and content may change over time.
+</div>
+<div id="page">
+
+<h1>Integrating a free file manager into TinyMCE</h1>
+<p>While there is a commercial file manager plugin for TinyMCE called MCImageManager, WebYep also supports a free alternative. This article will show you how to integrate 'Filemanager' from Core Five Labs.</p>
+
+<h2>Before you begin</h2>
+<p>This document assumes that you are fairly familiar with setting up WebYep and configuring web servers like Apache. It provides step by step instructions, without explaining everything in detail. If you don't know what permissions are, or have no idea what a "document root" might be, or where it is located, you might want to leave the installation/configuration to an experienced administrator.</p>
+<p>Installation instructions for TinyMCE can be found in the <a href="http://www.obdev.at/resources/webyep/documentation/WebYep_Documentation_1.6.0/reference/rich-text.html#WYSIWYG_Editor">WebYep documentation</a>.</p>
+<p><strong>Important:</strong> since TinyMCE and Filemanager are third-party products, we can't provide support for them!</p>
+
+<h2>Download Filemanager</h2>
+<ul>
+    <li>Download the filemanager from <a href="https://github.com/simogeo/Filemanager">GitHub</a>.<br />
+        You will get a file named simogeo-Filemanager-f595d02.zip (or similar).</li>
+    <li>Unpack the .zip and rename the resulting folder to 'filemanager'.</li>
+    <li>Put this folder into your <code>/webyep-system/program/opt/</code> folder.</li>
+</ul>
+
+<h2>Create the directory to hold the uploaded files</h2>
+<ul>
+    <li>Open the folder <code>/webyep-system/data</code> and create a subfolder named "userfiles" there. This folder should have the permissions 755. If this doesn't work on your server, try 775 or 777.</li>
+</ul>
+
+<h2>Prepare Filemanager - Part 1</h2>
+<ul>
+    <li>In the folder <code>/webyep-system/program/opt/filemanager/connectors/</code> delete every subfolder EXCEPT <code>php</code>.
+</ul>
+
+<h2>Prepare Filemanager - Part 2</h2>
+<ul>
+    <li>Open the file <code>/webyep-system/program/opt/filemanager/connectors/php/filemanager.config.php</code>
+    <ul><li>in the first line, add '<code>session_start();</code>' (without the quotes) like so:
+            <pre class="css">&lt;?php session_start();</pre></li>
+        <li>below you'll find a line that reads "<code>function auth() {</code>". Replace this up to and including the next "}" with the following:
+            <pre class="css">function auth() {
+    return isset($_SESSION['WebYepIsAuthorized']) &amp;&amp; $_SESSION['WebYepIsAuthorized'];
+}</pre></li>
+        <li>if you want another language than English, find the line that reads "<code>$config['culture'] = 'en';</code>" and change the "en" accordingly.
+            You'll find all available languages in the folder <code>/webyep-system/program/opt/filemanager/scripts/languages/</code>.
+            Every file in there represents another language, so if you want your filemanager to speak french, write:
+            <pre class="css">$config['culture'] = 'fr';</pre></li>
+        <li>you can also change the date format, by changing the line
+            <pre class="css">$config['date'] = 'd.M.Y H:i';</pre>
+            This will display a date like "29.2.2000 13:57". For a detailed explanation of the available format options, please refer to <a href="http://www.php.net/date">http://www.php.net/date</a></li>
+    </ul>
+</ul>
+
+<h2>Prepare Filemanager - Part 3</h2>
+<ul>
+    <li>In the folder <code>/webyep-system/program/opt/filemanager/scripts</code> you will find a file named <code>filemanager.config.js.default</code>.
+        Rename this file to <code>filemanager.config.js</code> (i.e. remove the trailing .default)</li>
+    <li>Open the file <code>/webyep-system/program/opt/filemanager/scripts/filemanager.config.js</code>
+    <ul><li>if you want another language than English, find the line that reads "<code>var culture = 'en';</code>" and change the "en" accordingly.
+            You'll find all available languages in the folder <code>/webyep-system/program/opt/filemanager/scripts/languages/</code>.
+            Every file in there represents another language, so if you want your filemanager to speak french, write:
+            <pre class="css">var culture = 'fr';</pre></li>
+        <li>find the line that reads "<code>var fileRoot = '/' + am + 'userfiles/';</code>" and replace it by the following:
+            <pre class="css">var fileRoot = '/webyep-system/data/userfiles/';</pre></li></ul></li>
+</ul>
+
+<h2>Prepare Filemanager - Part 4</h2>
+<ul>
+    <li>Open the file <code>/webyep-system/program/opt/filemanager/index.html</code>.</li>
+    <li>At the end of the <code>&lt;head&gt;</code> section insert the following line:
+        <pre class="css">  <span style="color:#aaa;">&hellip;</span>
+&lt;script type="text/javascript" src="../tinymce/jscripts/tiny_mce/tiny_mce_popup.js"&gt;&lt;/script&gt;
+<span style="color:#aaa;">&lt;/head&gt;
+&lt;body&gt;
+  &hellip;</span></pre></li>
+</ul>
+
+<h1>Did it work?</h1>
+<p>To check whether the installation was successful, do the following:</p>
+<ul>
+    <li>Create a WebYep page containing a RichText element and upload this page to your server.</li>
+    <li>Open this page in your browser and switch to edit mode.</li>
+    <li>Click the 'Edit' Button of the RichText element. A new window with TinyMCE should pop up.</li>
+    <li>In the toolbar click on "Insert/edit image". The image dialogue should appear.</li>
+    <li>If the installation of Imagemanager was successful, you'll now have a new button "Browse" next to the URL input field.</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

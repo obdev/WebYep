@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>WebYep Examples - Layout of the WebYep Image Gallery</title>
+<link rel="stylesheet" href="common.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel='stylesheet' href='examples.css' type='text/css' />
+</head>
+
+<body>
+<div class="box pageContent">
+<a href="index.html" class="backlink">&lt;&lt; back to overview</a>
+<img src="logo+claim.gif" alt="WebYep - The Shiny Tiny WebCMS" alt-de="WebYep - Das feine kleine WebCMS">
+
+<div class="introduction" style="width:730px">
+    This is one of a series of articles about WebYep and web design. Things are under development right now, so appearance and content may change over time.
+</div>
+<div id="page">
+
+<div class="RapidWeaver">
+    <h2>RapidWeaver users look here</h2>
+    We've made a demo site in RapidWeaver&reg; with all the necessary styles and markup alreadey built in.
+    Download this <a href="gallery2.rw.zip">example project</a> here.
+</div>
+
+<h1>Layout of the WebYep Image Gallery</h1>
+<p>Recently I've written about <a href="correct-html.html">correct HTML</a> and how to avoid &lt;table&gt;s in your layout. One could argue, that the WebYep ImageGallery violates the principles discussed there, but when you want to display your content tabularly, this is the way to go. It also is quite practical, since floating many Images might lead to problems with the layout. After all, floated content takes no actual space in the parent container and when there is a variable amount of pictures, you'd need additional markup to ensure correct layout.</p>
+
+<h2>Hiding the titles of each image</h2>
+<p>Sometimes you'll have a long description for your images, which will result in irregular text blocks beneath each image. Leaving the description field blank would solve this problem in the overview, but then you'd have no descriptions at all. There is of course a better way to do this, thanks to CSS.</p>
+<p>Each layout element of the WebYep ImageGallery has its CSS class assigned. In case of the image caption, this is <code>WebYepGalleryText</code><sup>1</sup> so a rule like the following will do the trick:</p>
+<pre class="css">.WebYepGalleryText {
+    display: none;
+}</pre>
+<p>The captions are gone now, but how do we know now where we've entered text? Clearly that's inconvenient as well, so we'll need another rule, that will show us the captions in edit mode:</p>
+<pre class="css">.WebYepGalleryImage + div + .WebYepGalleryText {
+    display: block;
+}</pre>
+<p>The trick is that in edit mode WebYep adds an additional <code>&lt;div&gt;</code> for the controls between the image and it's caption, so we can use the adjacent sibling selector to address the caption in edit mode only.</p>
+
+<h2>Centering images horizontally and vertically</h2>
+<p>As long as all your images are the same size and have the same aspect ratio, you'll be fine without special styles for the gallery. But when you (or more likely, your customer) want to add images both portrait and landscape, you should do something about the alignment, or it will look weird.</p>
+<p>Let's look at an example. We want to style the following WebYep ImageGallery element:</p>
+<pre>&lt;?php webyep_gallery("Gallery", false, 90, 90, 5, 600, 700, 120); ?&gt;</pre>
+<p>Nothing special so far: a gallery with 5 rows, thumbnails that are max. 90&times;90, 120 pixels per column and the images shall be zoomed to max. 600&times;700 pixels. When finished, it shall look like a bunch of square slides.</p>
+<p>The first thing we want to do, is center the images horizontally and vertically. For this we add the following rule to our stylesheet:</p>
+<pre class="css">.WebYepGalleryContainer td {
+    vertical-align: middle;
+    text-align:     center;
+}
+</pre>
+<p>The images are now centered, but the first thing we note is that each table row now shrinks to the size of the tallest picture in this row. The problem becomes visible, when we add a border to the cells:</p>
+<pre class="css"><span style="color:#aaa;">.WebYepGalleryContainer td {</span>
+    border:         solid 1px #aaa;
+    <span style="color:#aaa;">vertical-align: middle;
+    text-align:     center;
+}</span></pre>
+<p>Clearly this is not what we want, so we might be tempted to add a padding to the cells. However, this would be a bad idea, because some browsers won't calculate the height correctly. That's why we make sure, <code>padding</code> is  set to zero:</p>
+<pre class="css"><span style="color:#aaa;">.WebYepGalleryContainer td {
+    border:         solid 1px #aaa;</span>
+    padding:        0;
+    <span style="color:#aaa;">vertical-align: middle;
+    text-align:     center;
+}</span></pre>
+<p>The tall images still touch the surrounding cell and the table rows are not the same height. To correct this, we have to add another rule, that forces the table cells to appear equally tall:</p>
+<pre class="css"><span style="color:#aaa;">.WebYepGalleryContainer td {
+    border:         solid 1px #aaa;
+    padding:        0;</span>
+    height:         120px;
+    <span style="color:#aaa;">vertical-align: middle;
+    text-align:     center;
+}</span></pre>
+<p>Now that's more like it. All cells now have the same height and we can move on to our last task.</p>
+
+<h2>Spacing Images</h2>
+<p>Now that our cells are nice squares, we just want them to have some space between them. The <code>margin</code> property won't work, but there is a solution for this: <code>border-spacing</code> applied to the <code>table</code> element will do the trick<sup>2</sup>.</p>
+<pre class="css">.WebYepGalleryContainer {
+    border-spacing: 20px;
+}</pre>
+<p>One last thing is irritating and that's the empty cells (in case you haven't added a multiple of 5 images). CSS of course has a solution for this:</p>
+<pre class="css"><span style="color:#aaa;">.WebYepGalleryContainer {
+    border-spacing: 20px;</span>
+    empty-cells:    hide;
+<span style="color:#aaa;">}</span></pre>
+<p>And that's it for today. You can download an <a href="gallery2.zip"> example WebYep page</a> and try different stylings. In the example I've used some of the new CSS3 features like <code>box-shadow</code>. Not every browser will understand this and so the page will look slightly different. However, in modern browsers this will produce a nice effect. Create &amp; have fun.</p>
+
+<div class="footnote">[1] For a complete list of available classes refer to the WebYep Documentation.</footnote>
+<div class="footnote">[2] Please note that Internet Explorer 7 doesn't handle border-spacing correctly.</footnote>
+
+</div>
+
+</div>
+</body>
+</html>
