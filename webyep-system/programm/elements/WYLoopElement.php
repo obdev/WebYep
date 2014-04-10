@@ -111,7 +111,7 @@ EOT;
 	{
 		global $goApp;
 
-		if ($goApp->bEditMode) return $this->dContent[WY_DK_LOOPIDARRAY];
+		if ($goApp->bEditPermission) return $this->dContent[WY_DK_LOOPIDARRAY];
 		else {
 			$a = $this->dContent[WY_DK_LOOPIDARRAY];
 			$aDis = $this->_aDisabledLoopIDs();
