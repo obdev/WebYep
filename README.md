@@ -1,4 +1,4 @@
-What is WebYep?
+What is WebYep 2?
 ================
 
 WebYep is Web Content Management System. WebYep is now Open Source. There are
