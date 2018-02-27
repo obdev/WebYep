@@ -1,7 +1,7 @@
 What is WebYep² ?
 ================
 
-WebYep2 is Web Content Management System which is based heavily on the original 'https://github.com/obdev/WebYep' system, 
+WebYep2 is a Web Content Management System which is based heavily on the original 'https://github.com/obdev/WebYep', 
 and as before WebYep2 is an Open Source system. 
 There are many WebCMS available, even Open Source, but the original WebYep was different, and the new WebYep2 carries those innovative ideas/direction on to meet the new demands of a modern PHP7 compatible CMS:
 
