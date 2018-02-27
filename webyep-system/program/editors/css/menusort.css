@@ -1,0 +1,123 @@
+.ui-nestedSortable-error {
+     background-color: #fbe3e4;
+     background-image: url("../images/stop.gif");
+     background-position: 5px 50%;
+     background-repeat: no-repeat;
+     color: #8a1f11;
+}
+
+.hideChildren ul {
+     display: none;
+}
+
+ul.sortable, ul.sortable ul {
+     list-style-type: none;
+     margin: 0px 0px 0px 20px;
+     padding: 0px;
+}
+
+ul.sortable {
+     margin: 0px 0px 0px 3px;
+}
+
+.sortable li {
+     margin: 0px;
+     padding: 0px;
+     font-weight:bold;
+     color:#444
+}
+.sortable li li {
+     margin: 0px;
+     padding: 0px;
+     font-weight:normal;
+}
+
+.sortable li div {
+     background: #f7f7ff;
+     border-bottom: 1px solid #ecebf3;
+     border-top: 1px solid #ffffff;
+     cursor: move;
+     font-size: 12px;
+     line-height: 12px;
+     min-height: 15px;
+     padding: 7px 7px 4px 7px;
+	 margin-right:1px;
+}
+
+span.link {
+     color: #999999;
+     font-family: courier;
+     font-size: 11px;
+     font-weight: normal !important;
+}
+
+span.link:before {
+     color: mediumpurple;
+     font-family: 'webyepfontregular';
+     /* content: "URL :";
+	 xcontent:"\f0c1"; */
+	 content:"\e827";
+     font-size: 9px;
+     margin: 0 6px 0 3px;
+}
+
+.hidden span.link {
+     color: #888888;
+}
+.hidden span.link:before {
+     color: #888888;
+	 font-style: normal;
+}
+
+.sortable li div:hover {
+     background: none repeat scroll 0% 0% #f1effe;
+}
+
+.sortable li div.hidden {
+     background: #f8f8f8;
+	 color:#888888;
+     font-style: italic;
+ }
+ .sortable li div.hidden:before {
+	 font-family: 'webyepfontregular';
+	 margin-right:6px;
+	 color:#888888;
+	 content:"\e807"; 
+}
+
+.sortable li div.hidden:hover {
+     background: #f2f2f2;
+}
+
+.sortable li div.selected {
+     background: none repeat scroll 0% 0% #eee7fe ! important;
+}
+
+.sortable li div.selected:hover {
+     background: none repeat scroll 0% 0% #eee7fe ! important;
+}
+
+li div span.toggle {
+     cursor: pointer;
+     display: block;
+     float: right;
+     height: 13px;
+     margin: 2px 8px 0 0;
+     width: 22px;
+}
+
+li div span.toggle {
+     background-image: url("/webyep-system/program/images/minus-button.png");
+     background-repeat: no-repeat;
+	 opacity:.7;
+}
+
+li.hideChildren div span.toggle {
+     background-image: url("/webyep-system/program/images/plus-button.png");
+     background-repeat: no-repeat;
+	 opacity:.7;
+}
+
+li.hideChildren div span.toggle:hover, li div span.toggle:hover {
+	opacity:1;
+}

@@ -1,0 +1,1 @@
+Activate hover menu.

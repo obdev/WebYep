@@ -1,0 +1,24 @@
+/* CSS Mini Reset */
+
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-font-variant-ligatures: common-ligatures; /* for iOS and Safari 6 */
+    font-variant-ligatures: common-ligatures; /* for up-to-date browsers, including IE10 and Opera 21 */
+    font-kerning: normal;
+    -webkit-font-feature-settings: "kern";
+    font-feature-settings: "kern";
+}
+
+html, body, div, form, fieldset, legend, label, p { margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+h1, h2, h3, h4, h5, h6, th, td, caption, input  { font-weight:normal; }
+
+input, textarea { outline: none; background-color:transparent; border: 0px solid; }
+*:focus { outline:none }
+
+input[type="button"], input[type="submit"] { font-weight: normal; }
+
+
+
+
