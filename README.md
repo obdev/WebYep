@@ -27,7 +27,7 @@ This release adds or introduces a massive amount of visual changes. So as a guid
 7. I have kept the gallery construction the same, but it now uses a none table method ()although I need to create a quick tutorial for everyone to understand how to use it).
 8. The init-code has been tweaked and as well!! As well as the init code, we now have a new session code snippet which is added to the body tag
 9. 'Date controled' WebYep loops have had to be rewritten, and again I need to post a tutorial with new updated code
-10. There is a Rapidweaver plugin that's been re-written by William Woodgate, and he will launch the minute WebYep 2 is live on Github!
+10. There is a Rapidweaver plugin that's been re-written by William Woodgate, and he will launch the minute WebYep 2 is live on Github! but in the meantime you can read all about his stacks here: https://forums.obdev.at/viewtopic.php?f=6&t=11171
 
  
 
@@ -35,7 +35,7 @@ Whats the commercial editor all about??
 ============================
 
 Once WebYep has had time to become a world leader and take over the cms world, or a few weeks time whichever comes first. I will be launching a commercial version which contains the Freeway actions and the pre-installed commercial and licensed rich-text editor (redactor) this editor has already been configured with a file and image manager.. all installed and ready to go...
-But I how much will I charge for this version I hear you ask... well not much, most probably about the price of a few cups of tea and cake at costa. 
+But "how much will I charge for this commercial version" I hear you ask... well not much, most probably about the price of a few cups of tea and slice of cake at costa. 
 If you would prefer to spend 'absolutely nothing' on your cms then that's fine... this version is the same as the commercial version, but it can only use TinyMCE or CKEditor for the rich-text editor.
 As you can see, the entry-level bar has been lowered to subterranean levels... so there are no excuses for moaning.
 
