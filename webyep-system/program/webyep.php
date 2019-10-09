@@ -129,7 +129,7 @@ $webyep_aMultiLoginURLPatterns = array();
 $webyep_bDoNotIncludeMootools = false;// Mootools will be included, if required (see below)
 
 $webyep_iMajorVersion = 2;
-$webyep_iMinorVersion = 0;
+$webyep_iMinorVersion = 1;
 $webyep_iSubVersion = 0;
 $webyep_sCopyrightLine = "&copy; 2015, <a href='http://www.obdev.at/' target='_blank'>Objective Development Software GmbH</a>";
 
@@ -400,6 +400,47 @@ if ($webyep_bDocumentPage) {
         $webyep_sHeadHTML .= "<script type='text/javascript' src='" . $sOptLtURL . "/jquery-lightbox/lightbox.min.js'></script>\n";
         $webyep_sHeadHTML .= "<link rel='stylesheet' href='" . $sOptLtURL . "/jquery-lightbox/css/lightbox.css' type='text/css' media='screen' />\n";
     }
+
+ /***************** JQUERY *******************/
+    // Load jquery js library
+    if($webyep_JsLibariesType == 'none'){
+        //~ $aResult = webyep_aScanDirectory($oOptPath->sPath, "^jquery-([0-9]+\.)+(min\.)?js$");
+        //~ if (count($aResult) == 1) { // if we have something that looks like jQuery in /opt, use it
+            //~ $sJQueryLibrary = $aResult[0];
+            //~ $webyep_sHeadHTML .= '<script>window.jQuery || document.write(\'<script type="text/javascript" src="' . $sOptURL . '/' . $sJQueryLibrary . '"><\/script>\')</script>';
+        //~ } else {  // use newest jQuery v1.x from ajax.googleapis.com
+            //~ $webyep_sHeadHTML .= '<script>window.jQuery || document.write(\'<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"><\/script>\')</script>';
+        //~ }
+    }
+
+    //include simple modal js for model window
+    if($webyep_sModalWindowType == 'none'){
+        //~ @$webyep_bJqModelWindow == true;
+        //~ $webyep_sHeadHTML .= "<script type='text/javascript' src='" . $sOptURL . "/jq-simple-modal.js'></script>\n";
+        //~ $webyep_sHeadHTML .= "<script type='text/javascript' src='" . $sOptURL . "/wyJqModelWindow.js'></script>\n";
+        //~ $oOptURL = od_clone($goApp->oProgramURL);
+        //~ $oOptURL->addComponent("css");
+        //~ $sOptURL = $oOptURL->sEURL();
+        //~ $webyep_sHeadHTML .= "<link rel='stylesheet' href='" . $sOptURL . "/jq-simplemodal.css' type='text/css' media='screen' />\n";
+        //~ //here we open model window for notice if variable has been set to true
+        //~ if(@$wyNoticeMWShow === true){
+            //~ $webyep_sHeadHTML .= $goApp->sNoticeWindowMW("HeaderProblemTitle", "HeaderProblemMessage");
+        //~ }
+        //~ if(@$wyShowSecWarningMW === true){
+            //~ $webyep_sHeadHTML .= $goApp->sAlertWindowMW($webyep_SecWarningMW);
+        //~ }
+    }
+
+    //load lightbox from jquery files
+    if($webyep_LightboxType == 'none'){
+        //~ $oOptLtURL = od_clone($goApp->oProgramURL);
+        //~ $oOptLtURL->addComponent("opt");
+        //~ $sOptLtURL = $oOptLtURL->sEURL();
+        //~ $webyep_sHeadHTML .= "<script type='text/javascript' src='" . $sOptLtURL . "/jquery-lightbox/lightbox.min.js'></script>\n";
+        //~ $webyep_sHeadHTML .= "<link rel='stylesheet' href='" . $sOptLtURL . "/jquery-lightbox/css/lightbox.css' type='text/css' media='screen' />\n";
+    
+    }
+
 
     /***************** SCRIPTACULOUS *******************/
     // Load scriptaculous js library

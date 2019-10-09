@@ -122,10 +122,9 @@ EOT;
 	{
 		global $goApp;
 
-		//if ($goApp->bEditMode){
-		if ($goApp->bEditPermission) {
+		if ($goApp->bEditMode){
 		 return $this->dContent[WY_DK_LOOPIDARRAY];
-		} else {
+		}else {
 			$a = $this->dContent[WY_DK_LOOPIDARRAY];
 			$aDis = $this->_aDisabledLoopIDs();
 			return array_diff($a, $aDis);

@@ -16,6 +16,7 @@ define("WYLANG_SWEDISH", 5);
 define("WYLANG_DUTCH", 6);
 // define("WYLANG_HUNGARIAN", 7);
 define("WYLANG_FRENCH", 7);
+define("WYLANG_SPANISH", 8);
 // when adding languages here, also add them to sTinyMCELang() in editors/rich-text-tinymce.php
 
 $webyep_iLanguageID = WYLANG_ENGLISH;
@@ -115,6 +116,9 @@ class WYLanguage
 //      }
       else if ($webyep_sLang == "french") {
          $webyep_iLanguageID = WYLANG_FRENCH;
+      }
+      else if ($webyep_sLang == "spanish") {
+         $webyep_iLanguageID = WYLANG_SPANISH;
       }
 
 		if (isset($GLOBALS["webyep_iForcedLanguageID"])) {

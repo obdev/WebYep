@@ -567,13 +567,14 @@
 					<p class="f-fp f-lp">
                     	<input type="submit" class="WYmainbuttons r2" id="save" value="<?php WYTSD("SaveButton", true); ?>">
                         <?php echo (new WYEditor())->sHiddenFieldsForElement($oElement); ?>
-						<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
-                        <input type="button" class="WYmainbuttons r2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
-                        <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
-                        <input type="button" class="WYmainbuttons r2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
-                        <?php }else{?>
-                        <input type="button" class="WYmainbuttons r2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
-                        <?php }?>
+				<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
+                <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
+				<?php }
+				else{?>
+				<input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
+				<?php }?>
                     </p>
 					<div class="WYhelp">
 						<p class="WYhelpstyle"><a href="/webyep-system/program/help/english/access-denied.php"> <?php echo $goApp->sHelpLink($sHelpFile); ?> </a></p>

@@ -20,8 +20,8 @@
    $oP->addComponent("redactor");
    
    
-   if ($oP->bExists() && basename($oP->sPath) == 'tinymce') {
-      $oEditorsFolder->addComponent("rich-text-tinymce.php");
+   if ($oP->bExists() && basename($oP->sPath) == 'redactor') {
+      $oEditorsFolder->addComponent("rich-text-redactor.php");
 	   include_once($oEditorsFolder->sPath);
    }
    else {
@@ -33,37 +33,46 @@
          $oEditorsFolder->addComponent("rich-text-redactor.php");       
          include_once($oEditorsFolder->sPath);
       }
-	  else {
-		  unset($oP);
-		  $oP = od_clone($goApp->oProgramPath);
-		  $oP->addComponent("opt");
-		  $oP->addComponent("rte");
-		  if ($oP->bExists()) {
-			 $oEditorsFolder->addComponent("rich-text-rte.php");
-			 include_once($oEditorsFolder->sPath);
-		  }
+	  // else {
+	  // 		  unset($oP);
+	  // 		  $oP = od_clone($goApp->oProgramPath);
+	  // 		  $oP->addComponent("opt");
+	  // 		  $oP->addComponent("rte");
+	  // 		  if ($oP->bExists()) {
+	  // 			 $oEditorsFolder->addComponent("rich-text-rte.php");
+	  // 			 include_once($oEditorsFolder->sPath);
+	  // 		  }
 		  else {
-			  unset($oP);
-			  $oP = od_clone($goApp->oProgramPath);
-			  $oP->addComponent("opt");
-			  $oP->addComponent("fckeditor");
-			  if ($oP->bExists()) {
-				 $oEditorsFolder->addComponent("rich-text-fckeditor.php");
-				 include_once($oEditorsFolder->sPath);
-			  }
-			 else {
-					unset($oP);
-					$oP = od_clone($goApp->oProgramPath);
-					$oP->addComponent("opt");
-					$oP->addComponent("ckeditor");
-					if ($oP->bExists()) {
-						$oEditorsFolder->addComponent("rich-text-ckeditor.php");
-						include_once($oEditorsFolder->sPath);
-					}
-					else {
-						$oEditorsFolder->addComponent("rich-text-plain.php");
-						include_once($oEditorsFolder->sPath);
-					}
+		  			  unset($oP);
+		  			  $oP = od_clone($goApp->oProgramPath);
+		  			  $oP->addComponent("opt");
+		  			  $oP->addComponent("fckeditor");
+		  			  if ($oP->bExists()) {
+		  				 $oEditorsFolder->addComponent("rich-text-fckeditor.php");
+		  				 include_once($oEditorsFolder->sPath);
+		  			  }
+			  else {
+				  unset($oP);
+				  $oP = od_clone($goApp->oProgramPath);
+				  $oP->addComponent("opt");
+				  $oP->addComponent("tinymce");
+				  if ($oP->bExists()) {
+					 $oEditorsFolder->addComponent("rich-text-tinymce.php");
+					 include_once($oEditorsFolder->sPath);
+				  }
+				 else {
+						unset($oP);
+						$oP = od_clone($goApp->oProgramPath);
+						$oP->addComponent("opt");
+						$oP->addComponent("ckeditor");
+						if ($oP->bExists()) {
+							$oEditorsFolder->addComponent("rich-text-ckeditor.php");
+							include_once($oEditorsFolder->sPath);
+						}
+						else {
+							$oEditorsFolder->addComponent("rich-text-plain.php");
+							include_once($oEditorsFolder->sPath);
+						}
 			 }
 		  }
 	  }

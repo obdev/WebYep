@@ -120,12 +120,21 @@
 			$chunks = explode('|@|', $oTAWYEditorPostArea->sText());
             $chunks[1] = explode('|§|', $chunks[1]);
 			$oElement->dContent = parseDataForServer($chunks[1], $chunks[2]);
-            $oElement->save();
-            $bOK = true;
-             if($bOK){
-			$sOnLoadScript = 'window.parent.location.reload(true)';
+            
+			
+		$oElement->save();
+        $bOK = true;
+		
+		if($bOK){
+		            if($webyep_sModalWindowType == "none"){
+		                $sOnLoadScript = 'window.opener.location.reload(true);window.close();';
+		            }else{
+		                $sOnLoadScript = 'window.parent.location.reload(true);window.close();';
+		            }
+				}
+        
+		
 		}
-        }
     } else {
         $sContent = parseDataForClient($oElement->dContent, $oURL->sURL());
     }
@@ -836,7 +845,8 @@
 if (!isset($bOK)) $bOK = false; if ($oEditor->bSave) $bDidSave = true; else if (!isset($bDidSave)) $bDidSave = false;?> 
 <body onload="wy_restoreSize();<?php echo isset($sOnLoadScript) ? $sOnLoadScript:"" ?>" onresize="wy_saveSize();">
 <?php if (!$bDidSave) { ?>
-		<div id="PageDiv">
+		<div id="PageDiv" class="modelpoup">			  
+			<input type="hidden" value="<?php echo $webyep_submenu; ?>">
 			<div id="simplemodal" class="WYsimplemodal">
 				<h1 class="simplemodal f-lp"><?php echo WYTS("MenuEditorTitle")?>: <span class="grey"><?php echo $oEditor->sFieldName; ?></span></h1>
 				<div id="WebYeplogo">
@@ -847,12 +857,16 @@ if (!isset($bOK)) $bOK = false; if ($oEditor->bSave) $bDidSave = true; else if (
 					<p class="f-fp f-lp">
                     	<input class="WYmainbuttons r3 t2" id="WY_EditorButtonSave" type="button" value="<?php WYTSD("SaveButton", true); ?>" />
                     	<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
-                         <input name="Button" type="button" id="WY_EditorButtonCancel" class="WYmainbuttons r3 t2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
-                         <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
-                         <input name="Button" type="button" id="WY_EditorButtonCancel" class="WYmainbuttons r3 t2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
-                         <?php }else{?>
-                         <input id="WY_EditorButtonCancel" class="WYmainbuttons r3 t2" type="button" value="<?php WYTSD("CancelButton", true); ?>" />
-                         <?php }?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
+                <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
+				<?php }
+				else{?>
+				<input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
+				<?php }?>                       
+                         
+                         
+                     
                     </p>
 					<div class="WYhelp">
 						 <p class="WYhelpstyle">
@@ -943,7 +957,7 @@ if (!isset($bOK)) $bOK = false; if ($oEditor->bSave) $bDidSave = true; else if (
 								<p class="f-lp mt10" style="">
 									<input id="WY_EditMenuExternal" type="checkbox" class="css-checkbox" value="ako">
 									<label for="WY_EditMenuExternal" class="css-label css-label-nomargin"></label>
-								<span class="arrowleftbefore"></span> Disable WebYep Page Instance<br>
+								<span class="arrowleftbefore"></span> <?php WYTSD("DisableWebYepPageInstance"); ?><br>
 								<span class="linkinstruction">Add a forward slash '/' after the URL, only if NO specific page is specified.<br>
 Example:- <span class="blue">http://www.apple.com</span> would become <span class="blue">http://www.apple.com</span><span class="red">/</span></p>
 						</div>

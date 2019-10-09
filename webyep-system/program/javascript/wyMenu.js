@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
     WY = window.WY || {};
     WY.menu = {
         selectedEntry: 0,
@@ -116,6 +117,12 @@ $(document).ready(function(){
             } else {
                 linkTT = this.model.baseUrl;
             }
+            var dataa = $('.modelpoup input').val();
+             if(dataa ==='OFF'){			
+			     $('#WY_InsertMenuItemsHere li').addClass('hideChildren');
+			   }else{
+				      $('#WY_InsertMenuItemsHere li').removeClass('hideChildren');
+				 }
             return '<li id="menu_'+M.id+'"'+hideChildren+'><div class="WY_EditorMenuItem'+visible+selected+'" title="'+linkTT+'"><span class="title">'+M.text+'<\/span>'+toggle+linkTXT+'<\/div><\/li>';
         },
         sliceMenu: function(slices) {
@@ -390,8 +397,9 @@ $(document).ready(function(){
                 WY.menu.toggleVisibility($(this));
             });
             // click handler for toggle button (+/-)
-            $('span.toggle').bind('click', function(){
-                WY.menu.toggleVisibility($(this).parent());
+            $('span.toggle').bind('click', function(){				
+                 WY.menu.toggleVisibility($(this).parent()); 
+                 console.log('here123');              
             });
         },
         toString: function() {
@@ -427,11 +435,33 @@ $(document).ready(function(){
         placeholder: 'placeholder',
         tabSize: 20,
         tolerance: 'pointer', // 'intersect' or 'pointer'
-        toleranceElement: '> div',
-        update: function() { WY.menu.reorderModel(); }
-    });
+        toleranceElement: '> div',      
+        update: function() { WY.menu.reorderModel(); },      
+        change: function(e, ui){ 					
+        $(this).addClass('valid');              
+       },
+    sort: function(e, ui){
+      $(this).addClass('hideChildrenmeu'); 
+    },
+    relocate: function(e, ui){      
+    },  
+    }).droppable({            
+            drop : function(e, ui){  
+                var sortlisted = ui.draggable[0].attributes['id']['nodeValue'];            
+            setTimeout(function(){      
+               $('#'+sortlisted).removeClass('hideChildren');           
+               $('#'+sortlisted).parents('li').removeClass('hideChildren');
+          },301); }, 
+          over: function(e, ui) {
+          			         
+              }
+        });
 
-    // EditField for title
+$('#WY_InsertMenuItemsHere li').click(function() {
+          var attrval = $(this).attr("id");  
+          $('#WY_InsertMenuItemsHere').attr('allid',attrval);
+      });
+ // EditField for title
     $('#WY_EditMenuTitle').bind('blur change keyup', function(){
         $('#menu_'+WY.menu.selectedEntry).children('div').children('span.title').text($(this).val()); // write to DOM
         WY.menu.getSelectedItem().text = $(this).val(); // write to model
@@ -478,17 +508,60 @@ $(document).ready(function(){
     }).attr('checked',false);
 
     // --- Buttons to move selected entry around ----------------------------------------------------------
+    
+    
+/****    $('#WY_InsertMenuItemsHere li').dblclick(function(e) {
+  	e.preventDefault();  
+    var $this = $(this);  
+    if ($this.next().hasClass('show')) {
+        $this.next().removeClass('show');
+        $this.next().slideUp(350);
+    } else {
+        $this.parent().parent().find('li ul').removeClass('show');
+        $this.parent().parent().find('li ul').slideUp(350);
+        $this.next().toggleClass('show');
+        $this.next().slideToggle(350);
+    }
+}); ***/   
+    
+  
+    
+    
     $('#WY_EditorButtonUp').bind('click', function(){
-        WY.menu.moveSelectionUp();
+        WY.menu.moveSelectionUp();    
+        var attrvales = $('#WY_EditorButtonUp').attr("togval");
+        $('#'+attrvales).removeClass('hideChildren');  
+        $('#'+attrvales).parents('ul').removeClass('hideChildren'); 
+        $('#'+attrvales).find('ul').find('li').removeClass('hideChildren');
+        $('#'+attrvales).find('ul').show();
+        $('#'+attrvales).removeClass('hideChildren');  
     });
     $('#WY_EditorButtonDown').bind('click', function(){
         WY.menu.moveSelectionDown();
+        var attrvales = $('#WY_EditorButtonDown').attr("togval");
+        $('#'+attrvales).removeClass('hideChildren');  
+        $('#'+attrvales).parents('ul').removeClass('hideChildren'); 
+       $('#'+attrvales).find('ul').find('li').removeClass('hideChildren');
+        $('#'+attrvales).find('ul').show();
+        $('#'+attrvales).removeClass('hideChildren');  
     });
     $('#WY_EditorButtonLeft').bind('click', function(){
         WY.menu.moveSelectionLeft();
+      var attrvales = $('#WY_EditorButtonLeft').attr("togval");
+        $('#'+attrvales).removeClass('hideChildren');  
+        $('#'+attrvales).parents('ul').removeClass('hideChildren'); 
+        $('#'+attrvales).find('ul').find('li').removeClass('hideChildren');
+        $('#'+attrvales).find('ul').show();
+        $('#'+attrvales).removeClass('hideChildren');  
     });
     $('#WY_EditorButtonRight').bind('click', function(){
         WY.menu.moveSelectionRight();
+      var attrvales = $('#WY_EditorButtonRight').attr("togval");
+        $('#'+attrvales).removeClass('hideChildren');  
+        $('#'+attrvales).parents('ul').removeClass('hideChildren'); 
+        $('#'+attrvales).find('ul').find('li').removeClass('hideChildren');
+        $('#'+attrvales).find('ul').show();
+        $('#'+attrvales).removeClass('hideChildren');  
     });
 
     // Button 'Add Sibling'
@@ -499,11 +572,50 @@ $(document).ready(function(){
     // Button 'Add Child'
     $('#WY_EditMenuAddChild').click(function(){
         WY.menu.addChild(WY.menu.selectedEntry);
+       var attrvales = $('#WY_EditMenuAddChild').attr("togval");
+        $('#'+attrvales).removeClass('hideChildren');  
+        $('#'+attrvales).parents('ul').removeClass('hideChildren'); 
+        $('#'+attrvales).find('ul').find('li').removeClass('hideChildren');
+        $('#'+attrvales).find('ul').show();
+        var attrvalesub =$('#WY_EditMenuAddChild').attr('togvalsub');
+         $(attrvalesub).removeClass('hideChildren');       
+         $('#'+attrvalesub).removeClass('hideChildren');  
+         $('#'+attrvalesub).parents('ul').removeClass('hideChildren'); 
+        $('#'+attrvalesub).find('ul').find('li').removeClass('hideChildren');
+         $('#'+attrvalesub).find('ul').show();
     });
-
+    setInterval(function(){ 
+       $('ul#WY_InsertMenuItemsHere li ul li').click(function(){ 
+            var attrvalsub = $(this).attr("id");
+           $('#WY_EditMenuAddChild').attr('togvalsub',attrvalsub);
+           $('#WY_EditMenuDelete').attr('togvalsub',attrvalsub);
+       });
+      }, 300);
+      setInterval(function(){ 
+      $('#WY_InsertMenuItemsHere li').click(function() {		
+          var attrval = $(this).attr("id");       
+        $('#WY_EditMenuAddChild').attr('togval',attrval);        
+        $('#WY_EditMenuDelete').attr('togval',attrval);        
+        $('#WY_EditorButtonUp').attr('togval',attrval);        
+        $('#WY_EditorButtonDown').attr('togval',attrval);        
+        $('#WY_EditorButtonLeft').attr('togval',attrval);        
+        $('#WY_EditorButtonRight').attr('togval',attrval);        
+    });
+   }, 300);
     // Button 'Delete'
     $('#WY_EditMenuDelete').click(function(){
         WY.menu.deleteSubtree();
+         var attrvales = $('#WY_EditMenuDelete').attr("togval");
+         $('#'+attrvales).removeClass('hideChildren');  
+        $('#'+attrvales).parents('ul').removeClass('hideChildren'); 
+         $('#'+attrvales).find('ul').find('li').removeClass('hideChildren');
+        $('#'+attrvales).find('ul').show();
+        $('#'+attrvales).removeClass('hideChildren');  
+       var attrvalesub =$('#WY_EditMenuDelete').attr('togvalsub');       
+        $('#'+attrvalesub).removeClass('hideChildren');  
+        $('#'+attrvalesub).parents('ul').removeClass('hideChildren'); 
+       $('#'+attrvalesub).find('ul').find('li').removeClass('hideChildren');
+        $('#'+attrvalesub).find('ul').show();
     });
 
     // Button 'Cancel'
@@ -551,5 +663,11 @@ $(document).ready(function(){
     $(window).load(function(){
         WY.window.restoreSize();
         WY.menu.adjust();
-    });
+    }); 
+    
+//var submenu_Value = "OFF";   
+//if(submenu_Value == 'OFF'){   
+  // $('#WY_InsertMenuItemsHere li').addClass('hideChildren');
+//}      
+   
 }); // end of $.ready()

@@ -24,12 +24,22 @@
 	if (isset($_REQUEST['WEBYEP_ACTION'])) {
 		$oElement->setText($oTAHTMLCode->sText());
 		$oElement->save();
+	
 		$bOK = true;
 		if($bOK){
-echo "<script>window.parent.location.reload(true);</script>";
-}
-	}
-	else {
+			
+			
+		if($webyep_sModalWindowType == "none"){
+			
+				echo "<script>window.opener.location.reload(true);window.close();</script>";
+      	} else {
+	   			echo "<script>window.parent.location.reload(true);window.close();</script>";
+	   	}
+	
+	
+	  
+   	}
+	} else {
 		$sOnLoadScript = 'document.forms[0].HTML_CODE.focus();';
 	}
 	
@@ -499,7 +509,7 @@ echo "<script>window.parent.location.reload(true);</script>";
 	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return submitForm();">
 		<div id="PageDiv">
 			<div id="simplemodal" class="WYsimplemodal">
-				<h1 class="simplemodal f-lp"><?php echo WYTS("Markup Text"); ?>: <span class="grey"><?php echo $oEditor->sFieldName; ?></span></h1>
+				<h1 class="simplemodal f-lp"><?php echo WYTS("MarkupTextEditorTitle"); ?>: <span class="grey"><?php echo $oEditor->sFieldName; ?></span></h1>
 				<div id="WebYeplogo">
 					<img src="../images/webyep-logo.png" width=59 height=31 alt="WebYeplogo" style="float:left">
 				</div>
@@ -507,14 +517,16 @@ echo "<script>window.parent.location.reload(true);</script>";
 				<div id="wy-simple-modal-footer" class="WYcenteralign">
 					<p class="f-fp f-lp">
 						<input type="submit" class="WYmainbuttons r2" id="save" value="<?php WYTSD("SaveButton", true); ?>">
-					<?php echo (new WYEditor())->sHiddenFieldsForElement($oElement); ?>
-					<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
-						<input type="button" class="WYmainbuttons r2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
-					<?php }elseif($webyep_sModalWindowType == 'jquery'){?>
-						<input type="button" class="WYmainbuttons r2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
-					<?php }else{?>
-						<input type="button" class="WYmainbuttons r2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
-					<?php }?>
+					    
+                         <?php echo (new WYEditor())->sHiddenFieldsForElement($oElement); ?>
+				<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
+                <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
+				<?php }
+				else{?>
+				<input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
+				<?php }?>
 					
 					</p>
 					<div class="WYhelp">

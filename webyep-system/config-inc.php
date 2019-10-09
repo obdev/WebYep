@@ -30,28 +30,28 @@ $webyep_sAdminPassword = "";
 
    // Multiple Logins - additional logins for specific pages or groups of pages
    // (remove the double slashes to use it)
-   // $webyep_aMultiLoginName[] = "admin";
-   // $webyep_aMultiLoginPassword[] = "";
-   // $webyep_aMultiLoginURLPatterns[] = "/pageA.php /pageB.php";
+// $webyep_aMultiLoginName[] = "admin";
+// $webyep_aMultiLoginPassword[] = "";
+// $webyep_aMultiLoginURLPatterns[] = "/pageA.php /pageB.php";
 
-   // $webyep_aMultiLoginName[] = "admin";
-   // $webyep_aMultiLoginPassword[] = "";
-   // $webyep_aMultiLoginURLPatterns[] = "/workshops/* /news.php";
+// $webyep_aMultiLoginName[] = "admin";
+// $webyep_aMultiLoginPassword[] = "";
+// $webyep_aMultiLoginURLPatterns[] = "/workshops/* /news.php";
 
-   // $webyep_aMultiLoginName[] = "admin";
-   // $webyep_aMultiLoginPassword[] = "";
-   // $webyep_aMultiLoginURLPatterns[] = "/workshops/* /workshops/*/*";
+// $webyep_aMultiLoginName[] = "admin";
+// $webyep_aMultiLoginPassword[] = "";
+// $webyep_aMultiLoginURLPatterns[] = "/workshops/* /workshops/*/*";
 
-   // $webyep_aMultiLoginName[] = "admin";
-   // $webyep_aMultiLoginPassword[] = "";
-   // $webyep_aMultiLoginURLPatterns[] = "*public.php";
+// $webyep_aMultiLoginName[] = "admin";
+// $webyep_aMultiLoginPassword[] = "";
+// $webyep_aMultiLoginURLPatterns[] = "*public.php";
 
 
 ini_set('display_errors', 'off');
 error_reporting(E_ALL);
 
 
-   //system url used to show uploaded files from rich text editors set absolute URL address such as http://www.mywebsite.com  or leave blank if you require a root relative url
+   //system url use to show uploaded files from rich text editors and inside edotors
 
 define('BASE_URL', '');
 
@@ -87,7 +87,7 @@ $webyep_bOtherLoginsMayEditGlobalData = false;
    // also stop WebYep from converting texts to HTML entities! WebYep will instead insert the meta tag
    // also in each of it's editor pages.
 
-$webyep_sCharset = "UTF-8";
+$webyep_sCharset = "utf-8";
 
 
 
@@ -138,6 +138,14 @@ $webyep_bRememberOpenMenus = true;
    // possible values are:
    // true.....expanded menu trees will be saved in a cookie
    //  false....expanded menu trees will not be saved - when a new page is opened, all trees but the one the page belongs to are closed.
+   
+   
+$webyep_submenu = "OFF";
+   // possible values are:
+   // OFF..... Collapse Menu Trees of WebYep menu window in 'Edit Mode' 
+   // ON.... Expand Menu Trees of WebYep menu window in 'Edit Mode'  
+ 
+   
 
 
 
@@ -159,9 +167,9 @@ $webyep_bOpenFullURLsInNewWindow = false;
    // 2 - the company name, 
    // 3 - and company URL link 
    // Note this will appear in every: editor window, the help and the notice windows)
-$webyep_sProductName = 'WebYeb2';
-$webyep_sCompanyName = 'OBDev';
-$webyep_sCompanyLink = 'https://github.com/obdev/WebYep';
+$webyep_sProductName = 'MyProduct';
+$webyep_sCompanyName = 'WebYep by Objective Development';
+$webyep_sCompanyLink = 'http://www.obdev.at/index.html';
 
 
    // If you want to use the German version of WebYep, please change this value from "auto" to "deutsch".
@@ -172,7 +180,9 @@ $webyep_sCompanyLink = 'https://github.com/obdev/WebYep';
    // If you want to use the Dutch version of WebYep, please change this value from "auto" to "dutch".
    // If you want to use the Portuguese version of WebYep, please change this value from "auto" to "portuguese".
    // If you want to use the Polish version of WebYep, please change this value from "auto" to "polski".
+   // If you want to use the Spanish version of WebYep, please change this value from "auto" to "spanish".
 $webyep_sLang = "english";
+
 
 
    // If you are using Redactor WYSIWYG editor then you can choose your language from the list below.
@@ -198,6 +208,9 @@ $webyep_sLang = "english";
    // 	zh_cn	Chinese Simplified
    // 	zh_tw	Chinese Traditional
 $webyep_rLang = 'en';
+
+
+
 
 
    // Zur Problembehebung bittet Sie der WebYep Support manchmal, den WebYep Debug Modus zu aktivieren
@@ -236,7 +249,7 @@ $webyep_LightboxType = "jquery";
    * Refrence : http://php.net/manual/en/datetime.formats.date.php
    */
 $webyep_CustomDateFromat = "j-n-Y";
-$webyep_CustomTimeFromat = "G:i";
+$webyep_CustomTimeFromat = "g:m a";
 
 
    // Wichtig: In dieser Datei dürfen am Beginn und Ende keine Leerzeilen eingefügt werden!!!

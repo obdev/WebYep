@@ -61,6 +61,7 @@ class WYPopupWindowLink extends WYHTMLTag
 		//}else { $loopid=0; print_r($webyep_oCurrentLoop);}
 
 		$url=$oURL->sURL();$WEBYEP_LOOP_ID="0";
+		//$WEBYEP_LOOP_ID=$loopid;
 		if(isset($_REQUEST["WEBYEP_LOOP_ID"])){ $WEBYEP_LOOP_ID=$_REQUEST["WEBYEP_LOOP_ID"]; }
 		$url=str_replace('WEBYEP_LOOP_ID='.$WEBYEP_LOOP_ID,'WEBYEP_LOOP_ID='.$loopid,$url); 
 
@@ -69,6 +70,7 @@ class WYPopupWindowLink extends WYHTMLTag
 			$sJS = "javascript:WYPopupWindowLinkMW('".$url."', '".$sName."', '".$iW."', '".$iH."')"; 
 			
 		}else{
+			$oURL->dQuery['WEBYEP_LOOP_ID']=$loopid;
 			$sJS = WYPopupWindowLink::sOpenWindowCode($oURL, $sName, $iW, $iH, $iType);  
 		}	
 		

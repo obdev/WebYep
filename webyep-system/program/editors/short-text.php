@@ -21,7 +21,7 @@
 	$oElement = new WYShortTextElement($oEditor->sFieldName, $oEditor->bGlobal);
 	//print_r($oElement);
 	//$oEditor->WYEditor();
-	
+	//print_r($webyep_sModalWindowType);
 	//echo $oEditor->bSaWebYepShortTextEditButtonve;
 	if (isset($_REQUEST['WEBYEP_ACTION'])){
 		$oElement->setText($oTF->sValue());
@@ -30,9 +30,18 @@
 		//print_r($oElement);
         $bOK = true;
         if($bOK){
-			$sOnLoadScript = 'window.parent.location.reload(true)';
 			
-		}
+					             //  $sOnLoadScript = 'window.opener.location.reload(true);window.close();';
+
+			if($webyep_sModalWindowType == "none"){
+				
+		                $sOnLoadScript = 'window.opener.location.reload(true);window.close();';
+		                      
+		            }else{
+		                $sOnLoadScript = 'window.parent.location.reload(true);window.close();';
+		            }
+			
+		 }
 		
 	}else {
 		$oTF->setValue($oElement->sText());
@@ -58,6 +67,7 @@
 	
 	<link rel=stylesheet href="css/CSS-mini-reset.css">
 	<link rel=stylesheet href="css/wyfontstylesheet.css">
+	
 	<style type="text/css">
 	<!-- 
 	body {
@@ -510,7 +520,8 @@
                 <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
                 <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
                 <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
-				<?php }else{?>
+				<?php }
+				else{?>
 				<input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
 				<?php }?>
              	
@@ -541,6 +552,9 @@
 		</div>
 	</form>
     <?php } else { echo "<blockquote>"; echo "<div class='response'>$sResponse</div>"; if ($bOK) echo (new WYEditor())->sPostSaveScript(); else echo "<p class='textButton'>" . webyep_sBackLink() . "</p>"; echo "</blockquote>"; } ?>
+
+
+
 </body>
 
 </html>

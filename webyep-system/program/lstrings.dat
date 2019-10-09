@@ -8,9 +8,12 @@ portuguese
 swedish
 dutch
 francais
+spanish
 
 WebYepProductURL
 /* URL for link to product page */
+http://www.obdev.at/products/webyep/
+http://www.obdev.at/products/webyep/
 http://www.obdev.at/products/webyep/
 http://www.obdev.at/products/webyep/
 http://www.obdev.at/products/webyep/
@@ -29,34 +32,38 @@ info-pl.php
 info-pt.php
 info-sv.php
 info-en.php
+info-en.php
+info-en.php
 
 editTheField
 /* T! */
 /* tool tip when hovering over edit icon in browser */
 /* dica para quando se está a correr com o rato por cima do icon de edit no browser */
 /* missing translations: portuguese */
-edit %s
-%s bearbeiten
-podesi %s
-edytuj %s
-edit %s
+Edit %s
+%s Bearbeiten
+Podesi %s
+Edytuj %s
+Editar %s
 Redigera %s
 Bewerk %s
 Editer %s
+Editar %s
 
 insufficientPermissions
 /* T! */
 /* tool tip when hovering over edit icon in browser */
 /* dica para quando se está a correr com o rato por cima do icon de edit no browser */
 /* missing translations: portuguese */
-insufficient privileges
+Insufficient privileges
 Keine ausreichenden Rechte
-insufficient privileges
-insufficient privileges
-insufficient privileges
-insufficient privileges
-insufficient privileges
-insufficient privileges
+Недовољна привилегије
+Niewystarczające uprawnienia
+Privilégios insuficientes
+Otillräckliga privilegier
+Onvoldoende rechten
+Privilèges insuffisants
+Privilegios insuficientes
 
 CloseWindow
 /* T! */
@@ -70,6 +77,7 @@ Fecho de Janela
 Stäng fönster
 Sluit venster
 Fermer la fenêtre
+Cerrar la ventana
 
 ClickToZoom
 /* T! */
@@ -77,12 +85,13 @@ ClickToZoom
 /* Titulo do butão para fecho de janelas multiplas */
 Click to Zoom
 Zum Vergrößern klicken
-Click to Zoom
-Click to Zoom
-Click to Zoom
+Кликните за увећање
+Kliknij, aby powiększyć
+Clique para ampliar
 Klicka för större bild
-Click to Zoom
+Klik om te vergroten
 Cliquer pour agrandir
+Haga clic para agrandar
 
 BackLink
 /* T! */
@@ -97,6 +106,7 @@ BackLink
 &lt;tillbaka&gt;
 &lt;terug&gt;
 &lt;retour&gt;
+&lt;para atrás&gt;
 
 WebYepLogon
 /* T! */
@@ -111,6 +121,7 @@ Logon
 inloggning
 Login
 Se connecter
+Login
 
 LogonButtonTitle
 /* T! */
@@ -125,6 +136,7 @@ Logon
 Logga in
 Login
 Connexion
+Logon
 
 LogonSucceded
 /* T! */
@@ -138,6 +150,7 @@ Utilizador autorizado
 Du är nu inloggad
 Succesvol ingelogd
 Connexion réussie
+Conexión exitosa
 
 LogonFailed
 /* T! */
@@ -147,10 +160,11 @@ Username or password incorrect
 Benutzername oder Kennwort falsch
 Pogresno korisnicko ime ili sifra
 Login lub hasło jest niepoprawne
-Utilizador ou passwrod errada
+Utilizador ou senha errada
 Användarnamn eller lösenord felaktigt
 Gebruikersnaam of wachtwoord incorrect
 Erreur nom d'utilisateur ou mot de passe
+Usuario o contraseña incorrectos
 
 Username
 /* T! */
@@ -164,6 +178,7 @@ Utilizador
 Användarnamn
 Gebruikersnaam
 Nom d'utilisateur
+Nombre del usuario
 
 Password
 /* T! */
@@ -173,10 +188,11 @@ Password
 Kennwort
 Sifra
 Hasło
-Password
+Senha
 Lösenord
 Wachtwoord
 Mot de passe
+Contraseña
 
 WebYepNotice
 /* T! */
@@ -190,6 +206,7 @@ Atenção
 Meddelande
 Mededeling
 Avis
+Atención
 
 HeaderProblemTitle
 /* T! */
@@ -203,6 +220,7 @@ Problema com os headers HTTP
 Problem med HTTP Header
 Probleem met HTTP header
 Problème avec le Header HTTP
+Problema con los headers HTTP
 
 HeaderProblemMessage
 /* T! */
@@ -216,6 +234,7 @@ O seu código fonte HTML não se inicia com o código inicial do WebYep ! Veja a
 HTML-koden börjar inte med WebYeps initieringskod! Vänligen läs dokumentationen.
 De HTML broncode begint niet met de WebYep init code! Bekijk de WebYep documentatie voor details.
 Votre source ne débute pas avec le code nécessaire! veuillez lire la documentation
+Su código fuente HTML no se inicia con el código inicial de WebYep! Consulte la documentación para más detalles.
 
 DataAccessProblemTitle
 /* T! */
@@ -229,6 +248,7 @@ Não se consegue escrever os dados pretendidos
 Kan ej skriva datat
 Kan geen data wegschrijven
 Fichiers protégé en écriture
+No se puede escribir datos
 
 DataAccessProblemText
 /* T! */
@@ -239,57 +259,62 @@ WebYep kann keine Daten schreiben - ist WebYep richtig eingerichtet? (siehe "Hil
 WebYep ne moze da upise podatke - da li ste "aktivirali" WebYep? (vidi "Pomoc")
 WebYep nie może zapisać danych - czyżby WebYep nie był aktywowany? (sprawdź "Pomoc")
 WebYep não consegue escrever os dados - talvez o WebYep não esteja activado. A correr em modo demo ? (see help)
-WebYep kan inte skriva datat - är WebYep "aktiverat på rätt sätt? (se hjälpen)
+WebYep kan inte skriva datat - är WebYep "aktiverat på rätt sätt? (se hjälpen)"
 WebYep kan geen data wegschrijven - wellicht is WebYep niet "geactiveerd"? (zie Help)
 WebYep ne peut écrire sur les fichiers - avez-vous installé WebYep correctement? (voir l'aide)
+WebYep no puede escribir sus datos: es posible que WebYep no esté preparado correctamente o que el archivo que se está cargando sea demasiado grande, verifique su límite de carga (consulte la ayuda)
 
 PermissionErrorTitle
 /* T! */
 /* title for error message when editor has insufficient privileges */
 Insufficient Privileges
 Ungenügende Zugriffsrechte
-Insufficient Privileges
-Insufficient Privileges
-Insufficient Privileges
-Insufficient Privileges
-Insufficient Privileges
-Insufficient Privileges
+Недовољна привилегије
+Niewystarczające uprawnienia
+Privilégios insuficientes
+Otillräckliga privilegier
+Onvoldoende toegangsrechten
+Droits d'accès insuffisants
+Privilegios insuficientes
 
 PermissionErrorMessage
 /* T! */
 /* error message when editor has insufficient privileges */
 You do not have sufficient privileges to edit this content.
 Sie haben nicht die nötigen Zugriffsrechte, um diesen Inhalt zu editieren.
-You do not have sufficient privileges to edit this content.
-You do not have sufficient privileges to edit this content.
-You do not have sufficient privileges to edit this content.
-You do not have sufficient privileges to edit this content.
-You do not have sufficient privileges to edit this content.
-You do not have sufficient privileges to edit this content.
+Немате неопходна права приступа за уређивање овог садржајa.
+Nie masz wymaganych uprawnień do edycji tej zawartości.
+Você não tem os direitos de acesso necessários para editar este conteúdo.
+Du har inte nödvändiga behörigheter för att redigera det här innehållet.
+U hebt niet de benodigde toegangsrechten om deze inhoud te bewerken.
+Vous ne disposez pas de privilèges suffisants pour modifier ce contenu.
+No tienes suficientes privilegios para editar este contenido
+
 
 LiveDemoProblemTitle
 /* T! */
 /* error message title, when the live demo has no data folder */
 Demo cannot be started
 Die Demo kann nicht gestartet werden
-Demo cannot be started
-Demo cannot be started
-Demo cannot be started
-Demo cannot be started
-Demo cannot be started
+Демо се не може покренути
+Demo nie może zostać uruchomione
+A demonstração não pode começar
+Demonstrationen kan inte startas
+De demo kan niet worden gestart
 La démo ne peut pas démarrer
+La demostración no se puede iniciar
 
 LiveDemoProblemText
 /* T! */
 /* error message, when the live demo has no data folder */
 Due to an internal error the demo could not be launched.
 Aufgrund eines internen Fehlers kann die Demo nicht gestartet werden.
-Due to an internal error the demo could not be launched.
-Due to an internal error the demo could not be launched.
-Due to an internal error the demo could not be launched.
-Due to an internal error the demo could not be launched.
-Due to an internal error the demo could not be launched.
-A cause d'une erreur interne la démo ne peut pas démarrer.
+Због интерне грешке, демо се не може покренути.
+Z powodu błędu wewnętrznego demonstracja nie może zostać uruchomiona.
+Devido a um erro interno, a demonstração não pode ser iniciada.
+På grund av ett internt fel kan inte demo startas.
+Vanwege een interne fout kan de demo niet worden gestart.
+Debido a un error interno, la demostración no se puede iniciar
 
 SaveButton
 /* T! */
@@ -303,6 +328,7 @@ Guardar
 Spara
 Bewaar
 Enregistrer
+Guardar
 
 CancelButton
 /* T! */
@@ -316,6 +342,7 @@ Cancelar
 Avbryt
 Annuleer
 Annuler
+Cancelar
 
 ShortTextEditorTitle
 /* T! */
@@ -325,10 +352,11 @@ Short Text
 Kurztext
 Kratak tekst
 Krótki tekst
-Short Text
+Texto curto
 Rubriktext
 Korte tekst
 Texte court
+Texto corto
 
 ShortTextSaved
 /* T! */
@@ -342,19 +370,21 @@ Texto guardado com sucesso
 Texten sparad
 Korte tekst is opgeslagen
 Texte court à été enregistré
+Texto guardado con éxito
 
 LongTextEditorTitle
 /* T! */
 /* window title for Long Text Element editor window */
 /* Titulo da janela para a janela Long Text */
 Long Text
-Text
-Tekst
-Tekst
-Long Text
+Langer Text
+Дуги текст
+Długi tekst
+Texto longo
 Längre text
-Alinea
-Texte
+Lange tekst
+Texte long
+Texto largo
 
 LongTextSaved
 /* T! */
@@ -362,25 +392,41 @@ LongTextSaved
 /* Mensagem de sucesso para a janela de edição Long Text */
 Text saved
 Text wurde gespeichert
-Tekst je sacuvan
+Текст је сачуван
 Tekst zapisany
 Texto guardado com sucesso
 Texten sparad
 Alinea is opgeslagen
 Texte enregistré
+Texto guardado con éxito
+
+LongTextInlineMenu
+/* T! */
+/* form field inline menu */
+/* Cform field inline menu  */
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activar menú en línea
 
 RichTextEditorTitle
 /* T! */
 /* window title for Rich Text Element editor window */
 /* Titulo da janela para a janela de edição Rich Text */
 Rich Text
-HTML-Text
-Vidljivi tekst
-Tekst WYSWIG
-Rich Text
-Formaterad text
+Formatierter Text
+Форматирани текст
+Sformatowany tekst
+Texto formatado
+Texto Formaterad
 Opgemaakte tekst
-Texte HTML
+Texte formaté
+Texto formateado
 
 RichTextSaved
 /* T! */
@@ -394,6 +440,7 @@ Texto guardado com sucesso
 Formaterad text sparad
 Opgemaakte tekst is opgeslagen
 Texte enregistré
+Texto guardado con éxito
 
 RichTextEditorImageUploadTitle
 /* T! */
@@ -401,36 +448,52 @@ RichTextEditorImageUploadTitle
 /* Titulo da janela para a janela de edição Rich Text */
 Image Browser
 Bilder-Liste
+Имаге Бровсер
+Przeglądarka obrazów
+Navegador de imagens
+Bildbläddrare
 Image Browser
-Image Browser
-Image Browser
-Image Browser
-Image Browser
-Image Browser
+Navigateur d'images
+Navegador de imágenes
 
 RichTextEditorEmbedMediaButton
 /* T! */
 /* button title for Embed Media Plugin (CKEditor) */
 Embed Media
 Film einbetten
-Embed Media
-Embed Media
-Embed Media
-Embed Media
-Embed Media
-Embed Media
+Ембед Медиа
+Osadź media
+Incorporar Mídia
+Bädda in media
+Sluit media in
+Intégrer les médias
+Incorporar Medios
 
 RichTextEditorEmbedMediaTitle
 /* T! */
 /* window title for Embed Media Plugin window (CKEditor) */
 Paste Embed Code Here
 Fügen Sie den Code zum Einbetten hier ein
-Paste Embed Code Here
-Paste Embed Code Here
-Paste Embed Code Here
-Paste Embed Code Here
-Paste Embed Code Here
-Paste Embed Code Here
+Налепите код за уграђивање овде
+Wklej tutaj kod do umieszczenia na stronie
+Cole o código de incorporação aqui
+Klistra in den inbyggda koden här
+Plak hier de insluitcode
+Collez le code d'intégration ici
+Pega el código de inserción aquí
+
+MarkupTextEditorTitle
+/* T! */
+/* window title for Markup textwindow */
+Markup Text
+Markup Text
+Markup Текст
+Markup Tekst
+Markup Textd
+Markup Text
+Markup Tekst
+Markup Texte
+Markup Texto
 
 ReadMoreEditorTitle
 /* T! */
@@ -438,12 +501,13 @@ ReadMoreEditorTitle
 /* Titulo da janela para a janela de edição Read More */
 Read More
 Weiter lesen
-Read More
-Read More
-Read More
-Read More
-Read More
-Read More
+Опширније
+Czytaj więcej
+Consulte mais informação
+Läs mer
+Lees verder
+Lire la suite
+Lee mas
 
 ReadMoreSaved
 /* T! */
@@ -457,6 +521,7 @@ Texto guardado com sucesso
 Texten sparad
 Korte tekst is opgeslagen
 Texte court à été enregistré
+Texto guardado con éxito
 
 ImageEditorTitle
 /* T! */
@@ -470,6 +535,7 @@ Imagem
 Bild
 Afbeelding
 Image
+Imagen
 
 ImageSaved
 /* T! */
@@ -483,6 +549,7 @@ Imagem guardada
 Bilden sparad
 Afbeelding is opgeslagen
 Image enregistré
+Imagen guardada
 
 ImageStoreFailed
 /* T! */
@@ -490,12 +557,13 @@ ImageStoreFailed
 /* missing translations: serbian, polish, portuguese */
 Could not store the image
 Das Bild konnte nicht gespeichert werden
-Could not store the image
-Could not store the image
-Could not store the image
+Није могуће чувати слику
+Nie można zapisać obrazu
+Não foi possível armazenar a imagem
 Det gick inte att spara bilden
 Afbeelding kon niet worden opgeslagen
 L'image n'a pas pu être enregistré
+No se pudo almacenar la imagen
 
 ImageCannotResize
 /* T! */
@@ -503,12 +571,13 @@ ImageCannotResize
 /* missing translations: serbian, polish, portuguese */
 Uploaded images cannot be resized on this server!
 Hochgeladene Bilder können auf diesem Server nicht verkleinert werden!
-Uploaded images cannot be resized on this server!
-Uploaded images cannot be resized on this server!
-Uploaded images cannot be resized on this server!
+Преузете слике се не могу променити на овом серверу!
+Przesłanych zdjęć nie można zmienić na tym serwerze!
+As imagens baixadas não podem ser reduzidas neste servidor!
 Uppladdade bilder kan ej skalas ned i storlek av den här webbservern!
 De grootte van de afbeelding kan niet op de server worden aangepast!
 Les images téléchargé ne peuvent pas êtres réduites sur ce serveur!
+¡Las imágenes descargadas no se pueden reducir en este servidor!
 
 ImageDeleted
 /* T! */
@@ -516,12 +585,13 @@ ImageDeleted
 /* Mensagem de sucesso quando se deleta uma imagem na janela de edição de Imagem */
 Image deleted
 Bild wurde gelöscht
-Slika je obrisana
+Слика је избрисана
 Obraz usunięty
 Imagem deletada
 Bilden borttagen
 Afbeelding verwijderd
 L'image à été supprimé
+Imagen borrada
 
 ImageFile
 /* T! */
@@ -529,12 +599,13 @@ ImageFile
 /* Campo para selecionar o ficheiro de imagem para ser enviado (uploaded) */
 Image file
 Bilddatei
-Graficki fajl
+Графичка датотека
 Plik obrazka
 Ficheiro de imagem
 Bildfil
 Afbeelding
 Fichier image
+Archivo de imagen
 
 ImageLinkURL
 /* T! */
@@ -542,12 +613,13 @@ ImageLinkURL
 /* Campo para o URL a ser ligado á imagem */
 Link URL
 Link URL
-Link URL
+УРЛ адреса
 URL do pliku
 Link URL
 Länk URL
 Link URL
 Lien URL
+URL al archivo
 
 ImageAltText
 /* T! */
@@ -555,12 +627,13 @@ ImageAltText
 /* missing translations: portuguese */
 "Alt" text
 "Alt"-Text
-"Alt" text
-"Alt" text
-"Alt" text
+"Alt" текст
+"Alt" tekst
+"Alt" texto
 "Alt"-text
 "Alt-tekst"
 "Alt" texte
+"Alt" texto
 
 DeleteImageButton
 /* T! */
@@ -568,24 +641,26 @@ DeleteImageButton
 /* Titulo do butão para apagar a imagem */
 Delete Image
 Bild löschen
-Obrisi sliku
+Избришите слику
 Usuń obrazek
-Apagar a imagem
+Excluir imagem
 Radera bild
 Verwijder afbeelding
 Supprimer l'image
+Eliminar imagen
 
 UploadImageFileButton
 /* T! */
 /* title of button for uploading the image (iPhone only) */
 Upload
 Hinaufladen
-Upload
-Upload
-Upload
-Upload
-Upload
+Отпремити
+Przekazać plik
+Envio
+Ladda upp
+Uploaden
 Télécharger
+Subir
 
 DeleteImageQuestion
 /* T! */
@@ -593,49 +668,55 @@ DeleteImageQuestion
 /* Confirmação para o apagar da imagem */
 Really delete this image?
 Dieses Bild wirklich loeschen?
-Zaista obrisati sliku?
+Заиста избрисати ову слику?
 Czy na pewno usunąć ten obrazek?
-É mesmo para apagar esta imagem ?
+Tem certeza de que deseja excluir esta imagem?
 Radera bilden?
 De afbeelding echt verwijderen?
 Effacer cette image?
+Seguro que quieres eliminar esta imagen?
 
 Photo
 /* T! */
 /* HTML alt attribute  for <img> tags of Image Element */
 /* HTML alt attribute  para <img> tags da imagem */
-Photo
-Foto
-Foto
-Fotografia
-Foto
-Foto
-Foto
 Image
+Foto
+Слика
+Obraz
+Imagem
+Bild
+Beeld
+Image
+Imagen
+
+
 
 NoImageEditorOnIPhone
 /* T! */
 /* message explaining that there is no image editor for the iPhone */
 Unfortunately image uploads are currently not supported for the iPhone.
 Leider werden momentan Bild-Uploads für das iPhone noch nicht unterstützt.
-Unfortunately image uploads are currently not supported for the iPhone.
-Unfortunately image uploads are currently not supported for the iPhone.
-Unfortunately image uploads are currently not supported for the iPhone.
-Unfortunately image uploads are currently not supported for the iPhone.
-Unfortunately image uploads are currently not supported for the iPhone.
+Нажалост, додавање слика за иПхоне тренутно није подржано.
+Niestety, przesyłanie zdjęć do iPhone'a nie jest obecnie obsługiwane.
+Infelizmente, os uploads de imagens para o iPhone não são compatíveis no momento.
+Tyvärr stöds inte bilduppladdningar för iPhone för närvarande.
+Helaas worden beelduploads voor de iPhone momenteel niet ondersteund.
 Malheureusement, pour l'instant le téléchargement d'images pour l'iPhone n'est pas prs en charge.
+Desafortunadamente, las cargas de imágenes para el iPhone actualmente no son compatibles.
 
 SelectImage
 /* T! */
 /* Hint in image browser */
 Select Image
 Bild auswählen
-Select Image
-Select Image
-Select Image
-Select Image
-Select Image
-Select Image
+Изаберите слику
+Wybierz zdjęcie
+Selecione a imagem
+Välj bild
+Selecteer afbeelding
+Sélectionner une image
+Seleccionar imagen
 
 FileEditorTitle
 /* T! */
@@ -643,12 +724,13 @@ FileEditorTitle
 /* Titulo da janela de edição de ficheiros attachados */
 File Attachment
 Datei-Download
-Skidanje fajlova
+Преузмите датотеке
 Plik załącznika
 Ficheiros attachados
 Bifogad fil
 Gelinkt bestand
 Télécharger un fichier
+Archivo adjunto
 
 FileSaved
 /* T! */
@@ -656,12 +738,13 @@ FileSaved
 /* Mensagem de sucesso para a janela de edição de ficheiros attachados */
 File saved
 Datei wurde gespeichert
-Fajl je sacuvan
+Датотека је сачувана
 Plik zapisany
 Ficheiro guardado
 Filen sparad
 Bestand bewaard
 Fichier enregistré
+Archivo guardado
 
 FileDeleted
 /* T! */
@@ -669,12 +752,13 @@ FileDeleted
 /* Mensagem de sucesso quando se apaga um ficheiro */
 File deleted
 Datei wurde gelöscht
-Fajl je obrisan
+Датотека је избрисана
 Plik usunięty
 Ficheiro apagado
 Filen raderad
 Bestand verwijderd
 Le fichier à été supprimé
+Archivo borrado
 
 SendFileButton
 /* T! */
@@ -682,12 +766,13 @@ SendFileButton
 /* Titulo do butão para inicio do envio de ficheiro no janela de edição de ficheiros attachados */
 Send File
 Datei senden
-Poslati fajl
+Пошаљи датотеку
 Wyślij plik
 Enviar ficheiro
 Skicka fil
 Verstuur bestand
 Envoyer le fichier
+Enviar archivo
 
 DeleteFileButton
 /* T! */
@@ -695,12 +780,13 @@ DeleteFileButton
 /* Titulo do butão para apagar um ficheiro na janela de edição dos ficheiros attachados */
 Delete File
 Datei löschen
-Obrisi fajl
+Обриши фајл
 Usuń plik
 Apagar ficheiro
 Radera fil
 Verwijder bestand
 Effacer le fichier
+Borrar archivo
 
 DeleteFileQuestion
 /* T! */
@@ -708,12 +794,13 @@ DeleteFileQuestion
 /* Confirmação para apagar um ficheiro */
 Really delete this file?
 Diese Datei wirklich loeschen?
-Zaista obrisati fajl?
+Да ли сте сигурни да желите да избришете ову датотеку?
 Czy na pewno usunąć ten plik?
-Pretende mesmo apagar este ficheiro ?
+Tem certeza de que deseja excluir este arquivo?
 Radera filen?
 Bestand echt verwijderen?
 Voulez-vous vraiment effacer ce fichier?
+Seguro que quieres eliminar este archivo?
 
 AttachmentFile
 /* T! */
@@ -721,24 +808,26 @@ AttachmentFile
 /* Campo para o ficheiro a ser enviado (uploaded) */
 File
 Datei
-Fajl
+Филе
 Plik
 Ficheiro
 Fil
 Bestand
 Fichier
+Archivo
 
 NoAttachmentEditorOnIPhone
 /* T! */
 /* message explaining that there is no attachment editor for the iPhone */
 Unfortunately file uploads are currently not supported for the iPhone.
 Leider werden momentan Datei-Uploads für das iPhone noch nicht unterstützt.
-Unfortunately file uploads are currently not supported for the iPhone.
-Unfortunately file uploads are currently not supported for the iPhone.
-Unfortunately file uploads are currently not supported for the iPhone.
-Unfortunately file uploads are currently not supported for the iPhone.
-Unfortunately file uploads are currently not supported for the iPhone.
-Malheureusement, pou l'instant le téléchargement de fichiers pour l'iPhone n'est pas pris en charge.
+Нажалост, уплоад фајлова за иПхоне тренутно нису подржани.
+Niestety, przesyłanie plików dla iPhone'a nie jest obecnie obsługiwane.
+Infelizmente, os uploads de arquivos para o iPhone não são compatíveis no momento.
+Tyvärr stöds inte filuppladdningar för iPhone för närvarande.
+Helaas worden bestandsuploads voor de iPhone momenteel niet ondersteund.
+Malheureusement, pour l'instant le téléchargement de fichiers pour l'iPhone n'est pas pris en charge.
+Desafortunadamente, las cargas de archivos para el iPhone actualmente no son compatibles.
 
 DownloadHint
 /* T! */
@@ -746,24 +835,26 @@ DownloadHint
 /* Dica para quando se move a seta sobre o link de descarregar de um elemento attachado */
 Download file
 Datei herunterladen
-Skidanje fajla
+Преузмите датотеку
 Pobierz plik
 Descarregue o ficheiro
 Ladda ned fil
 Download bestand
 Télécharger le fichier
+Descargue el archivo
 
 SecWarning
 /* T! */
 /* Security warning when file upload is used to upload .php scripts */
 The Content Management System has found a severe security problem in this web site! Please contact the person who designed this web site immediately!
 Das Content Management System hat ein gravierendes Sicherheitsproblem in dieser Web-Site entdeckt! Bitte kontaktieren Sie umgehend die Person, die diese Web-Site erstellt hat!
-The Content Management System has found a severe security problem in this web site! Please contact the person who designed this web site immediately!
-The Content Management System has found a severe security problem in this web site! Please contact the person who designed this web site immediately!
-The Content Management System has found a severe security problem in this web site! Please contact the person who designed this web site immediately!
+Систем за управљање садржајем открио је озбиљан сигурносни проблем на овој веб страници! Молимо контактирајте особу која је створила ову веб страницу одмах!
+System zarządzania treścią odkrył poważny problem bezpieczeństwa na tej stronie! Skontaktuj się natychmiast z osobą, która utworzyła tę stronę!
+O sistema de gerenciamento de conteúdo descobriu um sério problema de segurança neste site! Por favor, entre em contato com a pessoa que criou este site imediatamente!
 CM-systemet har upptäckt ett allvarligt säkerhetsproblem på den här webbplatsen. Vänligen kontakta webbdesignern omedelbart!
-The Content Management System has found a severe security problem in this web site! Please contact the person who designed this web site immediately!
-Le CMS (Content Management System" à trouvé une grave erreur sur ce site internet! Veuillez svp. contacter immédiatement le Webmaster de ce site!
+Het CM-systeem heeft een ernstig beveiligingsprobleem ontdekt op deze site. Neem onmiddellijk contact op met de webdesigner!
+Le CMS (Content Management System) à trouvé une grave erreur sur ce site internet! Veuillez svp. contacter immédiatement le Webmaster de ce site!
+¡El sistema de gestión de contenido ha descubierto un serio problema de seguridad en este sitio web! Por favor, póngase en contacto con la persona que creó este sitio web de inmediato!
 
 AudioEditorTitle
 /* T! */
@@ -772,12 +863,13 @@ AudioEditorTitle
 /* missing translations: portuguese */
 MP3 File
 MP3-Datei
-MP3-fajl
+МП3 фајл
 Plik MP3
-MP3 File
+Arquivo MP3
 MP3-fil
 MP3 bestand
-Fichier mp3
+Fichier MP3
+Archivo MP3
 
 AudioPlayHint
 /* T! */
@@ -785,24 +877,26 @@ AudioPlayHint
 /* missing translations: portuguese */
 Play file
 Datei abspielen
-Reprodukuj fajl
+Репродукујте датотеку
 Otwórz Plik
-Play file
+Reproduzir arquivo
 Spela filen
 Afspelen
 Lire le fichier
+Reproducir archivo
 
 MP3PlayerWindowTitle
 /* T! */
 /* window title for Audio Element playback window */
 MP3 Player
 MP3 Datei abspielen
-reprodukovati MP3-fajl
+пустите МП3 датотеку
 MP3 Player
-Audio MP3
+Leitor de MP3
 MP3-spelare
 MP3 speler
 Lire le fichier mp3
+Reproductor de MP3
 
 FileUploadErrorSize
 /* T! */
@@ -810,7 +904,7 @@ FileUploadErrorSize
 /* Mensagem de erro quando o ficheiro enviado é demasiado grande */
 The file is too big
 Die Datei ist zu groß
-Fajl je preveliki
+МП3 плејер
 Ten plik jest zbyt duży
 Ficheiro enviado é muito grande
 Filen är för stor
@@ -823,25 +917,27 @@ FileUploadErrorInterrupted
 /* Mensagem de erro quando o envio de um ficheiro é interrompido */
 The file transfer was interrupted
 Das Hinaufladen wurde unterbrochen
-Postavljanje je prekinuto
+Подешавање је заустављено
 Przesyłanie pliku zostało przerwane
 Envio do fiheiro foi interrompido
 Filöverföringen avbröts
 De bestandsoverdracht is onderbroken
 Le téléchargement à été interrompu
+El envío del fiador fue interrumpido
 
 FileUploadErrorNoFile
 /* T! */
 /* error message displayed when no file was given during a file upload */
 /* Mensagem de erro quando nenhum ficheiro foi selecionado para ser enviado */
-No file given
+No file specified
 Es wurde keine Datei angegeben
-Fajl nije upisan
+Датотека није регистрована
 Nie wskazano pliku
 Nenhum ficheiro foi selecionado
 Ingen fil angiven
 Geen bestand geselecteerd
 Aucun fichier n'a été spécifié
+No se especificó ningún archivo
 
 FileUploadErrorUnknown
 /* T! */
@@ -849,12 +945,13 @@ FileUploadErrorUnknown
 /* Mensagem de erro quando um erro não identificado aconteçeu aquando do envio (upload) */
 Error on file upload
 Fehler beim übertragen der Datei
-Greska pri prenosu fajla
+Грешка при преносу датотеке
 Nieznany błąd przesyłania pliku
 Erro não identificado no envio
 Fel på uppladdningen
 Fout tijdens bestandsoverdracht
 Erreur du téléchargement
+Error al transferir el archivo
 
 MenuEditorTitle
 /* T! */
@@ -862,12 +959,13 @@ MenuEditorTitle
 /* Titulo da janela no editor de um elemento do Menu */
 Menu
 Menü
-Meni
+Мени
 Menu
 Menu
 Meny
 Menu
 Menu
+Menú
 
 MenuSaved
 /* T! */
@@ -875,12 +973,13 @@ MenuSaved
 /* Mensagem de sucesso para a janela de edição de elemento do Menu */
 Menu saved
 Menü wurde gespeichert
-Meni je sacuvan
+Мени је сачуван
 Menu zapisane
 Menu guardado
 Menyn sparad
 Menu bewaard
 Le menu à été enregistré
+Menú guardado
 
 MenuDelConfirmPre
 /* T! */
@@ -890,111 +989,133 @@ Really remove item
 Eintrag
 Upis
 Na pewno usunąć
-Confirma que é mesmo para remover o item
+Realmente remover item?
 Radera objektet?
 Onderdeel echt verwijderen
 Entrée
+Eliminar realmente el artículo?
 
 MenuDelConfirmPost
 /* T! */
 /* last part of confirmation question when deleting a menu item */
-/* full questions would then be: "Really remove item xxxx from menu?"
+/* full questions would then be: "Really remove item xxxx from menu?"*/
 /* Ultima parte da confirmação quando se apaga um item de um menu */
-/* Pergunta completa: "Remover item xxxx do menu?"
-from menu?
-wirklich entfernen?
-zaista izbaciti?
-z menu?
-do menu?
-från menyn
-uit menu?
-vraiment effacer?
+/* Pergunta completa: "Remover item xxxx do menu?"*/
+Confirm delete
+Wirklich entfernen?
+стварно уклонити?
+Naprawdę wyeliminować?
+Realmente elimina?
+Verkligen ta bort?
+Echt verwijderen?
+Vraiment enlever?
+Realmente eliminar?
 
 MenuUpButtonTitle
 /* T! */
 /* title of button to move a menu item up */
 /* Titulo do butão para mover um item para cima */
 Up
-hinauf
-na gore
-Do góry
+Hinauf
+горе
+W górę
 Para cima
 Upp
 Omhoog
-monter
+En haut
+Arriba
 
 MenuDownButtonTitle
 /* T! */
 /* title of button to move a menu item down */
 /* Titulo do butão para mover um item para baixo */
 Down
-hinunter
-na dole
+Hinunter
+доле
 W dół
 para baixo
 Ned
 Omlaag
-descendre
+Descendre
+Abajo
 
 MenuEditorMenuTitle
 /* T! */
 /* label for the input field for the menu title */
 Menu title
 Menütitel
-Menu title
-Menu title
-Menu title
-Menu title
-Menu title
-Menu title
+Назив менија
+Tytuł menu
+Título do menu
+Menyn titel
+Menutitel
+Titre du menu
+Título del menú
 
 MenuEditorMenuLink
 /* T! */
 /* label for the input field for the optional menu link */
-Link (optional)
-Link (optional)
-Link (optional)
-Link (optional)
-Link (optional)
-Link (optional)
-Link (optional)
-Link (optional)
+URL Link (optional)
+URL-Link (optional)
+УРЛ адреса (опционо)
+Link URL (opcjonalnie)
+Link de URL (opcional)
+URL-länk (tillval)
+URL-link (optioneel)
+Lien URL (facultatif)
+Enlace URL (opcional)
 
 MenuEditorMenuVisible
 /* T! */
 /* label for the checkbox indicating visibility */
 Visible
 Sichtbar
+видљив
+widoczny
+Visível
+Synlig
+Zichtbaar
 Visible
 Visible
-Visible
-Visible
-Visible
-Visible
+
+DisableWebYepPageInstance
+/* T! */
+/* label for the checkbox indicating disable page instance */
+Disable WebYep Page Instance
+Deaktivieren Sie die WebYep-Seiteninstanz
+Онемогући ВебИеп Паге Инстанце
+Wyłącz instancję strony WebYep
+Desabilitar Instância de Página do WebYep
+Inaktivera WebYep Page Instance
+Schakel WebYep-pagina-exemplaar uit
+Désactiver l'instance de la page WebYep
+Deshabilitar instancia de página WebYep
 
 MenuAddSiblingButtonTitle
 /* T! */
 /* title of button to add a menu item */
-Add menu entry
+Add new menu item
 Neuen Menüpunkt hinzufügen
-Add menu entry
-Add menu entry
-Add menu entry
-Add menu entry
-Add menu entry
-Add menu entry
+Додајте нову ставку менија
+Dodaj nową pozycję menu
+Adicionar novo item de menu
+Lägg till nytt menyalternativ
+Voeg een nieuw menu-item toe
+Ajouter un nouvel élément de menu
+Agregar nuevo elemento de menú
 
 MenuAddChildButtonTitle
 /* T! */
 /* title of button to add a submenu item */
-Add submenu entry
+Add new submenu item
 Neuen Unterpunkt hinzufügen
-Add submenu entry
-Add submenu entry
-Add submenu entry
-Add submenu entry
-Add submenu entry
-Add submenu entry
+Додајте ставку подмени
+Dodaj pozycję podmen
+Adicionar item de submenu
+Lägg till undermenyobjek
+Submenu-item toevoegen
+Ajouter un élément de sous-menu
+Agregar elemento del submenú
 
 MenuRemoveButtonTitle
 /* T! */
@@ -1002,60 +1123,65 @@ MenuRemoveButtonTitle
 /* Titulo do butão para apagar um item do menu */
 Remove entry
 Eintrag löschen
-izbaci
+Избриши
 Usuń
 Apagar
 Radera
 Verwijder
-supprimer
+Supprimer
+Borrar
 
 MenuConfirmRemoveOne
 /* T! */
 /* confirmation message to remove one menu item */
 Do you really want to remove this entry?
 Wollen Sie diesen Menüpunkt wirklich löschen?
-Do you really want to remove this entry?
-Do you really want to remove this entry?
-Do you really want to remove this entry?
-Do you really want to remove this entry?
-Do you really want to remove this entry?
-Do you really want to remove this entry?
+Да ли стварно желите да избришете ову ставку менија?
+Czy na pewno chcesz usunąć ten element menu?
+Você realmente deseja excluir este item de menu?
+Vill du verkligen ta bort det här menyalternativet?
+Wilt u dit menu-item echt verwijderen?
+Voulez-vous vraiment supprimer cet élément de menu?
+Realmente quieres borrar este elemento del menú?
 
 MenuConfirmRemoveMany
 /* T! */
 /* confirmation message to remove several menu items */
 Do you really want to remove this entry and all its subitems?
 Wollen Sie diesen Menüpunkt und alle seine Unterpunkte wirklich löschen?
-Do you really want to remove this entry and all its subitems?
-Do you really want to remove this entry and all its subitems?
-Do you really want to remove this entry and all its subitems?
-Do you really want to remove this entry and all its subitems?
-Do you really want to remove this entry and all its subitems?
-Do you really want to remove this entry and all its subitems?
+Да ли стварно желите да избришете ову ставку менија и све његове под-ставке?
+Czy na pewno chcesz usunąć ten element menu i wszystkie jego elementy podrzędne?
+Você realmente deseja excluir este item de menu e todos os seus subitens?
+Vill du verkligen ta bort det här menyalternativet och alla dess underrubriker?
+Wilt u dit menu-item en alle bijbehorende subitems echt verwijderen?
+Voulez-vous vraiment supprimer cet élément de menu et tous ses sous-éléments?
+Realmente desea eliminar este elemento del menú y todos sus subtemas?
 
 MenuNoToggleInvisibleParent
 /* T! */
 /* alert that toggling visibility is not possible, when parent items are hidden */
 You can't toggle visibility of this item, because a parent item is hidden.
 Sie können diesen Eintrag nicht sichtbar machen, da ein übergeordnetes Element versteckt ist.
-You can't toggle visibility of this item, because a parent item is hidden.
-You can't toggle visibility of this item, because a parent item is hidden.
-You can't toggle visibility of this item, because a parent item is hidden.
-You can't toggle visibility of this item, because a parent item is hidden.
-You can't toggle visibility of this item, because a parent item is hidden.
-You can't toggle visibility of this item, because a parent item is hidden.
+Не можете учинити овај унос видљивим зато што је родитељ скривен.
+Nie możesz uczynić tego wpisu widocznym, ponieważ rodzic jest ukryty.
+Você não pode tornar essa entrada visível porque um pai está oculto.
+Du kan inte göra denna post synlig eftersom en förälder är dold.
+U kunt deze vermelding niet zichtbaar maken omdat een ouder verborgen is.
+Vous ne pouvez pas rendre cette entrée visible parce qu'un parent est caché.
+No puede hacer que esta entrada sea visible porque un padre está oculto.
 
 NoMenuEditorOnIPhone
 /* T! */
 /* message explaining that there is no menu editor for the iPhone */
 Unfortunately menu editing is currently not supported for the iPhone.
 Leider wird das Editieren der Menüs am iPhone noch nicht unterstützt.
-Unfortunately menu editing is currently not supported for the iPhone.
-Unfortunately menu editing is currently not supported for the iPhone.
-Unfortunately menu editing is currently not supported for the iPhone.
-Unfortunately menu editing is currently not supported for the iPhone.
-Unfortunately menu editing is currently not supported for the iPhone.
-Malheureusement, la modification du mebu n'est pas encore pris en charge pour l'iPhone
+Нажалост, уређивање менија на иПхоне-у још није подржано.
+Niestety edycja menu na iPhone nie jest jeszcze obsługiwana.
+Infelizmente, a edição dos menus no iPhone ainda não é suportada.
+Tyvärr stöds inte menyerna på iPhone ännu inte.
+Helaas wordt het bewerken van de menu's op de iPhone nog niet ondersteund.
+Malheureusement, l'édition des menus sur l'iPhone n'est pas encore supportée.
+Desafortunadamente, aún no se admite la edición de menús en el iPhone.
 
 LoopAddButton
 /* T! */
@@ -1063,12 +1189,13 @@ LoopAddButton
 /* Titulo do butão para adicionar um bloco Loop Element */
 Add Element
 Eintrag hinzufügen
-dodaj upis
+Додајте ставку
 Dodaj Element
 Adicionar elemento
 Lägg till avsnitt
 Voeg element toe
 Ajouter une entrée
+Agregar elemento
 
 LoopRemoveButton
 /* T! */
@@ -1076,12 +1203,13 @@ LoopRemoveButton
 /* Titulo do butão para dletar um bloco Loop Element */
 Remove Element
 Eintrag löschen
-obrisi upis
+Уклоните Елемент
 Usuń Element
 Apagar elemento
 Radera avsnitt
 Verwijder element
 Supprimer l'entrée
+Eliminar elemento
 
 LoopUpButton
 /* T! */
@@ -1089,12 +1217,13 @@ LoopUpButton
 /* Titulo de butão para mover um bloco Loop Element para cima */
 Move Element Up
 Eintrag nach oben verschieben
-pomeri upis na gore
+Премести Елемент Уп
 Przesuń element do góry
 Mover elemento para cima
 Flytta upp avsnittet
 Element omhoog
 Déplacer vers le haut
+Mover el elemento hacia arriba
 
 LoopDownButton
 /* T! */
@@ -1102,36 +1231,39 @@ LoopDownButton
 /* Titulo de butão para mover um bloco Loop Element para baixo */
 Move Element Down
 Eintrag nach unten verschieben
-pomeri upis na dole
+Премести елемент дољ
 Przesuń element w dół
 Mover elemento para baixo
 Flytta ned avsnittet
 Element omlaag
 Déplacer vers le bas
+Mover el elemento hacia abajo
 
 LoopDisableButton
 /* T! */
 /* title of button to disable a Loop Element block */
 Disable Element
 Eintrag ausblenden
-Disable Element
-Disable Element
-Disable Element
-Disable Element
-Disable Element
+Онемогући Елемент
+Wyłącz element
+Desativar Elemento
+Inaktivera elementet
+Schakel Element uit
 Masquer l'entrée
+Deshabilitar Elemento
 
 LoopEnableButton
 /* T! */
 /* title of button to enable a Loop Element block */
 Enable Element
 Eintrag einblenden
-Enable Element
-Enable Element
-Enable Element
-Enable Element
-Enable Element
+Омогући елемент
+Włącz element
+Ativar elemento
+Aktivera element
+Schakel Element in
 Afficher l'entrée
+Habilitar elemento
 
 LoopRemoveConfirm
 /* T! */
@@ -1139,12 +1271,13 @@ LoopRemoveConfirm
 /* Pergunta de confirmação quando se apaga um bloco Loop Element */
 Really remove this element?
 Diesen Eintrag wirklich löschen?
-Zaista obrisati ovaj upis?
+Заиста уклоните овај елемент?
 Na pewno usunąć ten element?
 Deletar mesmo este elemento ?
 Radera avsnittet?
 Element echt verwijderen?
 Supprimer cette entrée?
+Realmente eliminar este elemento?
 
 GalleryOpenDetail
 /* T! */
@@ -1152,12 +1285,13 @@ GalleryOpenDetail
 /* Dica para quando se passa com o rato numa galeria thumbnail */
 Zoom
 Größere Ansicht öffnen
-Zumiranje
+Отворите већи приказ
 Powiększ
-Zoom
-Zooma
-Zoom
+Ampliar
+Förstora
+Vergroten
 Agrandir
+Agrandar
 
 GalleryDetailTitle
 /* T! */
@@ -1165,12 +1299,13 @@ GalleryDetailTitle
 /* Titulo da janela de detalhes de um galeria de imagens */
 Photo
 Foto
-Foto
+Фото
+Zdjęcie
 Fotografia
 Foto
 Foto
 Foto
-Image
+Foto
 
 GalleryCloseWindow
 /* T! */
@@ -1178,24 +1313,26 @@ GalleryCloseWindow
 /* Titulo do butão para fecho da janela de detalhes de um galeria de imagens */
 Close Window
 Fenster schließen
-Zatvori prozor
+Затвори прозор
 Zamknij okno
 Fechar janela
 Stäng fönster
 Sluit venster
 Fermer cette fenêtre
+Cerrar ventana
 
 GalleryEditButton
 /* T! */
 /* title of button for the Gallery Element for editing the image and/or text */
 Edit Image/Description
 Bild/Text bearbeiten
-Edit Image/Description
-Edit Image/Description
-Edit Image/Description
-Edit Image/Description
-Edit Image/Description
-Modifier image/texte
+Измени слику/текст
+Edytuj obraz/tekst
+Editar imagem/texto
+Redigera bild/text
+Bewerk afbeelding/tekst
+Modifier l'image/le texte
+Editar imagen/texto
 
 GalleryAddButton
 /* T! */
@@ -1203,12 +1340,13 @@ GalleryAddButton
 /* Titulo do butão para adicionar uma imagem á galeria de imagens */
 Add Image
 Bild hinzufügen
-Dodaj sliku
+Додај слику
 Dodaj obrazek
 Adicionar imagem
 Lägg till bild
 Voeg afbeelding toe
 Ajouter une image
+Añadir foto
 
 GalleryRemoveButton
 /* T! */
@@ -1216,12 +1354,13 @@ GalleryRemoveButton
 /* Titulo do butão para apagar uma imagem á galeria de imagens */
 Remove Image
 Bild löschen
-Obrisi sliku
+OИзбришите слику
 Usuń obrazek
 Deletar imagem
 Ta bort bild
 Verwijder afbeelding
 Supprimer l'image
+Eliminar imagen
 
 GalleryUpButton
 /* T! */
@@ -1229,12 +1368,14 @@ GalleryUpButton
 /* Titulo do butão para mover para cima uma imagem da galeria de imagens */
 Move Image Backward
 Bild zum Anfang verschieben
-Pomeri sliku prema pocetku
+Премести слику за почетак
 Przesuń obrazek z powrotem
 Mover imagem para cima
 Flytta bild bakåt
 Plaats afbeelding naar achteren
 Déplacer l'image au début
+Mueva la imagen para comenzar
+Mueva la imagen hasta el final
 
 GalleryDownButton
 /* T! */
@@ -1242,12 +1383,13 @@ GalleryDownButton
 /* Titulo do butão para mover para baixo uma imagem da galeria de imagens */
 Move Image Forward
 Bild zum Ende verschieben
-Pomeri sliku prema kraju
+Померите слику до краја
 Przesuń obrazek do przodu
 Mover imagem para baixo
 Flytta bild framåt
 Plaats afbeelding naar voren
 Déplacer l'image vers la fin
+Mueva la imagen hasta el final
 
 GalleryRemoveConfirm
 /* T! */
@@ -1255,12 +1397,13 @@ GalleryRemoveConfirm
 /* Pergunta de confirmação para um elemento da galeria quando se apaga uma imagem */
 Really remove this image?
 Dieses Bild wirklich löschen?
-Zaista obrisati ovu sliku?
+Заиста избрисати ову слику?
 Na pewno usunąć ten obrazek?
 Apagar mesmo esta imagem?
 Radera bilden?
 Afbeelding echt verwijderen?
 Voulez-vous vraiment supprimer cette image?
+Eliminar esta imagen?
 
 GalleryEditorTitle
 /* T! */
@@ -1268,12 +1411,13 @@ GalleryEditorTitle
 /* Titulo da janela de edição da Galeria */
 Image
 Foto
-Slika
+Слика
 Obrazek
 Imagem
 Bild
 Afbeelding
 Image
+Imagen
 
 GalleryFile
 /* T! */
@@ -1281,12 +1425,13 @@ GalleryFile
 /* Campo para o nome do ficheiro de imagem que será enviado (upload) */
 Image file
 Fotodatei
-Graficki fajl
+Фотографија фајл
 Plik obrazka
 Ficheiro de imagem
 Bildfil
 Afbeelding
 Fichier image
+Foto de archivo
 
 GalleryText
 /* T! */
@@ -1294,12 +1439,27 @@ GalleryText
 /* Campo para a descrição de texto da imagem */
 Description
 Bildtext
-Opis slike
+Опис
 Opis
 Descrição
 Beskrivning
 Beschrijving
 Déscription
+Descripción
+
+GalleryTextInlineMenu
+/* T! */
+/* form field inline menu */
+/* Cform field inline menu  */
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activate inline menu
+Activar menú en línea
 
 GalleryNewFoto
 /* T! */
@@ -1307,25 +1467,27 @@ GalleryNewFoto
 /* Titulo do butão para adicionar uma nova entrada na Galeria */
 New Photo
 Neues Foto
-Nova slika
+Нова фотографија
 Nowa fotografia
 Nova imagem
 Nytt foto
 Nieuwe foto
 Nouvelle image
+Nueva foto
 
 GalleryNewFotos
 /* T! */
 /* title of button for Gallery Element to create several new entries in the gallery */
-/* TODO: SRPSKI, POLISH, PORTUGUESE, SWEDISH, DUTCH, FRENCH */
+/* TO DO: SRPSKI, POLISH, PORTUGUESE, SWEDISH, DUTCH, FRENCH */
 New Photos
 Neue Fotos
-Nova slika
+Нове фотографије
 Nowa fotografia
 Nova imagem
 Nytt foto
 Nieuwe foto
 Nouvelle image
+Fotos nuevas
 
 GalleryNoImage
 /* T! */
@@ -1333,24 +1495,26 @@ GalleryNoImage
 /* Texto para a Galeria quando não existe uma imagem para uma entrada */
 ...no image...
 ...kein Foto...
-...nema slike...
+...нема слике...
 ...brak obrazka...
 ...nenhuma imagem...
 ...ingen bild...
 ...geen afbeelding...
 ...pas d'image...
+...sin imágen...
 
 NoGalleryEditorOnIPhone
 /* T! */
 /* message explaining that there is no gallery editor for the iPhone */
 Unfortunately image uploads are currently not supported for the iPhone.
 Leider werden momentan Bild-Uploads für das iPhone noch nicht unterstützt.
-Unfortunately image uploads are currently not supported for the iPhone.
-Unfortunately image uploads are currently not supported for the iPhone.
-Unfortunately image uploads are currently not supported for the iPhone.
-Unfortunately image uploads are currently not supported for the iPhone.
-Unfortunately image uploads are currently not supported for the iPhone.
+Нажалост, додавање слика за иПхоне тренутно није подржано.
+Niestety, przesyłanie zdjęć do iPhone'a nie jest obecnie obsługiwane.
+Infelizmente, os uploads de imagens para o iPhone não são compatíveis no momento.
+Tyvärr stöds inte bilduppladdningar för iPhone för närvarande.
+Helaas worden beelduploads voor de iPhone momenteel niet ondersteund.
 Malheureusement, le transfert d'image pour l'iPhone n'est pas encore pris en charge.
+Desafortunadamente, las cargas de imágenes para el iPhone actualmente no son compatibles.
 
 LogonButton
 /* T! */
@@ -1358,12 +1522,13 @@ LogonButton
 /* Dica para o butão de login WebYep quando o utilizador não está logged in */
 WebYep Logon
 WebYep Anmeldung
-WebYep prijava
+ВебИеп Анмелдунг
 Logowanie WebYep
-WebYep Logon
+Login WebYep
 WebYep inloggning
 WebYep login
 Connexion webYep
+Inicio de sesión WebYep
 
 LogoffButton
 /* T! */
@@ -1371,12 +1536,14 @@ LogoffButton
 /* Dica para o butão de login WebYep quando o utilizador está logged in */
 Logout
 Abmelden
-Odjava
+лог офф
 Wyloguj
 Logout
 Logga ut
 Log uit
 Déconnexion
+finalizar la sesión
+Salir
 
 LogonURL
 webyep-logon-en.php
@@ -1387,6 +1554,7 @@ webyep-logon-en.php
 webyep-logon-sv.php
 webyep-logon-en.php
 webyep-logon-en.php
+webyep-logon-es.php
 
 HelpButton
 /* T! */
@@ -1400,6 +1568,8 @@ Help
 Hjälp
 Help
 Aide
+Ayuda
+
 
 HelpFolder
 help/english
@@ -1410,6 +1580,7 @@ help/portuguese
 help/swedish
 help/dutch
 help/french
+help/spanish
 
 AtDate
 /* T! */
@@ -1417,12 +1588,13 @@ AtDate
 /* Para uso em expressões de datas, como "Criado no Sábado, Junho 7" */
 on
 am
-u
+на
 dnia
 no
 den
 op
 le
+en
 
 AtTime
 /* T! */
@@ -1430,12 +1602,13 @@ AtTime
 /* Para uso em expressões de tempo, como "Criado ás 10:34" */
 at
 um
-u
+ат
 o
 ás
 kl.
 om
 à
+a
 
 ClientIP
 /* T! */
@@ -1443,12 +1616,13 @@ ClientIP
 /* Endereço IP do autor para o Guestbook */
 Sender IP Address
 IP-Adresse des Senders
-IP-adresa posiljaoca
+ИП адреса пошиљаоца
 Adres IP autora
 Endereço IP de quem envia
 Avsändarens IP-adress
 IP adres afzender
 Adresse IP de l'epéditeur
+Dirección IP de quien envía
 
 unknown
 /* T! */
@@ -1456,12 +1630,13 @@ unknown
 /* Usado para o endereço IP de quem envia, caso esse endereço IP seja desconhecido */
 unknown
 unbekannt
-nepoznata
+непознат
 nieznany
 Endereço IP desconhecido
 okänd
 onbekend
 inconnu
+desconocido
 
 IPIsBlocked
 /* T! */
@@ -1469,12 +1644,13 @@ IPIsBlocked
 /* Mensagem de erro no Guestbook caso o endereço IP de quem envia esteja bloqueado */
 Message could not be added: Your IP address is blocked.
 Nachricht konnte nicht angenommen werden: Ihre IP-Adresse ist gesperrt.
-Poruka nije mogla da bude primljena: Vasa IP-adresa je blokirana.
+Порука се не може прихватити: Ваша ИП адреса је блокирана.
 Adres IP jest zablokowany
 Mensagem não pode ser adicionada: O seu endereço IP está bloqueado.
 Din IP-adress är blockerad.
 Bericht kan niet worden toegevoegd: uw IP adres is geblokkeerd
 Le message n'a pas pu être accepté, votre adresse IP est bloqué.
+No se pudo aceptar el mensaje: su dirección IP está bloqueada.
 
 GuestbookUnBlockConfirm
 /* T! */
@@ -1482,12 +1658,13 @@ GuestbookUnBlockConfirm
 /* Pergunta de confirmação quando se dá novamente autorização a um endereço IP que está bloqueado no Guestbook */
 Really reenable this IP address?
 Diese IP-Adresse wirklich wieder freigeben?
-Zaista deblokirati ovu adresu?
+Диесе ИП-Адрессе вирклицх виедер фреигебен?
 Czy na pewno udostępnić ten adres IP?
 Autoriza novamente o acesso a este endereço IP ?
 Ta bort blockering för denna IP-adress?
 Blokkering van dit IP-adres echt opheffen?
 Autoriser cette adresse IP?
+Autoriza de nuevo el acceso a esta dirección IP?
 
 GuestbookBlockConfirm
 /* T! */
@@ -1495,12 +1672,13 @@ GuestbookBlockConfirm
 /* Pergunta de confirmação quando se bloqueia o acesso a um determinado endereço IP no Guestbook */
 Really block this IP address?
 Diese IP-Adresse wirklich sperren?
-Zaista blokirati ovu adresu?
+Потврдите блок на ову ИП адресу?
 Czy na pewno zablokować ten adres IP?
-Confirma o bloqueio a este endereço IP?
+Confirmar o bloqueio a este endereço IP?
 Blockera denna IP-adress?
 Dit IP-adres echt blokkeren?
 Bloquer cette adresse IP?
+Confirmar el bloqueo a esta dirección IP?
 
 GuestbookRemoveConfirm
 /* T! */
@@ -1508,12 +1686,13 @@ GuestbookRemoveConfirm
 /* Pergunta de confirmação quando se apaga uma entrada no Guestbook */
 Really remove this entry?
 Diesen Eintrag wirklich löschen?
-Zaista obrisati ovaj upis?
+Да ли стварно обришите овај унос?
 Czy na pewno usunąć ten wpis?
 Pretende remover esta entrada?
 Ta bort detta inlägg?
 Deze bijdrage echt verwijderen?
 Supprimer ce message?
+Realmente borraste esta entrada?
 
 GuestbookRemoveButton
 /* T! */
@@ -1521,12 +1700,13 @@ GuestbookRemoveButton
 /* Titulo do butão para apagar uma entrada no Guestbook */
 Remove Entry
 Eintrag löschen
-Ubrisi upis
+Избришите унос
 Usuń wpis
 Apagar entrada
 Ta bort inlägg
 Bijdrage verwijderen
 Supprimer message
+Eliminar entrada
 
 GuestbookBlockButton
 /* T! */
@@ -1534,12 +1714,13 @@ GuestbookBlockButton
 /* Titulo de butão para bloquear um endereço IP no Guestbook */
 Block this IP
 Diese IP-Adresse sperren
-Blokiraj IP-Adresu
+Закључајте ову ИП адресу
 Zablokuj ten adres IP
 Bloqueie este IP
 Blockera IP-adressen
 Blokkeer dit IP-adres
 Bloquer cette adresse IP
+Bloquear esta dirección IP
 
 GuestbookUnBlockButton
 /* T! */
@@ -1547,12 +1728,13 @@ GuestbookUnBlockButton
 /* Titulo do butão para re-permitir o acesso de um endereço IP bloqueado no Guestbook */
 Reenable this IP
 Diese IP-Adresse freigeben
-Deblokiraj IP-adresu
+Отпустите ову ИП адресу
 Przywróć ten adres IP
 Re-enable este IP
 Häv blockering av IP-adressen
 Hef blokkering van dit IP-adres op
 Autoriser cette adresse IP
+Libera esta dirección IP
 
 BlockedIPs
 /* T! */
@@ -1560,12 +1742,13 @@ BlockedIPs
 /* Cabeçalho da lista de endereços IP bloqueados no Guestbook */
 Blocked IPs
 Gesperrte IP-Adressen
-Blokirane IP-adrese
+Закључане ИП адресе
 Zablokowane adresy IP
 IPs Bloqueados
 Blockerade IP-adresser
 Geblokkeerde IP-adressen
 Adresses IP bloquées
+Direcciones IP bloqueadas
 
 GuestbookMailSubject
 /* T! */
@@ -1573,48 +1756,51 @@ GuestbookMailSubject
 /* Campo Assunto para os mails gerados pelo Guestbook */
 New entry in your guestbook at %s
 Neuer Eintrag in Ihrem Gaestebuch auf %s
-Novi upis u Vasoj knjizi gostiju na %s
+Нови унос у вашу књигу гостију на %s
 Nowy wpis w księdze gości %s
 Nova entrada no Guestbook %s
 Nytt inlägg i din gästbok %s
 Nieuwe bijdrage in uw gastenboek %s
 Nouvelle entrée sur votre livre d'or sur %s
+Nueva entrada en el Guestbook %s
 
 GuestbookMailText
 /* T! */
 /* content for mails generated by the Guestbook Element */
 /* Campo de Conteudo para mails gerados pelo Guestbook */
-/* leave formatting characters "\n" and "%s" intact!!! /*
+/* leave formatting characters "\n" and "%s" intact!!! */
 Name: %s\nEMail: %s\nMessage:\n%s
 Name: %s\nE-Mail: %s\nNachricht:\n%s
-Ime: %s\nE-Mail: %s\nPoruka:\n%s
+Име: %s\nЕ-Маил: %s\nПорука:\n%s
 Nazwa: %s\nEMail: %s\nWiadomość:\n%s
 Nome: %s\nEMail: %s\nMensagem:\n%s
 Namn: %s\nE-post: %s\nMeddelande:\n%s
 Naam: %s\nE-mail: %s\nBericht:\n%s
 Nom: %s\nE-Mail: %s\nMessage:\n%s
+Nombre: %s\nE-Mail: %s\nMensaje:\n%s
 
 MultiFileUploadNoteTemplate
 /* T! */
 /* Shown in upload dialog if user can upload multiple files */
 Hold down the %s key to select multiple files in the file selection dialog.
 Halten Sie die %s-Taste gedrückt, um gleich mehrere Dateien im Dateiauswahl-Dialog zu selektieren.
-Hold down the %s key to select multiple files in the file selection dialog.
-Hold down the %s key to select multiple files in the file selection dialog.
-Hold down the %s key to select multiple files in the file selection dialog.
-Hold down the %s key to select multiple files in the file selection dialog.
-Hold down the %s key to select multiple files in the file selection dialog.
-Hold down the %s key to select multiple files in the file selection dialog.
+Држите тастер %s да бисте изабрали више датотека у дијалогу за одабир датотеке.
+Przytrzymaj klawisz %s aby wybrać wiele plików w oknie dialogowym wyboru pliku.
+Mantenha pressionada a tecla %s para selecionar vários arquivos na caixa de diálogo de seleção de arquivos.
+Håll knappen %s tryckt för att välja flera filer i dialogrutan för filval.
+Houd de %s-toets ingedrukt om verschillende bestanden in het dialoogvenster voor bestandsselectie te selecteren.
+Maintenez la touche %s enfoncée pour sélectionner plusieurs fichiers dans la boîte de dialogue de sélection de fichier.
+Mantenga presionada la tecla %s para seleccionar varios archivos en el cuadro de diálogo de selección de archivos.
 
 MultiFileUploadNoteNoGo
 /* T! */
 /* Shown in upload dialog if browser does not support uploading multiple files */
 Your web browser unfortunately does not support uploading multiple files at once.
 Ihr Web-Browser unterstützt  das gleichzeitige Hochladen mehrerer Dateien leider nicht.
-Your web browser unfortunately does not support uploading multiple files at once.
-Your web browser unfortunately does not support uploading multiple files at once.
-Your web browser unfortunately does not support uploading multiple files at once.
-Your web browser unfortunately does not support uploading multiple files at once.
-Your web browser unfortunately does not support uploading multiple files at once.
-Your web browser unfortunately does not support uploading multiple files at once.
-
+Ваш веб прегледач, нажалост, не подржава истовремено учитавање више датотека.
+Twoja przeglądarka niestety nie obsługuje równoczesnego przesyłania wielu plików.
+Infelizmente, o seu navegador não suporta o upload simultâneo de vários arquivos.
+Din webbläsare stöder tyvärr inte samtidig uppladdning av flera filer.
+Uw webbrowser ondersteunt helaas niet het gelijktijdig uploaden van meerdere bestanden.
+Votre navigateur Web ne prend malheureusement pas en charge le téléchargement simultané de plusieurs fichiers.
+Desafortunadamente, su navegador web no admite la carga simultánea de varios archivos.

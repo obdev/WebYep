@@ -29,9 +29,13 @@
 		$oElement->setText($oTA->sText());
 		$oElement->save();
 		$bOK = true;
-		 if($bOK){
-			$sOnLoadScript = 'window.parent.location.reload(true)';
-		}
+		if($bOK){
+		            if($webyep_sModalWindowType == "none"){
+		                $sOnLoadScript = 'window.opener.location.reload(true);window.close();';
+		            }else{
+		                $sOnLoadScript = 'window.parent.location.reload(true);window.close();';
+		            }
+				}
 	}else{
 		$sOnLoadScript = 'document.forms[0].TEXT.focus();';
 	}
@@ -561,14 +565,16 @@
 				<div id="wy-simple-modal-footer" class="WYcenteralign">
 					<p class="f-fp f-lp">
                     	<input type="submit" id="save" class="WYmainbuttons r2" value="<?php WYTSD("SaveButton", true); ?>">
-                        <?php echo (new WYEditor())->sHiddenFieldsForElement($oElement); ?>
-						<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
-                        <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
-                        <?php }else if($webyep_sModalWindowType == 'jquery'){?>
-                        <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
-                        <?php }else{?>
-                        <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
-                        <?php }?>
+                            
+                         <?php echo (new WYEditor())->sHiddenFieldsForElement($oElement); ?>
+				<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
+                <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
+				<?php }
+				else{?>
+				<input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
+				<?php }?>
                         
 					</p>
 					<div class="WYhelp">
@@ -589,7 +595,7 @@
 				</div>
 				<div id="instruction">
 					<div id="activate">
-						<p class="f-fp f-lp">Activate inline menu <span class="arrowrightafter"></span>
+						<p class="f-fp f-lp"> <?php WYTSD("LongTextInlineMenu"); ?> <span class="arrowrightafter"></span>
 							<!-- <img id="arrowright" src="../resources/arrow-right.png" alt="Activate menu"> -->
 							<input id="inlinemenu" type="checkbox" class="css-checkbox">
 							<label for="inlinemenu" class="css-label"><?php // include("../opt/minibar-files/php/mini-bar-instructions.php"); ?></label>

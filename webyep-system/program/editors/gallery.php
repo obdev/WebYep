@@ -121,10 +121,20 @@
 		}
 		$bOK = ($iNrOfErrors) ? false : true;
 		if($bOK){
-		$sOnLoadScript=' setTimeout(function(){ window.parent.location.reload(true); }, 1000);'; 
+		
+		//$sOnLoadScript=' setTimeout(function(){ window.parent.location.reload(true); }, 1000);'; 
+        
+		if($webyep_sModalWindowType == "none"){
+        $sOnLoadScript = 'setTimeout(function(){ window.opener.location.reload(true);window.close() }, 1000);';
+        }
+		else
+		{
+            $sOnLoadScript='setTimeout(function(){ window.parent.location.reload(true); }, 1000);'; 
+        }
+		
+		
 		}
-	}
-	else {
+	} else {
 		if ($bNewImage) {
 			if ($goApp->bIsSafari || $goApp->bIsNavigator) {
 				$sFormat = WYTS('MultiFileUploadNoteTemplate');
@@ -745,15 +755,17 @@
                     	<input type="submit" class="WYmainbuttons r3 t2" id="save" value="<?php WYTSD("SaveButton", true); ?>">
                         
 						<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
-                        <input type="button" class="WYmainbuttons r3 t2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
-                        <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
-                        <input type="button" class="WYmainbuttons r3 t2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
-						<?php }else{?>
-                        <input type="button" class="WYmainbuttons r3 t2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
-                        <?php }?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
+                <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
+				<?php }
+				else{?>
+				<input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
+				<?php }?>
                         <?php if (!WYImage::bCanResizeImages()) {  ?>
                            <div class="warning remark" style="padding-top: 8px"><?php echo WYTS("ImageCannotResize")?></div>
 						<?php } ?>
+						
 					  <?php
                             echo WYEditor::sHiddenFieldsForElement($oElement);
                             echo $oHFImageID->sDisplay();
@@ -798,7 +810,7 @@
 				</div>
 				<div id="instruction">
 					<div id="activate">
-						<p class="f-fp f-lp">Activate inline menu <span class="arrowrightafter"></span>
+						<p class="f-fp f-lp"><?php WYTSD("GalleryTextInlineMenu", true); ?> <span class="arrowrightafter"></span>
 							<!-- <img id="arrowright" src="../../../../images/arrow-right.png" alt=""> -->
 							<input id="inlinemenu" type=checkbox class="css-checkbox">
 							<label for="inlinemenu" class="css-label"></label>
@@ -820,7 +832,7 @@
 			echo WYEditor::sPostSaveScript(true); // new parameter for static method, meaning: keep editor window (defaults to false)
 			echo "<p class='textButton'>$iNrOfErrors Fehler!</p>";
 			echo "<div style='width:100%'><div style='width:auto;margin:10px auto'>";
-			if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'jquery' || $webyep_sModalWindowType == 'scriptaculous'){
+			if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'jquery' || $webyep_sModalWindowType == 'scriptaculous' || $webyep_sModalWindowType == 'none'){
             	echo '<input name="Button" type="button" class="formButton" value="'.WYTSD("CancelButton", true).'" onclick="parent.wySMLink.hide();">';
              }else{
              echo '<input name="Button" type="button" class="formButton" value="'.WYTSD("CloseWindow", true).'" onClick="window.close();">';

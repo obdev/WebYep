@@ -72,7 +72,11 @@
 		            $sResponse = WYTS("Image Saved");
 		            $bOK = true;
 		           if($bOK){
-		  $sOnLoadScript = 'window.parent.location.reload(true)';
+   		            if($webyep_sModalWindowType == "none"){
+   		                $sOnLoadScript = 'window.opener.location.reload(true);window.close();';
+   		            }else{
+   		                $sOnLoadScript = 'window.parent.location.reload(true);window.close();';
+   		            }
 	  }
 	            }
 	            else {
@@ -588,7 +592,7 @@
 	}
 	#choose {
 		width: auto;
-		max-width: 225px;
+		max-width: 165px;
 		margin: 0 10px 0 0
 	}
 	#delete {
@@ -726,13 +730,14 @@
 					<p class="f-fp f-lp">
                     	<input type="submit" id="save" class="WYmainbuttons r3 t2" value="<?php WYTSD("SaveButton", true); ?>">
                         
-                    	<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>  			
-                        <input type="button" id="cancel" class="WYmainbuttons r3 t2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
-                        <?php }elseif($webyep_sModalWindowType == 'jquery'){?>  			
-                        <input type="button" id="cancel" class="WYmainbuttons r3 t2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
-                         <?php }else{?>
-                         <input type="button" id="cancel" class="WYmainbuttons r3 t2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
-                         <?php }?>
+                    	<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
+                <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
+				<?php }
+				else{?>
+				<input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
+				<?php }?>
                          
             <?php if (!(new WYImage())->bCanResizeImages()) {  ?>
                <div class="warning remark" style="padding-top: 8px"><?php echo WYTS("ImageCannotResize")?></div>

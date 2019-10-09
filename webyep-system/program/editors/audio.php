@@ -552,12 +552,13 @@ function confirmDelete()
 							echo $oHFDelete->sDisplay();
                         ?>
 						<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
-                            <input type="button" class="WYmainbuttons r3 t2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
-                        <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
-                            <input type="button" class="WYmainbuttons r3 t2" id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">    
-                        <?php }else{?>
-                            <input type="button" class="WYmainbuttons r3 t2"  id="cancel" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
-                        <?php }?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
+                <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
+                <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hideModal();">
+				<?php }
+				else{?>
+				<input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
+				<?php }?>
                         
                         
 					</p>
