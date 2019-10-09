@@ -130,7 +130,7 @@ strong { font-weight:700 }
 			<p>The loop controls are usually placed automatically at the top of each loop block, right where the Loop Start is positioned. In some situations this is not appropriate, as the Loop Start might be in a place where no content (like the loop control button icons) is allowed - e.g. between a <span class="preInline">&lt;table&gt;</span> tag and a <span class="preInline">&lt;tr&gt;</span> tag.</p>
 			<p>In theses cases you should uncheck the &quot;Automatic controls&quot; attribute and place the controls &quot;by hand&quot; by inserting the following piece of PHP code:</p>
 			<p><pre>
-&lt;?php $webyep_oCurrentLoop-&gt;showEditButtons(); // WebYepV1 ?&gt;
+&lt;?php $webyep_oCurrentLoop-&gt;showEditButtons($webyep_oCurrentLoop-&gt;iLoopID); // WebYepV2 ?&gt;
 </pre></p>
 			<p>When set to &quot;for this doc only&quot; the elements content is unique for this page - even if another element on a different page has the same name. If set to &quot;for all documents&quot; the content will be the same on all pages for elements of this kind that use the same name.</p>
 			<h3>Attributes of the Loop End Element</h3>
