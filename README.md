@@ -28,6 +28,7 @@ This release adds or introduces bug fixes and a number improvements
 8. A new menu feature, which allows a developer to set the WebYep menu visual hierarchy as either expanded or collapsed when opening the WebYep menu editor. This is set within the config file.
 9. Spanish has been added to the supported languages within the WebYep interface
 10. Removal of license legacy file as this is now not needed.
+11. There is a Commercial Rapidweaver plugin that's been re-written by William Woodgate, and this can be purchased from here: https://stacks4stacks.com/webyep/  Please note: this is a Rapid-weaver plugin and can be used in conjunction with the Free WebYep2 system or the Commercial version of WebYep2.
 
 
 
