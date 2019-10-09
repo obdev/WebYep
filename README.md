@@ -13,7 +13,25 @@ There are many WebCMS available, even Open Source, but the original WebYep was d
 
  
 
-So whats new in this release?
+So whats new in version 2.1 release?
+============================
+
+This release adds or introduces bug fixes and a number improvements
+
+1. Fixed errors and mismatches within the live page when choosing a specific Javascript Libabry setting within the config file which in turn caused the Javascript error warning windows to be displayed
+2. Loop error fixed when modal windows were set to none within the config file.
+3. Logon window cancel button fixed when no modal windows are specified within the config file.
+4. Date control now works correctly.
+5. WebYep loops work correctly in all PHP versions from PHP 5.6 to PHP 7.3.7
+6. WebYep Read More item extra character removal fix
+7. Numerous small fixes.
+8. A new menu feature, which allows a developer to set the WebYep menu visual hierarchy as either expanded or collapsed when opening the WebYep menu editor. This is set within the config file.
+9. Spanish has been added to the supported languages within the WebYep interface
+10. Removal of license legacy file as this is now not needed.
+
+
+
+So whats new in version 2 release?
 ============================
 
 This release adds or introduces a massive amount of visual changes. So as a guide, I have listed the main differences below :
@@ -34,9 +52,11 @@ This release adds or introduces a massive amount of visual changes. So as a guid
 Whats the commercial editor all about??
 ============================
 
-Once WebYep has had time to become a world leader and take over the cms world, or a few weeks time whichever comes first. I will be launching a commercial version which contains the Freeway actions and the pre-installed commercial and licensed rich-text editor (redactor) this editor has already been configured with a file and image manager.. all installed and ready to go...
+My first thoughts was once WebYep2 had had time to become a world leader and take over the cms world, or after a few weeks had passed after the initial launch whichever come first I would launch a commercial version. This would contain the Freeway actions and a version of WebYep2 with the pre-installed commercial and licensed rich-text editor (redactor) this editor has already been configured with a file and image manager.. all installed and ready to go...
+But before that happened, I wanted to make sure WebYep was stable enough, and after I discovered the loop errors and the Javascript errors, I felt it only right to wait until I fixed those and so hence why I waited for WebYep 2.1 to be finished. That is now done so in the next week or so WebYep2.1 commercial will be launched.
+
 But "how much will I charge for this commercial version" I hear you ask... well not much, most probably about the price of a few cups of tea and slice of cake at costa. 
-If you would prefer to spend 'absolutely nothing' on your cms then that's fine... this version is the same as the commercial version, but it can only use TinyMCE or CKEditor for the rich-text editor.
+If you would prefer to spend 'absolutely nothing' on your cms then that's fine... the latest version is the same as the commercial version, but it can only use TinyMCE or CKEditor for the rich-text editor as per the original WebYep1 series.
 As you can see, the entry-level bar has been lowered to subterranean levels... so there are no excuses for moaning.
 
  
@@ -44,8 +64,8 @@ As you can see, the entry-level bar has been lowered to subterranean levels... s
 Is It Perfect?
 ============================
 
-**Nope.** I'm reasonably sure there are going to be some bugs that have slipped past me.
-But it won't go pop!! or bring on the downfall of the UK economy...
+**2.1 is better than 2.0** I'm reasonably sure there are going to be some bugs that have slipped past me.
+But it won't go pop!! or bring on the downfall of the UK economy... only the Government can do that!
 
  
 
