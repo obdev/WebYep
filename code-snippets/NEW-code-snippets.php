@@ -116,5 +116,5 @@ include("$webyep_sIncludePath/webyep.php");
 
 
 <!-- SEPERATE LOOPBUTTONS CODE -->
-<?php $webyep_oCurrentLoop->showEditButtons(); // WebYepV1 ?>
+<?php $webyep_oCurrentLoop->showEditButtons($webyep_oCurrentLoop->iLoopID); // WebYepV2 ?>
 
