@@ -51,7 +51,7 @@ ini_set('display_errors', 'off');
 error_reporting(E_ALL);
 
 
-   //system url use to show uploaded files from rich text editors and inside edotors
+   //system url use to show uploaded files from rich text editors and inside editors
 
 define('BASE_URL', '');
 
