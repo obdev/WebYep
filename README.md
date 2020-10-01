@@ -72,7 +72,7 @@ As you can see, the entry-level bar has been lowered to subterranean levels... s
 Is It Perfect?
 ============================
 
-**2.1 is better than 2.0** I'm reasonably sure there are going to be some bugs that have slipped past me.
+**2.1.1 is slightly better than 2.1 and 2.1 is a lot better than 2.0** I'm reasonably sure there are going to be some bugs that have slipped past me.
 But it won't go pop!! or bring on the downfall of the UK economy... only the Government can do that!
 
  
