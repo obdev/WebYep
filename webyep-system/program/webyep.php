@@ -5,9 +5,13 @@
 // setup php
 // get_magic_quotes_runtime and set_magic_quotes_runtime 5.4.0 	Always returns FALSE because the magic quotes feature was removed from PHP.
 // so need to clean up code this code if needed then we have to find ulternative code
+
+
+if (version_compare(PHP_VERSION, '5.3.0', '<')) {
 if (get_magic_quotes_runtime() && function_exists("set_magic_quotes_runtime")) @set_magic_quotes_runtime(false);
 ini_set("display_errors", "1");
 error_reporting(E_ERROR | E_DEPRECATED | E_PARSE);
+}
 
 define("WEBYEP_DEMOSLOT_PREFIX", "demoslot_");
 define("WY_QK_LOGOUT", "WEBYEP_LOGOUT");
@@ -130,8 +134,8 @@ $webyep_bDoNotIncludeMootools = false;// Mootools will be included, if required 
 
 $webyep_iMajorVersion = 2;
 $webyep_iMinorVersion = 1;
-$webyep_iSubVersion = 0;
-$webyep_sCopyrightLine = "&copy; 2015, <a href='http://www.obdev.at/' target='_blank'>Objective Development Software GmbH</a>";
+$webyep_iSubVersion = 1;
+$webyep_sCopyrightLine = "&copy; 2020, <a href='http://www.obdev.at/' target='_blank'>Objective Development Software GmbH</a>";
 
 if (isset($_GET['webyep_sIncludePath']) || isset($_POST['webyep_sIncludePath']) || isset($_COOKIE['webyep_sIncludePath']) || isset($_SESSION['webyep_sIncludePath'])) exit(-1);
 if (strpos($webyep_sIncludePath, ":") !== false) exit(-1);
