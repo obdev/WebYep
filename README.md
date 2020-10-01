@@ -13,6 +13,13 @@ There are many WebCMS available, even Open Source, but the original WebYep was d
 
  
 
+So whats new in version 2.1.1 release?
+============================
+
+1. This release disables the deprecated set_magic_quotes_runtime() which introduced an error if running PHP 7.2 and newer. This only affected the WebYep Attachment downloaded file.
+
+
+
 So whats new in version 2.1 release?
 ============================
 
