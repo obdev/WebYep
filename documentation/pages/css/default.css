@@ -1,0 +1,150 @@
+
+/* FONT WEIGHTS USED
+   ================================================== */
+
+/* 
+Open sans   font-weight:300,400,700,400italic
+ */
+
+/* SPECIAL MARGINS
+   ================================================== */
+
+h1+h1, h2+h1, h3+h1, h4+h1, h5+h1, h6+h1, h1+h2, h2+h2, h3+h2, h4+h2, h5+h2, h6+h2, h1+h3, h2+h3, h3+h3, h4+h3, h5+h3, h6+h3, h1+h4, h2+h4, h3+h4, h4+h4, h5+h4, h6+h4, h1+h5, h2+h5, h3+h5, h4+h5, h5+h5, h6+h5, h1+h6, h2+h6, h3+h6, h4+h6, h5+h6, h6+h6 { margin-top: -0.25em; }
+
+ul ul, ol ol, ul ol, ol ul { margin-top: 0; margin-bottom: 0; }
+
+
+/* LETTER SPACING
+   ================================================== */
+
+h1, h2 { letter-spacing: -0.00em }
+
+h3 { letter-spacing: -0.00em }
+
+/* FIRST PARAGRAPH AFTER  H-TAG AUTOMATICALLY STYLED DIFFERENTLY FROM STANDARD P-TAGS
+   ================================================== */
+
+h1+p, h2+p { font-weight: 400 }
+
+
+/* WORD HYPHENATION
+   ================================================== */
+
+p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+/* PARAGRAPH INDENT
+   ================================================== */
+
+.indent p+p { text-indent: 2em }
+
+
+/* COLOURS
+   ================================================== */
+
+p + hr {
+    height: 0px;
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 2.25em 0 1.75;
+}
+
+/* ===[ Used to ad more space after p ]=== */
+
+/* FORMS
+   ================================================== */
+
+input, select, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+fieldset select { margin-bottom:1em;}
+
+fieldset legend { 
+    font-size:1.3rem;
+    text-transform: uppercase;
+    font-weight:600;
+}
+
+fieldset input[type=checkbox]:not(old), input[type=radio]:not(old) {
+    opacity: 0;
+    width: 0px;
+}
+
+fieldset input[type=checkbox]:not(old) + label, input[type=radio]:not(old) + label {
+    margin-left: -5px;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 20px;
+    background-image: url('../resources/input-icons-x2.png');
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 24px;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+fieldset label { 
+    padding-top: 2px 
+}
+
+/* input[type=checkbox]:not(old) + label { margin-left:-19px;} _NO__DOTCOMMA__AFTER__ */
+
+fieldset input[type=checkbox]:not(old):checked + label { background-position: 0 -48px }
+
+fieldset input[type=radio]:not(old) + label { background-position: 0 -96px }
+
+fieldset input[type=radio]:not(old):checked + label { background-position: 0 -144px }
+
+
+
+
+/* TABLES
+   ================================================== */
+
+table.myTableClass {
+    max-width: 100%;
+    width: 100%;
+}
+
+table.myTableClass caption {
+    text-transform: uppercase;
+    padding: 0 1.0999999999999999em;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1.2rem;
+    font-weight:600;
+}
+
+table.myTableClass th, table.myTableClass td {
+    padding: 0.825em 1.0999999999999999em;
+}
+
+table.myTableClass tfoot th, table.myTableClass tfoot td { color: rgba(0, 0, 0, 0.4) }
+
+table.myTableClass th {
+    text-align: left;
+    font-weight: 700;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+table.myTableClass tbody tr {
+    border-bottom: 1px solid #eeeeee;
+}
+
+table.myTableClass tfoot tr {
+    border-top: 2px solid #e6e6e6;
+}
+
+
+
+
+
+

@@ -1,0 +1,38 @@
+.fade {
+    -webkit-animation: fadein .3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein .3s; /* Firefox < 16 */
+        -ms-animation: fadein .3s; /* Internet Explorer */
+         -o-animation: fadein .3s; /* Opera < 12.1 */
+            animation: fadein .3s;
+}
+
+
+.grad1 { 
+background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(118,91,160,1)),to(rgba(76,65,123,1))); /* Saf4+, Chrome */ 
+background-image: -webkit-linear-gradient(top, rgba(118,91,160,1), rgba(76,65,123,1)); /* Saf5.1+, Chrome 10+ */ 
+background-image:    -moz-linear-gradient(top, rgba(118,91,160,1), rgba(76,65,123,1)); /* FF3.6 */ 
+background-image:     -ms-linear-gradient(top, rgba(118,91,160,1), rgba(76,65,123,1)); /* IE10 */ 
+background-image:      -o-linear-gradient(top, rgba(118,91,160,1), rgba(76,65,123,1)); /* Opera 11.10+ */ 
+background-image:         linear-gradient(top, rgba(118,91,160,1), rgba(76,65,123,1)); /* Standard CSS3 */ 
+}
+
+
+table#longtext { margin-bottom: 2em }
+table#longtext p {font-size:13px !important; color:#4a4a4a !important}
+table#longtext li {font-size:13px !important; color:black !important}
+
+table#longtext td { padding: 8px 6px 2px 8px; border-right: solid white 2px; border-bottom: dotted 1px silver; }
+table#longtext tbody tr td table tbody tr td { border-color: white !important; }
+
+.styleExample { color:green; font-family:courier}
+td hr {margin:5px 2px;  border-color:black }
+
+table#longtext b {font-weight: 600;}
+
+
+#m2>ol {
+background-color: #f6f6ff;
+display: inline-block;
+padding: 20px 20px 15px 45px;
+}
+

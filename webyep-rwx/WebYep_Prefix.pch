@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'WebYep' target in the 'WebYep' project.
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif

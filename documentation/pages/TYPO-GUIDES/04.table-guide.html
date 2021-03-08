@@ -1,0 +1,786 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>04. Table-Guide</title>
+<meta name="viewport" content="width = device-width, minimum-scale = 0.25, maximum-scale = 1.60">
+<meta name="generator" content="Freeway Pro 7.1.4">
+<link rel=stylesheet href="../css/mini-css-reset.css">
+<style type="text/css">
+<!--
+body { margin:0px; background-color:#fff; height:100% }
+html { height:100% }
+form { margin:0px }
+body > form { height:100% }
+img { margin:0px; border-style:none }
+button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
+table { empty-cells:hide }
+td { padding:0px }
+.f-sp { font-size:1px; visibility:hidden }
+.f-lp { margin-bottom:0px }
+.f-fp { margin-top:0px }
+       * { margin-top:0px; margin-bottom:0px }
+       html { font-size:62.5% }
+      body { font-family:'Open Sans',Helvetica,sans-serif; font-size:1.5em; line-height:1.5 }
+     dl { margin:1em 0em 1.65em 2.1em }
+    dd { margin:0em; padding:0 }
+    ul { margin:1em 0em 1.65em 1.1em }
+   li { margin:0em 0em 0.33em; padding:0 }
+   p { color:#666; line-height:1.5; margin-top:0em; margin-bottom:0.75em }
+  .button:hover { color:#e6e6e6; background-color:#333; border:1px solid #333; padding:8px 16px; cursor:pointer }
+  .dropdown:hover { color:#e6e6e6; background-color:#333; padding:6px 40px 6px 8px; border:1px solid #666; cursor:pointer }
+  .input:focus { border:1px solid #333 }
+  .input:hover { color:#3c2e69 }
+  .r1 { -webkit-border-radius:1px; -moz-border-radius: 1px;  border-radius: 1px; -webkit-background-clip:padding-box; background-clip:padding-box }
+  .r2 { -webkit-border-radius:2px; -moz-border-radius: 2px;  border-radius: 2px; -webkit-background-clip:padding-box; background-clip:padding-box }
+  .r3 { -webkit-border-radius:3px; -moz-border-radius: 3px;  border-radius: 3px; -webkit-background-clip:padding-box; background-clip:padding-box }
+  .r4 { -webkit-border-radius:4px; -moz-border-radius: 4px;  border-radius: 4px; -webkit-background-clip:padding-box; background-clip:padding-box }
+  .r5 { -webkit-border-radius:5px; -moz-border-radius: 5px;  border-radius: 5px; -webkit-background-clip:padding-box; background-clip:padding-box }
+  hr { margin:2.75em 0px 2.25em; height:0; border: 0; border-top: 1px solid #ddd }
+#wynavigation a { color:#fff; text-decoration:none }
+#wynavigation a:hover { color:#e6e6e6 }
+address { text-decoration:none; font-size:13px; line-height:1.5; margin:0.5em; font-style:normal }
+blockquote { color:#777; font-style:italic; text-decoration:none; margin:1em 0em 1.65em 2.5em; border-left:2px solid #ddd; padding-left:1.65em }
+cite { font-size:13px }
+code { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:1.4rem }
+em { font-style:italic }
+h1 { color:#3c2e69; font-size:3.8rem; line-height:1.1; margin-bottom:1.25em; margin-top:1em; font-weight:300 }
+h1:first-child { margin-top:0px }
+h2 { color:#fb694d; font-size:2.8rem; line-height:1.2; margin-bottom:0.6em; margin-top:1.5em; font-weight:300 }
+h2:first-child { margin-top:0px }
+h3 { color:#fb694d; font-size:2.1rem; line-height:1.3; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
+h3:first-child { margin-top:0px }
+h4 { font-size:1.8rem; line-height:1.4; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
+h4:first-child { margin-top:0px }
+h5 { font-size:1.6rem; line-height:1.5; margin-bottom:0.75em; margin-top:1.5em; font-weight:400 }
+h5:first-child { margin-top:0px }
+h6 { font-weight:bold; font-size:1.4rem; text-transform:uppercase; font-variant:normal; line-height:1; margin-bottom:0.75em; margin-top:1.6em }
+h6:first-child { margin-top:0px }
+pre { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:87.5%; margin-left:1em; margin-top:0em; margin-bottom:0.75em; white-space:pre-wrap }
+small { font-size:1.3rem }
+strong { font-weight:700 }
+#PageDiv { position:relative; min-height:100%; max-width:1200px; padding:30px }
+-->
+</style>
+<!--[if lt IE 9]>
+<script src="../../Resources/html5shiv.js"></script>
+<![endif]-->
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic" media="all">
+<link rel=stylesheet href="../css/default.css" media="all">
+</head>
+<body>
+<div id="PageDiv">
+	<h1 class="f-fp">04. Data Tables</h1>
+	
+	<hr><p>&nbsp;</p>
+	<p>&nbsp;</p>
+	
+	<table class="myTableClass">
+		<thead><tr>
+			<th>OrderDate
+			</th>
+			<th>Region
+			</th>
+			<th>Rep
+			</th>
+			<th>Item
+			</th>
+			<th>Units
+			</th>
+			<th>Unit Cost
+			</th>
+			<th>Total
+			</th>
+		</tr></thead>
+		<tbody class=""><tr>
+			<td>1/6/14
+			</td>
+			<td>East
+			</td>
+			<td>Jones
+			</td>
+			<td>Pencil
+			</td>
+			<td>95
+			</td>
+			<td> 1.99 
+			</td>
+			<td> 189.05 
+			</td>
+		</tr>
+		<tr>
+			<td>1/23/14
+			</td>
+			<td>Central
+			</td>
+			<td>Kivell
+			</td>
+			<td>Binder
+			</td>
+			<td>50
+			</td>
+			<td> 19.99 
+			</td>
+			<td> 999.50 
+			</td>
+		</tr>
+		<tr>
+			<td>2/9/14
+			</td>
+			<td>Central
+			</td>
+			<td>Jardine
+			</td>
+			<td>Pencil
+			</td>
+			<td>36
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 179.64 
+			</td>
+		</tr>
+		<tr>
+			<td>2/26/14
+			</td>
+			<td>Central
+			</td>
+			<td>Gill
+			</td>
+			<td>Pen
+			</td>
+			<td>27
+			</td>
+			<td> 19.99 
+			</td>
+			<td> 539.73 
+			</td>
+		</tr>
+		<tr>
+			<td>3/15/14
+			</td>
+			<td>West
+			</td>
+			<td>Sorvino
+			</td>
+			<td>Pencil
+			</td>
+			<td>56
+			</td>
+			<td> 2.99 
+			</td>
+			<td> 167.44 
+			</td>
+		</tr>
+		<tr>
+			<td>4/1/14
+			</td>
+			<td>East
+			</td>
+			<td>Jones
+			</td>
+			<td>Binder
+			</td>
+			<td>60
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 299.40 
+			</td>
+		</tr>
+		<tr>
+			<td>4/18/14
+			</td>
+			<td>Central
+			</td>
+			<td>Andrews
+			</td>
+			<td>Pencil
+			</td>
+			<td>75
+			</td>
+			<td> 1.99 
+			</td>
+			<td> 149.25 
+			</td>
+		</tr>
+		<tr>
+			<td>5/5/14
+			</td>
+			<td>Central
+			</td>
+			<td>Jardine
+			</td>
+			<td>Pencil
+			</td>
+			<td>90
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 449.10 
+			</td>
+		</tr>
+		<tr>
+			<td>5/22/14
+			</td>
+			<td>West
+			</td>
+			<td>Thompson
+			</td>
+			<td>Pencil
+			</td>
+			<td>32
+			</td>
+			<td> 1.99 
+			</td>
+			<td> 63.68 
+			</td>
+		</tr>
+		<tr>
+			<td>6/8/14
+			</td>
+			<td>East
+			</td>
+			<td>Jones
+			</td>
+			<td>Binder
+			</td>
+			<td>60
+			</td>
+			<td> 8.99 
+			</td>
+			<td> 539.40 
+			</td>
+		</tr>
+		<tr>
+			<td>6/25/14
+			</td>
+			<td>Central
+			</td>
+			<td>Morgan
+			</td>
+			<td>Pencil
+			</td>
+			<td>90
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 449.10 
+			</td>
+		</tr>
+		<tr>
+			<td>7/12/14
+			</td>
+			<td>East
+			</td>
+			<td>Howard
+			</td>
+			<td>Binder
+			</td>
+			<td>29
+			</td>
+			<td> 1.99 
+			</td>
+			<td> 57.71 
+			</td>
+		</tr>
+		<tr>
+			<td>7/29/14
+			</td>
+			<td>East
+			</td>
+			<td>Parent
+			</td>
+			<td>Binder
+			</td>
+			<td>81
+			</td>
+			<td> 19.99 
+			</td>
+			<td> 1,619.19 
+			</td>
+		</tr>
+		<tr>
+			<td>8/15/14
+			</td>
+			<td>East
+			</td>
+			<td>Jones
+			</td>
+			<td>Pencil
+			</td>
+			<td>35
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 174.65 
+			</td>
+		</tr>
+		<tr>
+			<td>9/1/14
+			</td>
+			<td>Central
+			</td>
+			<td>Smith
+			</td>
+			<td>Desk
+			</td>
+			<td>2
+			</td>
+			<td> 125.00 
+			</td>
+			<td> 250.00 
+			</td>
+		</tr>
+		<tr>
+			<td>9/18/14
+			</td>
+			<td>East
+			</td>
+			<td>Jones
+			</td>
+			<td>Pen Set
+			</td>
+			<td>16
+			</td>
+			<td> 15.99 
+			</td>
+			<td> 255.84 
+			</td>
+		</tr>
+		<tr>
+			<td>10/5/14
+			</td>
+			<td>Central
+			</td>
+			<td>Morgan
+			</td>
+			<td>Binder
+			</td>
+			<td>28
+			</td>
+			<td> 8.99 
+			</td>
+			<td> 251.72 
+			</td>
+		</tr>
+		<tr>
+			<td>10/22/14
+			</td>
+			<td>East
+			</td>
+			<td>Jones
+			</td>
+			<td>Pen
+			</td>
+			<td>64
+			</td>
+			<td> 8.99 
+			</td>
+			<td> 575.36 
+			</td>
+		</tr>
+		<tr>
+			<td>11/8/14
+			</td>
+			<td>East
+			</td>
+			<td>Parent
+			</td>
+			<td>Pen
+			</td>
+			<td>15
+			</td>
+			<td> 19.99 
+			</td>
+			<td> 299.85 
+			</td>
+		</tr>
+		<tr>
+			<td>11/25/14
+			</td>
+			<td>Central
+			</td>
+			<td>Kivell
+			</td>
+			<td>Pen Set
+			</td>
+			<td>96
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 479.04 
+			</td>
+		</tr>
+		<tr>
+			<td>12/12/14
+			</td>
+			<td>Central
+			</td>
+			<td>Smith
+			</td>
+			<td>Pencil
+			</td>
+			<td>67
+			</td>
+			<td> 1.29 
+			</td>
+			<td> 86.43 
+			</td>
+		</tr>
+		<tr>
+			<td>12/29/14
+			</td>
+			<td>East
+			</td>
+			<td>Parent
+			</td>
+			<td>Pen Set
+			</td>
+			<td>74
+			</td>
+			<td> 15.99 
+			</td>
+			<td> 1,183.26 
+			</td>
+		</tr>
+		<tr>
+			<td>1/15/15
+			</td>
+			<td>Central
+			</td>
+			<td>Gill
+			</td>
+			<td>Binder
+			</td>
+			<td>46
+			</td>
+			<td> 8.99 
+			</td>
+			<td> 413.54 
+			</td>
+		</tr>
+		<tr>
+			<td>2/1/15
+			</td>
+			<td>Central
+			</td>
+			<td>Smith
+			</td>
+			<td>Binder
+			</td>
+			<td>87
+			</td>
+			<td> 15.00 
+			</td>
+			<td> 1,305.00 
+			</td>
+		</tr>
+		<tr>
+			<td>2/18/15
+			</td>
+			<td>East
+			</td>
+			<td>Jones
+			</td>
+			<td>Binder
+			</td>
+			<td>4
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 19.96 
+			</td>
+		</tr>
+		<tr>
+			<td>3/7/15
+			</td>
+			<td>West
+			</td>
+			<td>Sorvino
+			</td>
+			<td>Binder
+			</td>
+			<td>7
+			</td>
+			<td> 19.99 
+			</td>
+			<td> 139.93 
+			</td>
+		</tr>
+		<tr>
+			<td>3/24/15
+			</td>
+			<td>Central
+			</td>
+			<td>Jardine
+			</td>
+			<td>Pen Set
+			</td>
+			<td>50
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 249.50 
+			</td>
+		</tr>
+		<tr>
+			<td>4/10/15
+			</td>
+			<td>Central
+			</td>
+			<td>Andrews
+			</td>
+			<td>Pencil
+			</td>
+			<td>66
+			</td>
+			<td> 1.99 
+			</td>
+			<td> 131.34 
+			</td>
+		</tr>
+		<tr>
+			<td>4/27/15
+			</td>
+			<td>East
+			</td>
+			<td>Howard
+			</td>
+			<td>Pen
+			</td>
+			<td>96
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 479.04 
+			</td>
+		</tr>
+		<tr>
+			<td>5/14/15
+			</td>
+			<td>Central
+			</td>
+			<td>Gill
+			</td>
+			<td>Pencil
+			</td>
+			<td>53
+			</td>
+			<td> 1.29 
+			</td>
+			<td> 68.37 
+			</td>
+		</tr></tbody>
+		<tr>
+			<td>5/31/15
+			</td>
+			<td>Central
+			</td>
+			<td>Gill
+			</td>
+			<td>Binder
+			</td>
+			<td>80
+			</td>
+			<td> 8.99 
+			</td>
+			<td> 719.20 
+			</td>
+		</tr>
+		<tr>
+			<td>6/17/15
+			</td>
+			<td>Central
+			</td>
+			<td>Kivell
+			</td>
+			<td>Desk
+			</td>
+			<td>5
+			</td>
+			<td> 125.00 
+			</td>
+			<td> 625.00 
+			</td>
+		</tr>
+		<tr>
+			<td>7/4/15
+			</td>
+			<td>East
+			</td>
+			<td>Jones
+			</td>
+			<td>Pen Set
+			</td>
+			<td>62
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 309.38 
+			</td>
+		</tr>
+		<tr>
+			<td>7/21/15
+			</td>
+			<td>Central
+			</td>
+			<td>Morgan
+			</td>
+			<td>Pen Set
+			</td>
+			<td>55
+			</td>
+			<td> 12.49 
+			</td>
+			<td> 686.95 
+			</td>
+		</tr>
+		<tr>
+			<td>8/7/15
+			</td>
+			<td>Central
+			</td>
+			<td>Kivell
+			</td>
+			<td>Pen Set
+			</td>
+			<td>42
+			</td>
+			<td> 23.95 
+			</td>
+			<td> 1,005.90 
+			</td>
+		</tr>
+		<tr>
+			<td>8/24/15
+			</td>
+			<td>West
+			</td>
+			<td>Sorvino
+			</td>
+			<td>Desk
+			</td>
+			<td>3
+			</td>
+			<td> 275.00 
+			</td>
+			<td> 825.00 
+			</td>
+		</tr>
+		<tr>
+			<td>9/10/15
+			</td>
+			<td>Central
+			</td>
+			<td>Gill
+			</td>
+			<td>Pencil
+			</td>
+			<td>7
+			</td>
+			<td> 1.29 
+			</td>
+			<td> 9.03 
+			</td>
+		</tr>
+		<tr>
+			<td>9/27/15
+			</td>
+			<td>West
+			</td>
+			<td>Sorvino
+			</td>
+			<td>Pen
+			</td>
+			<td>76
+			</td>
+			<td> 1.99 
+			</td>
+			<td> 151.24 
+			</td>
+		</tr>
+		<tr>
+			<td>10/14/15
+			</td>
+			<td>West
+			</td>
+			<td>Thompson
+			</td>
+			<td>Binder
+			</td>
+			<td>57
+			</td>
+			<td> 19.99 
+			</td>
+			<td> 1,139.43 
+			</td>
+		</tr>
+		<tr>
+			<td>10/31/15
+			</td>
+			<td>Central
+			</td>
+			<td>Andrews
+			</td>
+			<td>Pencil
+			</td>
+			<td>14
+			</td>
+			<td> 1.29 
+			</td>
+			<td> 18.06 
+			</td>
+		</tr>
+		<tr>
+			<td>11/17/15
+			</td>
+			<td>Central
+			</td>
+			<td>Jardine
+			</td>
+			<td>Binder
+			</td>
+			<td>11
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 54.89 
+			</td>
+		</tr>
+		<tr>
+			<td>12/4/15
+			</td>
+			<td>Central
+			</td>
+			<td>Jardine
+			</td>
+			<td>Binder
+			</td>
+			<td>94
+			</td>
+			<td> 19.99 
+			</td>
+			<td> 1,879.06 
+			</td>
+		</tr>
+		<tr>
+			<td>12/21/15
+			</td>
+			<td>Central
+			</td>
+			<td>Andrews
+			</td>
+			<td>Binder
+			</td>
+			<td>28
+			</td>
+			<td> 4.99 
+			</td>
+			<td> 139.72 
+			</td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>
