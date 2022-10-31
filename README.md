@@ -2,7 +2,7 @@ What is WebYep 3
 ================
 WebYep3 is a Web Content Management System which is based heavily on the original 'https://github.com/obdev/WebYep', 
 and as before WebYep3 is an Open Source system. 
-There are many WebCMS available, even Open Source, but the original WebYep was different, and the new WebYep2 carries those innovative ideas/direction on to meet the new demands of a modern PHP7 compatible CMS:
+There are many WebCMS available, even Open Source, but the original WebYep was different, and the new WebYep3 carries those innovative ideas/direction on to meet the new demands of a modern PHP8 compatible CMS:
 
 * WebYep is designed to be simple. It's easy to install, understand and most of all use.
 * WebYep does not require a database server.... yipppeee
@@ -69,7 +69,7 @@ This release adds or introduces a massive amount of visual changes. So as a guid
 Whats the commercial editor all about??
 ============================
 
-My first thoughts was once WebYep2 had had time to become a world leader and take over the cms world, or after a few weeks had passed after the initial launch whichever come first I would launch a commercial version. This would contain the Freeway actions and a version of WebYep2 with the pre-installed commercial and licensed rich-text editor (redactor) this editor has already been configured with a file and image manager.. all installed and ready to go...
+My first thoughts was once WebYep2/3 had had time to become a world leader and take over the cms world, or after a few weeks had passed after the initial launch whichever come first I would launch a commercial version. This would contain the Freeway actions and a version of WebYep2 with the pre-installed commercial and licensed rich-text editor (redactor) this editor has already been configured with a file and image manager.. all installed and ready to go...
 But before that happened, I wanted to make sure WebYep was stable enough, and after I discovered the loop errors and the Javascript errors, I felt it only right to wait until I fixed those and so hence why I waited for WebYep 2.1 to be finished. That is now done so in the next week or so WebYep2.1 commercial will be launched.
 
 But "how much will I charge for this commercial version" I hear you ask... well not much, most probably about the price of a few cups of tea and slice of cake at costa. 
@@ -81,7 +81,8 @@ As you can see, the entry-level bar has been lowered to subterranean levels... s
 Is It Perfect?
 ============================
 
-**2.1.1 is slightly better than 2.1 and 2.1 is a lot better than 2.0** I'm reasonably sure there are going to be some bugs that have slipped past me.
+**3.0.3 is is getting prety darn good and is quite a bit better than 2**
+**2.1.1 was slightly better than 2.1 and 2.1 is a lot better than 2.0** I'm reasonably sure there are going to be some bugs that have slipped past me.
 But it won't go pop!! or bring on the downfall of the UK economy... only the Government can do that!
 
  
