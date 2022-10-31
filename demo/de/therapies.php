@@ -1,1 +1,0 @@
-../en/therapies.php

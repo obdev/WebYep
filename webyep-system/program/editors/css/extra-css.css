@@ -1,0 +1,32 @@
+input[type=checkbox].css-checkbox {
+	display: none
+}
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0px -18px
+}
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left: 18px;
+	margin-left: 6px;
+	height: 18px;
+	display: inline-block;
+	line-height: 18px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 18px;
+	vertical-align: top;
+	cursor: pointer;
+}
+label.css-label {
+	background-image: url(../../images/checkbox.png);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+input[type=checkbox].css-checkbox + label.css-label-nomargin {
+	margin-left: 0px;
+} 

@@ -1,0 +1,85 @@
+/* CSS Mini Reset
+   ================================================== */
+   
+
+/* GUIDE TO FONT WEIGHTS -  Please note thin and ultra light are sometimes swopped
+   ================================================== */
+
+/* thin       =  font-weight:100  */
+/* ultralight =  font-weight:200  */
+/* light      =  font-weight:300  */
+/* regular    =  font-weight:400  */
+/* medium     =  font-weight:500  */
+/* semibold   =  font-weight:600  */
+/* bold       =  font-weight:700  */
+/* heavy      =  font-weight:800  */
+/* black      =  font-weight:900  */
+
+
+
+/* TYPOGRAPHY
+   ================================================== */
+
+html {
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===[ Correct font family set oddly in Safari 5 and Chrome. ]=== */
+code, kbd, pre, samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+html, body, main, header, section, nav, article, aside, footer, address, div, form, fieldset, legend, label, h1, h2, h3, h4, h5, h6, dl, dt, dd, p, blockquote, iframe {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+}
+
+h1, h2, h3, h4, h5, h6, th, td, caption { font-weight: 400 }
+
+/* ===[ Make sure selects don't get the default browser styles. ]=== */
+select { -webkit-appearance: none }
+
+
+
+/* TABLES
+   ================================================== */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td { vertical-align: top }
+
+
+/* LINKS
+   ================================================== */
+
+a img { border: none }
+
+/* ===[ Improve readability when focused and also mouse hovered in all browsers. ]=== */
+a:active, a:hover { outline: 0 }
+
+*:focus { outline: none }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand { display: none;
+}     /* for IE 11 */
+
+
+/* SIZE CALCULATIONS
+   ================================================== */
+
+ /* html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit;  }   */
+
+

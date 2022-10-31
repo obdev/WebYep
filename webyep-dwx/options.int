@@ -1,2 +1,0 @@
-ignore \.DS_Store \.int$ Library/ Templates/ tests/ \.mxp$ \.php$ \.sh$ \.svn
-destinations ../en/webyep-dwx ../de/webyep-dwx
