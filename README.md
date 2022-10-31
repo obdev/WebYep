@@ -1,4 +1,4 @@
-What is WebYep 3 ?
+What is WebYep 3
 ================
 
 WebYep3 is a Web Content Management System which is based heavily on the original 'https://github.com/obdev/WebYep', 
