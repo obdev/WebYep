@@ -1,6 +1,5 @@
 What is WebYep 3
 ================
-
 WebYep3 is a Web Content Management System which is based heavily on the original 'https://github.com/obdev/WebYep', 
 and as before WebYep3 is an Open Source system. 
 There are many WebCMS available, even Open Source, but the original WebYep was different, and the new WebYep2 carries those innovative ideas/direction on to meet the new demands of a modern PHP7 compatible CMS:
@@ -11,14 +10,17 @@ There are many WebCMS available, even Open Source, but the original WebYep was d
 * No PHP or HTML knowledge needed.
 * Freeway & RapidWeaver plugins are available plus code snippets for manual insertion into HTML. A Dreamweaver plugin is on the cards!!
 
+
 So whats new in version 3.0.3 release?
-============================ 
+============================
+
 1. A lot!!!! 
 2. Now WebYep is PHP 8 compatible, all editors have been updated
 3. Markup text NOW correctly handles HTML entities by either leaving anything you type 'as is' or converting it to the actual intended character, and this can be toggled on and off via the config file.
 4. Countless tiny bugs have been squashed but there sure to be others some where!!
 5. An extra free Richtext editor is available to use along the Tiny MCE and cKeditor editors and this one is called trumbowyg
 6. New documentation written by Will Woodgate cheers Will 
+
 
 So whats new in version 2.1.1 release?
 ============================
