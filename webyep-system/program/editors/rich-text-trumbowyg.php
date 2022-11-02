@@ -2,7 +2,6 @@
 // WebYep
 // (C) Objective Development Software GmbH
 // http://www.obdev.at
-
 	$webyep_bDocumentPage = false;
 	$webyep_sIncludePath = "..";
 	include_once("$webyep_sIncludePath/webyep.php");
@@ -12,38 +11,50 @@
 	include_once(@webyep_sConfigValue("webyep_sIncludePath") . "/lib/WYEditor.php");
 
 
-	$bOK = false;
+   $bOK = false;
 	$sResponse = WYTS("RichTextSaved");
-	$sHelpFile = "markuptext-element.php";
+	$sHelpFile = "richtext-element.php";
+
+
+	//global $goApp;
+ //   $goApp->oProgramURL='/';
+	//$oURL = new  WYURL($goApp->oProgramURL);
+	//$oURL->addComponent("script.php");
+
+
+
 
 	$oEditor = new WYEditor();
-	$oElement = new WYRichTextElement($oEditor->sFieldName, $oEditor->bGlobal); 
-	$oTAHTMLCode = new WYTextArea("HTML_CODE", htmlspecialchars($oElement->sText()));
+	$oElement = new WYRichTextElement($oEditor->sFieldName, $oEditor->bGlobal);
+	$oTAHTMLCode = new WYTextArea("HTML_CODE", $oElement->sText());
 	$oTAHTMLCode->setAttribute("class", "WYtextfield WYinput r3");
-	
+
 	if (isset($_REQUEST['WEBYEP_ACTION'])) {
+
+		$oEditorsFolder = od_clone($goApp->oProgramPath);
 		$oElement->setText($oTAHTMLCode->sText());
 		$oElement->save();
-	
-		$bOK = true;
+      	$bOK = true;
 		if($bOK){
-			
-			
+
+
 		if($webyep_sModalWindowType == "none"){
-			
+
 				echo "<script>window.opener.location.reload(true);window.close();</script>";
       	} else {
 	   			echo "<script>window.parent.location.reload(true);window.close();</script>";
 	   	}
-	
-	
-	  
+
+
+
    	}
 	} else {
 		$sOnLoadScript = 'document.forms[0].HTML_CODE.focus();';
+		$sCSSURL = $goApp->sFormFieldValue(WY_QK_RICH_TEXT_CSS);
 	}
-	
+
 	$goApp->outputWarningPanels(); // give App a chance to say something
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -57,7 +68,7 @@
 	<script src="../javascript/pace.js"></script>
 	<link rel=stylesheet href="css/CSS-mini-reset.css">
 	<style type="text/css">
-		<!-- 
+
 		body {
 			color: #404040;
 			font-size: 13px;
@@ -65,8 +76,9 @@
 			height: 100%
 		}
 		html {
-			height: 100%
+			height: 100%;
 		}
+
 		form {
 			margin: 0px
 		}
@@ -345,13 +357,13 @@
 			box-sizing: border-box
 		}
 		.WYtextfield {
-			color: #fbfdff;
-			font-family: Menlo, Monaco, Courier,'Courier New';
-			font-size: 13px;
-			background-color: #404040;
+			color: #404040;
+			font-family: 'Courier New', Courier;
+			font-size: 14px;
+			background-color: #fbfdff;
 			line-height: 15px;
 			text-align: left;
-			/* border: 1px solid #6AC7FD;  */
+			border: 1px solid #6AC7FD;
 			resize: none;
 			padding: 5px 6px 5px 6px;
 			transition: all 0.25s ease-in-out;
@@ -365,7 +377,7 @@
 			box-shadow: 0 0 4px rgba(81, 203, 238, 1);
 			-webkit-box-shadow: 0 0 4px rgba(81, 203, 238, 1);
 			-moz-box-shadow: 0 0 4px rgba(81, 203, 238, 1);
-			/* 	border-color: #58bbf4;  */
+			border-color: #58bbf4;
 		}
 		#PageDiv {
 			position: relative;
@@ -385,7 +397,7 @@
 			padding: 11px 18px 16px;
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
-			box-sizing: border-box
+			box-sizing: border-box;
 		}
 		#WebYeplogo {
 			position: absolute;
@@ -435,15 +447,15 @@
 			z-index: 4
 		}
 		#formcontainerouter {
-			position: absolute;
-			left: 0px;
-			top: 87px;
-			width: 100%;
-			bottom: 78px;
-			min-height: 28px;
-			z-index: 6;
-			padding-left: 18px;
-			padding-right: 18px
+		    position: absolute;
+		    left: 0px;
+		    top: 49px;
+		    width: 100%;
+		    bottom: 85px;
+		    min-height: 28px;
+		    z-index: 6;
+		    padding-left: 0px;
+		    padding-right: 0px;
 		}
 		#textarea {
 			position: absolute;
@@ -471,45 +483,94 @@
 			font-size:14px;
 			text-align:center;
 		}
-		.response:before { 
-			font-family:webyepfontregular; 
-			margin-left:0px; 
-			margin-right:8px; 
+		.response:before {
+			font-family:webyepfontregular;
+			margin-left:0px;
+			margin-right:8px;
 			content:"\e80F";
 		}
+
+		/* <!--
+		.redactor_box{
+			border: 1px solid #6AC7FD;
+		}--> */
+
 		::-webkit-scrollbar {
 		  -webkit-appearance: none;
 		  width: 5px;
 		}
 		::-webkit-scrollbar-thumb {
 		  border-radius:5px;
-		  background-color: rgba(255, 255, 255, .6);
-		  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);	
-		} 
-		::-webkit-scrollbar-thumb:hover {
-		  background-color: rgba(113, 119, 191, 1);
+		  background-color: rgba(0, 0, 0, .3);
+		  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 		}
-		
-		-->
+		::-webkit-scrollbar-thumb:hover {
+		  background-color: rgba(113, 119, 191, .75);
+		}
+
+		/* Added by Will Woodgate */
+		.trumbowyg-box,
+		.trumbowyg-editor {
+	    margin: 0px auto !important;
+			border: none !important;
+		}
+
+		.trumbowyg-editor {
+			font-size: 16px;
+			line-height: 1.5;
+		}
+
+		.trumbowyg-modal-box,
+		.trumbowyg-modal-box .trumbowyg-modal-button {
+    	font-family: Helvetica, Verdana, sans-serif !important;
+		}
+
+
 	</style>
 	<!--[if lt IE 9]>
 	<script src="../javascript/html5shiv.js"></script>
 	<![endif]-->
-	<link rel=stylesheet href="css/extra-css.css">
 	<?php include("remember-editor-size.js.php"); ?>
-	
+	<link rel=stylesheet href="css/extra-css.css">
+	<link rel="stylesheet" href="../opt/trumbowyg/trumbowyg.css" />
+	<script type="text/javascript" src="../javascript/jquery-1.11.0.min.js"></script>
+	<script src="../opt/trumbowyg/trumbowyg.js"></script>
+	<script>
+	$(document).ready(function() {
+		$('textarea').trumbowyg({
+			svgPath: '../opt/trumbowyg/icons.svg',
+			btns: [
+        ['viewHTML'],
+        ['undo', 'redo'], // Only supported in Blink browsers
+        ['formatting'],
+        ['strong', 'em', 'del'],
+        ['superscript', 'subscript'],
+        ['link'],
+        ['insertImage'],
+        ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+        ['unorderedList', 'orderedList'],
+        ['horizontalRule'],
+        ['removeformat']
+    	],
+			changeActiveDropdownIcon: true
+		});
+	});
+	</script>
+
+
 </head>
+
 <?php
 	if (!isset($bOK)) $bOK = false;
 	if ($oEditor->bSave) $bDidSave = true;
 	else if (!isset($bDidSave)) $bDidSave = false;
 ?>
-<body onload="wy_rteInit(); wy_restoreSize();<?php echo isset($sOnLoadScript) ? $sOnLoadScript:"" ?>" onresize="wy_saveSize();">
+<body onload="wy_restoreSize();<?php echo isset($sOnLoadScript) ? $sOnLoadScript:""?>" onresize="wy_saveSize();">
 <?php if (!$bDidSave) { ?>
-	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" onsubmit="return submitForm();">
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" onsubmit="return submitForm();">
 		<div id="PageDiv">
 			<div id="simplemodal" class="WYsimplemodal">
-				<h1 class="simplemodal f-lp"><?php echo WYTS("MarkupTextEditorTitle"); ?>: <span class="grey"><?php echo $oEditor->sFieldName; ?></span></h1>
+				<h1 class="simplemodal f-lp"><?php echo WYTS("RichTextEditorTitle"); ?>: <span class="grey"><?php echo $oEditor->sFieldName; ?></span></h1>
 				<div id="WebYeplogo">
 					<img src="../images/webyep-logo.png" width=59 height=31 alt="WebYeplogo" style="float:left">
 				</div>
@@ -517,8 +578,7 @@
 				<div id="wy-simple-modal-footer" class="WYcenteralign">
 					<p class="f-fp f-lp">
 						<input type="submit" class="WYmainbuttons r2" id="save" value="<?php WYTSD("SaveButton", true); ?>">
-					    
-                         <?php echo (new WYEditor())->sHiddenFieldsForElement($oElement); ?>
+						<?php echo (new WYEditor())->sHiddenFieldsForElement($oElement); ?>
 				<?php if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'scriptaculous'){?>
                 <input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="parent.wySMLink.hide();">
                 <?php }elseif($webyep_sModalWindowType == 'jquery'){?>
@@ -527,28 +587,32 @@
 				else{?>
 				<input type="button" id="cancel" class="WYmainbuttons r2" value="<?php WYTSD("CancelButton", true); ?>" onclick="window.close();">
 				<?php }?>
-					
 					</p>
 					<div class="WYhelp">
-						<p class="WYhelpstyle"><a href="/webyep-system/program/help/english/access-denied.php"> <?php echo $goApp->sHelpLink($sHelpFile); ?> </a></p>
+						<p class="WYhelpstyle">
+						<!-- <a href="/webyep-system/program/help/english/access-denied.php"> </a> -->
+						<?php echo $goApp->sHelpLink($sHelpFile); ?>
+						</p>
 					</div>
 				</div>
 				<div id="WY-Debug-Message" class="WYwarning">
 					<?php if ($webyep_bDebug) echo '<p>WebYep Debug Mode<em>!</em></p>'; ?>
 				</div>
+				<!--
 				<div class="WYobd-link">
 					<p><a href="<?php echo $webyep_sCompanyLink?>" target="_blank"> <?php echo $webyep_sCompanyName?> </a>
 					</p>
 				</div>
+				-->
+
 				<div id="formcontainerouter" class="borderboxsizing">
-					<?php echo $oTAHTMLCode->sDisplay(); ?>
+					<?php echo $oTAHTMLCode->sDisplay()?>
 				</div>
+
 			</div>
 		</div>
 	</form>
-	<?php } else { echo "<blockquote>"; echo "<div class='response'>$sResponse</div>"; if ($bOK) echo WYEditor::sPostSaveScript(); else echo "<p class='textButton'>" . webyep_sBackLink() . "</p>"; echo "</blockquote>"; } ?>
-		
-		
-</body>
+<?php } else { echo "<blockquote>"; echo "<div class='response'>$sResponse</div>"; if ($bOK) echo (new WYEditor())->sPostSaveScript(); else echo "<p class='textButton'>" . webyep_sBackLink() . "</p>"; echo "</blockquote>"; } ?>
 
+</body>
 </html>

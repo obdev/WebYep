@@ -27,7 +27,7 @@
     $oTFUsername = new WYTextField("USERNAME");
 	$oTFUsername->makeUsernameField();
 	$oTFUsername->setAttribute("class", "WYtextfieldLogon WYinput r3");
-	
+
     $oTFPassword = new WYTextField("PASSWORD");
     $oTFPassword->makePasswordField();
 	$oTFPassword->setAttribute("class", "WYtextfieldLogon WYinput r3");
@@ -57,7 +57,7 @@
 	<link rel=stylesheet href="css/CSS-mini-reset.css">
 	<link rel="stylesheet" href="css/fontstylesheet.css">
 	<style type="text/css">
-	<!-- 
+	<!--
 	body {
 		color: #404040;
 		font-size: 13px;
@@ -547,65 +547,65 @@
 		right: 18px;
 		z-index: 5
 	}
-	
-	#infor { 
+
+	#infor {
 		position:absolute;
-		left:0px; 
-		top:0px; 
-		width:100%; 
-		min-height:100%; 
-		z-index:20; 
-		padding-left:8px; 
-		padding-top:102px; 
-		background-color:#fff; 
-		background-image:url(images/wy-splash-screen.jpg); 
-		background-position:center; 
-		background-size:cover; 
+		left:0px;
+		top:0px;
+		width:100%;
+		min-height:100%;
+		z-index:20;
+		padding-left:8px;
+		padding-top:102px;
+		background-color:#fff;
+		background-image:url(images/wy-splash-screen.jpg);
+		background-position:center;
+		background-size:cover;
 		background-repeat:no-repeat;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-	.loading { 
-		color:#674380; 
-		font-family:Helvetica,Arial,sans-serif; 
-		font-size:16px; 
-		text-transform:uppercase; 
-		font-variant:normal; 
-		letter-spacing:0.5em; 
-		line-height:1; 
-		margin-top:0px; 
-		margin-bottom:0px; 
-		text-align:center 
+	.loading {
+		color:#674380;
+		font-family:Helvetica,Arial,sans-serif;
+		font-size:16px;
+		text-transform:uppercase;
+		font-variant:normal;
+		letter-spacing:0.5em;
+		line-height:1;
+		margin-top:0px;
+		margin-bottom:0px;
+		text-align:center
 	}
-	.versionno { 
-		color:#674380; 
-		font-family:Helvetica,Arial,sans-serif; 
-		font-size:9px; 
-		text-transform:uppercase; 
-		font-variant:normal; 
-		letter-spacing:0.5em; 
-		margin-top:4px; 
-		margin-bottom:0px; 
-		text-align:center 
+	.versionno {
+		color:#674380;
+		font-family:Helvetica,Arial,sans-serif;
+		font-size:9px;
+		text-transform:uppercase;
+		font-variant:normal;
+		letter-spacing:0.5em;
+		margin-top:4px;
+		margin-bottom:0px;
+		text-align:center
 	}
-	.spinner { 
-		font-family:Helvetica,Arial,sans-serif; 
-		letter-spacing:normal 
+	.spinner {
+		font-family:Helvetica,Arial,sans-serif;
+		letter-spacing:normal
 	}
-	.spinner:after { 
-		color:#999; 
-		font-family:webyepfontregular; 
-		margin-left:8px; 
-		margin-right:8px; 
-		content:"\e801"; 
+	.spinner:after {
+		color:#999;
+		font-family:webyepfontregular;
+		margin-left:8px;
+		margin-right:8px;
+		content:"\e801";
 		-moz-animation:spin 2s infinite linear;
 		-o-animation: spin 2s infinite linear;
 		-webkit-animation: spin 2s infinite linear;
 		animation: spin 2s infinite linear;
 		display: inline-block;
 	}
-	
+
 	@-moz-keyframes spin {
 	0% {
 	-moz-transform: rotate(0deg);
@@ -680,27 +680,27 @@
 	-webkit-transform: rotate(359deg);
 	transform: rotate(359deg);}
 	}
-	
+
 	.response {
 		font-size:14px;
 		text-align:center;
 		padding-top:20px;
 	}
-	.response:before { 
+	.response:before {
 		font-size:18px;
-		font-family:webyepfontregular; 
-		margin-left:0px; 
-		margin-right:8px; 
+		font-family:webyepfontregular;
+		margin-left:0px;
+		margin-right:8px;
 		content:"\e811";
 	}
-	
+
 	.truncate {
 		width: 265px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	
+
 	-->
 	</style>
 
@@ -711,7 +711,7 @@
 
 	<script src="javascript/jquery-1.11.0.min.js"></script>
 
-	<script type='text/javascript'>
+	<script>
 	$(function(){
 				$("#infor").delay(2000).fadeOut("fast");
 	});
@@ -775,21 +775,21 @@
 						</tr>
 					</table>
 				</div>
-			
+
 				<?php } else { ?>
-					<div id="url-alt-container"> 
+					<div id="url-alt-container">
 						<?php if ($bSuccess) {
 							$_SESSION[WY_SV_IS_AUTH] = true; // WebYepIsAuthorized
 							echo "<p class='response'>" . WYTS("LogonSucceded") . "</p>";
 							if ($oPageURL) {
-				if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'jquery' || $webyep_sModalWindowType == 'scriptaculous'){ //if model window enabled then close login window 
-					echo "<script type='text/javascript'>\n";
+				if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'jquery' || $webyep_sModalWindowType == 'scriptaculous'){ //if model window enabled then close login window
+					echo "<script>\n";
 					echo "   window.parent.location = '" . $oPageURL->sURL() . "'\n";
 					echo "   window.parent.focus();\n";
 					echo "   window.setTimeout('parent.wySM.hide();', 1500);\n";
 					echo "</script>";
 				}else{
-					echo "<script type='text/javascript'>\n";
+					echo "<script>\n";
 					echo "   window.opener.location = '" . $oPageURL->sURL() . "'\n";
 					echo "   window.opener.focus();\n";
 					echo "   window.setTimeout('window.close();', 1500);\n";
@@ -805,7 +805,7 @@
 			// echo "<p class='textButton'>&lt;<a href='javascript:parent.wySM.hide();'>" . WYTS("CloseWindow") . "</a>&gt;</p>";
 			}else{
 				// echo "<p class='textButton'>&lt;<a href='javascript:window.close();'>" . WYTS("CloseWindow") . "</a>&gt;</p>";
-			}	
+			}
 		}?>
 	</div>
 
@@ -817,7 +817,7 @@
 			</div>
 		</div>
 	</form>
-	
+
 	<script>
 	Modernizr.load({
 		test: Modernizr.input.placeholder,

@@ -75,7 +75,8 @@ class WYFileUpload extends WYHTMLTag
 	{
 		$sTmpPath = $this->dFileInfos["tmp_name"][$iIndex];
 		if ($sTmpPath) {
-			$oFile = new WYFile(new WYPath($sTmpPath));
+			$newpath = new WYPath($sTmpPath);
+			$oFile = new WYFile($newpath);
 			if ($oFile->bExists()) $oFile->bDelete();
 		}
 	}

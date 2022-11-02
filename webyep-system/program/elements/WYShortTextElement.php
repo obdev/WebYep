@@ -19,7 +19,7 @@ define("WY_SHORTTEXT_VERSION", 1);
 function webyep_sShortTextContent($sFieldName, $bGlobal)
 {     global $webyep_oCurrentLoop; 
 	 if(!empty($webyep_oCurrentLoop)){
-	$webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"];
+	$webyep_oCurrentLoop->iLoopID = $_SESSION["loopid"];
         }
 	$o = new WYShortTextElement($sFieldName, $bGlobal);
 //echo $sFieldName;
@@ -29,7 +29,7 @@ function webyep_sShortTextContent($sFieldName, $bGlobal)
 function webyep_shortText($sFieldName, $bGlobal, $mwEditorWidth=500, $mwEditorHeight=250) {
    global $webyep_oCurrentLoop; 
 	 if(!empty($webyep_oCurrentLoop)){
-	$webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"];
+	$webyep_oCurrentLoop->iLoopID = $_SESSION["loopid"] ?? null;
 
 	}
 //echo "hello";

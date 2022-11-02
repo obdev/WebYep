@@ -57,7 +57,7 @@ class WYPopupWindowLink extends WYHTMLTag
 		$this->dAttributes["href"] = $oURL->sEURL();
 
 		//if(!empty($webyep_oCurrentLoop)){ echo "yes";
-		$loopid= $_SESSION["loopid"];
+		$loopid= $_SESSION["loopid"] ?? null;
 		//}else { $loopid=0; print_r($webyep_oCurrentLoop);}
 
 		$url=$oURL->sURL();$WEBYEP_LOOP_ID="0";

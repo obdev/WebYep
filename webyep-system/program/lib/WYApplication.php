@@ -210,7 +210,7 @@ class WYApplication
          $iIP = ip2long($sIP);
          $sBinNet = str_pad(decbin($iNet), 32, "0",STR_PAD_LEFT);
          $sFirstPart = substr($sBinNet, 0, $iMask);
-         $sBinIP = str_pad(decbin($iIP), 32, "0",STR_PAD_LEFT); 
+         $sBinIP = str_pad(decbin($iIP), 32, "0",STR_PAD_LEFT);
          $sFirstIP = substr($sBinIP, 0, $iMask);
          if (strcmp($sFirstPart, $sFirstIP) == 0) {
             $b = true;
@@ -358,15 +358,16 @@ class WYApplication
 	{
 		$sValue = "";
 		$bStrip = true;
-		
+
 		if (isset($_GET[$sKey]) && $sMethod != WYAPP_METHOD_POST) $sValue = $_GET[$sKey];
 		else if (isset($_POST[$sKey]) && $sMethod != WYAPP_METHOD_GET) $sValue = $_POST[$sKey];
 		else {
 			$sValue = $sDefaultValue;
 			$bStrip = false;
 		}
-		if ($bStrip && get_magic_quotes_gpc()) $sValue = stripslashes($sValue);
-		
+		$sValue = stripslashes($sValue);
+		//if ($bStrip && get_magic_quotes_gpc()) $sValue = stripslashes($sValue);
+
 		return $sValue;
 	}
 
@@ -552,10 +553,10 @@ class WYApplication
 		$s .= WYPopupWindowLink::sOpenWindowCode($oURL, "WebYepLogon", 400, 300, WY_POPWIN_TYPE_PLAIN);
 		return $s;
 	}
-	
+
 	function sAuthWindowMW()
 	{
-		
+
 		$sJS = "";
 		$oURL = od_nil;
 		$oPageURL = od_clone((new WYURL())->oCurrentURL());
@@ -563,12 +564,12 @@ class WYApplication
 		$oURL = od_clone($this->oProgramURL);
 		$oURL->addComponent("logon.php");
 		$oURL->dQuery[WY_QK_LOGON_PAGE_URL] = $oPageURL->sURL();
-		
+
 		// $sJS .= "javascript:opendModelWindow('WebYepLogon', '".$oURL->sURL()."')"; //
 		   $sJS .= "javascript:opendModelWindow(' ', '".$oURL->sURL()."')";
 		return  $sJS;
 	}
-	
+
 	function sLoginUrlMW()
 	{
 		$sURL = "";
@@ -579,14 +580,14 @@ class WYApplication
 		$oURL->dQuery[WY_QK_LOGON_PAGE_URL] = $oPageURL->sURL();
 		return $oURL->sURL();
 	}
-	
+
 	function sNoticeWindowJS($sTitleKey, $sMsgKey, $sHelpFile = "")
 	{
 		$s = "";
 		$oURL = od_nil;
 
 		if (!strstr($_SERVER['PHP_SELF'], "notice.php")) {
-			$s .= "<script type='text/javascript'>\n";
+			$s .= "<script>\n";
 			$oURL = od_clone($this->oProgramURL);
 			$oURL->addComponent("notice.php");
 			$oURL->setQuery(array("TITLE" => $sTitleKey, "MESSAGE" => $sMsgKey, "HELP" => $sHelpFile));
@@ -596,35 +597,35 @@ class WYApplication
 		}
 		return $s;
 	}
-	
+
 	function sNoticeWindowMW($sTitleKey, $sMsgKey, $sHelpFile = "")
 	{
 		global $webyep_sModalWindowType;
-		
+
 		$s = "";
 		$oURL = od_nil;
 
 		if (!strstr($_SERVER['PHP_SELF'], "notice.php")) {
 			$oURL = od_clone($this->oProgramURL);
 			$oURL->addComponent("notice.php");
-			$oURL->setQuery(array("TITLE" => $sTitleKey, "MESSAGE" => $sMsgKey, "HELP" => $sHelpFile));	
-			
+			$oURL->setQuery(array("TITLE" => $sTitleKey, "MESSAGE" => $sMsgKey, "HELP" => $sHelpFile));
+
 			if($webyep_sModalWindowType == 'mootools'){
-				$s .= "<script type='text/javascript'>\n";
+				$s .= "<script>\n";
 				$s .= "window.addEvent('domready', function() {\n";
 				$s .= 'WYPopupWindowLinkMW("'.$oURL->sURL().'", "WebYepNotice", 400, 300);'."\n";
 				$s .= "});\n";
 				$s .= "</script>\n";
-			}		
+			}
 			if($webyep_sModalWindowType == 'jquery'){
-				$s .= "<script type='text/javascript'>\n";
+				$s .= "<script>\n";
 				$s .= "$(document).ready(function(e) {\n";
 				$s .= 'WYPopupWindowLinkMW("'.$oURL->sURL().'", "WebYepNotice", 400, 300);'."\n";
 				$s .= "});\n";
 				$s .= "</script>\n";
 			}
 			if($webyep_sModalWindowType == 'scriptaculous'){
-				$s .= "<script type='text/javascript'>\n";
+				$s .= "<script>\n";
 				$s .= "document.observe('dom:loaded', function() {\n";
 				$s .= 'WYPopupWindowLinkMW("'.$oURL->sURL().'", "WebYepNotice", 400, 300);'."\n";
 				$s .= "});\n";
@@ -633,34 +634,34 @@ class WYApplication
 		}
 		return $s;
 	}
-	
+
 	function sAlertWindowMW($oText)
 	{
 		global $webyep_sModalWindowType;
 		$s = "";
 		if($webyep_sModalWindowType == 'mootools'){
-			$s .= "<script type='text/javascript'>\n";
+			$s .= "<script>\n";
 			$s .= "window.addEvent('domready', function() {\n";
 			$s .= 'WYPopupWindowAlertMW("'.$oText.'", "WebYepalert", 300, 200);'."\n";
 			$s .= "});\n";
 			$s .= "</script>\n";
-		}		
+		}
 		if($webyep_sModalWindowType == 'jquery'){
-			$s .= "<script type='text/javascript'>\n";
+			$s .= "<script>\n";
 			$s .= "$(document).ready(function(e) {\n";
 			$s .= 'WYPopupWindowAlertMW("'.$oText.'", "WebYepalert", 300, 200);'."\n";
 			$s .= "});\n";
 			$s .= "</script>\n";
 		}
 		if($webyep_sModalWindowType == 'scriptaculous'){
-			$s .= "<script type='text/javascript'>\n";
+			$s .= "<script>\n";
 			$s .= "document.observe('dom:loaded', function() {\n";
 			$s .= 'WYPopupWindowAlertMW("'.$oText.'", "WebYepalert", 300, 200);'."\n";
 			$s .= "});\n";
 			$s .= "</script>\n";
-		}	
-		
-		
+		}
+
+
 		return $s;
 	}
 

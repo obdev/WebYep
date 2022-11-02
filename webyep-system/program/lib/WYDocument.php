@@ -137,8 +137,8 @@ class WYDocument
 	function iAddPageIDForDocumentPath($oP, $iNewID)
 	{
 		global $goApp;
-
-		$oF = new WYFile($this->oDocumentsFilePath());
+		$newpath = $this->oDocumentsFilePath();
+		$oF = new WYFile($newpath);
 		;
 		$sFileContent = "\r\n" . $oP->sPath . "\t" . $iNewID;
 		if (!$oF->bAppend($sFileContent)) {

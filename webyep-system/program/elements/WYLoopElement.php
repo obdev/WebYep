@@ -2,7 +2,7 @@
 // WebYep
 // (C) Objective Development Software GmbH
 // http://www.obdev.at
-session_start(); 
+//session_start(); 
 
 include_once(@webyep_sConfigValue("webyep_sIncludePath") . "/lib/WYElement.php");
 include_once(@webyep_sConfigValue("webyep_sIncludePath") . "/lib/WYLink.php");
@@ -43,7 +43,9 @@ class WYLoopElement extends WYElement
 	{
           global $webyep_oCurrentLoop;
          //
+           if(!empty($webyep_oCurrentLoop)){
          $a=$webyep_oCurrentLoop->iLoopID;
+      	}
          //print_r($a);
          //echo 'hello'; 
           //$webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"];
@@ -158,7 +160,7 @@ EOT;
 		$goApp->outputWarningPanels(); // give App a chance to say something
 	}*/
 	
-	function loopStart($bShowControls = true,$ids)
+	function loopStart($bShowControls = true,$ids=null)
 	{
 		global $goApp;
 		
@@ -201,7 +203,7 @@ EOT;
 		global $goApp, $webyep_bShowDisabledEditButtons, $webyep_bOtherLoginsMayEditGlobalData;
 		//echo $this->iCurrentLoopID();
 		if ($goApp->bEditMode) {
-//print_r($this);
+			//print_r($this);
 			if ($this->iEditedID == $this->iLoopID) $this->showAnchor();
 
 			if ($this->bUserMayEditThisElement()) {

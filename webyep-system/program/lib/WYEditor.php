@@ -24,23 +24,23 @@ class WYEditor
 	// private
 
 	// class methods
-	
+
 	static function dQueryForElement(&$oElement)
 	{
 		global $goApp;
 		$d = array();
-		
+
 		$d[WY_QK_EDITOR_FIELDNAME] = $oElement->sName;
 		$d[WY_QK_EDITOR_GLOBAL] = (int)$oElement->bGlobal;
 		$d[WY_QK_PAGEID] = $goApp->oDocument->iPageID(true);
 		$d[WY_QK_DI] = $goApp->oDocument->iDocumentInstance();
 		$d[WY_QK_LOOP_ID] = $goApp->oDocument->iLoopID();
-		
+
 		//echo "<pre>";
 		//print_r($d);
 		return $d;
 	}
-	
+
 	static function sHiddenFieldsForElement(&$oElement)
 	{
 		// key: "WEBYEP_FIELDNAME" with value "Activity Photo's" results in:
@@ -59,20 +59,20 @@ class WYEditor
 
 	static function sPostSaveScript($bKeepEditor = false)
 	{
-		
+
 		global $webyep_bDebug, $goApp, $webyep_sModalWindowType;
 		$s = "";
 
 		if ($goApp->bIsiPhone) {
-			$s .= "<script type='text/javascript'>\n";
+			$s .= "<script>\n";
 			$s .= "   window.opener.location.reload(true);\n";
 			if(!$bKeepEditor) {
 				$s .= "   window.close();\n";
 			}
 			$s .= "</script>";
 		}else {
-			$s .= "<script type='text/javascript'>\n";
-			
+			$s .= "<script>\n";
+
 			if(!$bKeepEditor) {
 				if($webyep_sModalWindowType == 'mootools' || $webyep_sModalWindowType == 'jquery' || $webyep_sModalWindowType == 'scriptaculous'){
 					$s .= "   window.parent.location.reload(true);\n";
@@ -91,7 +91,7 @@ class WYEditor
 		}
 		return $webyep_bDebug ? "":$s;
 	}
-   
+
    function getSizeCookieNames($sIdent, &$sW, &$sH)
    {
       $sIdent = str_replace(".", "_", $sIdent);
@@ -99,7 +99,7 @@ class WYEditor
       $sW = $sIdent . "_w";
       $sH = $sIdent . "_h";
    }
-   
+
    // these stupid browser use different sizes for:
    // window.open
    // window.resizerTo and
@@ -155,8 +155,8 @@ class WYEditor
 		}
 		$this->sFieldName = $goApp->sFormFieldValue(WY_QK_EDITOR_FIELDNAME);
 		$this->bGlobal = !((int)$goApp->sFormFieldValue(WY_QK_EDITOR_GLOBAL) == 0);
-		$this->bSave = false;		
-		
+		$this->bSave = false;
+
 		if ($goApp->sFormFieldValue(WY_QK_ACTION,false,'post') == WY_QK_EDITOR_SAVE) $this->bSave = true;
 		// set info in Document object so othes see the right values
 		$goApp->oDocument->setPageID((int)$goApp->sFormFieldValue(WY_QK_PAGEID));
@@ -167,6 +167,6 @@ class WYEditor
 	}
 
 
-	
+
 }
 ?>

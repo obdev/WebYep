@@ -109,7 +109,7 @@ class WYElement
 	
 	function iVersion()
 	{
-		return $this->dContent[WY_DK_VERSION];
+		return $this->dContent[WY_DK_VERSION] ?? null;
 	}
 
 	function bUseDocumentInstance()

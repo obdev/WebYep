@@ -1,4 +1,4 @@
-<?php session_start();
+<?php //session_start();
 /**
  * WebYep
  * @copyright Objective Development Software GmbH
@@ -51,10 +51,10 @@ function webyep_gallery($sFieldName, $bGlobal, $iMaxTNWidth, $iMaxTNHeight, $iCo
 
 global $webyep_oCurrentLoop; 
 //print_r($webyep_oCurrentLoop);
-	static $k=0;
+	static $j=0;$k=0;
 if($webyep_oCurrentLoop){
 
-	 $webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"];	
+	 $webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"]?? null;	
 $k++;
 } 
 
@@ -120,7 +120,7 @@ class WYGalleryElement extends WYElement
 		if (!isset($this->dContent[WY_DK_GALLERY_ID_ARRAY])) $this->dContent[WY_DK_LOOPIDARRAY] = array();
 		if ($goApp->bEditMode && $this->bUserMayEditThisElement()) $this->dispatchEditAction();
 	static $k=0;
-if($webyep_oCurrentLoop){
+if(!empty($webyep_oCurrentLoop)){
 	$loopArr=$webyep_oCurrentLoop->dContent['CONTENT'];
 	$loopVal=floor($k/1); 
 	// print_r($loopArr);	
@@ -460,6 +460,12 @@ $k++;
 			$sHTML .= "</div>";
 
 		}	
+
+		if(empty($_SESSION["loopid"])) {
+		 	$_SESSION["loopid"] = '0';
+
+		}
+
 		$sHTML = str_replace("WEBYEP_LOOP_ID=","WEBYEP_LOOP_ID=".$_SESSION["loopid"]."&",$sHTML);
 		return $sHTML;
 	}

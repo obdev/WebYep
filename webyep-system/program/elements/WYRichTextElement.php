@@ -21,10 +21,10 @@ function webyep_sRichTextContent($sFieldName, $bGlobal)
 * @param $mwEditorWidth
 * @param $mwEditorHeight
 */
-function webyep_richText($sFieldName, $bGlobal, $sCSSURL = "", $bObfuscate = true, $mwEditorWidth=850, $mwEditorHeight=620) {
+function webyep_richText($sFieldName, $bGlobal, $mwEditorWidth=850, $mwEditorHeight=620, $sCSSURL = "", $bObfuscate = true) {
 	global $webyep_oCurrentLoop; 
 	 if(!empty($webyep_oCurrentLoop)){
-	$webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"];
+	$webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"]?? null;
 
 	}
 	(new WYRichTextElement())->webyep_richText($sFieldName, $bGlobal, $sCSSURL, $bObfuscate, $mwEditorWidth, $mwEditorHeight);
@@ -39,7 +39,7 @@ class WYRichTextElement extends WYElement
    var $oCSSURL;
    var $bObfuscate;
 
-   function webyep_richText($sFieldName, $bGlobal, $sCSSURL, $bObfuscate = true, $mwEditorWidth, $mwEditorHeight)
+   function webyep_richText($sFieldName, $bGlobal, $mwEditorWidth, $mwEditorHeight, $sCSSURL, $bObfuscate = true)
    {
       global $goApp; //print_r($goApp);
       $o = new WYRichTextElement($sFieldName, $bGlobal, $sCSSURL, $bObfuscate, $mwEditorWidth, $mwEditorHeight);

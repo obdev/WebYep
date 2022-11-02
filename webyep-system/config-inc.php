@@ -1,57 +1,56 @@
 <?php
-   // WebYep
-   // (C) Objective Development Software GmbH
-   // http://www.obdev.at
+	// WebYep
+	// (C) Objective Development Software GmbH
+	// http://www.obdev.at
 
-   // Wichtig:   In dieser Datei dŸrfen am Beginn und Ende keine Leerzeilen eingefŸgt werden!!!
-   //            Achten Sie auch darauf, dass diese Datei keinen Unicode Byte Order Marker (BOM) enthŠlt!!!
-   // Important: Do not insert ANYTHING before or after the PHP block in this file!!!
-   //            Also make sure this file does not contain a Unicode Byte Order Marker (BOM)!!!
+	// Wichtig:   In dieser Datei dÃ¼rfen am Beginn und Ende keine Leerzeilen eingefÃ¼gt werden!!!
+	//            Achten Sie auch darauf, dass diese Datei keinen Unicode Byte Order Marker (BOM) enthÃ¤lt!!!
+	// Important: Do not insert ANYTHING before or after the PHP block in this file!!!
+	//            Also make sure this file does not contain a Unicode Byte Order Marker (BOM)!!!
 
-   // NŠhere Informationen zu den hier mšglichen Einstellungen finden Sie in der WebYep Dokumentation
-   // Further information on the configuration settings in this file can be found in the WebYep documentation
-
-
-
-   // Name und Kennwort fŸr die Anmeldung
-   // --
-   // Username and password logging in
+	// NÃ¤here Informationen zu den hier mÃ¶glichen Einstellungen finden Sie in der WebYep Dokumentation
+	// Further information on the configuration settings in this file can be found in the WebYep documentation
 
 
-$webyep_sAdminName = "admin";
+
+	// Name und Kennwort fÃ¼r die Anmeldung
+	// --
+	// Username and password logging in
+
+$webyep_sAdminName = "";
 $webyep_sAdminPassword = "";
 
 
-   // Multi Login - zusŠtzliche Logins fŸr einzelne Seiten o. Seitengruppen
-   // (entfernen Sie die Doppel-SchrŠgstriche, um es zu verwenden)
-   // $webyep_aMultiLoginName[] = "einName";
-   // $webyep_aMultiLoginPassword[] = "einKennwort";
-   // $webyep_aMultiLoginURLPatterns[] = "/eineSeite.php /einOrdner/*";
+	// Multi Login - zusÃ¤tzliche Logins fÃ¼r einzelne Seiten o. Seitengruppen
+	// (entfernen Sie die Doppel-SchrÃ¤gstriche, um es zu verwenden)
+	// $webyep_aMultiLoginName[] = "einName";
+	// $webyep_aMultiLoginPassword[] = "einKennwort";
+	// $webyep_aMultiLoginURLPatterns[] = "/eineSeite.php /einOrdner/*";
 
-   // Multiple Logins - additional logins for specific pages or groups of pages
-   // (remove the double slashes to use it)
-// $webyep_aMultiLoginName[] = "admin";
-// $webyep_aMultiLoginPassword[] = "";
-// $webyep_aMultiLoginURLPatterns[] = "/pageA.php /pageB.php";
+	// Multiple Logins - additional logins for specific pages or groups of pages
+	// (remove the double slashes to use it)
+	// $webyep_aMultiLoginName[] = "admin";
+	// $webyep_aMultiLoginPassword[] = "";
+	// $webyep_aMultiLoginURLPatterns[] = "/pageA.php /pageB.php";
 
-// $webyep_aMultiLoginName[] = "admin";
-// $webyep_aMultiLoginPassword[] = "";
-// $webyep_aMultiLoginURLPatterns[] = "/workshops/* /news.php";
+	// $webyep_aMultiLoginName[] = "admin";
+	// $webyep_aMultiLoginPassword[] = "";
+	// $webyep_aMultiLoginURLPatterns[] = "/workshops/* /news.php";
 
-// $webyep_aMultiLoginName[] = "admin";
-// $webyep_aMultiLoginPassword[] = "";
-// $webyep_aMultiLoginURLPatterns[] = "/workshops/* /workshops/*/*";
+	// $webyep_aMultiLoginName[] = "admin";
+	// $webyep_aMultiLoginPassword[] = "";
+	// $webyep_aMultiLoginURLPatterns[] = "/workshops/* /workshops/*/*";
 
-// $webyep_aMultiLoginName[] = "admin";
-// $webyep_aMultiLoginPassword[] = "";
-// $webyep_aMultiLoginURLPatterns[] = "*public.php";
+	// $webyep_aMultiLoginName[] = "admin";
+	// $webyep_aMultiLoginPassword[] = "";
+	// $webyep_aMultiLoginURLPatterns[] = "*public.php";
 
 
 ini_set('display_errors', 'off');
 error_reporting(E_ALL);
 
 
-   //system url use to show uploaded files from rich text editors and inside editors
+   //system url use to show uploaded files from rich text editors and inside edotors
 
 define('BASE_URL', '');
 
@@ -61,8 +60,8 @@ define('BASE_URL', '');
 define('BASE_PATH', realpath(dirname(__FILE__) . '/../webyep-system'));
 
 
-   // Wenn eine Seite editierbare Felder enthŠlt, der/die BenutzerIn aber keine Editier-Rechte hat,
-   // kšnnen die Editier-Knšpfe inaktiv oder gar nicht angezeigt werden
+   // Wenn eine Seite editierbare Felder enthÃ¤lt, der/die BenutzerIn aber keine Editier-Rechte hat,
+   // kÃ¶nnen die Editier-KnÃ¶pfe inaktiv oder gar nicht angezeigt werden
    // --
    // If a page contains editable fields but the user has insiffucient privileges
    // WebYep can display the edit buttons disable ot not at all
@@ -70,7 +69,7 @@ define('BASE_PATH', realpath(dirname(__FILE__) . '/../webyep-system'));
 $webyep_bShowDisabledEditButtons = false;
 
 
-   // Ob andere BenutzerInnen als der/die Haupt-BenutzerIn ($webyep_sAdminName) "globale" Inhalte editieren dŸrfen sollen
+   // Ob andere BenutzerInnen als der/die Haupt-BenutzerIn ($webyep_sAdminName) "globale" Inhalte editieren dÃ¼rfen sollen
    // --
    // Whether editors other than the main editor should be able to edit "global" fields
 
@@ -104,13 +103,13 @@ $webyep_sCharset = "utf-8";
 $webyep_sHTMLStandard = "auto";
 
 
-   // Die Einstellung $webyep_bUseTablesForMenus wird nicht mehr unterstŸtzt!
+   // Die Einstellung $webyep_bUseTablesForMenus wird nicht mehr unterstÃ¼tzt!
    // $webyep_bUseTablesForMenus is deprecated and always false now!
 
 $webyep_sMenuType = "listJS";
-   // mšgliche Werte:
+   // mÃ¶gliche Werte:
    // "list".....ohne JavaScript-Funktion
-   // "listJS"...mit JavaScript-Funktion zum Ein-/Ausblenden von MenŸzweigen
+   // "listJS"...mit JavaScript-Funktion zum Ein-/Ausblenden von MenÃ¼zweigen
    // --
    // possible values are:
    // "list".....no JavaScript functionality
@@ -118,22 +117,22 @@ $webyep_sMenuType = "listJS";
 
 
 
-   // nur fŸr $webyep_sMenuType="listJS":
+   // nur fÃ¼r $webyep_sMenuType="listJS":
    // only for $webyep_sMenuType="listJS":
 
 $webyep_bAutoCloseMenus = true;
-   // mšgliche Werte:
-   // true.....beim šffnen eines MenŸzweiges werden automatisch alle anderen Zweige geschlossen
-   // false....die MenŸzweige werden manuell von den BenutzerInnen geschlossen
+   // mÃ¶gliche Werte:
+   // true.....beim Ã¶ffnen eines MenÃ¼zweiges werden automatisch alle anderen Zweige geschlossen
+   // false....die MenÃ¼zweige werden manuell von den BenutzerInnen geschlossen
    // --
    // possible values are:
    //    true.....when expanding a menu tree, all other tree collapse automatically
    //    false....menu trees are not automatically collapsed
 
 $webyep_bRememberOpenMenus = true;
-   // mšgliche Werte:
-   // true.....gešffnete MenŸzweige werden in einem Cookie gespeichert
-   // false....gešffnete MenŸzweige werden nicht gespeichert - sobald eine neue Seite gešffnet wird, werden alle Zweige automatisch geschlossen, au§er der, zu dem die aktuelle Seite gehšrt
+   // mÃ¶gliche Werte:
+   // true.....geÃ¶ffnete MenÃ¼zweige werden in einem Cookie gespeichert
+   // false....geÃ¶ffnete MenÃ¼zweige werden nicht gespeichert - sobald eine neue Seite geÃ¶ffnet wird, werden alle Zweige automatisch geschlossen, auÃŸer der, zu dem die aktuelle Seite gehÃ¶rt
    // --
    // possible values are:
    // true.....expanded menu trees will be saved in a cookie
@@ -152,24 +151,24 @@ $webyep_submenu = "OFF";
 $webyep_bOpenFullURLsInNewWindow = false;
    // Set to true of you want the Long Text and Image Elements to open full URLs (including the http:// part) in a new browser window
    // --
-   // Setzen Sie diesen Wert auf true, wenn das Flie§text-Element und das Bild-Element absolute URLs (die den "http://"-Teil enthalten) in einem neuen Browser-Fenster šffnen sollen
+   // Setzen Sie diesen Wert auf true, wenn das FlieÃŸtext-Element und das Bild-Element absolute URLs (die den "http://"-Teil enthalten) in einem neuen Browser-Fenster Ã¶ffnen sollen
 
 
 
-   //   // Wenn Sie das wei§e Etikett webyep wŸnschen, kšnnen Sie die...
+   //   // Wenn Sie das weiÃŸe Etikett webyep wÃ¼nschen, kÃ¶nnen Sie die...
    // 1 - Produktname,
    // 2 - der Firmenname,
    // 3 - und Firmen-URL-Link
-   // Dies wird in jedem: Editor-Fenster, die Hilfe und die AnkŸndigung Fenster erscheinen)
+   // Dies wird in jedem: Editor-Fenster, die Hilfe und die AnkÃ¼ndigung Fenster erscheinen)
    // --
    // If you wish to white label webyep, you can change the... 
    // 1 - product name, 
    // 2 - the company name, 
    // 3 - and company URL link 
    // Note this will appear in every: editor window, the help and the notice windows)
-$webyep_sProductName = 'MyProduct';
-$webyep_sCompanyName = 'WebYep by Objective Development';
-$webyep_sCompanyLink = 'http://www.obdev.at/index.html';
+$webyep_sProductName = 'WebYep CMS';
+$webyep_sCompanyName = '';
+$webyep_sCompanyLink = 'https://webyepstuff.com';
 
 
    // If you want to use the German version of WebYep, please change this value from "auto" to "deutsch".
@@ -252,8 +251,8 @@ $webyep_CustomDateFromat = "j-n-Y";
 $webyep_CustomTimeFromat = "g:m a";
 
 
-   // Wichtig: In dieser Datei dŸrfen am Beginn und Ende keine Leerzeilen eingefŸgt werden!!!
-   //          Achten Sie auch darauf, dass diese Datei keinen Unicode Byte Order Marker (BOM) enthŠlt!!!
+   // Wichtig: In dieser Datei dÃ¼rfen am Beginn und Ende keine Leerzeilen eingefÃ¼gt werden!!!
+   //          Achten Sie auch darauf, dass diese Datei keinen Unicode Byte Order Marker (BOM) enthÃ¤lt!!!
    // --
    // Important: Do not insert ANYTHING before or after the PHP block in this file!!!
    //            Also make sure this file does not contain a Unicode Byte Order Marker (BOM)!!!

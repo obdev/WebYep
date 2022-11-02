@@ -231,8 +231,8 @@ class WYImage extends WYHTMLTag {
         $oP = $this->oPath();
         if (is_readable($oP->sPath)) {
             @$aDim = getimagesize($oP->sPath);
-            $iW = $aDim[0];
-            $iH = $aDim[1];
+            $iW = $aDim[0] ?? null;
+            $iH = $aDim[1] ?? null;
         }
         if ($iW && $iH) {
             $this->dAttributes['width'] = $iW;

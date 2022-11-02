@@ -47,7 +47,7 @@ function webyep_image($sFieldName, $bGlobal, $sAttributes = "", $sURL = "", $sTa
 /*   modified code */
 	global $webyep_oCurrentLoop; 
 	if(!empty($webyep_oCurrentLoop)){
-	 $webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"];
+	 $webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"]?? null;
 	}
 /*  !  modified code */
 

@@ -14,13 +14,14 @@ function webyep_sLongTextContent($sFieldName, $bGlobal) {
     return $o->sText();
 }
 
-function webyep_longText($sFieldName, $bGlobal, $deprecated1 = "", $bHide = false, $mwEditorWidth=520, $mwEditorHeight=450) {
+function webyep_longText($sFieldName, $bGlobal, $mwEditorWidth=520, $mwEditorHeight=450, $deprecated1 = "", $bHide = false) {
 	global $webyep_oCurrentLoop; static $j=0;
-		$loopArr=$webyep_oCurrentLoop->dContent['CONTENT'];
-		$loopVal=floor($j/1); 
-		$loopid=$loopArr[$loopVal];
+
 	if(!empty($webyep_oCurrentLoop)){
-	 $webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"];
+        $loopArr=$webyep_oCurrentLoop->dContent['CONTENT'];
+        $loopVal=floor($j/1);
+        $loopid=$loopArr[$loopVal] ?? null;
+	 $webyep_oCurrentLoop->iLoopID=$_SESSION["loopid"]?? null;
 	}
 
     (new WYLongTextElement())->webyep_longText($sFieldName, $bGlobal, $deprecated1, $bHide, $mwEditorWidth, $mwEditorHeight);
@@ -33,10 +34,11 @@ class WYLongTextElement extends WYElement {
     // instance variables
     var $bHideEMailAddress;
 
-    function webyep_longText($sFieldName, $bGlobal, $deprecated1 = "", $bHide = false, $mwEditorWidth, $mwEditorHeight) {
-       
+    function webyep_longText($sFieldName, $bGlobal, $mwEditorWidth, $mwEditorHeight, $deprecated1 = "", $bHide = false) {
+
         $o = new WYLongTextElement($sFieldName, $bGlobal, $bHide, $mwEditorWidth, $mwEditorHeight);
-	global $goApp;global $webyep_oCurrentLoop; 
+	global $goApp;
+    global $webyep_oCurrentLoop;
 		//echo $webyep_oCurrentLoop->iLoopID;
 //print_r($o);
         $s = $o->sDisplay();
@@ -76,7 +78,7 @@ class WYLongTextElement extends WYElement {
     }
 
     function _sFormatEMailLinks($sLine) {   // also used by guestbook!
-        return preg_replace("/([-a-zA-Z0-9_.]+)@([-a-zA-Z0-9_.]+[-a-zA-Z0-9_])/", "<script type='text/javascript'>\n/* <![CDATA[ */\ndocument.write(\"<a href='mailto:\\1\"+String.fromCharCode(64)+\"\\2'>\\1\"+String.fromCharCode(64)+\"\\2<\\/a>\");\n/* ]]> */\n</script><noscript><div style=\"display:inline\">\\1(_AT_)\\2</div></noscript>", $sLine);
+        return preg_replace("/([-a-zA-Z0-9_.]+)@([-a-zA-Z0-9_.]+[-a-zA-Z0-9_])/", "<script>\n/* <![CDATA[ */\ndocument.write(\"<a href='mailto:\\1\"+String.fromCharCode(64)+\"\\2'>\\1\"+String.fromCharCode(64)+\"\\2<\\/a>\");\n/* ]]> */\n</script><noscript><div style=\"display:inline\">\\1(_AT_)\\2</div></noscript>", $sLine);
     }
 
     function _aSplitTableCells($sLine) {
@@ -182,7 +184,10 @@ class WYLongTextElement extends WYElement {
 
             if ($bHideEMailAddress) {
                 if (preg_match("|[-a-zA-Z0-9_.]+@[-a-zA-Z0-9_.]+|", $sLine)) {
-                    $sLine = WYLongTextElement::_sFormatEMailLinks($sLine);
+
+                    $WYLongTextElement = new WYLongTextElement();
+                    $sLine = $WYLongTextElement->_sFormatEMailLinks($sLine);
+
                 }
             } else {
                 $sLine = preg_replace('|([-a-zA-Z0-9_.]+@[-a-zA-Z0-9_.]+[-a-zA-Z0-9_])|', "<a href='mailto:\\1'>\\1</a>", $sLine);
