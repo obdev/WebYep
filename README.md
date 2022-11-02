@@ -11,7 +11,7 @@ There are many WebCMS available, even Open Source, but the original WebYep was d
 * Freeway & RapidWeaver plugins are available plus code snippets for manual insertion into HTML. A Dreamweaver plugin is on the cards!!
 
 
-So whats new in version 3.0.3 release?
+So whats new in version 3.0.3 release I hear you ask?
 ============================
 
 1. A lot!!!! 
