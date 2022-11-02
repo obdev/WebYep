@@ -48,7 +48,7 @@ include("$webyep_sIncludePath/webyep.php");
 <?php webyep_richText("rich", false, "", true, 900, 600); // WebYepV2 ?>
 
 <!-- MARKUP CODE -->
-<?php webyep_markupText("markup", false, "", false, 600, 400); // WebYepV2 ?>
+<?php webyep_markupText("markup", false, "", false, true, 600, 400); // WebYepV3 ?>
 
 <!-- READMORE CODE -->
 <?php webyep_readMore("read", "Read More", "readmorepage.php", "_self", 550, 240); // WebYepV2 ?>
