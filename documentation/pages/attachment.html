@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="VS Code" />
-    <title>Markup Text</title>
+    <title>Attachment</title>
     <link rel="stylesheet" href="../code/styles.css" />
     <script src="../code/scripts.js" defer></script>
   </head>
@@ -49,22 +49,18 @@
               <details open>
                 <summary class="current">Elements</summary>
                 <ul>
-                  <li>
-                    <a href="elementsoverview.html">Elements Overview</a>
-                  </li>
+                  <li><a href="elementsoverview.html">Elements Overview</a></li>
                   <li><a href="initcode.html">Init Code</a></li>
-                  <li>
-                    <a href="logonbutton.html">Logon Button</a>
-                  </li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
                   <li><a href="shorttext.html">Short Text</a></li>
                   <li><a href="longtext.html">Long Text</a></li>
                   <li><a href="richtext.html">Rich Text</a></li>
-                  <li>
-                    <a href="markuptext.html" class="current">Markup Text</a>
-                  </li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
                   <li><a href="image.html">Image</a></li>
                   <li><a href="gallery.html">Image Gallery</a></li>
-                  <li><a href="attachment.html">Attachment</a></li>
+                  <li>
+                    <a href="attachment.html" class="current">Attachment</a>
+                  </li>
                   <li><a href="menu.html">Menu</a></li>
                   <li><a href="loop.html">Loop</a></li>
                   <li><a href="readmore.html">Read More</a></li>
@@ -90,24 +86,22 @@
         </div>
       </aside>
       <main>
-        <h1><strong>Markup Text</strong> element</h1>
+        <h1><strong>Attachment</strong> element</h1>
         <p>
           <strong
-            >This element is useful for adding code to the web page, like
-            embedded Vimeo or YouTube videos, Google Calendars, registration
-            forms, event booking code, PayPal 'buy now' buttons, an Open Street
-            Map, code samples, and much more.</strong
+            >With this WebYep element you can attach arbitrary documents to a
+            web page, offering them for download.</strong
           >
-          It's a flexible element, which could be good to use if you or a client
-          don't mind working with code. For example, if you have a YouTube video
-          embedded within a web page, the Markup Text provides a method to swap
-          the current video out for a new one.
+          The user can upload a file such as a Word document or a PDF. The
+          Attachment element will create a download link (using the document
+          filename) for it. And by clicking on the link, visitors can download
+          the file in their web browser.
         </p>
-        <h3>The Markup Text element code</h3>
+        <h3>The Attachment element code</h3>
         <pre>
-&lt;?php webyep_markupText("Fieldname", false, "", false, true, 600, 400); // WebYepV3 ?></pre
+&lt;?php webyep_attachment("attachment", false, "", 550, 240); // WebYepV2 ?&gt;</pre
         >
-        <h3>Arguments for the function call</h3>
+        <h3>Arguments for the function call:</h3>
         <ol>
           <li>
             "<strong>Fieldname</strong>": A string - the field name for this
@@ -115,43 +109,83 @@
           </li>
           <li>
             <strong>true/false</strong>: A boolean - the scope for this element.
-            <br /><strong>true</strong> if the element should have the same
-            content on all pages (global).<br /><strong>false</strong> if it
-            should have different content on each page it appears on
+            <br />true if the element should have the same content on all pages
+            (global).<br />false if it should have different content on each
+            page it appears on.
           </li>
           <li>
-            <strong>""</strong>: A string - obsolete, pass an empty string ("").
+            <strong>URL</strong>: Optional supportive image/icon location e.g.
+            (<em>images/artwork-highlighter.png</em>).
           </li>
           <li>
-            <strong>true/false</strong>: A boolean - whether email links should
-            be encoded. <br /><strong>true</strong> if email addresses entered
-            in the text element should be encoded using Javascript.<br /><strong
-              >false</strong
-            >
-            if they should be simply output as HTML. (default)
-          </li>
-          <li>
-            <strong>true/false</strong>: A boolean - render HTML exactly as
-            entered or convert to entities.<br /><strong>true</strong> no
-            modification to special characters. Code works exactly as it was
-            entered. (default).<br /><strong>false</strong> special characters
-            (like <code>&lt;</code>) will be converted into HTML entities (like
-            <code>&amp;lt;</code>).
-          </li>
-          <li>
-            <strong>600, 400:</strong> Maximum width and height of the editor
+            <strong>550, 240:</strong> Maximum width and height of the editor
             window.
           </li>
         </ol>
         <h3>Screenshots</h3>
         <figure>
           <img
-            src="../images/markup-text.png"
-            alt="The Markup Text editor window."
+            src="../images/wy-attachment-link.png"
+            alt="A plain Attachment link, as it appears to website users."
           />
-          <figcaption>The Markup Text editor window.</figcaption>
+          <figcaption>
+            The Attachment link, as it appears to website users.
+          </figcaption>
         </figure>
-        <h3>Attributes of the Short Text element</h3>
+        <figure>
+          <img
+            src="../images/wy-attachment-icon.png"
+            alt="An Attachment link, with the addition of an image icon."
+          />
+          <figcaption>
+            An Attachment link, with the addition of an image icon.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="../images/wy-attachment.png"
+            alt="The Attachment editor window, prior to a file being selected for upload."
+          />
+          <figcaption>
+            The Attachment editor window, prior to a file being selected for
+            upload.
+          </figcaption>
+        </figure>
+        <h3>A note about forced downloads</h3>
+        <p>
+          WebYep does its best to make sure that browsers really download the
+          document and do not display it directly, which is what they tend to do
+          with some file types (like PDF). Unfortunately not all browsers
+          conform to the relevant internet standards (defined in the HTTP
+          protocol specification) and thus some older web browsers might
+          nevertheless display the document instead of starting a download.
+        </p>
+        <h3>File size</h3>
+        <p>The size of the uploaded file is limited by two parameters:</p>
+        <ol>
+          <li>
+            <strong>The PHP configuration of your provider.</strong> The
+            provider running the webserver can set various limits to uploads
+            done via PHP. Usually they are set around 2MB - WebYep tries to
+            figure out that limit and displays it in the file upload window.
+          </li>
+          <li>
+            <strong>The internet connection speed.</strong> If an upload takes
+            too long (due to rate if file size to internet connection speed),
+            the browser or server might interrupt the upload process. What
+            exactly "too long" means, depends on a lot of factors (which
+            browser, which version, which operating system, etc.), but a file
+            size of 1-2MB can be considered safe in most situations. It is also
+            important to note that this limit affects only the upload by the
+            user, not the download done by the visitors.
+          </li>
+        </ol>
+        <p>
+          Also consider that if the user has an older smartphone / tablet device
+          (without a file browser) or has a corporate 'firewall' installed, they
+          may be blocked from uploading any files.
+        </p>
+        <h3>Attributes of the Attachment element</h3>
         <h4>Fieldname</h4>
         <p>
           A distinctive name for that element. This name will be displayed in
@@ -165,35 +199,6 @@
           this page - even if another element on a different page has the same
           name. If set to "for all documents" the content will be the same on
           all pages for elements of this kind that use the same name.
-        </p>
-        <h4>Encode email links</h4>
-        <p>
-          If a user enters an email address into a Markup Text Element, WebYep
-          will display it as a clickable link ('mailto' email link).
-        </p>
-        <p>
-          If you enable the 'Encode Email Links' option, WebYep will
-          <em>encode</em> these links to <em>keep SPAM bots</em> from collecting
-          the email addresses.
-        </p>
-        <p>
-          To do so, WebYep uses a Javascript based encoding. If the visitors of
-          your website have <em>deactivated Javascript</em>, they will only see
-          these email addresses in the form:
-        </p>
-        <pre>name(_AT_)domain.com</pre>
-        <p>and the email addresses will then not be clickable.</p>
-        <h4>Preserve HTML code or convert to entities</h4>
-        <p>
-          This argument was added in WebYep 3. By default (or with the argument
-          set to 'true') any HTML code will work exactly in the page, as it was
-          entered. So as an example, pasted YouTube embed code will render out
-          on the page as an actual video. Alternatively, setting this argument
-          to 'false' will result in HTML tags and special characters being
-          converted into HTML entities. This latter method can be useful if you
-          need to make a <code>&lt;pre&gt;</code> block editable, and optionally
-          have WebYep safely convert HTML tags (and other special characters)
-          into HTML entities, which can be viewed as code on the page.
         </p>
         <h4>Modal window size</h4>
         <p>

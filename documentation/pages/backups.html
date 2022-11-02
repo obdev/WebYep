@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="VS Code" />
-    <title>Basic Configuration</title>
+    <title>Backups</title>
     <link rel="stylesheet" href="../code/styles.css" />
     <script src="../code/scripts.js" defer></script>
   </head>
@@ -18,13 +18,11 @@
             <li><a href="../index.html">Introduction</a></li>
             <li><a href="installation.html">Installation &amp; Setup</a></li>
             <li>
-              <details open>
-                <summary class="current">Configuration</summary>
+              <details>
+                <summary>Configuration</summary>
                 <ul>
                   <li>
-                    <a href="configuration.html" class="current"
-                      >Basic Configuration</a
-                    >
+                    <a href="configuration.html">Basic Configuration</a>
                   </li>
                   <li><a href="multiplelogins.html">Multiple Logins</a></li>
                   <li>
@@ -34,13 +32,13 @@
               </details>
             </li>
             <li>
-              <details>
-                <summary>Tutorials</summary>
+              <details open>
+                <summary class="current">Tutorials</summary>
                 <ul>
                   <li><a href="firststeps.html">First Steps</a></li>
                   <li><a href="themenu.html">The Menu</a></li>
                   <li><a href="theloop.html">The Loop</a></li>
-                  <li><a href="backups.html">Backups</a></li>
+                  <li><a href="backups.html" class="current">Backups</a></li>
                   <li>
                     <a href="whitelabeledversion.html">White Labeled Version</a>
                   </li>
@@ -88,63 +86,58 @@
         </div>
       </aside>
       <main>
-        <h1><strong>Basic</strong> configuration</h1>
-        <p>
+        <h1>Making <strong>backups</strong></h1>
+        <p class="intro-text">
           <strong
-            >Before uploading the webyep-system folder to your web server, you
-            should set up the WebYep configuration.</strong
+            >WebYep saves all content entered and uploaded by the users in a
+            folder on the server.</strong
           >
-          Most importantly perhaps, you should set the username and password.
-          Whenever a user wants to change the website's content, he or she has
-          to log in with username and password (by clicking the
-          <a href="logonbutton.html">logon&nbsp;button</a> on a web page). This
-          username and password are the first configuration settings you should
-          take care of.
+          There is no database (like MySQL, SQlite or PostgreSQL). WebYep is a
+          'flat-file CMS'. Although your web hosting provider should create
+          backups of your whole website each day, it's a good idea to manually
+          create backups of the WebYep data yourself. Particularly if you plan
+          to do any major website updates or move the website to another server.
         </p>
+        <h3>Where does WebYep store its data?</h3>
+        <span
+          >WebYep saves all content entered and uploaded by the users into
+          /webyep-system/data/ on the server. This includes editable text, plus
+          images or other files (like PDFs) that may heve been uploaded.</span
+        >
+        <h3>How do I backup the data?</h3>
         <p>
-          The configuration settings are stored in a text file named
-          config-inc.php inside the webyep-system folder. To edit the
-          configuration file, open it in any text editor.
+          To create a backup simply download the whole 'data' folder, from
+          inside of 'webyep-system'. Make sure the transfer mode of your FTP
+          program is set to binary.
         </p>
+        <h3>How do I restore data from a backup?</h3>
+        <ol>
+          <li>
+            Remove the whole webyep-system folder on the server (if data was
+            lost or distorted the chances are that the webyep system could also
+            have been damaged).
+          </li>
+          <li>
+            Reinstall WebYep (see
+            <a href="installation.html">installation</a> on the server).
+          </li>
+          <li>
+            Replace the 'data' folder inside the webyep-system folder on the
+            server with your backup copy (e.g. by removing the folder on the
+            server and uploading the backup copy). Make sure the transfer mode
+            of your FTP program is set to binary.
+          </li>
+        </ol>
         <p>
-          <strong>Note:</strong> The configuration file is UTF-8 encoded to
-          display special characters correctly. Some text editors tend to add an
-          invisible character sequence at the start of a UTF-8 file when saving
-          it: The UTF-8 BOM (Byte Order Mark) will, unfortunately, break the
-          configuration file (PHP then refuses to send HTTP headers). Please
-          make sure to switch off this feature in your editor or use an editor
-          that does not add the BOM.
+          Be sure to use the same version when reinstalling WebYep, because not
+          all versions of WebYep are data compatible. You can check the
+          installed version by accessing the WebYep status info page:
         </p>
-        <h3>Username and password</h3>
+        <p>https://example.com/webyep-system/info.php</p>
         <p>
-          These options determine who can log in to WebYep. You should at least
-          set the administrator's password.
-        </p>
-        <pre>$webyep_sAdminName</pre>
-        <p>
-          This is the primary editor's username (master login). The
-          Administrator can edit every WebYep field.
-        </p>
-        <pre>$webyep_sAdminPassword</pre>
-        <p>The Administrator's password.</p>
-        <p>
-          To set up the username and password, change the content between the
-          quotes in this block of the configuration file:
-        </p>
-        <pre>$webyep_sAdminName = "<span class="orange">admin</span>";<br>$webyep_sAdminPassword = "<span class="orange">test</span>";</pre>
-        <p>
-          Please note that both username and password are case sensitive! A
-          username can either be a name or an email address.
-        </p>
-        <p>
-          For the password, use something unique, that is too difficult for
-          someone else to guess. This will help keep your website more secure
-          and prevent a hacker changing your web page content!
-        </p>
-        <p>
-          If you need to allow multiple people to login and control what pages
-          they are allowed to edit, please see the
-          <a href="multiplelogins.html">multiple&nbsp;logins</a> guide.
+          Replace 'example.com' with your actual website domain name. Type this
+          address in the browser address bar, and you should see your WebYep
+          info and diagnostics page shown.
         </p>
       </main>
     </div>

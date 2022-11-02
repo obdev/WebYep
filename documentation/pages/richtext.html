@@ -1,201 +1,276 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>rich text</title>
-<meta name="viewport" content="width = device-width, minimum-scale = 0.25, maximum-scale = 1.60">
-<meta name="generator" content="Freeway Pro 7.1.4">
-<link rel=stylesheet href="css/mini-css-reset.css">
-<style type="text/css">
-<!--
-body { margin:0px; height:100% }
-html { height:100% }
-form { margin:0px }
-body > form { height:100% }
-img { margin:0px; border-style:none }
-button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
-table { empty-cells:hide }
-td { padding:0px }
-.f-sp { font-size:1px; visibility:hidden }
-.f-lp { margin-bottom:0px }
-.f-fp { margin-top:0px }
-a:link { color:#5294c4 }
-a:visited { color:#5294c4 }
-a:hover { color:#c28df2 }
-a:active { color:#c28df2 }
-       * { margin-top:0px; margin-bottom:0px }
-       html { font-size:62.5% }
-      body { font-family:'Open Sans',Helvetica,sans-serif; font-size:1.5em; line-height:1.5 }
-     dl { margin:1em 0em 1.65em 2.1em }
-    dd { margin:0em; padding:0 }
-    ul { margin:1em 0em 1.65em 1.1em }
-   li { margin:0em 0em 0.33em; padding:0 }
-   p { color:#666; line-height:1.5; margin-top:0em; margin-bottom:0.75em }
-  .button:hover { color:#e6e6e6; background-color:#333; border:1px solid #333; padding:8px 16px; cursor:pointer }
-  .dropdown:hover { color:#e6e6e6; background-color:#333; padding:6px 40px 6px 8px; border:1px solid #666; cursor:pointer }
-  .input:focus { border:1px solid #333 }
-  .input:hover { color:#3c2e69 }
-  .r1 { -webkit-border-radius:1px; -moz-border-radius: 1px;  border-radius: 1px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r2 { -webkit-border-radius:2px; -moz-border-radius: 2px;  border-radius: 2px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r3 { -webkit-border-radius:3px; -moz-border-radius: 3px;  border-radius: 3px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r4 { -webkit-border-radius:4px; -moz-border-radius: 4px;  border-radius: 4px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r5 { -webkit-border-radius:5px; -moz-border-radius: 5px;  border-radius: 5px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  hr { margin:2.75em 0px 2.25em; height:0; border: 0; border-top: 1px solid #ddd }
-#wynavigation a { color:#fff; text-decoration:none }
-#wynavigation a:hover { color:#e6e6e6 }
-address { text-decoration:none; font-size:13px; line-height:1.5; margin:0.5em; font-style:normal }
-blockquote { color:#777; font-style:italic; text-decoration:none; margin:1em 0em 1.65em 2.5em; border-left:2px solid #ddd; padding-left:1.65em }
-cite { font-size:13px }
-code { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:1.4rem }
-em { font-style:italic }
-h1 { color:#3c2e69; font-size:3.8rem; line-height:1.1; margin-bottom:1.25em; margin-top:1em; font-weight:300 }
-h1:first-child { margin-top:0px }
-h2 { color:#fb694d; font-size:2.8rem; line-height:1.2; margin-bottom:0.6em; margin-top:1.5em; font-weight:300 }
-h2:first-child { margin-top:0px }
-h3 { color:#fb694d; font-size:2.1rem; line-height:1.3; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h3:first-child { margin-top:0px }
-h4 { font-size:1.8rem; line-height:1.4; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h4:first-child { margin-top:0px }
-h5 { font-size:1.6rem; line-height:1.5; margin-bottom:0.75em; margin-top:1.5em; font-weight:400 }
-h5:first-child { margin-top:0px }
-h6 { font-weight:bold; font-size:1.4rem; text-transform:uppercase; font-variant:normal; line-height:1; margin-bottom:0.75em; margin-top:1.6em }
-h6:first-child { margin-top:0px }
-pre { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:87.5%; margin-left:1em; margin-top:0em; margin-bottom:0.75em; white-space:pre-wrap }
-small { font-size:1.3rem }
-strong { font-weight:700 }
-.intro-text { color:#3c2e69; font-size:1.8rem; line-height:1.6; margin-top:0em; margin-bottom:0.75em; font-weight:300 }
-.fw400 { font-weight:400 }
-.numbered { margin-bottom:0.75em }
-.RED { color:#f00 }
-.preInline { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:87.5% }
-.WHITE { color:#fff }
-#PageDiv { position:relative; width:100%; min-height:100%; margin:0px auto 0px 0px }
-#m1.f-ms { width:calc(100vw - 315px); min-height:100%; z-index:0; float:left; margin-left:315px }
-#m2.f-ms { width:91%; min-height:119px; z-index:0; margin:95px 50px 80px 16px }
-#img-wrap { width:100%; z-index:0 }
-#wyrichtext { vertical-align:top; overflow:hidden }
-#navWrap.f-ms { position:fixed; left:0px; top:0px; width:280px; min-height:332px; z-index:1; background-color:#60448c; height:100vh }
-#wynavigation.f-ms { width:265px; min-height:89px; z-index:0; margin-left:15px; margin-top:95px; margin-right:auto }
-@media screen and (max-width:800px)
-{
-	#PageDiv { width:auto; max-width:800px }
-}
-@media screen and (max-width:640px)
-{
-	#PageDiv { max-width:640px }
-}
-@media screen and (max-width:384px)
-{
-	#PageDiv { max-width:384px }
-}
--->
-</style>
-<!--[if lt IE 9]>
-<script src="../Resources/html5shiv.js"></script>
-<![endif]-->
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic">
-<link rel=stylesheet href="css/default.css">
-<link rel=stylesheet href="css/common.css">
-<link rel=stylesheet href="css/mtree.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/velocity/0.2.1/jquery.velocity.min.js"></script>
-<style type="text/css"><!----></style></head>
-<body>
-<div id="PageDiv">
-	<div id="m1" class="f-ms"><div id="m2" class="f-ms"><h1 class="f-fp">Rich Text</h1>
-			<p class="intro-text"><span class="fw400">This element is useful for long text passages like product descriptions or news articles - or even whole pages.</span> The text content of this element can be formatted by the user by either entering raw HTML code or by using one of the supported WYSIWYG HTML in-browser editors &quot;TinyMCE&quot;, &quot;CKEditor&quot; or if you have purchased the commmercial version of WebYep2, &quot;Redactor&quot;.</p>
-			<p>This element is represented by the following PHP code:</p>
-			<p><pre>
-&lt;?php webyep_richText(&quot;Fieldname&quot;, false, &quot;&quot;, true, 900, 600); // WebYepV2 ?&gt;
-</pre></p>
-			<p>Arguments for the webyep_longText() PHP function call:<br><small>(</small><em><small>see &quot;Attributes of the Rich Text Element&quot; below for details</small></em><small>)</small></p>
-			<ol class="numbered">
-				<li>&quot;<strong>Fieldname</strong>&quot;: A string – the field name for this element.</li>
-				<li><strong>true/false</strong>: A boolean – the scope for this element. <br><strong>true</strong> if the element should have the same content on all pages (global).<br><strong>false</strong> if it should have different content on each page it appears on</li>
-				<li><strong>&quot;&quot;</strong>: A string – obsolete, pass an empty string (&quot;&quot;).</li>
-				<li><strong>true/false</strong>: A boolean – whether email links should be encoded. <br><strong>true</strong> if email addresses entered in the text element should be encoded using JavaScript.<br><strong>false</strong> if they should be simply output as HTML.</li>
-				<li><strong>900, 600:</strong> Modal window width &amp; height</li>
-			</ol>
-			<p><br>The Rich Text Editor window</p>
-			<div id="img-wrap"><p class="f-fp f-lp"><img id="wyrichtext" src="../Resources/wy-rich-text.png" alt="wyrichtext"></p>
-			</div>
-			<hr>
-			<h4>Choosing a WYSIWYG in-browser Editor</h4>
-			<p>The WebYep Rich Text Element supports third party in-browser HTML Editors: Redactor, TinyMCE and CKeditor. The editors are not bundled with WebYep2 unless you have purchased the Commercial version of webyep2, This version has Redactor installed and configured.</p>
-			<h5>Note about browser compatibility:</h5>
-			<p>Please note that not all browsers are supported by these editors. To find out which browsers are currently supported by which editor, please consult each WYSIWYG editor's website.</p>
-			<p>Important: The WYSIWYG editors give the user the opportunity to format the entered text. Some of them also offer to paste already formatted text in – text that was already formatted in some word processing application. It turned out that doing so is not a good idea. Most word processing applications tend to create (to put it nice) disadvantageous HTML code. Even pasting non formatted text from such applications will transfer (bad) HTML code. So the user should either enter the text directly into the WYSIWYG editor or create it in some pure ASCII editor (like Notepad on Windows or TextEdit, in Plain Text Mode, on the Mac).</p>
-			<h4>Setting up the WYSIWYG editor</h4>
-			<p>Each WYSIWG editor has its own unique features. Please refer to the WYSIWYG editors web site to learn about individual aspects of each editor. Both the TinyMCE and CKeditor load from there own respective CDN. These editors are hosted on servers spread across the globe which in turn allow scripts to load faster because they are served from the nearest locations to the end user.</p>
-			<h6>To activate either CKeditor or TinyMCE Editor </h6>
-			<p>To activate either TinyMCE or Ckeditor editors all you need to so is simply remove the &quot;-&quot; character at the begining of the chosen editor's folder name which can be found witin the opt folder &quot;webyep-system/program/opt&quot;. For example the folder named &quot;<strong>-TinyMCE</strong>&quot; would be renamed &quot;<strong>TinyMCE</strong>&quot; and &quot;<strong>-CKeditor</strong>&quot; would be renamed &quot;<strong>CKeditor</strong>&quot;.  WebYep2 will then automatically recognize its existence and use it for the Rich Text Element's editor window. <br><strong><span class="RED">Note:</span></strong> you can only use one editor type and renaming both folders will <strong>NOT</strong> make both editor types available.   </p>
-			<h6>Redactor Editor (commercial version only) </h6>
-			<p>If you have purchased the commercial version of WebYep2 then you will have a third WYSIWYG html editor choice. Redactor is the default in this WebYep2 (commercial) . It is a fully licensed, easy to use, fully integrated, clean and a powerful professional text editing framework.</p>
-			<p>Redactor has an incorporated image and file upload and manager. Please refer to the <a href="completeoptions.html">configuration</a> settings for Redectors image and file manger configuration. </p>
-			<h4>Placing the Text Element</h4>
-			<p>Please always remember that the Rich Text Elements produces HTML code! When the user creates a bullet list for example the Rich Text Elements creates <span class="preInline">&lt;ul&gt;</span> and <span class="preInline">&lt;li&gt;</span> HTML tags. Thus it is important to place the Rich Text Element at a position in your page where such HTML tags are allowed!</p>
-			<p>Placing the Text Element</p>
-			<p>The safest place is inside a <span class="preInline">&lt;div&gt;</span> tag. Not ideal would be a paragraph (<span class="preInline">&lt;p&gt;</span> tag) as HTML does not allow bullet lists inside a paragraph.</p>
-			<p>If you find your Rich Text Element placed inside a <span class="preInline">&lt;p&gt;</span> tag you can change it into a <span class="preInline">&lt;div&gt;</span> tag by clicking the &lt;p&gt; tag in the Tag Selector with the right mouse button and choose &quot;Edit Tag...&quot;.</p>
-			<hr>
-			<h3>Attributes of the Long Text Element</h3>
-			<h5>Fieldname</h5>
-			<p>A distinctive name for that element. This name will be displayed in the page in edit mode to give the user a hint on what this elements content stands for and to distinguish the different WebYep Elements in a page.</p>
-			<h5>Content</h5>
-			<p>When set to &quot;for this doc only&quot; the elements content is unique for this page - even if another element on a different page has the same name. If set to &quot;for all documents&quot; the content will be the same on all pages for elements of this kind that use the same name.</p>
-			<h5>Encode EMail Links</h5>
-			<p>If a user enters an email address into a Long Text Element, WebYep will display it as a clickable link (&quot;mailto&quot; link).</p>
-			<p>If you enable the &quot;Encode EMail Links&quot; option, WebYep will <strong>encode</strong> these links to <strong>keep SPAM spiders</strong> from collecting the email addresses.</p>
-			<p>To do so, WebYep uses a JavaScript based encoding. If the visitors of your website have <strong>deactivated JavaScript</strong>, they will only see these email addresses in the form:</p>
-			<pre>name(_AT_)domain.com</pre>
-			<p>and the email addresses will then not be clickable.</p>
-			<h5>Modal Window size</h5>
-			<p class="f-lp">As the developer you can preset the dimensions of the modal window size </p>
-		</div>
-	</div>
-	<div id="navWrap" class="f-ms grad1"><div id="wynavigation" class="WHITE f-ms"><ul class="f-fp f-lp mtree transit">
-				<li><a href="../index.html">Introduction</a></li>
-				<li><a href="basic.html">Basics</a></li>
-				<li><a href="installation.html">Installation</a></li>
-				<li><a href="configuration.html">Configuration</a>
-				<ul>
-					<li><a href="configuration.html">Basic Configuration</a></li>
-					<li><a href="multiplelogins.html">Multiple Logins</a></li>
-					<li><a href="completeoptions.html">Complete Options</a></li>
-				</ul>
-				</li>
-				<li><a href="backup.html">Backup</a></li>
-				<li><a href="systemrequirements.html">System Requirements</a></li>
-				<li><a href="whitelabeledversion.html">White Labeled Version</a></li>
-				<li><a href="tutorials.html">Tutorials</a>
-				<ul>
-					<li><a href="firststeps.html">First Steps</a></li>
-					<li><a href="themenu.html">The Menu</a></li>
-					<li><a href="theloop.html">The Loop</a></li>
-				</ul>
-				</li>
-				<li><a href="#">References</a>
-				<ul>
-					<li><a href="referenceoverview.html">Reference Overview</a></li>
-					<li><a href="theinitcode.html">The Init Code</a></li>
-					<li><a href="sessioncode.html">The Session Code</a></li>
-					<li><a href="logonbutton.html">Logon Button</a></li>
-					<li><a href="shorttext.html">Short Text</a></li>
-					<li><a href="longtext.html">Long Text</a></li>
-					<li><a href="richtext.html">Rich Text</a></li>
-					<li><a href="markuptext.html">Markup Text</a></li>
-					<li><a href="image.html">Image</a></li>
-					<li><a href="gallery.html">Image Gallery</a></li>
-					<li><a href="attachement.html">Attachment</a></li>
-					<li><a href="menu.html">Menu</a></li>
-					<li><a href="loop.html">Loop</a></li>
-					<li><a href="readmore.html">Read More</a></li>
-				</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-</body>
-<script src="js/mtree.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Rich Text</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li><a href="configuration.html">Basic Configuration</a></li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li><a href="completeoptions.html">Complete Options</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Elements</summary>
+                <ul>
+                  <li><a href="elementsoverview.html">Elements Overview</a></li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html" class="current">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Rich Text</strong> element</h1>
+        <p>
+          <strong
+            >This element is useful for long text passages, like product
+            descriptions or news articles. Potentially you could even make a
+            whole page editable using a rich text editor.</strong
+          >
+          The text content of this element can be formatted by the user, either
+          by entering raw HTML code or by using one of the built-in WYSIWYG
+          (what you see is what you get) editors, like CKEditor or Trumbowyg. If
+          you have purchased the commmercial version of WebYep, then you have
+          the option of the Redactor rich text editor. All these rich text
+          editors provide a buttoned interface that mimicks a word processing or
+          text editing app.
+        </p>
+        <h3>The Rich Text element code</h3>
+        <pre>
+&lt;?php webyep_richText("Fieldname", false, "", true, 900, 600); // WebYepV2 ?></pre
+        >
+        <h3>Arguments for the function call</h3>
+        <ol>
+          <li>
+            "<strong>Fieldname</strong>": A string - the field name for this
+            element.
+          </li>
+          <li>
+            <strong>true/false</strong>: A boolean - the scope for this element.
+            <br /><strong>true</strong> if the element should have the same
+            content on all pages (global).<br /><strong>false</strong> if it
+            should have different content on each page it appears on
+          </li>
+          <li>
+            <strong>""</strong>: A string - obsolete, pass an empty string ("").
+          </li>
+          <li>
+            <strong>true/false</strong>: A boolean - whether email links should
+            be encoded. <br /><strong>true</strong> entered email addresses
+            should be encoded using Javascript (default).<br />
+            <strong>false</strong> if email addresses should be simply outputed
+            as HTML.
+          </li>
+          <li>
+            <strong>900, 600:</strong> Maximum width and height of the editor
+            window.
+          </li>
+        </ol>
+        <h3>Screenshots</h3>
+        <figure>
+          <img
+            src="../images/wy-rich-text.png"
+            alt="The Rich Text editor window, with the Redactor formatting controls activated."
+          />
+          <figcaption>
+            The Rich Text editor window, with the Redactor formatting controls
+            activated.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="../images/trumbowyg.png"
+            alt="The Rich Text editor window, with the Trumbowyg formatting controls activated."
+          />
+          <figcaption>
+            The Rich Text editor window, with the Trumbowyg formatting controls
+            activated.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="../images/ckeditor.png"
+            alt="The Rich Text editor window, with the CKeditor formatting controls activated."
+          />
+          <figcaption>
+            The Rich Text editor window, with the CKeditor formatting controls
+            activated.
+          </figcaption>
+        </figure>
+        <h3>Choosing a WYSIWYG editor</h3>
+        <p>
+          The Rich Text element supports third party in-browser HTML Editors:
+          Redactor, Trumbowyg, TinyMCE and CKeditor. Redactor is only included
+          with the commercial (paid) version of WebYep.
+        </p>
+        <p>
+          <strong>Important:</strong> The WYSIWYG editors give the user the
+          opportunity to format the entered text. Some of them also offer to
+          paste already formatted text in - text that was already formatted in
+          some word processing application. It turned out that doing so is not a
+          good idea. Most word processing applications tend to create (to put it
+          nice) disadvantageous HTML code. Even pasting non formatted text from
+          such applications will transfer (bad) HTML code. So the user should
+          either enter the text directly into the WYSIWYG editor or create it in
+          some pure ASCII editor (like Notepad on Windows or TextEdit, in Plain
+          Text Mode, on the Mac).
+        </p>
+        <h3>Setting up the WYSIWYG editor</h3>
+        <p>
+          Each WYSIWG editor has its own unique features. Please refer to the
+          WYSIWYG editors web site to learn about individual aspects of each
+          editor. Both the TinyMCE and CKeditor load from there own respective
+          CDN. These editors are hosted on servers spread across the globe which
+          in turn allow scripts to load faster because they are served from the
+          nearest locations to the end user.
+        </p>
+        <h4>To activate either Trumbowyg, CKeditor or TinyMCE editors</h4>
+        <p>
+          To activate either TinyMCE or Ckeditor editors all you need to so is
+          simply remove the "-" character at the begining of the chosen editor's
+          folder name which can be found witin the opt folder
+          "webyep-system/program/opt". For example the folder named
+          "<em>-TinyMCE</em>" would be renamed "<em>TinyMCE</em>" and
+          "<em>-CKeditor</em>" would be renamed "<em>CKeditor</em>". WebYep will
+          then automatically recognize its existence and use it for the Rich
+          Text element's editor window.
+        </p>
+        <p>
+          <strong>Note:</strong> You can only use one editor type and renaming
+          multiple folders will <em>not</em> make two or more editor types
+          available.
+        </p>
+        <h4>To activate Redactor Editor (WebYep commercial version only)</h4>
+        <p>
+          If you have purchased the commercial version of WebYep then you will
+          have the choice of a third WYSIWYG html editor to use. Redactor is the
+          default in WebYep (commercial). It is a fully licensed, easy to use,
+          fully integrated, clean and a powerful professional text editing
+          framework.
+        </p>
+        <p>
+          Redactor has an incorporated image and file upload and manager. Please
+          refer to the <a href="completeoptions.html">configuration</a> settings
+          for Redectors image and file manger configuration.
+        </p>
+        <h3>Placing the Rich Text element</h3>
+        <p>
+          Please always remember that the Rich Text Elements produces HTML code!
+          When the user creates a bullet list for example the Rich Text Elements
+          creates <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> HTML tags.
+          Thus it is important to place the Rich Text Element at a position in
+          your page where such HTML tags are allowed!
+        </p>
+        <p>
+          The safest place is inside a <code>&lt;div&gt;</code> tag. Not ideal
+          would be a paragraph (<code>&lt;p&gt;</code> tag) as HTML does not
+          allow bullet lists inside a paragraph.
+        </p>
+        <p>
+          If you find your Rich Text Element placed inside a
+          <code>&lt;p&gt;</code> tag you can change it into a
+          <code>&lt;div&gt;</code> tag by clicking the &lt;p&gt; tag in the Tag
+          Selector with the right mouse button and choose "Edit Tag...".
+        </p>
+
+        <h3>Attributes of the Rich Text element</h3>
+        <h4>Fieldname</h4>
+        <p>
+          A distinctive name for that element. This name will be displayed in
+          the page in edit mode to give the user a hint on what this elements
+          content stands for and to distinguish the different WebYep elements in
+          a page.
+        </p>
+        <h4>Content</h4>
+        <p>
+          When set to "for this doc only" the elements content is unique for
+          this page - even if another element on a different page has the same
+          name. If set to "for all documents" the content will be the same on
+          all pages for elements of this kind that use the same name.
+        </p>
+        <h4>Encode email links</h4>
+        <p>
+          If a user enters an email address into a Long Text Element, WebYep
+          will display it as a clickable link ('mailto' link).
+        </p>
+        <p>
+          If you enable the "Encode EMail Links" option, WebYep will
+          <em>encode</em> these links to <em>keep SPAM spiders</em> from
+          collecting the email addresses.
+        </p>
+        <p>
+          To do so, WebYep uses a Javascript based encoding. If the visitors of
+          your website have <em>deactivated Javascript</em>, they will only see
+          these email addresses in the form:
+        </p>
+        <pre>name(_AT_)domain.com</pre>
+        <p>and the email addresses will then not be clickable.</p>
+        <h4>Modal window size</h4>
+        <p>
+          As the developer you can preset the dimensions of the modal window
+          size.
+        </p>
+      </main>
+    </div>
+  </body>
 </html>

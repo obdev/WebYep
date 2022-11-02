@@ -1,163 +1,145 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>white labeled version</title>
-<meta name="viewport" content="width = device-width, minimum-scale = 0.25, maximum-scale = 1.60">
-<meta name="generator" content="Freeway Pro 7.1.4">
-<link rel=stylesheet href="css/mini-css-reset.css">
-<style type="text/css">
-<!--
-body { margin:0px; height:100% }
-html { height:100% }
-form { margin:0px }
-body > form { height:100% }
-img { margin:0px; border-style:none }
-button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
-table { empty-cells:hide }
-td { padding:0px }
-.f-sp { font-size:1px; visibility:hidden }
-.f-lp { margin-bottom:0px }
-.f-fp { margin-top:0px }
-a:link { color:#5294c4 }
-a:visited { color:#5294c4 }
-a:hover { color:#c28df2 }
-a:active { color:#c28df2 }
-       * { margin-top:0px; margin-bottom:0px }
-       html { font-size:62.5% }
-      body { font-family:'Open Sans',Helvetica,sans-serif; font-size:1.5em; line-height:1.5 }
-     dl { margin:1em 0em 1.65em 2.1em }
-    dd { margin:0em; padding:0 }
-    ul { margin:1em 0em 1.65em 1.1em }
-   li { margin:0em 0em 0.33em; padding:0 }
-   p { color:#666; line-height:1.5; margin-top:0em; margin-bottom:0.75em }
-  .button:hover { color:#e6e6e6; background-color:#333; border:1px solid #333; padding:8px 16px; cursor:pointer }
-  .dropdown:hover { color:#e6e6e6; background-color:#333; padding:6px 40px 6px 8px; border:1px solid #666; cursor:pointer }
-  .input:focus { border:1px solid #333 }
-  .input:hover { color:#3c2e69 }
-  .r1 { -webkit-border-radius:1px; -moz-border-radius: 1px;  border-radius: 1px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r2 { -webkit-border-radius:2px; -moz-border-radius: 2px;  border-radius: 2px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r3 { -webkit-border-radius:3px; -moz-border-radius: 3px;  border-radius: 3px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r4 { -webkit-border-radius:4px; -moz-border-radius: 4px;  border-radius: 4px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r5 { -webkit-border-radius:5px; -moz-border-radius: 5px;  border-radius: 5px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  hr { margin:2.75em 0px 2.25em; height:0; border: 0; border-top: 1px solid #ddd }
-#wynavigation a { color:#fff; text-decoration:none }
-#wynavigation a:hover { color:#e6e6e6 }
-address { text-decoration:none; font-size:13px; line-height:1.5; margin:0.5em; font-style:normal }
-blockquote { color:#777; font-style:italic; text-decoration:none; margin:1em 0em 1.65em 2.5em; border-left:2px solid #ddd; padding-left:1.65em }
-cite { font-size:13px }
-code { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:1.4rem }
-em { font-style:italic }
-h1 { color:#3c2e69; font-size:3.8rem; line-height:1.1; margin-bottom:1.25em; margin-top:1em; font-weight:300 }
-h1:first-child { margin-top:0px }
-h2 { color:#fb694d; font-size:2.8rem; line-height:1.2; margin-bottom:0.6em; margin-top:1.5em; font-weight:300 }
-h2:first-child { margin-top:0px }
-h3 { color:#fb694d; font-size:2.1rem; line-height:1.3; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h3:first-child { margin-top:0px }
-h4 { font-size:1.8rem; line-height:1.4; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h4:first-child { margin-top:0px }
-h5 { font-size:1.6rem; line-height:1.5; margin-bottom:0.75em; margin-top:1.5em; font-weight:400 }
-h5:first-child { margin-top:0px }
-h6 { font-weight:bold; font-size:1.4rem; text-transform:uppercase; font-variant:normal; line-height:1; margin-bottom:0.75em; margin-top:1.6em }
-h6:first-child { margin-top:0px }
-pre { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:87.5%; margin-left:1em; margin-top:0em; margin-bottom:0.75em; white-space:pre-wrap }
-small { font-size:1.3rem }
-strong { font-weight:700 }
-.intro-text { color:#3c2e69; font-size:1.8rem; line-height:1.6; margin-top:0em; margin-bottom:0.75em; font-weight:300 }
-.fw400 { font-weight:400 }
-.WHITE { color:#fff }
-#PageDiv { position:relative; width:100%; min-height:100%; margin:0px auto 0px 0px }
-#m1.f-ms { width:calc(100vw - 315px); min-height:100%; z-index:0; float:left; margin-left:315px }
-#m2 { width:91%; min-height:801px; z-index:0; margin:95px 50px 80px 16px }
-#navWrap.f-ms { position:fixed; left:0px; top:0px; width:280px; min-height:332px; z-index:1; background-color:#60448c; height:100vh }
-#wynavigation.f-ms { width:265px; min-height:89px; z-index:0; margin-left:15px; margin-top:95px; margin-right:auto }
-@media screen and (max-width:800px)
-{
-	#PageDiv { width:auto; max-width:800px }
-}
-@media screen and (max-width:640px)
-{
-	#PageDiv { max-width:640px }
-}
-@media screen and (max-width:384px)
-{
-	#PageDiv { max-width:384px }
-}
--->
-</style>
-<!--[if lt IE 9]>
-<script src="../Resources/html5shiv.js"></script>
-<![endif]-->
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic">
-<link rel=stylesheet href="css/default.css">
-<link rel=stylesheet href="css/common.css">
-<link rel=stylesheet href="css/mtree.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/velocity/0.2.1/jquery.velocity.min.js"></script>
-<style type="text/css"><!----></style></head>
-<body>
-<div id="PageDiv">
-	<div id="m1" class="f-ms"><div id="m2" class="fade"><h1 class="f-fp">White Labeled Version</h1>
-			<p class="intro-text"><span class="fw400">You can present WebYep2 as your own product, matching your corporate design and style by change graphical components of WebYep <em>(such as images and text styles)</em> allowing you to adapt the visual appearance of WebYep to your website's design.</span> </p>
-			<p class="intro-text">But changing the White Label setting within the config file allows you to change the WebYep logo and CMS name and links within the modal windows.</p>
-			<h3>How WebYep becomes &quot;your product&quot;</h3>
-			<p>To match the  WebYep system to your corporate design and present it as &quot;your product&quot;, you can perform the following changes:</p>
-			<h4>Change the WebYep logo</h4>
-			<p>The WebYep logo is located in the images folder and the file is named: logo.png. This can be found  in the &quot;program/images&quot; subfolder of the webyep-system folder. Simply replace it with your personal logo.</p>
-			<h4>Button icons, etc.</h4>
-			<p>The &quot;program/images&quot; subfolder also contains several icons used for various buttons in the WebYep user inteface. Change/replace these as needed.</p>
-			<h4>Product &amp; Company name, Company URL</h4>
-			<p>To change to product name, company name and company link from the defaults to your requirements. Open the configuration file config-inc.php in the webyep-system folder using a text editor. On lines 162, 163 &amp; 164 you will find these line</p>
-			<pre>$webyep_sProductName = 'MyProduct';<br>$webyep_sCompanyName = 'WebYep by Objective Development';<br>$webyep_sCompanyLink = 'http://www.obdev.at/index.html';</pre>
-			<p>Change the text between the single quotes, but be sure to leave the single quotes intact and to not use any single quotes as part of the product name!</p>
-			<hr>
-			<h3>&quot;Running&quot; your WebYep</h3>
-			<p class="f-lp">For <strong>testing</strong> and during <strong>development</strong> you usually run WebYep via a local web server (<em>on your desktop or on a server machine in you local network</em>). If the web server running localy WebYep may not be accessible from the internet.</p>
-		</div>
-	</div>
-	<div id="navWrap" class="f-ms grad1"><div id="wynavigation" class="WHITE f-ms"><ul class="f-fp f-lp mtree transit">
-				<li><a href="../index.html">Introduction</a></li>
-				<li><a href="basic.html">Basics</a></li>
-				<li><a href="installation.html">Installation</a></li>
-				<li><a href="configuration.html">Configuration</a>
-				<ul>
-					<li><a href="configuration.html">Basic Configuration</a></li>
-					<li><a href="multiplelogins.html">Multiple Logins</a></li>
-					<li><a href="completeoptions.html">Complete Options</a></li>
-				</ul>
-				</li>
-				<li><a href="backup.html">Backup</a></li>
-				<li><a href="systemrequirements.html">System Requirements</a></li>
-				<li><a href="whitelabeledversion.html">White Labeled Version</a></li>
-				<li><a href="tutorials.html">Tutorials</a>
-				<ul>
-					<li><a href="firststeps.html">First Steps</a></li>
-					<li><a href="themenu.html">The Menu</a></li>
-					<li><a href="theloop.html">The Loop</a></li>
-				</ul>
-				</li>
-				<li><a href="#">References</a>
-				<ul>
-					<li><a href="referenceoverview.html">Reference Overview</a></li>
-					<li><a href="theinitcode.html">The Init Code</a></li>
-					<li><a href="sessioncode.html">The Session Code</a></li>
-					<li><a href="logonbutton.html">Logon Button</a></li>
-					<li><a href="shorttext.html">Short Text</a></li>
-					<li><a href="longtext.html">Long Text</a></li>
-					<li><a href="richtext.html">Rich Text</a></li>
-					<li><a href="markuptext.html">Markup Text</a></li>
-					<li><a href="image.html">Image</a></li>
-					<li><a href="gallery.html">Image Gallery</a></li>
-					<li><a href="attachement.html">Attachment</a></li>
-					<li><a href="menu.html">Menu</a></li>
-					<li><a href="loop.html">Loop</a></li>
-					<li><a href="readmore.html">Read More</a></li>
-				</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-</body>
-<script src="js/mtree.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>White Labeled Version</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html" class="current"
+                      >White Labeled Version</a
+                    >
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Elements</summary>
+                <ul>
+                  <li>
+                    <a href="elementsoverview.html">Elements Overview</a>
+                  </li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1>Deploying a <strong>white labeled</strong> version</h1>
+        <p>
+          <strong
+            >WebYep is opensource. Just by using it, you are a small part of
+            this incredible platform, and so you are entitled to present it as
+            your <em>own product</em>.</strong
+          >
+          You can present WebYep to clients, matching your corporate design or
+          style it to include a company logo or link. By changing the white
+          label settings (within the config file) you can quickly change the
+          WebYep logo, CMS name and links within the modal windows.
+        </p>
+        <h3>Change the WebYep logo</h3>
+        <p>
+          The WebYep logo is located in the images folder and the file is named
+          'webyep-logo.png'. This can be found in the /program/images/ subfolder
+          of the 'webyep-system' folder. Simply replace it with a new logo of
+          similar size (59px wide, 31px tall).
+        </p>
+        <h3>Button icons, etc.</h3>
+        <p>
+          The "/program/images/" subfolder also contains several icons used for
+          various buttons in the WebYep user inteface. You can edit or replace
+          these as needed. Again, use images of a similar size to the orginals.
+        </p>
+        <h3>Product, company name, &amp; company URL</h3>
+        <p>
+          These are changeable within the config-inc.php in the 'webyep-system'
+          folder. Open this file in a text editor and scroll down until you find
+          these lines:
+        </p>
+        <pre>$webyep_sProductName = '<span class="orange">MyProduct</span>';
+$webyep_sCompanyName = '<span class="orange">WebYep by Objective Development</span>';
+$webyep_sCompanyLink = '<span class="orange">http://www.obdev.at/index.html</span>';</pre>
+        <p>
+          Change the text between the single quotes, but be sure to leave the
+          single quotes intact and to not use any single quotes as part of the
+          product name! In case you were wondering, 'Objective Development' was
+          the company that started WebYep.
+        </p>
+        <h3>Screenshots</h3>
+        <figure>
+          <img
+            src="../images/wy-white-labeled-version.png"
+            alt="An example of a WebYep rich text editor window, with a custom logo image and name applied."
+          />
+          <figcaption>
+            An example of a WebYep rich text editor window, with a custom logo
+            image and name applied.
+          </figcaption>
+        </figure>
+      </main>
+    </div>
+  </body>
 </html>

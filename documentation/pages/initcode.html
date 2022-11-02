@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Init Code</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Elements</summary>
+                <ul>
+                  <li>
+                    <a href="elementsoverview.html">Elements Overview</a>
+                  </li>
+                  <li><a href="initcode.html" class="current">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Init</strong> code</h1>
+        <p>
+          <strong
+            >'Init' is an acronym for 'initialization', and every web page you
+            want to edit using WebYep needs this.</strong
+          >
+          This code must be located at the very beginning of the document,
+          before anything else. There must not even be an empty line or space
+          before it.
+        </p>
+        <p>
+          It must also be located before the
+          <code>&lt;DOCTYPE&gt;</code> declaration. Although that declaration
+          also must be the first thing in the document, this will not cause any
+          problems, as the PHP code does not reach the browser! The PHP code is
+          processed (and 'consumed') by the server and in the HTML code reaching
+          the browser, the <code>&lt;DOCTYPE&gt;</code> will again be the first
+          thing.
+        </p>
+        <h3>This is the WebYep Init Code:</h3>
+        <p>
+          <strong>Important:</strong> Please make sure to copy all of the code,
+          from the first '<code>&lt;?php</code>' tag to the last
+          '<code>?&gt;</code>' tag.
+        </p>
+        <pre>
+&lt;?php session_start(); // WebYep init WebYepV2
+/* &gt;&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=white&gt;&lt;h2&gt;WebYep message: Error, PHP inactive&lt;/h2&gt;
+&lt;font color=red&gt;The PHP code in this page can not be executed!&lt;ul&gt;
+&lt;li&gt;Are you launching this page directly form your harddisc &lt;em&gt;(e.g. via a local browser" instead of accessing it via a webserver?)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Has this file the correct file extension for PHP scripts? WebYep pages must have the ".php" extension and &lt;b&gt;not&lt;/b&gt; ".html" or ".htm"!&lt;/li&gt;
+&lt;/ul&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;!--
+*/
+$webyep_sIncludePath = "./";
+$iDepth = 0;
+while (!file_exists($webyep_sIncludePath . "webyep-system")) {
+  $iDepth++;
+  if ($iDepth &gt; 10) {
+    error_log("webyep-system folder not found!", 0);
+    echo "&lt;html&gt;&lt;head&gt;&lt;title&gt;WebYep&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;b&gt;WebYep:&lt;/b&gt; This page can not be displayed &lt;br&gt;Problem: The webyep-system folder was not found!&lt;/body&gt;&lt;/html&gt;";
+    exit;
+  }
+  $webyep_sIncludePath = ($webyep_sIncludePath == "./") ? ("../"):("$webyep_sIncludePath../");
+}
+if (file_exists("${webyep_sIncludePath}webyep-system/programm")) $webyep_sIncludePath .= "webyep-system/programm";
+else $webyep_sIncludePath .= "webyep-system/program";
+include("$webyep_sIncludePath/webyep.php");
+// --&gt;?&gt;</pre
+        >
+        <p></p>
+        <h3>Screenshots</h3>
+        <figure>
+          <a href="../images/init-vscode.png" target="_blank">
+            <img
+            src="../images/init-vscode.png"
+            alt="The view of a an HTML document open in VS Code, with the Init Code correctly placed at the top of the web page."
+          />
+          </a>
+          <figcaption>
+            The view of a an HTML document open in VS Code, with the Init Code
+            correctly placed at the top of the web page, before the <code>&lt;DOCTYPE></DOCTYPE></code> declaration. Click for a larger view.
+          </figcaption>
+        </figure>
+        <h3>Summary</h3>
+        <ul class="f-lp">
+          <li>Every page using any WebYep element needs the Init Code.</li>
+          <li>
+            The Init Code must be inserted as the very first item within the
+            document.
+          </li>
+          <li>
+            This PHP code is only ever seen and used by the web server. It never
+            gets sent down to the web browser or can be seen by website users.
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

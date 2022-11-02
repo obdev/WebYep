@@ -1,185 +1,207 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>loop</title>
-<meta name="viewport" content="width = device-width, minimum-scale = 0.25, maximum-scale = 1.60">
-<meta name="generator" content="Freeway Pro 7.1.4">
-<link rel=stylesheet href="css/mini-css-reset.css">
-<style type="text/css">
-<!--
-body { margin:0px; height:100% }
-html { height:100% }
-form { margin:0px }
-body > form { height:100% }
-img { margin:0px; border-style:none }
-button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
-table { empty-cells:hide }
-td { padding:0px }
-.f-sp { font-size:1px; visibility:hidden }
-.f-lp { margin-bottom:0px }
-.f-fp { margin-top:0px }
-a:link { color:#5294c4 }
-a:visited { color:#5294c4 }
-a:hover { color:#c28df2 }
-a:active { color:#c28df2 }
-       * { margin-top:0px; margin-bottom:0px }
-       html { font-size:62.5% }
-      body { font-family:'Open Sans',Helvetica,sans-serif; font-size:1.5em; line-height:1.5 }
-     dl { margin:1em 0em 1.65em 2.1em }
-    dd { margin:0em; padding:0 }
-    ul { margin:1em 0em 1.65em 1.1em }
-   li { margin:0em 0em 0.33em; padding:0 }
-   p { color:#666; line-height:1.5; margin-top:0em; margin-bottom:0.75em }
-  .button:hover { color:#e6e6e6; background-color:#333; border:1px solid #333; padding:8px 16px; cursor:pointer }
-  .dropdown:hover { color:#e6e6e6; background-color:#333; padding:6px 40px 6px 8px; border:1px solid #666; cursor:pointer }
-  .input:focus { border:1px solid #333 }
-  .input:hover { color:#3c2e69 }
-  .r1 { -webkit-border-radius:1px; -moz-border-radius: 1px;  border-radius: 1px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r2 { -webkit-border-radius:2px; -moz-border-radius: 2px;  border-radius: 2px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r3 { -webkit-border-radius:3px; -moz-border-radius: 3px;  border-radius: 3px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r4 { -webkit-border-radius:4px; -moz-border-radius: 4px;  border-radius: 4px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r5 { -webkit-border-radius:5px; -moz-border-radius: 5px;  border-radius: 5px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  hr { margin:2.75em 0px 2.25em; height:0; border: 0; border-top: 1px solid #ddd }
-#wynavigation a { color:#fff; text-decoration:none }
-#wynavigation a:hover { color:#e6e6e6 }
-address { text-decoration:none; font-size:13px; line-height:1.5; margin:0.5em; font-style:normal }
-blockquote { color:#777; font-style:italic; text-decoration:none; margin:1em 0em 1.65em 2.5em; border-left:2px solid #ddd; padding-left:1.65em }
-cite { font-size:13px }
-code { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:1.4rem }
-em { font-style:italic }
-h1 { color:#3c2e69; font-size:3.8rem; line-height:1.1; margin-bottom:1.25em; margin-top:1em; font-weight:300 }
-h1:first-child { margin-top:0px }
-h2 { color:#fb694d; font-size:2.8rem; line-height:1.2; margin-bottom:0.6em; margin-top:1.5em; font-weight:300 }
-h2:first-child { margin-top:0px }
-h3 { color:#fb694d; font-size:2.1rem; line-height:1.3; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h3:first-child { margin-top:0px }
-h4 { font-size:1.8rem; line-height:1.4; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h4:first-child { margin-top:0px }
-h5 { font-size:1.6rem; line-height:1.5; margin-bottom:0.75em; margin-top:1.5em; font-weight:400 }
-h5:first-child { margin-top:0px }
-h6 { font-weight:bold; font-size:1.4rem; text-transform:uppercase; font-variant:normal; line-height:1; margin-bottom:0.75em; margin-top:1.6em }
-h6:first-child { margin-top:0px }
-pre { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:87.5%; margin-left:1em; margin-top:0em; margin-bottom:0.75em; white-space:pre-wrap }
-small { font-size:1.3rem }
-strong { font-weight:700 }
-.intro-text { color:#3c2e69; font-size:1.8rem; line-height:1.6; margin-top:0em; margin-bottom:0.75em; font-weight:300 }
-.fw400 { font-weight:400 }
-.numbered { margin-bottom:0.75em }
-.preInline { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:87.5% }
-.RED { color:#f00 }
-.WHITE { color:#fff }
-#PageDiv { position:relative; width:100%; min-height:100%; margin:0px auto 0px 0px }
-#m1.f-ms { width:calc(100vw - 315px); min-height:100%; z-index:0; float:left; margin-left:315px }
-#m2.f-ms { width:91%; min-height:119px; z-index:0; margin:95px 50px 80px 16px }
-#navWrap.f-ms { position:fixed; left:0px; top:0px; width:280px; min-height:332px; z-index:1; background-color:#60448c; height:100vh }
-#wynavigation.f-ms { width:265px; min-height:89px; z-index:0; margin-left:15px; margin-top:95px; margin-right:auto }
-@media screen and (max-width:800px)
-{
-	#PageDiv { width:auto; max-width:800px }
-}
-@media screen and (max-width:640px)
-{
-	#PageDiv { max-width:640px }
-}
-@media screen and (max-width:384px)
-{
-	#PageDiv { max-width:384px }
-}
--->
-</style>
-<!--[if lt IE 9]>
-<script src="../Resources/html5shiv.js"></script>
-<![endif]-->
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic">
-<link rel=stylesheet href="css/default.css">
-<link rel=stylesheet href="css/common.css">
-<link rel=stylesheet href="css/mtree.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/velocity/0.2.1/jquery.velocity.min.js"></script>
-<style type="text/css"><!----></style></head>
-<body>
-<div id="PageDiv">
-	<div id="m1" class="f-ms"><div id="m2" class="f-ms"><h1 class="f-fp">Loop</h1>
-			<p class="intro-text"><span class="fw400">To repeat a block of HTML content and/or WebYep Elements in a page you can use the Loop Element.</span> The user can define the number and order of the blocks, which can contain any HTML, JavaScript or PHP content like static text, images or any WebYep Element. Of course the content of the repeated WebYep Elements will be different for every repetition.</p>
-			<p>The Loop Start Element is represented by the following PHP code:</p>
-			<p><pre>
-&lt;?php foreach ((new WYLoopElement())-&gt;aLoopIDs(&quot;<span style="color:red">Fieldname</span>&quot;) as $webyep_oCurrentLoop-&gt;iLoopID) { $loopid=$webyep_oCurrentLoop-&gt;iLoopID; $_SESSION[&quot;loopid&quot;]=$loopid; $webyep_oCurrentLoop-&gt;loopStart(<span style="color:red">true</span>,$webyep_oCurrentLoop-&gt;iLoopID); // WebYepV2 ?&gt;
-</pre></p>
-			<p>Arguments for the aLoopIDs() PHP function call:<br><small>(see &quot;Attributes of the Loop Element&quot; below for details)</small></p>
-			<ol class="numbered">
-				<li><strong>&quot;Fieldname&quot;:</strong> A string – the field name for this element.<br>Arguments for the loopStart() PHP function call:</li>
-				<li><strong>true/false:</strong> A boolean – whether the loop control buttons should be inserted automatically. <br><strong>true</strong> if the loop controls should be inserted automatically at the top of each block.<br><strong>false</strong> if not. You then need to insert the PHP code for these control buttons manually – see &quot;Automatic controls&quot; below.</li>
-			</ol>
-			<p>The Loop End Element is represented by the following PHP code:</p>
-			<p><pre>
-&lt;?php $webyep_oCurrentLoop-&gt;loopEnd(); } unset($_SESSION[&quot;loopid&quot;]); // WebYepV2 ?&gt;
-</pre></p>
-			<h4>Using the Loop Element</h4>
-			<p>To use the Loop Element, create some content in you page that is to be repeated and then place a Loop Start <strong>before</strong> and a Loop End Element <strong>after that content.</strong></p>
-			<h4>Exactly positioning the Loop Element is important:</h4>
-			<p>When repeating content in your page it is important to make sure the resulting HTML code is valid! Repeating a <span class="preInline">&lt;p&gt;</span> tag without the closing <span class="preInline">&lt;/p&gt;</span> tag for example would result in invalid HTML which will be rendered incorrectly by the browser.</p>
-			<p>In the rare cases when the result of a loop seams wrong, it is a good idea to check the validity of the resulting HTML code: Simply open the page in a browser, go to WebYep edit mode and create some loop blocks. Then leave edit mode and take a look at the resulting HTML code by viewing the code directly in the browser. Maybe also copy the HTML code and paste it into an empty document and then check the HTML code thats been created.</p>
-			<p>The menu items can be edited by the user by simply clicking the &quot;Edit&quot; button beside the menu in the webpage (when in edit mode). This will open the Edit Menu Window, in which the user can add/remove menu items, change their order and create simple hierarchies (by placing section titles and indenting items).</p>
-			<hr>
-			<h3>Attributes of the Loop Start Element</h3>
-			<h5>Loop name</h5>
-			<p>A distinctive name for that element. This name will be displayed in the page in edit mode to give the user a hint on what this elements content stands for and to distinguish the different WebYep Elements in a page.</p>
-			<p><span class="RED">Important:</span> If you need <strong>more than one Loop Element</strong> on a page, you have to make sure that the WebYep Elements inside the two loops do not share the same names. <strong>Use different names for all WebYep Elements</strong> in all Loops of one page!</p>
-			<h5>Automatic controls</h5>
-			<p>The loop controls are usually placed automatically at the top of each loop block, right where the Loop Start is positioned. In some situations this is not appropriate, as the Loop Start might be in a place where no content (like the loop control button icons) is allowed - e.g. between a <span class="preInline">&lt;table&gt;</span> tag and a <span class="preInline">&lt;tr&gt;</span> tag.</p>
-			<p>In theses cases you should uncheck the &quot;Automatic controls&quot; attribute and place the controls &quot;by hand&quot; by inserting the following piece of PHP code:</p>
-			<p><pre>
-&lt;?php $webyep_oCurrentLoop-&gt;showEditButtons($webyep_oCurrentLoop-&gt;iLoopID); // WebYepV2 ?&gt;
-</pre></p>
-			<p>When set to &quot;for this doc only&quot; the elements content is unique for this page - even if another element on a different page has the same name. If set to &quot;for all documents&quot; the content will be the same on all pages for elements of this kind that use the same name.</p>
-			<h3>Attributes of the Loop End Element</h3>
-			<p class="f-lp">The Loop End Element has no adjustable attributes.</p>
-		</div>
-	</div>
-	<div id="navWrap" class="f-ms grad1"><div id="wynavigation" class="WHITE f-ms"><ul class="f-fp f-lp mtree transit">
-				<li><a href="../index.html">Introduction</a></li>
-				<li><a href="basic.html">Basics</a></li>
-				<li><a href="installation.html">Installation</a></li>
-				<li><a href="configuration.html">Configuration</a>
-				<ul>
-					<li><a href="configuration.html">Basic Configuration</a></li>
-					<li><a href="multiplelogins.html">Multiple Logins</a></li>
-					<li><a href="completeoptions.html">Complete Options</a></li>
-				</ul>
-				</li>
-				<li><a href="backup.html">Backup</a></li>
-				<li><a href="systemrequirements.html">System Requirements</a></li>
-				<li><a href="whitelabeledversion.html">White Labeled Version</a></li>
-				<li><a href="tutorials.html">Tutorials</a>
-				<ul>
-					<li><a href="firststeps.html">First Steps</a></li>
-					<li><a href="themenu.html">The Menu</a></li>
-					<li><a href="theloop.html">The Loop</a></li>
-				</ul>
-				</li>
-				<li><a href="#">References</a>
-				<ul>
-					<li><a href="referenceoverview.html">Reference Overview</a></li>
-					<li><a href="theinitcode.html">The Init Code</a></li>
-					<li><a href="sessioncode.html">The Session Code</a></li>
-					<li><a href="logonbutton.html">Logon Button</a></li>
-					<li><a href="shorttext.html">Short Text</a></li>
-					<li><a href="longtext.html">Long Text</a></li>
-					<li><a href="richtext.html">Rich Text</a></li>
-					<li><a href="markuptext.html">Markup Text</a></li>
-					<li><a href="image.html">Image</a></li>
-					<li><a href="gallery.html">Image Gallery</a></li>
-					<li><a href="attachement.html">Attachment</a></li>
-					<li><a href="menu.html">Menu</a></li>
-					<li><a href="loop.html">Loop</a></li>
-					<li><a href="readmore.html">Read More</a></li>
-				</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-</body>
-<script src="js/mtree.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Loop</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Elements</summary>
+                <ul>
+                  <li><a href="elementsoverview.html">Elements Overview</a></li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html" class="current">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Loop</strong> element</h1>
+        <p>
+          <strong
+            >To repeat a block of HTML content or WebYep elements in a page you
+            can use the powerful Loop element.</strong
+          >
+          The user can define the number and order of the blocks, which can
+          contain any HTML, Javascript or PHP content like static text, images
+          or any WebYep elements. Of course, the content of the repeated WebYep
+          elements will be different for every repetition.
+        </p>
+        <p>
+          The Loop element is actually split into two elements. A Loop Start
+          element that defines the start of the loop, and a Loop End element
+          that closes the loop. The HTML content or WebYep elements sandwiched
+          between these two elements form the repeating content. The Loop
+          element has only two arguments, highlighted red and detailed below.
+        </p>
+        <h3>The Loop element code</h3>
+        <pre>&lt;?php foreach ((new WYLoopElement())-&gt;aLoopIDs("<span style="color:red">Fieldname</span>") as $webyep_oCurrentLoop-&gt;iLoopID) { $loopid=$webyep_oCurrentLoop-&gt;iLoopID; $_SESSION["loopid"]=$loopid; $webyep_oCurrentLoop-&gt;loopStart(<span style="color:red">true</span>,$webyep_oCurrentLoop-&gt;iLoopID); // WebYepV2 ?&gt;</pre>
+        <pre>
+&lt;?php $webyep_oCurrentLoop-&gt;loopEnd(); } unset($_SESSION["loopid"]); // WebYepV2 ?&gt;</pre
+        >
+        <h3>Arguments for the function call</h3>
+        <ol>
+          <li>
+            <strong>"Fieldname":</strong> A string - the field name for this
+            element.<br />Arguments for the loopStart() PHP function call:
+          </li>
+          <li>
+            <strong>true/false:</strong> A boolean - whether the loop control
+            buttons should be inserted automatically. <br /><strong
+              >true</strong
+            >
+            if the loop controls should be inserted automatically at the top of
+            each block.<br />
+            <strong>false</strong> No buttons shown. You need to use some PHP
+            code to insert these control buttons manually - see 'automatic
+            controls' below.
+          </li>
+        </ol>
+        <h3>Screenshots</h3>
+        <figure>
+          <img
+            src="../images/loop-example.png"
+            alt="An example showing how the Loop element could be used to create a simple events calendar, comprising of Short Text and Long Text elements for each event listing."
+          />
+          <figcaption>
+            An example showing how the Loop element could be used to create a
+            simple events calendar, comprising of Short Text and Long Text
+            elements for each event listing.
+          </figcaption>
+        </figure>
+        <h3>Using the Loop element</h3>
+        <p>
+          To use the Loop element, create some content in the page that is to be
+          repeated. Insert a Loop Start before this content and a Loop End after
+          that content.
+        </p>
+        <h3>Loop not working?</h3>
+        <p>
+          Occasionally the loop may not work in some configurations. In earlier
+          versions of WebYep, it was suggested that this code gets placed after
+          the opening <code>&lt;body&gt;</code> tag in the page:
+        </p>
+        <pre>&lt;?php unset($_SESSION["loopid"]); ?&gt;</pre>
+        <p>
+          This may still work to help resolve problems of the loop not working,
+          within certain situations.
+        </p>
+        <h3>Exact positioning the Loop element is important</h3>
+        <p>
+          When repeating content in your page, it is important to make sure the
+          resulting HTML code is valid. Repeating a <code>&lt;p&gt;</code> tag
+          without the closing <code>&lt;/p&gt;</code> tag for example would
+          result in invalid HTML. Bad code can quickly cause a page to break.
+        </p>
+        <p>
+          In the rare cases when the result of a loop seams wrong, it is a good
+          idea to check the validity of the resulting HTML code. Simply open the
+          page in a browser, go to WebYep edit mode and create some loop blocks.
+          Then leave edit mode and take a look at the resulting HTML code by
+          viewing the source code directly in the browser. Maybe also copy the
+          HTML code and paste it into an empty document and then check the HTML
+          code thats been created.
+        </p>
+
+        <h3>Attributes of the Loop element</h3>
+        <h4>Fieldname</h4>
+        <p>
+          A distinctive name for that element. This name will be used to
+          distinguish the Loop from other WebYep elements in a page.
+        </p>
+        <p>
+          If you need more than one Loop element on a page, you have to make
+          sure that the WebYep elements inside the two loops do not share the
+          same names. Use different names for all WebYep elements in all Loops
+          of the page.
+        </p>
+        <h4>Automatic controls</h4>
+        <p>
+          The loop controls are usually placed automatically at the top of each
+          loop block, right where the Loop Start is positioned. In some
+          situations this is not appropriate, as the Loop Start might be in a
+          place where no content (like the loop control button icons) is
+          allowed, like between a <code>&lt;table&gt;</code> tag and a
+          <code>&lt;tr&gt;</code> tag.
+        </p>
+        <p>
+          In theses cases you should set the 'automatic controls' attribute to
+          false in the Start Loop code. Then place the controls 'by hand', by
+          inserting the following piece of PHP code, where you want the controls
+          shown:
+        </p>
+        <pre>
+&lt;?php $webyep_oCurrentLoop-&gt;showEditButtons(); // WebYepV1 ?&gt;</pre
+        >
+      </main>
+    </div>
+  </body>
 </html>

@@ -1,177 +1,320 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>installation</title>
-<meta name="viewport" content="width = device-width, minimum-scale = 0.25, maximum-scale = 1.60">
-<meta name="generator" content="Freeway Pro 7.1.4">
-<link rel=stylesheet href="css/mini-css-reset.css">
-<style type="text/css">
-<!--
-body { margin:0px; height:100% }
-html { height:100% }
-form { margin:0px }
-body > form { height:100% }
-img { margin:0px; border-style:none }
-button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
-table { empty-cells:hide }
-td { padding:0px }
-.f-sp { font-size:1px; visibility:hidden }
-.f-lp { margin-bottom:0px }
-.f-fp { margin-top:0px }
-a:link { color:#5294c4 }
-a:visited { color:#5294c4 }
-a:hover { color:#c28df2 }
-a:active { color:#c28df2 }
-       * { margin-top:0px; margin-bottom:0px }
-       html { font-size:62.5% }
-      body { font-family:'Open Sans',Helvetica,sans-serif; font-size:1.5em; line-height:1.5 }
-     dl { margin:1em 0em 1.65em 2.1em }
-    dd { margin:0em; padding:0 }
-    ul { margin:1em 0em 1.65em 1.1em }
-   li { margin:0em 0em 0.33em; padding:0 }
-   p { color:#666; line-height:1.5; margin-top:0em; margin-bottom:0.75em }
-  .button:hover { color:#e6e6e6; background-color:#333; border:1px solid #333; padding:8px 16px; cursor:pointer }
-  .dropdown:hover { color:#e6e6e6; background-color:#333; padding:6px 40px 6px 8px; border:1px solid #666; cursor:pointer }
-  .input:focus { border:1px solid #333 }
-  .input:hover { color:#3c2e69 }
-  .r1 { -webkit-border-radius:1px; -moz-border-radius: 1px;  border-radius: 1px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r2 { -webkit-border-radius:2px; -moz-border-radius: 2px;  border-radius: 2px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r3 { -webkit-border-radius:3px; -moz-border-radius: 3px;  border-radius: 3px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r4 { -webkit-border-radius:4px; -moz-border-radius: 4px;  border-radius: 4px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r5 { -webkit-border-radius:5px; -moz-border-radius: 5px;  border-radius: 5px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  hr { margin:2.75em 0px 2.25em; height:0; border: 0; border-top: 1px solid #ddd }
-#wynavigation a { color:#fff; text-decoration:none }
-#wynavigation a:hover { color:#e6e6e6 }
-address { text-decoration:none; font-size:13px; line-height:1.5; margin:0.5em; font-style:normal }
-blockquote { color:#777; font-style:italic; text-decoration:none; margin:1em 0em 1.65em 2.5em; border-left:2px solid #ddd; padding-left:1.65em }
-cite { font-size:13px }
-code { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:1.4rem }
-em { font-style:italic }
-h1 { color:#3c2e69; font-size:3.8rem; line-height:1.1; margin-bottom:1.25em; margin-top:1em; font-weight:300 }
-h1:first-child { margin-top:0px }
-h2 { color:#fb694d; font-size:2.8rem; line-height:1.2; margin-bottom:0.6em; margin-top:1.5em; font-weight:300 }
-h2:first-child { margin-top:0px }
-h3 { color:#fb694d; font-size:2.1rem; line-height:1.3; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h3:first-child { margin-top:0px }
-h4 { font-size:1.8rem; line-height:1.4; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h4:first-child { margin-top:0px }
-h5 { font-size:1.6rem; line-height:1.5; margin-bottom:0.75em; margin-top:1.5em; font-weight:400 }
-h5:first-child { margin-top:0px }
-h6 { font-weight:bold; font-size:1.4rem; text-transform:uppercase; font-variant:normal; line-height:1; margin-bottom:0.75em; margin-top:1.6em }
-h6:first-child { margin-top:0px }
-pre { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:87.5%; margin-left:1em; margin-top:0em; margin-bottom:0.75em; white-space:pre-wrap }
-small { font-size:1.3rem }
-strong { font-weight:700 }
-.intro-text { color:#3c2e69; font-size:1.8rem; line-height:1.6; margin-top:0em; margin-bottom:0.75em; font-weight:300 }
-.fw600 { font-weight:600 }
-.fw400 { font-weight:400 }
-.WHITE { color:#fff }
-#PageDiv { position:relative; width:100%; min-height:100%; margin:0px auto 0px 0px }
-#m1.f-ms { width:calc(100vw - 315px); min-height:100%; z-index:0; float:left; margin-left:315px }
-#m2.f-ms { width:91%; min-height:119px; z-index:0; margin:95px 50px 80px 16px }
-#navWrap.f-ms { position:fixed; left:0px; top:0px; width:280px; min-height:332px; z-index:1; background-color:#60448c; height:100vh }
-#wynavigation.f-ms { width:265px; min-height:89px; z-index:0; margin-left:15px; margin-top:95px; margin-right:auto }
-@media screen and (max-width:800px)
-{
-	#PageDiv { width:auto; max-width:800px }
-}
-@media screen and (max-width:640px)
-{
-	#PageDiv { max-width:640px }
-}
-@media screen and (max-width:384px)
-{
-	#PageDiv { max-width:384px }
-}
--->
-</style>
-<!--[if lt IE 9]>
-<script src="../Resources/html5shiv.js"></script>
-<![endif]-->
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic">
-<link rel=stylesheet href="css/default.css">
-<link rel=stylesheet href="css/common.css">
-<link rel=stylesheet href="css/mtree.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/velocity/0.2.1/jquery.velocity.min.js"></script>
-<style type="text/css"><!----></style></head>
-<body>
-<div id="PageDiv">
-	<div id="m1" class="f-ms"><div id="m2" class="f-ms"><h1 class="f-fp">Installation</h1>
-			<p class="intro-text"><span class="fw600"><span class="fw400">WebYep is a &quot;Web Content Management System&quot; :-</span></span>&nbsp;&nbsp;It enables people without web design knowledge to edit the content of web pages, just using the web browser. By incorporating WebYep into your website every person that can use a web browser can edit the content of the site's pages.</p>
-			<p class="intro-text">To integrate WebYep into your site, you as the web designer need to install WebYep into the webspace and insert WebYep elements into the web pages that need to be editable.</p>
-			<p class="intro-text">One main difference to other web content management systems is, that you do not need to create your whole website with WebYep. You can take any &quot;regular&quot; website and just make some parts of some pages &quot;editable&quot;, by replacing the static content with the appropriate WebYep Elements.</p>
-			<p class="intro-text">This documentation is intended to give you all necessary information for adding WebYep to your website, inserting and setting up the WebYep elements in your pages.</p>
-			<h3>The webyep-system folder</h3>
-			<p>The core of WebYep is a set of PHP scripts contained in a folder named &quot;webyep-system&quot;. This webyep-system folder must be uploaded onto your webspace (like all other pages/images of your website) - usually into the root folder of your website, where your homepage (index.html or index.php) resides.</p>
-			<p>Important: Whenever you rename a page or move it to another folder, the link between the page and its WebYep data is lost, as WebYep can only identify a page by its URL (filename and path).<br>But you can re-link the page to its data:<br>Open the file webyep-system/data/documents - a text file, containing pairs of paths and document IDs. Locate the file in question and correct its file or folder name. Then WebYep will find the document's data again.</p>
-			<p>For example, if you have your page in a subfolder 'new_design' and you want to have it in the root folder, you'd do the following:</p>
-			<p>This:</p>
-			<pre>/new_design/index.php 	1<br>/new_design/somePage.php 	2<br>/new_design/anotherPage.php 	3<br>/new_design/about.php 	4</pre>
-			<p>would become:</p>
-			<pre>/index.php 	1<br>/somePage.php 	2<br>/anotherPage.php 	3<br>/about.php 	4</pre>
-			<h3>Configuration</h3>
-			<p>Before uploading the webyep-system folder to your webspace, you should setup the configuration (in the file config-inc.php inside the webyep-system folder) - at least set a username and password. See &quot;<a href="configuration.html">Configuration</a>&quot; for details.</p>
-			<h3>Installation on the web server</h3>
-			<p>To install WebYep on your web server just upload the webyep-system folder like all your pages and images via FTP. You can do this with any FTP application or directly.</p>
-			<h3>Preparing WebYep, enabling write access</h3>
-			<p>To enable write access for WebYep (and thus PHP) to let it store data on the web server on most server systems you have to set the UNIX file permissions for the folder PHP should store data in.</p>
-			<h3>Verification</h3>
-			<p>Whether the preparation of WebYep was successful can be verified by calling the WebYep status/info page:<br>http://www.mywebsite.com/webyep-system/info.php</p>
-			<h3>Summary</h3>
-			<ul class="f-lp">
-				<li><strong>The webyep-system folder:</strong><br>A folder named &quot;webyep-system&quot; with various PHP scripts etc. - the core of the WebYep system.<br>This folder should be placed in the root directory of your website (where your homepage – index.html or index.php – resides).</li>
-				<li><strong>Configuration:</strong><br>Set username and password in config-inc.php.</li>
-				<li><strong>Installation on the web server:</strong><br>Upload the webyep-system folder like the other files of your website to your web server (usually directly via FTP software).</li>
-				<li><strong>Activation:</strong><br>Use any other FTP/SCP application to set the access privileges for the &quot;data&quot; folder inside the webyep-system folder accordingly.</li>
-				<li><strong>Checking:</strong><br>You can check the status of your WebYep installation via the URL<br>http://www.mywebsite.com/webyep-system/info.php</li>
-			</ul>
-		</div>
-	</div>
-	<div id="navWrap" class="f-ms grad1"><div id="wynavigation" class="WHITE f-ms"><ul class="f-fp f-lp mtree transit">
-				<li><a href="../index.html">Introduction</a></li>
-				<li><a href="basic.html">Basics</a></li>
-				<li><a href="installation.html">Installation</a></li>
-				<li><a href="configuration.html">Configuration</a>
-				<ul>
-					<li><a href="configuration.html">Basic Configuration</a></li>
-					<li><a href="multiplelogins.html">Multiple Logins</a></li>
-					<li><a href="completeoptions.html">Complete Options</a></li>
-				</ul>
-				</li>
-				<li><a href="backup.html">Backup</a></li>
-				<li><a href="systemrequirements.html">System Requirements</a></li>
-				<li><a href="whitelabeledversion.html">White Labeled Version</a></li>
-				<li><a href="tutorials.html">Tutorials</a>
-				<ul>
-					<li><a href="firststeps.html">First Steps</a></li>
-					<li><a href="themenu.html">The Menu</a></li>
-					<li><a href="theloop.html">The Loop</a></li>
-				</ul>
-				</li>
-				<li><a href="#">References</a>
-				<ul>
-					<li><a href="referenceoverview.html">Reference Overview</a></li>
-					<li><a href="theinitcode.html">The Init Code</a></li>
-					<li><a href="sessioncode.html">The Session Code</a></li>
-					<li><a href="logonbutton.html">Logon Button</a></li>
-					<li><a href="shorttext.html">Short Text</a></li>
-					<li><a href="longtext.html">Long Text</a></li>
-					<li><a href="richtext.html">Rich Text</a></li>
-					<li><a href="markuptext.html">Markup Text</a></li>
-					<li><a href="image.html">Image</a></li>
-					<li><a href="gallery.html">Image Gallery</a></li>
-					<li><a href="attachement.html">Attachment</a></li>
-					<li><a href="menu.html">Menu</a></li>
-					<li><a href="loop.html">Loop</a></li>
-					<li><a href="readmore.html">Read More</a></li>
-				</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-</body>
-<script src="js/mtree.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Installation &amp; Setup</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li>
+              <a href="installation.html" class="current"
+                >Installation &amp; Setup</a
+              >
+            </li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Elements</summary>
+                <ul>
+                  <li>
+                    <a href="elementsoverview.html">Elements Overview</a>
+                  </li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1>
+          WebYep <strong>installation</strong> and web page
+          <strong>setup</strong>
+        </h1>
+        <p>
+          <strong
+            >The underlying intent of WebYep is to make parts of a web page
+            editable for a user.</strong
+          >
+          The user could be yourself, wishing to update a website remotely. Or
+          it could be a website you are building on behalf of a client, who
+          wants the freedom to make content edits whenever they want.
+        </p>
+        <p>
+          There are two main stages towards making a website editable using
+          WebYep. Firstly we need to configure and upload the 'webyep-system'
+          folder, which handles the login and all content edits. Secondly the
+          pages that you want to make editable require some PHP code adding to
+          them.
+        </p>
+        <p>
+          If you prefer to safely test WebYep without affecting your published
+          website, you can practice installing and configuring WebYep using a
+          test website in <a href="https://www.mamp.info/en/mac/">MAMP</a> or
+          <a href="https://www.apachefriends.org/">XAMPP</a> on your computer.
+          This is free software that simulates a web server on your computer.
+        </p>
+        <h3>System requirements</h3>
+        <p>
+          For running WebYep 3, the web server requires a minimum of PHP 8.0.
+        </p>
+        <ul>
+          <li>
+            If you are unsure what version of PHP your web server has or how to
+            upgrade to a newer version, please ask the web hosting provider for
+            help.
+          </li>
+          <li>
+            The PHP support must be 'as usual'. If it is reduced in any way,
+            WebYep might not function properly.
+          </li>
+          <li>
+            It must be possible to give PHP the right to create, change and
+            delete files in a specified directory (normally standard).
+          </li>
+          <li>
+            To create thumbnails of uploaded images, the
+            <a
+              href="https://www.php.net/manual/en/book.image.php"
+              target="_blank"
+              >GD&nbsp;extension</a
+            >
+            for PHP must be installed on the server.
+          </li>
+          <li>Windows web servers are not supported.</li>
+        </ul>
+        <h3>Quick 10-step setup guide:</h3>
+        <ol>
+          <li>If you have not done so already, download WebYep.</li>
+          <li>
+            Copy the 'webyep-system' folder (contained within the WebYep
+            package) onto your desktop.
+          </li>
+          <li>
+            Use a code editor to open the file 'config-inc.php' inside the
+            'webyep-system' folder. In here, you can set a username and
+            password, to be used for the WebYep login. Save the changes when
+            done. See <a href="configuration">configuration</a> for details of
+            other configurations you can change (like the language).
+          </li>
+          <li>
+            Move the 'webyep-system' folder into the root directory (public_html
+            or htdocs) of your website, alongside where your homepage index.html
+            or index.php file is. You can do this either using a file manager or
+            your FTP software.
+          </li>
+          <li>
+            For pages that are to contain pieces of editable content, ensure
+            they have a .php file extension. Use a code editor to add the
+            <a href="initcode.html">Init Code</a> to the top of these pages.
+          </li>
+          <li>
+            Use a code editor to replace exisiting static content or images with
+            WebYep
+            <a href="elementsoverview.html">elements</a> These elements are
+            little PHP code snippets that <em>tell</em> WebYep the type of
+            content editor to use and configure some <em>arguments</em> like the
+            encoding type or size of the popup editor.
+          </li>
+          <li>
+            Add a <a href="logon.html">Logon Button</a> to enable the website
+            author to click and login to make edits.
+          </li>
+          <li>
+            Save all the changes in your code editor. Open a web browser, and
+            navigate to the page you want to edit with WebYep. Click the padlock
+            icon to login.
+          </li>
+          <li>
+            In 'edit mode' click on any edit button (denoted with a pen icon) to
+            add or edit content within the popups.
+          </li>
+          <li>
+            When done editing, click the padlock icon again to commit your
+            content changes and return the web page back to its normal viewing
+            mode.
+          </li>
+        </ol>
+        <h3>More about the webyep-system folder</h3>
+        <p>
+          The core of WebYep is a set of PHP scripts contained in a folder named
+          'webyep-system'. This webyep-system folder must be uploaded onto your
+          webspace (like all other pages/images of your website) - usually into
+          the root 'public_html' or 'htdocs' folder of your website, where your
+          homepage (index.html or index.php) resides.
+        </p>
+        <p>
+          <strong>Important:</strong> If you rename a page or move it to another
+          folder, the link between the page and its WebYep data is lost. This is
+          becasue WebYep can only identify a page by its URL (filename and
+          path). But you can fix this, by re-linking the page with its data. To
+          do this, open the file webyep-system/data/documents - a text file,
+          containing pairs of paths and document IDs. Locate the file in
+          question and correct its file or folder name. Save the changes. Then
+          WebYep will find the document's data again.
+        </p>
+        <p>
+          For example, if you have your page in a subfolder 'new_design' and you
+          want to have it in the root folder, you'd do the following to change
+          this:
+        </p>
+
+        <pre><code>/new_design/index.php 1
+/new_design/somePage.php 2
+/new_design/anotherPage.php 3
+/new_design/about.php 4</code></pre>
+
+        To this:
+
+        <pre><code>/index.php 1
+/somePage.php 2
+/anotherPage.php 3
+/about.php 4</code></pre>
+
+        <h3>Structure of the webyep-system folder</h3>
+        <p>
+          WebYep is a flat-file CMS. It has no database. All the programming
+          code that makes WebYep work and the editable content you create all
+          gets stored within the webyep-system folder. The webyep-system folder
+          is neatly organized as follows.
+        </p>
+        <ul>
+          <li>webyep-system</li>
+          <ul>
+            <li>
+              config-inc.php (this is where you set up the username and
+              password)
+            </li>
+            <li>
+              info.php (shows system information, installed licenses and WebYep
+              status)
+            </li>
+            <li>the program contains all WebYep program scripts and data</li>
+            <li>
+              data (includes the data entered/uploaded by the users)
+              <ul>
+                <li>documents (<em>list of pages using WebYep</em>)</li>
+                <li>
+                  various files containing all data entered by the users (<em
+                    >texts, images, etc.</em
+                  >)
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </ul>
+        <p>
+          The 'data' folder should be backed up from time to time (see
+          <a href="backup.html">backup</a> for details).
+        </p>
+        <h3>Verification and diagnostic info</h3>
+        <p>
+          Whether the preparation of WebYep was successful can be verified by
+          calling the WebYep status/info page. This page displays some basic
+          information about WebYep. It also outputs technical details about how
+          PHP is configured on your webserver. You can access this special
+          status page here:<br />
+          <a href="https://example.com/webyep-system/info.php" target="_blank"
+            >https://example.com/webyep-system/info.php</a
+          ><br /><br />
+          Type this address into your web browser address bar. Replace
+          'example.com' with your website domain name and press enter. The
+          resulting page will show what version of WebYep is installed and other
+          useful details, like the version number of PHP the web server is
+          running.
+        </p>
+        <h3>Summary</h3>
+        <ul>
+          <li>
+            <strong>System requirements:</strong><br />The web server needs to
+            meet the minimum system requirements, as outlined above.
+          </li>
+          <li>
+            <strong>The webyep-system folder:</strong><br />A folder named
+            'webyep-system' with various PHP scripts etc. - the core of the
+            WebYep system. This folder should be placed in the root directory of
+            your website (where your homepage index.html or index.php file
+            resides).
+          </li>
+          <li>
+            <strong>Configuration:</strong><br />Setup a username and password
+            in config-inc.php.
+          </li>
+          <li>
+            <strong>Installation on the web server:</strong><br />Upload the
+            webyep-system folder like the other files of your website to your
+            web server (usually directly via FTP software).
+          </li>
+          <li>
+            <strong>Checking:</strong><br />You can check the status of your
+            WebYep installation via the URL:<br />https://example.com/webyep-system/info.php
+          </li>
+          <li>
+            <strong>Make web pages editable:</strong><br />Add the Init code to
+            the top of the page. Use WebYep elements to denote the parts of the
+            page you want to make editable.
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
 </html>

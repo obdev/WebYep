@@ -1,201 +1,271 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>multiple logins</title>
-<meta name="viewport" content="width = device-width, minimum-scale = 0.25, maximum-scale = 1.60">
-<meta name="generator" content="Freeway Pro 7.1.4">
-<link rel=stylesheet href="css/mini-css-reset.css">
-<style type="text/css">
-<!--
-body { margin:0px; height:100% }
-html { height:100% }
-form { margin:0px }
-body > form { height:100% }
-img { margin:0px; border-style:none }
-button { margin:0px; border-style:none; padding:0px; background-color:transparent; vertical-align:top }
-table { empty-cells:hide }
-td { padding:0px }
-.f-sp { font-size:1px; visibility:hidden }
-.f-lp { margin-bottom:0px }
-.f-fp { margin-top:0px }
-a:link { color:#5294c4 }
-a:visited { color:#5294c4 }
-a:hover { color:#c28df2 }
-a:active { color:#c28df2 }
-       * { margin-top:0px; margin-bottom:0px }
-       html { font-size:62.5% }
-      body { font-family:'Open Sans',Helvetica,sans-serif; font-size:1.5em; line-height:1.5 }
-     dl { margin:1em 0em 1.65em 2.1em }
-    dd { margin:0em; padding:0 }
-    ul { margin:1em 0em 1.65em 1.1em }
-   li { margin:0em 0em 0.33em; padding:0 }
-   p { color:#666; line-height:1.5; margin-top:0em; margin-bottom:0.75em }
-  .button:hover { color:#e6e6e6; background-color:#333; border:1px solid #333; padding:8px 16px; cursor:pointer }
-  .dropdown:hover { color:#e6e6e6; background-color:#333; padding:6px 40px 6px 8px; border:1px solid #666; cursor:pointer }
-  .input:focus { border:1px solid #333 }
-  .input:hover { color:#3c2e69 }
-  .r1 { -webkit-border-radius:1px; -moz-border-radius: 1px;  border-radius: 1px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r2 { -webkit-border-radius:2px; -moz-border-radius: 2px;  border-radius: 2px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r3 { -webkit-border-radius:3px; -moz-border-radius: 3px;  border-radius: 3px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r4 { -webkit-border-radius:4px; -moz-border-radius: 4px;  border-radius: 4px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  .r5 { -webkit-border-radius:5px; -moz-border-radius: 5px;  border-radius: 5px; -webkit-background-clip:padding-box; background-clip:padding-box }
-  hr { margin:2.75em 0px 2.25em; height:0; border: 0; border-top: 1px solid #ddd }
-#wynavigation a { color:#fff; text-decoration:none }
-#wynavigation a:hover { color:#e6e6e6 }
-address { text-decoration:none; font-size:13px; line-height:1.5; margin:0.5em; font-style:normal }
-blockquote { color:#777; font-style:italic; text-decoration:none; margin:1em 0em 1.65em 2.5em; border-left:2px solid #ddd; padding-left:1.65em }
-cite { font-size:13px }
-code { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:1.4rem }
-em { font-style:italic }
-h1 { color:#3c2e69; font-size:3.8rem; line-height:1.1; margin-bottom:1.25em; margin-top:1em; font-weight:300 }
-h1:first-child { margin-top:0px }
-h2 { color:#fb694d; font-size:2.8rem; line-height:1.2; margin-bottom:0.6em; margin-top:1.5em; font-weight:300 }
-h2:first-child { margin-top:0px }
-h3 { color:#fb694d; font-size:2.1rem; line-height:1.3; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h3:first-child { margin-top:0px }
-h4 { font-size:1.8rem; line-height:1.4; margin-bottom:0.66em; margin-top:1.5em; font-weight:400 }
-h4:first-child { margin-top:0px }
-h5 { font-size:1.6rem; line-height:1.5; margin-bottom:0.75em; margin-top:1.5em; font-weight:400 }
-h5:first-child { margin-top:0px }
-h6 { font-weight:bold; font-size:1.4rem; text-transform:uppercase; font-variant:normal; line-height:1; margin-bottom:0.75em; margin-top:1.6em }
-h6:first-child { margin-top:0px }
-pre { color:#006ec0; font-family:Menio,Monaco,Consolas,"Courier New",monospace; font-size:87.5%; margin-left:1em; margin-top:0em; margin-bottom:0.75em; white-space:pre-wrap }
-small { font-size:1.3rem }
-strong { font-weight:700 }
-.RED { color:#f00 }
-.ORANGE { color:#fb694d }
-.WHITE { color:#fff }
-#PageDiv { position:relative; width:100%; min-height:100%; margin:0px auto 0px 0px }
-#m1.f-ms { width:calc(100vw - 315px); min-height:100%; z-index:0; float:left; margin-left:315px }
-#m2.f-ms { width:91%; min-height:119px; z-index:0; margin:95px 50px 80px 16px }
-#navWrap.f-ms { position:fixed; left:0px; top:0px; width:280px; min-height:332px; z-index:1; background-color:#60448c; height:100vh }
-#wynavigation.f-ms { width:265px; min-height:89px; z-index:0; margin-left:15px; margin-top:95px; margin-right:auto }
-@media screen and (max-width:800px)
-{
-	#PageDiv { width:auto; max-width:800px }
-}
-@media screen and (max-width:640px)
-{
-	#PageDiv { max-width:640px }
-}
-@media screen and (max-width:384px)
-{
-	#PageDiv { max-width:724px }
-}
--->
-</style>
-<!--[if lt IE 9]>
-<script src="../Resources/html5shiv.js"></script>
-<![endif]-->
-<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300,400italic">
-<link rel=stylesheet href="css/default.css">
-<link rel=stylesheet href="css/common.css">
-<link rel=stylesheet href="css/mtree.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/velocity/0.2.1/jquery.velocity.min.js"></script>
-<style type="text/css"><!----></style></head>
-<body>
-<div id="PageDiv">
-	<div id="m1" class="f-ms"><div id="m2" class="f-ms"><h1 class="f-fp">Multiple Logins</h1>
-			<pre>$webyep_aMultiLoginName[]<br>$webyep_aMultiLoginPassword[]<br>$webyep_aMultiLoginURLPatterns[]</pre>
-			<p>These options allow you to specify other users than the Administrator.</p>
-			<p>You can add more than one username/password pair if you want different people to be able to edit different parts of the website.</p>
-			<p>The above username/password then acts as the <strong>master login</strong> - this user will be able to edit <strong>any</strong> content of the website.</p>
-			<p>You can add additional logins by adding one or more of these blocks to your configuration:</p>
-			<pre>$webyep_aMultiLoginName[] = &quot;<span class="RED">someUserName</span>&quot;;<br>$webyep_aMultiLoginPassword[] = &quot;<span class="RED">somePassword</span>&quot;;<br>$webyep_aMultiLoginURLPatterns[] = &quot;<span class="RED">/somePage.php /someOtherPage.php</span>&quot;;</pre>
-			<p>With the first two lines, you define the username and password for the login. With the third line, you identify one or more pages or groups of pages (via wildcards) that this user should be allowed to edit, by stating the URL paths of these pages.</p>
-			<p><strong><span class="ORANGE"><em>Note:</em></span><em> </em></strong><em>Please note the brackets after the variable names – this is different compared to other configuration variables!</em></p>
-			<p>In the simplest case, you would just state the URL path of one page here, but you can also define several paths, separated by spaces.<br>Note that URL paths are not supposed to contain spaces! Special characters like spaces must be URL-encoded (e.g. space = %20) in a URL path.</p>
-			<p>A path can also contain the wildcard character (&quot;*&quot;, the asterisk) to match several pages. For example, to match all pages in a particular folder, you would state the path to the folder, followed by a slash, followed by the wildcard:</p>
-			<pre>$webyep_aMultiLoginURLPatterns[] = &quot;<span class="RED">/someFolder/*</span>&quot;;</pre>
-			<hr>
-			<h3>A word on URL paths</h3>
-			<p>When setting the URL patterns for a login it's important to be clear about the path structure of your website.</p>
-			<p>The path part of a URL is the part following the hostname - e.g. in the URL</p>
-			<pre>http://www.somewebsite.com/foldername/subfoldername/pagename.php</pre>
-			<p>the path would be:</p>
-			<pre>/foldername/subfoldername/pagename.php</pre>
-			<p>So if you want to give some login the right to edit this page, you would set the</p>
-			<pre>$webyep_aMultiLoginURLPatterns[] to:</pre>
-			<pre>$webyep_aMultiLoginURLPatterns[] = &quot;<span class="RED">/foldername/subfoldername/pagename.php</span>&quot;;</pre>
-			<p><strong><span class="ORANGE"><em>Note:</em></span></strong><em> The slash at the beginning of the path is important. If omitted, the path would be a relative path. Such path can match multiple pages which full paths simply end with the given sequence.</em></p>
-			<hr>
-			<h3>URL Pattern Examples</h3>
-			<p>The login should be able to...</p>
-			<p>...edit only the pages &quot;/pageA.php&quot; and &quot;/pageB.php&quot;:</p>
-			<pre>$webyep_aMultiLoginURLPatterns[] = &quot;<span class="RED">/pageA.php /pageB.php</span>&quot;;</pre>
-			<p>...edit all pages in the folder &quot;/workshops&quot; and the page &quot;/news.php&quot;:</p>
-			<pre>$webyep_aMultiLoginURLPatterns[] = &quot;<span class="RED">/workshops/* /news.php</span>&quot;;</pre>
-			<p>...edit all pages in the folder &quot;/workshops&quot; and its immediate subfolders:</p>
-			<pre>$webyep_aMultiLoginURLPatterns[] = &quot;<span class="RED">/workshops/* /workshops/*/*</span>&quot;;</pre>
-			<p>...edit all pages which filename is &quot;events.php&quot; - regardless of where (in which folder) the page is located:</p>
-			<pre>$webyep_aMultiLoginURLPatterns[] = &quot;<span class="RED">events.php</span>&quot;;</pre>
-			<p><em>(</em><strong><span class="ORANGE"><em>Note</em></span></strong><span class="ORANGE"><em> </em></span><em>the missing slash in front of the filename! This makes the path </em><strong><em>relative</em></strong><em> and able to match all paths that simply </em><strong><em>end</em></strong><em> with &quot;.../events.php&quot;)</em></p>
-			<p>...edit all pages which filename end with &quot;...public.php&quot; - regardless of where (in which folder) the page is located:</p>
-			<pre>$webyep_aMultiLoginURLPatterns[] = &quot;<span class="RED">*public.php</span>&quot;;</pre>
-			<p>Note: To find the right pattern for a login its best to first set the username and password, then login using your browser and navigate to the page in question. If the WebYep edit buttons appear disabled, correct the pattern and reload the page – until the edit buttons become enabled...</p>
-			<p>But then be sure to also check whether the other logins really are not able to edit that page!</p>
-			<h4>Switching logins (logging out)</h4>
-			<p>Once logged in you will stay in that login for the current browser session. Usually, users do not switch logins.</p>
-			<p>If you're checking your configuration and you wish to switch between the different logins. Simply quit the browser (thereby ending the browser session). Or you can hold the <strong>ALT</strong> and/or <strong>SHIFT</strong> modifier key(s) while clicking the WebYep Logout Button on the page (the open lock icon) - depending on which browser you use: Use <strong>SHIFT</strong> in Safari [1], <strong>SHIFT</strong> and <strong>ALT</strong> together in Firefox and just <strong>ALT</strong> in Internet Explorer).</p>
-			<p><small>[1] With Safari 5.1 this is no longer possible since all modifier keys in combination with a click fulfil other tasks.</small></p>
-			<hr>
-			<h3>Other Login Options</h3>
-			<p><strong>$webyep_bShowDisabledEditButtons</strong></p>
-			<p>If a page contains editable fields, but the user has insufficient privileges WebYep can display the edit buttons disabled (true) or not at all (false).</p>
-			<p>Default: true</p>
-			<p><strong>$webyep_bOtherLoginsMayEditGlobalData</strong></p>
-			<p>Whether editors other than the main editor should be able to edit &quot;global&quot; fields.</p>
-			<p>WebYep Elements marked global (with the &quot;Content&quot; attribute set to &quot;for all documents&quot;) generally can only be modified by the master login.</p>
-			<p>Default: false</p>
-			<p>If you want all other logins to be able to edit global content on pages they have edit rights for, change the following configuration variable in your configuration file:</p>
-			<pre>$webyep_bOtherLoginsMayEditGlobalData = <span class="RED">true;</span></pre>
-		</div>
-	</div>
-	<div id="navWrap" class="f-ms grad1"><div id="wynavigation" class="WHITE f-ms"><ul class="f-fp f-lp mtree transit">
-				<li><a href="../index.html">Introduction</a></li>
-				<li><a href="basic.html">Basics</a></li>
-				<li><a href="installation.html">Installation</a></li>
-				<li><a href="configuration.html">Configuration</a>
-				<ul>
-					<li><a href="configuration.html">Basic Configuration</a></li>
-					<li><a href="multiplelogins.html">Multiple Logins</a></li>
-					<li><a href="completeoptions.html">Complete Options</a></li>
-				</ul>
-				</li>
-				<li><a href="backup.html">Backup</a></li>
-				<li><a href="systemrequirements.html">System Requirements</a></li>
-				<li><a href="whitelabeledversion.html">White Labeled Version</a></li>
-				<li><a href="tutorials.html">Tutorials</a>
-				<ul>
-					<li><a href="firststeps.html">First Steps</a></li>
-					<li><a href="themenu.html">The Menu</a></li>
-					<li><a href="theloop.html">The Loop</a></li>
-				</ul>
-				</li>
-				<li><a href="#">References</a>
-				<ul>
-					<li><a href="referenceoverview.html">Reference Overview</a></li>
-					<li><a href="theinitcode.html">The Init Code</a></li>
-					<li><a href="sessioncode.html">The Session Code</a></li>
-					<li><a href="logonbutton.html">Logon Button</a></li>
-					<li><a href="shorttext.html">Short Text</a></li>
-					<li><a href="longtext.html">Long Text</a></li>
-					<li><a href="richtext.html">Rich Text</a></li>
-					<li><a href="markuptext.html">Markup Text</a></li>
-					<li><a href="image.html">Image</a></li>
-					<li><a href="gallery.html">Image Gallery</a></li>
-					<li><a href="attachement.html">Attachment</a></li>
-					<li><a href="menu.html">Menu</a></li>
-					<li><a href="loop.html">Loop</a></li>
-					<li><a href="readmore.html">Read More</a></li>
-				</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-</body>
-<script src="js/mtree.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Configuring Multiple Logins</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details open>
+                <summary class="current">Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li>
+                    <a href="multiplelogins.html" class="current"
+                      >Multiple Logins</a
+                    >
+                  </li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Elements</summary>
+                <ul>
+                  <li>
+                    <a href="elementsoverview.html">Elements Overview</a>
+                  </li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1>Configuring <strong>multiple</strong> logins</h1>
+        <p>
+          <strong
+            >You probably know already how to setup a 'master' admin username
+            and password, from reading the
+            <a href="configuration.html">configuration</a> page.</strong
+          >
+          But did you know you can setup additional usernames and passwords? You
+          can even control which pages or groups of pages those additional users
+          are allowed to edit! Again this can all be done in the config-inc.php
+          file.
+        </p>
+        <pre>
+$webyep_aMultiLoginName[]
+$webyep_aMultiLoginPassword[]
+$webyep_aMultiLoginURLPatterns[]</pre
+        >
+        <p>
+          These options allow you to specify other users than the Administrator.
+        </p>
+        <p>
+          You can add more than one username/password pair if you want different
+          people to be able to edit different parts of the website.
+        </p>
+        <p>
+          The above username/password then acts as the
+          <strong>master login</strong> - this user will be able to edit
+          <strong>any</strong> content of the website.
+        </p>
+        <p>
+          You can add additional logins by adding one or more of these blocks to
+          your configuration:
+        </p>
+        <pre>
+$webyep_aMultiLoginName[] = "<span class="orange">someUserName</span>";
+$webyep_aMultiLoginPassword[] = "<span class="orange">somePassword</span>";
+$webyep_aMultiLoginURLPatterns[] = "<span class="orange">/somePage.php /someOtherPage.php</span>";</pre>
+        <p>
+          With the first two lines, you define the username and password for the
+          login. With the third line, you identify one or more pages or groups
+          of pages (via wildcards) that this user should be allowed to edit, by
+          stating the URL paths of these pages.
+        </p>
+        <p>
+          <strong>Note:</strong> Please note the brackets after the variable
+          names - this is different compared to other configuration variables!
+        </p>
+        <p>
+          In the simplest case, you would just state the URL path of one page
+          here, but you can also define several paths, separated by spaces.<br />Note
+          that URL paths are not supposed to contain spaces! Special characters
+          like spaces must be URL-encoded (e.g. space = %20) in a URL path.
+        </p>
+        <p>
+          A path can also contain the wildcard character ("*", the asterisk) to
+          match several pages. For example, to match all pages in a particular
+          folder, you would state the path to the folder, followed by a slash,
+          followed by the wildcard:
+        </p>
+        <pre>$webyep_aMultiLoginURLPatterns[] = "<span class="orange">/someFolder/*</span>";</pre>
+        <h3>A word on URL paths</h3>
+        <p>
+          When setting the URL patterns for a login it's important to be clear
+          about the path structure of your website.
+        </p>
+        <p>
+          The path part of a URL is the part following the hostname - e.g. in
+          the URL
+        </p>
+        <pre>
+http://www.somewebsite.com/foldername/subfoldername/pagename.php</pre
+        >
+        <p>the path would be:</p>
+        <pre>/foldername/subfoldername/pagename.php</pre>
+        <p>
+          So if you want to give some login the right to edit this page, you
+          would set the
+        </p>
+        <pre>$webyep_aMultiLoginURLPatterns[]</pre>
+        <p>To:</p>
+        <pre>
+$webyep_aMultiLoginURLPatterns[] = "<span class="orange">/foldername/subfoldername/pagename.php</span>";</pre>
+        <p>
+          <strong>Note:</strong> The slash at the beginning of the path is
+          important. If omitted, the path would be a relative path. Such path
+          can match multiple pages which full paths simply end with the given
+          sequence.
+        </p>
+        <h3>URL Pattern Examples</h3>
+        <p>The login should be able to...</p>
+        <p>...edit only the pages "/pageA.php" and "/pageB.php":</p>
+        <pre>$webyep_aMultiLoginURLPatterns[] = "<span class="orange">/pageA.php /pageB.php</span>";</pre>
+        <p>
+          ...edit all pages in the folder "/workshops" and the page "/news.php":
+        </p>
+        <pre>$webyep_aMultiLoginURLPatterns[] = "<span class="orange">/workshops/* /news.php</span>";</pre>
+        <p>
+          ...edit all pages in the folder "/workshops" and its immediate
+          subfolders:
+        </p>
+        <pre>$webyep_aMultiLoginURLPatterns[] = "<span class="orange">/workshops/* /workshops/*/*</span>";</pre>
+        <p>
+          ...edit all pages which filename is "events.php" - regardless of where
+          (in which folder) the page is located:
+        </p>
+        <pre>$webyep_aMultiLoginURLPatterns[] = "<span class="orange">events.php</span>";</pre>
+        <p>
+          <strong>Note:</strong> the missing slash in front of the filename!
+          This makes the path <em>relative</em> and able to match all paths that
+          simply <em>end</em> with ".../events.php"
+        </p>
+        <p>
+          ...edit all pages which filename end with "...public.php" - regardless
+          of where (in which folder) the page is located:
+        </p>
+        <pre>$webyep_aMultiLoginURLPatterns[] = "<span class="orange">*public.php</span>";</pre>
+        <p>
+          Note: To find the right pattern for a login its best to first set the
+          username and password, then login using your browser and navigate to
+          the page in question. If the WebYep edit buttons appear disabled,
+          correct the pattern and reload the page - until the edit buttons
+          become enabled...
+        </p>
+        <p>
+          But then be sure to also check whether the other logins really are not
+          able to edit that page!
+        </p>
+        <h3>Switching logins (logging out)</h3>
+        <p>
+          Once logged in you will stay in that login for the current browser
+          session. Usually, users do not switch logins.
+        </p>
+        <p>
+          If you're checking your configuration and you wish to switch between
+          the different logins. Simply quit the browser (thereby ending the
+          browser session). Or you can hold the <strong>ALT</strong> and/or
+          <strong>SHIFT</strong> modifier key(s) while clicking the WebYep
+          Logout Button on the page (the open lock icon) - depending on which
+          browser you use: Use <strong>SHIFT</strong> in Safari [1],
+          <strong>SHIFT</strong> and <strong>ALT</strong> together in Firefox
+          and just <strong>ALT</strong> in Internet Explorer).
+        </p>
+        <p>
+          <small
+            >[1] With Safari 5.1 this is no longer possible since all modifier
+            keys in combination with a click fulfil other tasks.</small
+          >
+        </p>
+        <h3>Other Login Options</h3>
+        <pre>$webyep_bShowDisabledEditButtons</pre>
+        <p>
+          If a page contains editable fields, but the user has insufficient
+          privileges WebYep can display the edit buttons disabled (true) or not
+          at all (false).
+        </p>
+        <p>Default: true</p>
+        <pre>$webyep_bOtherLoginsMayEditGlobalData</pre>
+        <p>
+          Whether editors other than the main editor should be able to edit
+          "global" fields.
+        </p>
+        <p>
+          WebYep Elements marked global (with the "Content" attribute set to
+          "for all documents") generally can only be modified by the master
+          login.
+        </p>
+        <p>Default: false</p>
+        <p>
+          If you want all other logins to be able to edit global content on
+          pages they have edit rights for, change the following configuration
+          variable in your configuration file:
+        </p>
+        <pre>$webyep_bOtherLoginsMayEditGlobalData = <span class="orange">true;</span></pre>
+        <p>
+          If you are interested in wanting to change other aspects of your
+          WebYep install, please see the
+          <a href="completeoptions.html">complete&nbsp;options</a> guide.
+        </p>
+      </main>
+    </div>
+  </body>
 </html>
