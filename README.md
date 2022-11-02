@@ -52,7 +52,7 @@ This release adds or introduces bug fixes and a number of improvements.
 So what's new in version 2 release?
 ============================
 
-This release adds or introduces a massive amount of visual changes. So as a guide, I have listed the main differences below :
+This release adds or introduces a massive amount of visual changes. So as a guide, I have listed the main differences below:
 
 1. visually… virtually everything has been updated, although I am still finding hidden warning popups which still use the original CSS layout, but I hope they are few and far between.
 2. config file has changed a lot, and it now allows more control. It's also where you can configure things like the path to where the commercial rich-text editor files are stored or the language the editor uses *(more about that later)*. I have also added things like extra choice and control over which Javascript framework you wish to use and if you want to include the reference automatically. I have expanded the selection of Javascript frameworks to include Mootools. It’s also from here where you can set elements such as date and time configuration.
