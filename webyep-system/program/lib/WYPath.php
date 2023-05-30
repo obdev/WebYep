@@ -67,7 +67,7 @@ function __construct($s=''){
         }
         if ($iCheckMask & WYPATH_CHECK_JUSTIMAGE) {
             $sExt = strtolower($this->sExtension());
-            $aImageExtensions = array("gif", "jpg", "jpeg", "png");
+            $aImageExtensions = array("gif", "jpg", "jpeg", "png", "webp", "svg"); // add "webp" and "svg" to the array
             if ($sExt == "" || !in_array($sExt, $aImageExtensions, true)) return false;
         }
         if ($iCheckMask & WYPATH_CHECK_JUSTAUDIO) {

@@ -351,45 +351,53 @@ function webyep_menuItemClick(iMenuID, sURL, sTarget) {
         return $sHTML;
     }
 
-    function _bIsCurrentEntry($iDI, $sExplicitURL = "") {
-        // remove DOC_INST=0 from URL and set DI=0
-        if (preg_match('|DOC_INST=0|', $sExplicitURL)) {
-            $sExplicitURL = preg_replace('|DOC_INST=0|', '', $sExplicitURL);
-            $sExplicitURL = preg_replace('|[\?&]$|', '', $sExplicitURL);
-            $sExplicitURL = preg_replace('|&&|', '', $sExplicitURL);
-            $sExplicitURL = preg_replace('|\?&|', '?', $sExplicitURL);
-            $iDI = 0;
-        }
 
-        global $goApp;
 
-$oCurrentURL = new WYURL(); 
+	//  menu instance version
 
-        $bIsCurrent = false;
-     $oCurrentURL = $oCurrentURL->oCurrentURL();
- //$oCurrentURL = $this;
-        $sCurrentURL = $oCurrentURL->sURL(true, true, true);
-        if ($sExplicitURL) {
-            $bIsTargetPage = strpos($sCurrentURL, $sExplicitURL) !== false;
-            $bIsCurrent = $bIsTargetPage && $iDI == $goApp->oDocument->iDocumentInstance();
-        } else {
-            $oFullTargetURL = od_clone($this->oURL); // target page of menu element
-            $oFullTargetURL->makeSiteRelative();     //
-            $oFullTargetURL->dQuery = array();       // remove query params from target page (just to be sure)
-            $oCurrentURL->dQuery = array();          // remove query params from this request
-            $bIsTargetPage = $oFullTargetURL->sURL() == $oCurrentURL->sURL();
-            $bIsCurrent = $bIsTargetPage && $iDI == $goApp->oDocument->iDocumentInstance();
-        }
-        /*
-        $goApp->log("_bIsCurrentEntry($iDI,'$sExplicitURL') ... sCurrentURL:".($oCurrentURL->sURL())
-                    ." ... bIsTargetPage:".($bIsTargetPage ? 'true' : 'false')
-                    ." ... DI:".($goApp->oDocument->iDocumentInstance())." (this:$iDI)"
-                    ." ... oFullTargetURL:".(isset($oFullTargetURL) ? $oFullTargetURL->sURL() : '')
-                    ." ... return:".($bIsCurrent ? 'true' : 'false')
-                   );
-        */
-        return $bIsCurrent;
-    }
+	    function _bIsCurrentEntry($iDI, $sExplicitURL = "") {
+	        // remove DOC_INST=0 from URL and set DI=0
+	        if (preg_match('|DOC_INST=0|', $sExplicitURL)) {
+	            $sExplicitURL = preg_replace('|DOC_INST=0|', '', $sExplicitURL);
+	            $sExplicitURL = preg_replace('|[\?&]$|', '', $sExplicitURL);
+	            $sExplicitURL = preg_replace('|&&|', '', $sExplicitURL);
+	            $sExplicitURL = preg_replace('|\?&|', '?', $sExplicitURL);
+	            $iDI = 0;
+	        }
+
+	        global $goApp;
+
+	$oCurrentURL = new WYURL();
+
+	        $bIsCurrent = false;
+	     $oCurrentURL = $oCurrentURL->oCurrentURL();
+	 //$oCurrentURL = $this;
+	        $sCurrentURL = $oCurrentURL->sURL(true, true, true);
+	        if ($sExplicitURL) {
+	            $bIsTargetPage = strpos($sCurrentURL, $sExplicitURL) !== false;
+	            $bIsCurrent = $bIsTargetPage && $iDI == $goApp->oDocument->iDocumentInstance();
+	        } else {
+	            $oFullTargetURL = od_clone($this->oURL); // target page of menu element
+	            $oFullTargetURL->makeSiteRelative();     //
+	            $oFullTargetURL->dQuery = array();       // remove query params from target page (just to be sure)
+	            $oCurrentURL->dQuery = array();          // remove query params from this request
+	            $bIsTargetPage = $oFullTargetURL->sURL() == $oCurrentURL->sURL();
+	            $bIsCurrent = $bIsTargetPage && $iDI == $goApp->oDocument->iDocumentInstance();
+	        }
+	        /*
+	        $goApp->log("_bIsCurrentEntry($iDI,'$sExplicitURL') ... sCurrentURL:".($oCurrentURL->sURL())
+	                    ." ... bIsTargetPage:".($bIsTargetPage ? 'true' : 'false')
+	                    ." ... DI:".($goApp->oDocument->iDocumentInstance())." (this:$iDI)"
+	                    ." ... oFullTargetURL:".(isset($oFullTargetURL) ? $oFullTargetURL->sURL() : '')
+	                    ." ... return:".($bIsCurrent ? 'true' : 'false')
+	                   );
+	        */
+	        return $bIsCurrent;
+	    }
+
+	// end of  menu instance version
+
+
 
     function bTitleHasURL(&$sText, &$sURL)
     {
@@ -495,7 +503,9 @@ $oCurrentURL = new WYURL();
             if ($dEntry['VISIBLE']) {
                 if ($dEntry['URL']) {
                     $oURL = new WYURL($dEntry['URL']);
-                    $bOpenInNewWindow = $webyep_bOpenFullURLsInNewWindow && WYURL::bIsAbsolute($dEntry['URL']);
+                    $Wyurl = new WYURL();
+                    //$bOpenInNewWindow = $webyep_bOpenFullURLsInNewWindow && WYURL::bIsAbsolute($dEntry['URL']);
+                    $bOpenInNewWindow = $webyep_bOpenFullURLsInNewWindow &&  $Wyurl->bIsAbsolute($dEntry['URL']);
                     $bUseTitleAsItem = true;
                 } else {
                     $oURL = od_clone($this->oURL);
@@ -556,14 +566,14 @@ $oCurrentURL = new WYURL();
         $sLink = "MISSING LINK";
         $sTargetAtt = $this->sTarget ? (" target='" . $this->sTarget . "'"):"";
         if ($bIsTitle) {
-		
+
             if ($bUseTitleAsItem) { // this is a title and it also has a URL
-			
+
                 if (!$bIsExpanded || !$webyep_bAutoCloseMenus) {
                     $sTitleJS = "if (webyep_showHideMenuTree($webyep_iMenuID, $iItemID)) {webyep_menuItemClick($webyep_iMenuID, \"$sURL\", \"" . $this->sTarget ."\") } return false;";
-                
-                print_r( $sTitleJS);
-                
+
+                // print_r($sTitleJS); // Updated line
+
                 } else {
                     $sTitleJS = "webyep_menuItemClick($webyep_iMenuID, \"$sURL\", \"" . $this->sTarget ."\"); return false;";
                 }
@@ -587,6 +597,15 @@ $oCurrentURL = new WYURL();
         }
         return $sLink;
     }
+
+
+
+
+   
+   
+   
+   
+   
 
     /**
      * Convert old data format to current version

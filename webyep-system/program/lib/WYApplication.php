@@ -550,7 +550,7 @@ class WYApplication
 		$oURL = od_clone($this->oProgramURL);
 		$oURL->addComponent("logon.php");
 		$oURL->dQuery[WY_QK_LOGON_PAGE_URL] = $oPageURL->sURL();
-		$s .= WYPopupWindowLink::sOpenWindowCode($oURL, "WebYepLogon", 400, 300, WY_POPWIN_TYPE_PLAIN);
+		$s .= (new WYPopupWindowLink())->sOpenWindowCode($oURL, "WebYepLogon", 400, 300, WY_POPWIN_TYPE_PLAIN);
 		return $s;
 	}
 

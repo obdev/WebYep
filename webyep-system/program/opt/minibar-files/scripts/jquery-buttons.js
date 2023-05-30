@@ -33,33 +33,33 @@ if ($('#inlinemenu').prop('checked')){
 	});
 
 // 3 wrap selected text in a WebyYep tag //
-	$("#blank").click(function() {
-		formatText(document.getElementById('mytext'),'<BLANK ','>')
+	$("#h1").click(function() {
+		formatText(document.getElementById('mytext'),'<h1> ','</h1>')
 			$("#menu").fadeOut("1000");
 	});
 
 // 4 wrap selected text in a WebyYep tag //
-	$("#blank").click(function() {
-		formatText(document.getElementById('mytext'),'<BLANK ','>')
+	$("#h2").click(function() {
+		formatText(document.getElementById('mytext'),'<h2> ','</h2>')
 			$("#menu").fadeOut("1000");
 	});
 
 
 // 5 wrap selected text in a WebyYep tag //
-	$("#blank").click(function() {
-		formatText(document.getElementById('mytext'),'<BLANK ','>')
+	$("#h3").click(function() {
+		formatText(document.getElementById('mytext'),'<h3> ','</h3>')
 			$("#menu").fadeOut("1000");
 	});
 
 // 6 wrap selected text in a WebyYep tag //
-	$("#blank").click(function() {
-		formatText(document.getElementById('mytext'),'<BLANK ','>')
+	$("#h4").click(function() {
+		formatText(document.getElementById('mytext'),'<h4> ','</h4>')
 			$("#menu").fadeOut("1000");
 	});
 
 // 7 wrap selected text in a WebyYep tag //
-	$("#blank").click(function() {
-		formatText(document.getElementById('mytext'),'<BLANK ','>')
+	$("#h5").click(function() {
+		formatText(document.getElementById('mytext'),'<h5> ','</h5>')
 			$("#menu").fadeOut("1000");
 	});
 

@@ -11,6 +11,15 @@ There are many WebCMS available, even Open Source, but the original WebYep was d
 * Freeway & RapidWeaver plugins are available, plus code snippets for manual insertion into HTML.
 
 
+So what's new in version 3.0.6 release
+============================
+
+1. Again, quite a bit 
+2. There was a bug which is now fixed that occurred if you had set popup windows to be used rather than modal windows from the config file settings, and in some instances, the WebYep lock disappeared and didn't work
+3. Longtext Editor can now create tables again by the use of a | symbol which was causing a fatal crash in the previous versions of WebYep 3
+4. Countless tiny bugs have been squashed, but there will surely be others somewhere!!
+5. WebP file format has now been added to WebYep accepted file formats in WebYep - Images, Gallery, Attachments and some Richtext Editors
+
 
 So what's new in version 3.0.3 release, I hear you ask!
 ============================

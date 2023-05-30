@@ -451,7 +451,9 @@ class WYImageElement extends WYElement
                }
             }
 				$oLink = new WYLink($oURL, "", true);
-				if ($webyep_bOpenFullURLsInNewWindow && WYURL::bIsAbsolute($sURL)) $this->sTarget = "_blank";
+				 $Wyurl = new WYURL();
+				//if ($webyep_bOpenFullURLsInNewWindow && WYURL::bIsAbsolute($sURL)) $this->sTarget = "_blank";
+				if ($webyep_bOpenFullURLsInNewWindow && $Wyurl->bIsAbsolute($sURL)) $this->sTarget = "_blank";
 				if ($this->sTarget) $oLink->setAttribute("target", $this->sTarget);
 			}
 			if ($this->bIsThumb && !$oLink) {

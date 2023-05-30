@@ -73,6 +73,10 @@ class WYImage extends WYHTMLTag {
         }
         return $aOut;
     }
+	
+	
+	
+	
 
    static function bCanResizeImages() {
         if (function_exists('imagejpeg') && (function_exists('imagecopyresampled') || function_exists('imagecopyresized'))) {
@@ -98,60 +102,125 @@ class WYImage extends WYHTMLTag {
         }
     }
 
-    static function bResizeImage($oPIn, $oPOut, $iW, $iH) {
-        // replace the image with the resized one
-        global $goApp;
-        $bSuccess = false;
+    // static function bResizeImage($oPIn, $oPOut, $iW, $iH) {
+   //      // replace the image with the resized one
+   //      global $goApp;
+   //      $bSuccess = false;
+   //
+   //      $rInImage = $rOutImage = false;
+   //
+   //      WYImage::_allocateMemoryForImage($oPIn);
+   //
+   //      if (!function_exists('imagejpeg')) {
+   //          $goApp->log('bResizeImage: no GD lib with JPEG support installed');
+   //          return false;
+   //      }
+   //
+		
+   static function bIsSVG($oP) {
+       $aAllowedExtensions = array("svg");
+       $sExtension = strtolower($oP->sExtension());
+       return in_array($sExtension, $aAllowedExtensions);
+   }
+   
+   	
+   static function bResizeImage($oPIn, $oPOut, $iW, $iH) {
+       // replace the image with the resized one
+       global $goApp;
+       $bSuccess = false;
 
-        $rInImage = $rOutImage = false;
+       if (WYImage::bIsSVG($oPIn)) {
+           // handle SVG images here
+           // ...
+           return true;
+       }
 
-        WYImage::_allocateMemoryForImage($oPIn);
+       $rInImage = $rOutImage = false;
 
-        if (!function_exists('imagejpeg')) {
-            $goApp->log('bResizeImage: no GD lib with JPEG support installed');
-            return false;
-        }
+       WYImage::_allocateMemoryForImage($oPIn);
 
-        if (strtolower($oPIn->sExtension()) == 'jpg') {
-            if (!function_exists('imagecreatefromjpeg')) {
-                $goApp->log('bResizeImage: no imagecreatefromjpeg function found');
-                return false;
-            }
-            else $rInImage = @imagecreatefromjpeg($oPIn->sPath);
-        }
-        else if (strtolower($oPIn->sExtension()) == 'jpeg') {
-            if (!function_exists('imagecreatefromjpeg')) {
-                $goApp->log('bResizeImage: no imagecreatefromjpeg function found');
-                return false;
-            }
-            else $rInImage = @imagecreatefromjpeg($oPIn->sPath);
-        }
-        else if (strtolower($oPIn->sExtension()) == 'gif') {
-            if (!function_exists('imagecreatefromgif')) {
-                $goApp->log('bResizeImage: no imagecreatefromgif function found');
-                return false;
-            }
-            else $rInImage = @imagecreatefromgif($oPIn->sPath);
-        }
-        else if (strtolower($oPIn->sExtension()) == 'png') {
-            if (!function_exists('imagecreatefrompng')) {
-                $goApp->log('bResizeImage: no imagecreatefrompng function found');
-                return false;
-            }
-            else $rInImage = @imagecreatefrompng($oPIn->sPath);
-        }
+       if (!function_exists('imagejpeg')) {
+           $goApp->log('bResizeImage: no GD lib with JPEG support installed');
+           return false;
+       }
+		
+		
+		
+		
+ 
+	    if (strtolower($oPIn->sExtension()) == 'jpg') {
+	        if (!function_exists('imagecreatefromjpeg')) {
+	            $goApp->log('bResizeImage: no imagecreatefromjpeg function found');
+	            return false;
+	        }
+	        else $rInImage = @imagecreatefromjpeg($oPIn->sPath);
+	    }
+	    else if (strtolower($oPIn->sExtension()) == 'jpeg') {
+	        if (!function_exists('imagecreatefromjpeg')) {
+	            $goApp->log('bResizeImage: no imagecreatefromjpeg function found');
+	            return false;
+	        }
+	        else $rInImage = @imagecreatefromjpeg($oPIn->sPath);
+	    }
+	    else if (strtolower($oPIn->sExtension()) == 'gif') {
+	        if (!function_exists('imagecreatefromgif')) {
+	            $goApp->log('bResizeImage: no imagecreatefromgif function found');
+	            return false;
+	        }
+	        else $rInImage = @imagecreatefromgif($oPIn->sPath);
+	    }
+	    else if (strtolower($oPIn->sExtension()) == 'png') {
+	        if (!function_exists('imagecreatefrompng')) {
+	            $goApp->log('bResizeImage: no imagecreatefrompng function found');
+	            return false;
+	        }
+	        else $rInImage = @imagecreatefrompng($oPIn->sPath);
+	    }
+		
+		// start of webp file format
+	    else if (strtolower($oPIn->sExtension()) == 'webp') {
+	        if (!function_exists('imagecreatefromwebp')) {
+	            $goApp->log('bResizeImage: no imagecreatefromwebp function found');
+	            return false;
+	        }
+	        else $rInImage = @imagecreatefromwebp($oPIn->sPath);
+	    }
+		// end of webp file format
+		
+		
+		
+		
 
-        if (!$rInImage) {
-            $goApp->log('bResizeImage: could not create image from ' . $oPIn->sPath);
-            return false;
-        }
+	    if (!$rInImage) {
+	        $goApp->log('bResizeImage: could not create image from ' . $oPIn->sPath);
+	        return false;
+	    }
 
-        if (WYImage::bGD2Installed() && function_exists('imagecreatetruecolor')) $rOutImage = @imagecreatetruecolor($iW, $iH);
-        else if (function_exists('imagecreate')) $rOutImage = @imagecreate($iW, $iH);
-        if (!$rOutImage) {
-            $goApp->log("bResizeImage: could not create output image of size $iW/$iH");
-            return false;
-        }
+// disabled old function to stop fatal error if thumbnail size was set to unrestricted
+
+	    // if (WYImage::bGD2Installed() && function_exists('imagecreatetruecolor')) $rOutImage = @imagecreatetruecolor($iW, $iH);
+		// 	    else if (function_exists('imagecreate')) $rOutImage = @imagecreate($iW, $iH);
+		// 	    if (!$rOutImage) {
+		// 	        $goApp->log("bResizeImage: could not create output image of size $iW/$iH");
+		// 	        return false;
+		// 	    }
+
+// New function allows unrestricted thubnail size if set to 0
+		if (WYImage::bGD2Installed() && function_exists('imagecreatetruecolor')) {
+		    if ($iW <= 0) {
+		        $goApp->log("bResizeImage: invalid width value: $iW");
+		        return false;
+		    }
+		    $rOutImage = @imagecreatetruecolor($iW, $iH);
+		} else if (function_exists('imagecreate')) {
+		    $rOutImage = @imagecreate($iW, $iH);
+		}
+		if (!$rOutImage) {
+		    $goApp->log("bResizeImage: could not create output image of size $iW/$iH");
+		    return false;
+		}
+	
+		
 
         // preserve transparency
         if (strtolower($oPIn->sExtension()) == 'gif' || strtolower($oPIn->sExtension()) == 'png') {
@@ -165,6 +234,8 @@ class WYImage extends WYHTMLTag {
             }
         }
 
+
+
         if (WYImage::bGD2Installed() && function_exists('imagecopyresampled'))
             $bSuccess = @imagecopyresampled($rOutImage, $rInImage, 0, 0, 0, 0, $iW, $iH, imagesx($rInImage), imagesy($rInImage));
         if (!$bSuccess && function_exists('imagecopyresized'))
@@ -173,14 +244,34 @@ class WYImage extends WYHTMLTag {
             $goApp->log('bResizeImage: could not use imagecopyresampled or imagecopyresized');
             return false;
         }
+		
+		
 
-        unset($rInImage); // close input file
-        switch(strtolower($oPIn->sExtension())) { // save image as the right file type
-            case 'gif': $bSuccess = @imagegif($rOutImage, $oPOut->sPath); break;
-            case 'png': $bSuccess = @imagepng($rOutImage, $oPOut->sPath, 9); break;
-            case 'jpg': $bSuccess = @imagejpeg($rOutImage, $oPOut->sPath, 100); break;
-            case 'jpeg': $bSuccess = @imagejpeg($rOutImage, $oPOut->sPath, 100); break;
-        }
+        // unset($rInImage); // close input file
+        // switch(strtolower($oPIn->sExtension())) { // save image as the right file type
+        //     case 'gif': $bSuccess = @imagegif($rOutImage, $oPOut->sPath); break;
+        //     case 'png': $bSuccess = @imagepng($rOutImage, $oPOut->sPath, 9); break;
+        //     case 'jpg': $bSuccess = @imagejpeg($rOutImage, $oPOut->sPath, 100); break;
+        //     case 'jpeg': $bSuccess = @imagejpeg($rOutImage, $oPOut->sPath, 100); break;
+        // }
+		
+		
+
+		// Begining of New code File format support 3.0.4
+		
+		unset($rInImage); // close input file
+		switch(strtolower($oPIn->sExtension())) { // save image as the right file type
+		    case 'gif': $bSuccess = @imagegif($rOutImage, $oPOut->sPath); break; break;
+		    case 'png': $bSuccess = @imagepng($rOutImage, $oPOut->sPath, 9); break;
+		    case 'jpg': $bSuccess = @imagejpeg($rOutImage, $oPOut->sPath, 80); break;
+		    case 'jpeg': $bSuccess = @imagejpeg($rOutImage, $oPOut->sPath, 80); break;
+		    case 'webp': $bSuccess = @imagewebp($rOutImage, $oPOut->sPath, 75); break;
+		}
+		
+		// end of New file format
+		
+		
+		
 
         chmod($oPIn->sPath, 0644);
         if (!$bSuccess) {

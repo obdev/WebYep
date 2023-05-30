@@ -1,6 +1,6 @@
 .ui-nestedSortable-error {
      background-color: #fbe3e4;
-     background-image: url("../images/stop.gif");
+     background-image: url("../../images/stop.png");
      background-position: 5px 50%;
      background-repeat: no-repeat;
      color: #8a1f11;
@@ -107,13 +107,13 @@ li div span.toggle {
 }
 
 li div span.toggle {
-     background-image: url("/webyep-system/program/images/minus-button.png");
+     background-image: url("../../images/minus-button.png");
      background-repeat: no-repeat;
 	 opacity:.7;
 }
 
 li.hideChildren div span.toggle {
-     background-image: url("/webyep-system/program/images/plus-button.png");
+     background-image: url("../../images/plus-button.png");
      background-repeat: no-repeat;
 	 opacity:.7;
 }

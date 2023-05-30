@@ -48,12 +48,15 @@ class WYPopupWindowLink extends WYHTMLTag
 	function __construct($oURL='', $sName='', $iW='', $iH='', $iType='')
 	{
 		global $goApp;
+		global $webyep_sIncludePath;
 		static $i = 0; 
 		global $webyep_sModalWindowType;
 		$sJS = "";
 		parent::__construct("a");
 		$this->bSingular = false;
-
+		if(empty($oURL)) {
+			$oURL = new WYURL($webyep_sIncludePath);
+		}
 		$this->dAttributes["href"] = $oURL->sEURL();
 
 		//if(!empty($webyep_oCurrentLoop)){ echo "yes";

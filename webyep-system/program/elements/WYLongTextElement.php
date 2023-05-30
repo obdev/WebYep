@@ -212,7 +212,7 @@ class WYLongTextElement extends WYElement {
             }
 
             if ($iListLevel == 0 && preg_match('/([^\\\\]\|)|(^\|)/', $sOutLine)) {
-                $aCells = WYLongTextElement::_aSplitTableCells($sOutLine);
+                $aCells = (new WYLongTextElement())->_aSplitTableCells($sOutLine);
                 $sOutLine = "<tr>\n";
                 foreach ($aCells as $sCell) {
                    $sCell = trim($sCell);

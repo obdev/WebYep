@@ -135,8 +135,8 @@ $webyep_bDoNotIncludeMootools = false;// Mootools will be included, if required 
 // WebYep version number //
 $webyep_iMajorVersion = 3;
 $webyep_iMinorVersion = 0;
-$webyep_iSubVersion = 3;
-$webyep_sCopyrightLine = "&copy; 2022, <a href='http://www.obdev.at/' target='_blank'>Objective Development Software GmbH</a>";
+$webyep_iSubVersion = 6;
+$webyep_sCopyrightLine = "Original Code: &copy; 2023, <a href='http://www.obdev.at/' target='_blank'>Objective Development Software GmbH</a>";
 
 if (isset($_GET['webyep_sIncludePath']) || isset($_POST['webyep_sIncludePath']) || isset($_COOKIE['webyep_sIncludePath']) || isset($_SESSION['webyep_sIncludePath'])) exit(-1);
 if (strpos($webyep_sIncludePath, ":") !== false) exit(-1);

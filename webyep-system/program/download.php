@@ -18,6 +18,9 @@ $aMimeTypes['txt'] = "text/plain";
 $aMimeTypes['gif'] = "image/gif"; 
 $aMimeTypes['jpg'] = "image/jpeg";
 $aMimeTypes['png'] = "image/png";
+$aMimeTypes['webp'] = "image/webp";
+$aMimeTypes['svg'] = "image/svg";
+
 
 $oFilename = new WYPath($_GET[WY_QK_DOWNLOAD_FILENAME]);
 $oOrgFilename = new WYPath($_GET[WY_QK_ORIGINAL_FILENAME]);

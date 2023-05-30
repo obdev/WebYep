@@ -24,4 +24,7 @@ label.css-label {
     -ms-user-select: none;
     user-select: none;
 }
+a#WebYepLogon {
+    display: none;
+}
 
