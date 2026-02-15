@@ -1,0 +1,2 @@
+[15-Mar-2019 04:33:41 America/Chicago] PHP Notice:  A session had already been started - ignoring session_start() in /home1/quirksto/public_html/gamma/webeype/latest webyep version/webyep-system/program/elements/WYGalleryElement.php on line 1
+[15-Mar-2019 04:33:41 America/Chicago] PHP Warning:  unlink(webyep-system/data/license): No such file or directory in /home1/quirksto/public_html/gamma/webeype/latest webyep version/webyep-system/program/webyep.php on line 525

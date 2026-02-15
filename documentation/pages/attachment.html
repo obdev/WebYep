@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Attachment</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Elements</summary>
+                <ul>
+                  <li><a href="elementsoverview.html">Elements Overview</a></li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li>
+                    <a href="attachment.html" class="current">Attachment</a>
+                  </li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Attachment</strong> element</h1>
+        <p>
+          <strong
+            >With this WebYep element you can attach arbitrary documents to a
+            web page, offering them for download.</strong
+          >
+          The user can upload a file such as a Word document or a PDF. The
+          Attachment element will create a download link (using the document
+          filename) for it. And by clicking on the link, visitors can download
+          the file in their web browser.
+        </p>
+        <h3>The Attachment element code</h3>
+        <pre>
+&lt;?php webyep_attachment("attachment", false, "", 550, 240); // WebYepV2 ?&gt;</pre
+        >
+        <h3>Arguments for the function call:</h3>
+        <ol>
+          <li>
+            "<strong>Fieldname</strong>": A string - the field name for this
+            element.
+          </li>
+          <li>
+            <strong>true/false</strong>: A boolean - the scope for this element.
+            <br />true if the element should have the same content on all pages
+            (global).<br />false if it should have different content on each
+            page it appears on.
+          </li>
+          <li>
+            <strong>URL</strong>: Optional supportive image/icon location e.g.
+            (<em>images/artwork-highlighter.png</em>).
+          </li>
+          <li>
+            <strong>550, 240:</strong> Maximum width and height of the editor
+            window.
+          </li>
+        </ol>
+        <h3>Screenshots</h3>
+        <figure>
+          <img
+            src="../images/wy-attachment-link.png"
+            alt="A plain Attachment link, as it appears to website users."
+          />
+          <figcaption>
+            The Attachment link, as it appears to website users.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="../images/wy-attachment-icon.png"
+            alt="An Attachment link, with the addition of an image icon."
+          />
+          <figcaption>
+            An Attachment link, with the addition of an image icon.
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="../images/wy-attachment.png"
+            alt="The Attachment editor window, prior to a file being selected for upload."
+          />
+          <figcaption>
+            The Attachment editor window, prior to a file being selected for
+            upload.
+          </figcaption>
+        </figure>
+        <h3>A note about forced downloads</h3>
+        <p>
+          WebYep does its best to make sure that browsers really download the
+          document and do not display it directly, which is what they tend to do
+          with some file types (like PDF). Unfortunately not all browsers
+          conform to the relevant internet standards (defined in the HTTP
+          protocol specification) and thus some older web browsers might
+          nevertheless display the document instead of starting a download.
+        </p>
+        <h3>File size</h3>
+        <p>The size of the uploaded file is limited by two parameters:</p>
+        <ol>
+          <li>
+            <strong>The PHP configuration of your provider.</strong> The
+            provider running the webserver can set various limits to uploads
+            done via PHP. Usually they are set around 2MB - WebYep tries to
+            figure out that limit and displays it in the file upload window.
+          </li>
+          <li>
+            <strong>The internet connection speed.</strong> If an upload takes
+            too long (due to rate if file size to internet connection speed),
+            the browser or server might interrupt the upload process. What
+            exactly "too long" means, depends on a lot of factors (which
+            browser, which version, which operating system, etc.), but a file
+            size of 1-2MB can be considered safe in most situations. It is also
+            important to note that this limit affects only the upload by the
+            user, not the download done by the visitors.
+          </li>
+        </ol>
+        <p>
+          Also consider that if the user has an older smartphone / tablet device
+          (without a file browser) or has a corporate 'firewall' installed, they
+          may be blocked from uploading any files.
+        </p>
+        <h3>Attributes of the Attachment element</h3>
+        <h4>Fieldname</h4>
+        <p>
+          A distinctive name for that element. This name will be displayed in
+          the page in edit mode to give the user a hint on what this elements
+          content stands for and to distinguish the different WebYep elements in
+          a page.
+        </p>
+        <h4>Content</h4>
+        <p>
+          When set to "for this doc only" the elements content is unique for
+          this page - even if another element on a different page has the same
+          name. If set to "for all documents" the content will be the same on
+          all pages for elements of this kind that use the same name.
+        </p>
+        <h4>Modal window size</h4>
+        <p>
+          As the developer you can preset the dimensions of the modal window
+          size.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

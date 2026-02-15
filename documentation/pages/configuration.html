@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Basic Configuration</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details open>
+                <summary class="current">Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html" class="current"
+                      >Basic Configuration</a
+                    >
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Elements</summary>
+                <ul>
+                  <li>
+                    <a href="elementsoverview.html">Elements Overview</a>
+                  </li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Basic</strong> configuration</h1>
+        <p>
+          <strong
+            >Before uploading the webyep-system folder to your web server, you
+            should set up the WebYep configuration.</strong
+          >
+          Most importantly perhaps, you should set the username and password.
+          Whenever a user wants to change the website's content, he or she has
+          to log in with username and password (by clicking the
+          <a href="logonbutton.html">logon&nbsp;button</a> on a web page). This
+          username and password are the first configuration settings you should
+          take care of.
+        </p>
+        <p>
+          The configuration settings are stored in a text file named
+          config-inc.php inside the webyep-system folder. To edit the
+          configuration file, open it in any text editor.
+        </p>
+        <p>
+          <strong>Note:</strong> The configuration file is UTF-8 encoded to
+          display special characters correctly. Some text editors tend to add an
+          invisible character sequence at the start of a UTF-8 file when saving
+          it: The UTF-8 BOM (Byte Order Mark) will, unfortunately, break the
+          configuration file (PHP then refuses to send HTTP headers). Please
+          make sure to switch off this feature in your editor or use an editor
+          that does not add the BOM.
+        </p>
+        <h3>Username and password</h3>
+        <p>
+          These options determine who can log in to WebYep. You should at least
+          set the administrator's password.
+        </p>
+        <pre>$webyep_sAdminName</pre>
+        <p>
+          This is the primary editor's username (master login). The
+          Administrator can edit every WebYep field.
+        </p>
+        <pre>$webyep_sAdminPassword</pre>
+        <p>The Administrator's password.</p>
+        <p>
+          To set up the username and password, change the content between the
+          quotes in this block of the configuration file:
+        </p>
+        <pre>$webyep_sAdminName = "<span class="orange">admin</span>";<br>$webyep_sAdminPassword = "<span class="orange">test</span>";</pre>
+        <p>
+          Please note that both username and password are case sensitive! A
+          username can either be a name or an email address.
+        </p>
+        <p>
+          For the password, use something unique, that is too difficult for
+          someone else to guess. This will help keep your website more secure
+          and prevent a hacker changing your web page content!
+        </p>
+        <p>
+          If you need to allow multiple people to login and control what pages
+          they are allowed to edit, please see the
+          <a href="multiplelogins.html">multiple&nbsp;logins</a> guide.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>The Loop</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html" class="current">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Elements</summary>
+                <ul>
+                  <li>
+                    <a href="elementsoverview.html">Elements Overview</a>
+                  </li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1>
+          Repeating page sections using <strong>the loop</strong> elements
+        </h1>
+        <p>
+          <strong
+            >A need often arises in web design to repeat blocks of code or
+            content in a web page.</strong
+          >
+          It can often be desirable if the contents of those blocks can be
+          edited too. Loops are a powerful tool in WebYep, to make the creation
+          of repeating code or content all the more easier for website authors
+          to work with. In this tutorial you'll learn how to create a WebYep
+          Loop, comprising of an image and title, within a paragraph.
+        </p>
+        <p>
+          Please use a website with WebYep installed for this tutorial (see
+          <a href="installation.html">installation</a> for details). A general
+          understanding of HTML code and working with a code editor is assumed.
+        </p>
+        <h3>Creating the page, inserting the WebYep Elements</h3>
+        <ol>
+          <li>
+            Create a new document 'wy_loop.php'. Please don't work on
+            unnamed/unsaved documents! Create the file and immediately save it
+            under the name "wy_loop.php" before continuing.
+          </li>
+          <li>
+            Add some basic 'boilerplate' HTML code in the page, to define the
+            DOCTYPE, head and body regions.
+          </li>
+          <li>
+            Add the WebYep <a href="initcode.html">Init Code</a> to the top of
+            the page.
+          </li>
+          <li>Add a WebYep Logon element in the page body.</li>
+          <li>
+            Remaining in the page body, insert a pair of empty paragraph tags
+            (&lt;p> and &lt;/p>). For our test, we'll turn this new paragraph
+            block into a repeating section.
+          </li>
+          <li>
+            Position the cursor between these new paragraph tags and insert both
+            an <a href="image.html">Image Element</a> and a
+            <a href="shorttext.html">Short Text</a> element, together in this
+            same paragraph.
+          </li>
+          <li>
+            Position the cursor above the paragraph, and add an opening loop
+            element:<br />
+            <pre>
+&lt;?php foreach ((new WYLoopElement())->aLoopIDs("Fieldname") as $webyep_oCurrentLoop->iLoopID) { $loopid=$webyep_oCurrentLoop->iLoopID; $_SESSION["loopid"]=$loopid; $webyep_oCurrentLoop->loopStart(true,$webyep_oCurrentLoop->iLoopID); // WebYepV2 ?>
+            </pre>
+          </li>
+          <li>
+            And after the closing paragraph tag, add a closing loop element:<br />
+            <pre>
+&lt;?php $webyep_oCurrentLoop->loopEnd(); } unset($_SESSION["loopid"]); // WebYepV2 ?></pre
+            >
+          </li>
+        </ol>
+        <h3>Configuring the WebYep elements</h3>
+        <ol>
+          <li>
+            Within the opening WebYep loop element change its fieldname to
+            <span class="orange">"Special Offers"</span> like this:<br />
+            <pre>&lt;?php foreach ((new WYLoopElement())->aLoopIDs(<span class="orange">"Special Offers"</span>) as $webyep_oCurrentLoop->iLoopID) { $loopid=$webyep_oCurrentLoop->iLoopID; $_SESSION["loopid"]=$loopid; $webyep_oCurrentLoop->loopStart(true,$webyep_oCurrentLoop->iLoopID); // WebYepV2 ?>
+                          </pre>
+          </li>
+          <li>
+            Update the Image element. Enter
+            <span class="orange">"Product Image"</span> as the fieldname:<br />
+            <pre>&lt;?php webyep_image(<span class="orange">"Product Image"</span>, false, '', '', '_self', 100, 100, false, 900, 600, 600, 270); // WebYepV2 ?&gt;</pre>
+          </li>
+          <li>
+            Update the Short Text element. Enter
+            <span class="orange">"Product Title"</span> as the fieldname:<br />
+            <pre>&lt;?php webyep_shortText(<span class="orange">"Product Title"</span>, false, 550, 240); // WebYepV2 ?&gt;</pre>
+          </li>
+        </ol>
+        <h3>Testing the page</h3>
+        <p>
+          Please make sure you have transferred the webyep-system folder to your
+          web server and have prepared WebYep (see
+          <a href="installation.html">installation</a> for details).
+        </p>
+        <ol>
+          <li>
+            Transfer the page (wy_loop.php) to your web server (upload via FTP
+            or copy it into your local sever directory).
+          </li>
+          <li>
+            Open the page in your web browser by entering the appropriate
+            address (URL), like this:<br />
+            https://example.com/wy_loop.php
+          </li>
+          <li>Click the lock icon in the page (the WebYep Logon Button).</li>
+          <li>
+            When the logon window pops up, enter the username and password you
+            configured when installing WebYep (default is username 'admin' and
+            no password).
+          </li>
+          <li>
+            Click the edit buttons to upload an image file ("Product Image") and
+            enter some text ("Product Title").
+          </li>
+          <li>
+            Then click the '+' icon to add more loop blocks.<br />Click the
+            trash icon to remove whole loop blocks, click the 'up' and 'down'
+            icons to rearrange the blocks.
+          </li>
+        </ol>
+        <p>
+          In this example the loop block contains only WebYep Elements, but it
+          can contain any content, including static HTML code (like text or
+          images) and WebYep elements.
+        </p>
+        <h3>Loop not working?</h3>
+        <p>
+          Occasionally the loop may not work in some configurations. In earlier
+          versions of WebYep, it was suggested that this code gets placed after
+          the opening <code>&lt;body&gt;</code> tag in the page:
+        </p>
+        <pre>&lt;?php unset($_SESSION["loopid"]); ?&gt;</pre>
+        <p>
+          This may still work to help resolve problems of the loop not working,
+          within certain situations.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

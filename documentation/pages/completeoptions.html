@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Complete Configuration Options</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details open>
+                <summary class="current">Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html" class="current"
+                      >Complete Options</a
+                    >
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Elements</summary>
+                <ul>
+                  <li>
+                    <a href="elementsoverview.html">Elements Overview</a>
+                  </li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Complete</strong> configuration options</h1>
+        <p>
+          This page lists all options that alter the standard behaviour of
+          WebYep, via edits made to the config-inc.php inside the webyep-system
+          folder.
+        </p>
+        <h3>Logon Options:</h3>
+        <p>
+          Sets the main Username and Password. Plesae Refer to
+          <a href="multiplelogins.html">multiple logins</a> for adding
+          additional login accounts and controlling the pages that can be
+          edited.
+        </p>
+        <pre>$webyep_sAdminName = "admin";<br>$webyep_sAdminPassword = "";</pre>
+        <h3>Base URL:</h3>
+        <p>
+          Used by the 'Redactor' rich text editor, in the commercial version of
+          WebYep. Sets the base URL of the website for image and file uploads.
+        </p>
+        <pre>define('BASE_URL', 'http://www.mywebsite.com');</pre>
+        <h3>Privileges Option:</h3>
+        <p>
+          If a page contains editable fields, but the user has insiffucient
+          privileges, WebYep can display the edit buttons disable or hide them.
+        </p>
+        <pre>$webyep_bShowDisabledEditButtons = false;</pre>
+        <p>
+          Likewise, this option controls whether editors (other than the main
+          editor) should be able to edit 'global' fields.
+        </p>
+        <pre>$webyep_bOtherLoginsMayEditGlobalData = false;</pre>
+        <h3>Charector Option</h3>
+        <p>
+          Support for special character sets. If you wish for WebYep to use for
+          example 'utf-8' or 'iso-8859-2', change the following configuration
+          variable in your configuration file:
+        </p>
+        <pre>$webyep_sCharset = "utf-8";</pre>
+        <p>
+          This will ensure WebYep displays the special characters using this
+          character set.<br />
+          <strong>Note:</strong> Setting an explicit encoding will stop WebYep
+          from converting special characters to HTML entities. So only change
+          this option if necessary.
+        </p>
+        <h3>Language Type</h3>
+        <p>
+          Defines which syntax WebYep should use when creating HTML tags. You
+          can set this configuration variable to the HTML character set you are
+          using in your web pages.<br />
+          Default: empty<br />
+          HTML - HTML 4.01 Strict / HTML5<br />
+          XHTML - XHTML 1.0 Strict / XHTML5<br />
+          auto - WebYep tries to detect the used syntax via the !DOCTYPE
+          directive of the document.
+        </p>
+        <pre>$webyep_sHTMLStandard = "auto";</pre>
+        <h3>Menu Options:</h3>
+        <p>
+          Determines how the menu works. Possible values are: list (no
+          Javascript functionality) and listJS (use Javascript to show/hide menu
+          trees).
+        </p>
+        <pre>$webyep_sMenuType = "listJS";</pre>
+        <p>
+          Default: listJS (use Javascript to show/hide menu trees)<br />Default:
+          list (no Javascript functionality)
+        </p>
+        <pre>$webyep_bAutoCloseMenus = true;</pre>
+        <p>
+          When expanding a menu tree, all other trees collapse automatically
+          (true) or remain as they were (false).<br />This option will be
+          ignored if $webyep_sMenuType is set to "list".<br />
+          Default: false
+        </p>
+        <pre>$webyep_bRememberOpenMenus = true;</pre>
+        <p>
+          Expanded menu trees will be saved in a cookie (true). Setting this to
+          false will result in all trees but the one the page belongs to being
+          closed.<br />
+          This option will be ignored if $webyep_sMenuType is set to "list".<br />
+          Default: true
+        </p>
+        <h3>Open full URLs via links</h3>
+        <p>
+          Set to true of you wish the Long Text, Image and Gallery (text)
+          elements to open full URLs (including the https:// part) in a new
+          browser tab or window.
+        </p>
+        <pre>$webyep_bOpenFullURLsInNewWindow = false;</pre>
+        <p>Default: false</p>
+        <h3>White Label</h3>
+        <p>
+          You can change the product name, company name and company link here.
+          This content will appear in the editor windows, the help and the
+          notice windows.
+        </p>
+        <pre>$webyep_sProductName = 'MyProduct';<br>$webyep_sCompanyName = 'WebYep by Objective Development';<br>$webyep_sCompanyLink = 'http://www.obdev.at/index.html';</pre>
+        <h3>WebYep Interface Language</h3>
+        <p>
+          The editing interface can be presented to users in a choice of
+          languages. The default is 'english'.
+        </p>
+        <pre>$webyep_sLang = "english";</pre>
+        <p>
+          Replace 'english' for one of the alternative languages, if you prefer:
+        </p>
+        <ul>
+          <li>deutsch</li>
+          <li>french</li>
+          <li>srpski</li>
+          <li>swedish</li>
+          <li>dutch</li>
+          <li>portuguese</li>
+          <li>polski</li>
+        </ul>
+        <h3>Redactor Language</h3>
+        <p>
+          If you are using the Redactor rich text editor (in the commercial
+          version of WebYep), you can change the language of the editing
+          interface. The default is 'en' (English).
+        </p>
+        <pre>$webyep_rLang = 'en';</pre>
+        <p>Replace 'en' for one of the alternative languages, if you prefer:</p>
+        <ul>
+          <li>ar</li>
+          <li>de</li>
+          <li>en</li>
+          <li>es</li>
+          <li>pa</li>
+          <li>fi</li>
+          <li>fr</li>
+          <li>he</li>
+          <li>hu</li>
+          <li>it</li>
+          <li>ja</li>
+          <li>ko</li>
+          <li>nl</li>
+          <li>no</li>
+          <li>pl</li>
+          <li>pt_br</li>
+          <li>ru</li>
+          <li>sv</li>
+          <li>tr</li>
+          <li>zh_cn</li>
+          <li>zh_tw</li>
+        </ul>
+        <h3>Debug</h3>
+        <p>Toggles the display of debug information, in the web pages.</p>
+        <pre>$webyep_bDebug = false;</pre>
+        <h3>Javascript Library Framework Type</h3>
+        <p>
+          Available Javascript library choices which you may wish to use with
+          the WebYep items.
+        </p>
+        <pre>$webyep_JsLibariesType = "jquery";</pre>
+        <p>
+          If you're using Mootools then set to "mootools".<br />
+          If you're using jQuery then set to "jquery".<br />
+          If you're using Scriptaculous/Prototype then set to
+          "scriptaculous".<br />
+          If do NOT wish to use any javascript libraries then set to "none".<br />
+          ------
+        </p>
+        <pre>$webyep_sModalWindowType = "jquery";</pre>
+        <p>
+          Choose which modal scripts library you wish to use with the WebYep
+          items<br />
+          If you wish to use Mootools Modal window then set to
+          "<strong>mootools</strong>".<br />
+          If you wish to use jQuery Modal window then set to
+          "<strong>jquery</strong>".<br />
+          If you wish to use Scriptaculous/Prototype Modal window then set to
+          "<strong>scriptaculous</strong>".<br />
+          If do NOT wish to use any modal scripts libraries then set to
+          "<strong>none</strong>" and a standard popup will be used.<br />
+          ------
+        </p>
+        <pre>$webyep_sModalWindowType = "jquery";</pre>
+        <p>
+          Choose which lightbox scripts library you wish to use with the WebYep
+          items<br />
+          If you wish to use Mootools lightbox then set to
+          "<strong>mootools</strong>".<br />
+          If you wish to use jQuery lightbox then set to
+          "<strong>jquery</strong>".<br />
+          If you wish to use Scriptaculous/Prototype lightbox then set to
+          "<strong>scriptaculous</strong>".<br />
+          If do NOT wish to use any lightbox scripts then set to
+          "<strong>none</strong>" and a standard popup will be used.
+        </p>
+        <h3>Date Format</h3>
+        <p>
+          This setting defines the date format and time format according to your
+          region. The defined format will be shown on the WebYep Guestbook. PHP
+          date time reference:<br />
+          <a
+            href="http://php.net/manual/en/datetime.formats.date.php"
+            target="_blank"
+            >http://php.net/manual/en/datetime.formats.date.php</a
+          >
+        </p>
+        <pre>$webyep_CustomDateFromat = "j-n-Y";<br>$webyep_CustomTimeFromat = "g:m a e";</pre>
+      </main>
+    </div>
+  </body>
+</html>

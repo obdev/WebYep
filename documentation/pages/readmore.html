@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Read More</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Elements</summary>
+                <ul>
+                  <li><a href="elementsoverview.html">Elements Overview</a></li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html" class="current">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Read More</strong> element</h1>
+        <p>
+          <strong
+            >The Read More element can be used to create customizable links to
+            dynamically-generated web pages.</strong
+          >
+          This element is similar in function to the
+          <a href="menu.html">Menu</a> element. But instead of generating a list
+          of multiple page links, it only generates just one link.
+        </p>
+        <p>
+          Much like a Menu element, the Read More element uses a method of query
+          strings (like <code>?DOC_INST=22</code>) to display a 'virtual copy'
+          of the target page and populate it with the correct content.
+        </p>
+        <p>
+          A good usage example would be to combine it with a
+          <a href="loop.html">Loop</a> element, to create a list of blog article
+          titles and summaries. By inserting a Read More element below the
+          summery text, you can now create a link to the full blog post.
+        </p>
+        <h3>The Read More element code</h3>
+        <pre>
+&lt;?php webyep_readMore("read", "Read More", "readmorepage.php", "_self", 550, 240); // WebYepV2 ?&gt;</pre
+        >
+        <h3>Arguments for the function call</h3>
+        <ol>
+          <li>
+            <strong>"Fieldname":</strong> A string - the fieldname for this
+            element.
+          </li>
+          <li>
+            <strong>"Link Text":</strong> A string - a default text for the
+            link.
+          </li>
+          <li>
+            <strong>"target_page.php":</strong> A string - the URL to the target
+            (template) page. For example, a blog post or product information
+            page.
+          </li>
+          <li>
+            <strong>"Target":</strong> A string - like <code>_self</code> or
+            <code>_blank</code>, to control whether the link should open in a
+            new browser tab or not.
+          </li>
+          <li>
+            <strong>"Modal Size":</strong> Maximum width and height of the
+            editor modal window.
+          </li>
+        </ol>
+        <h3>Screenshots</h3>
+        <figure>
+          <img
+            src="../images/wy-readmore.png"
+            alt="The Read More editor window."
+          />
+          <figcaption>The Read More editor window.</figcaption>
+        </figure>
+        <h3>Attributes of the Loop element</h3>
+        <h4>Fieldname</h4>
+        <p>
+          A distinctive name for that element. This name will be used to
+          distinguish the Loop from other WebYep elements in a page.
+        </p>
+        <h4>Link text</h4>
+        <p>
+          The default text for the Read More edit button. If left blank, WebYep
+          will display the element's name instead next to the edit button.
+        </p>
+        <h4>Page (URL)</h4>
+        <p>
+          The URL (or filename) of a page to be shown when a visitor clicks the
+          link.
+        </p>
+        <p>
+          If the Read More element is positioned inside a Loop element (see the
+          <a href="theloop.html">WebYep Loop element</a>), the Read More
+          elements behave much like a WebYep Menu element. The page shown when
+          clicking the link can have different content shown, depending on which
+          link (in which loop item) the visitor clicked on.
+        </p>
+        <p>
+          So one could for example create a loop (using a WebYep Loop element)
+          of brief product descriptions with a product title (Short Text
+          element), a description (Long Text element) and a Read More element in
+          the looped block. By assigning the URL of a detail page to the Read
+          More element, visitors can click on the link to see the detail page
+          for that product.
+        </p>
+        <h4>Target frame</h4>
+        <p>
+          If the page which URL you entered in the "Target Page" attribute
+          should be opened in another HTML frame you can enter this frame's name
+          here.
+        </p>
+        <h4>Modal window size</h4>
+        <p>
+          As the developer you can preset the dimensions of the modal window
+          size.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

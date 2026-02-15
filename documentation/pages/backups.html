@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Backups</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html" class="current">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Elements</summary>
+                <ul>
+                  <li>
+                    <a href="elementsoverview.html">Elements Overview</a>
+                  </li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1>Making <strong>backups</strong></h1>
+        <p class="intro-text">
+          <strong
+            >WebYep saves all content entered and uploaded by the users in a
+            folder on the server.</strong
+          >
+          There is no database (like MySQL, SQlite or PostgreSQL). WebYep is a
+          'flat-file CMS'. Although your web hosting provider should create
+          backups of your whole website each day, it's a good idea to manually
+          create backups of the WebYep data yourself. Particularly if you plan
+          to do any major website updates or move the website to another server.
+        </p>
+        <h3>Where does WebYep store its data?</h3>
+        <span
+          >WebYep saves all content entered and uploaded by the users into
+          /webyep-system/data/ on the server. This includes editable text, plus
+          images or other files (like PDFs) that may heve been uploaded.</span
+        >
+        <h3>How do I backup the data?</h3>
+        <p>
+          To create a backup simply download the whole 'data' folder, from
+          inside of 'webyep-system'. Make sure the transfer mode of your FTP
+          program is set to binary.
+        </p>
+        <h3>How do I restore data from a backup?</h3>
+        <ol>
+          <li>
+            Remove the whole webyep-system folder on the server (if data was
+            lost or distorted the chances are that the webyep system could also
+            have been damaged).
+          </li>
+          <li>
+            Reinstall WebYep (see
+            <a href="installation.html">installation</a> on the server).
+          </li>
+          <li>
+            Replace the 'data' folder inside the webyep-system folder on the
+            server with your backup copy (e.g. by removing the folder on the
+            server and uploading the backup copy). Make sure the transfer mode
+            of your FTP program is set to binary.
+          </li>
+        </ol>
+        <p>
+          Be sure to use the same version when reinstalling WebYep, because not
+          all versions of WebYep are data compatible. You can check the
+          installed version by accessing the WebYep status info page:
+        </p>
+        <p>https://example.com/webyep-system/info.php</p>
+        <p>
+          Replace 'example.com' with your actual website domain name. Type this
+          address in the browser address bar, and you should see your WebYep
+          info and diagnostics page shown.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

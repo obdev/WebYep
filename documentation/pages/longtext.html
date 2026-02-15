@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Long Text</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Elements</summary>
+                <ul>
+                  <li><a href="elementsoverview.html">Elements Overview</a></li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html" class="current">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Long Text</strong> element</h1>
+        <p>
+          <strong
+            >This element is used for long text passages like product
+            descriptions, sidebars, news articles - or even whole pages.</strong
+          >
+          The text content of this element can be formatted by the user with
+          some rudimental formatting options (like bold text or bullet lists).
+          If you as the designer wish to stay in partial control of the text
+          styling, then the long text element is a good choice. The formatting
+          possibilities are listed below.
+        </p>
+        <h3>The Long Text element code</h3>
+        <pre>
+&lt;?php webyep_longText("Fieldname", false, "", true, 600, 400); // WebYepV2 ?></pre
+        >
+        <h3>Arguments for the function call</h3>
+        <ol class="numbered">
+          <li>
+            "<strong>Fieldname</strong>": A string - the field name for this
+            element.
+          </li>
+          <li>
+            <strong>true/false</strong>: A boolean - the scope for this element.
+            <br /><strong>true</strong> if the element should have the same
+            content on all pages (global).<br /><strong>false</strong> if it
+            should have different content on each page it appears on
+          </li>
+          <li>
+            <strong>""</strong>: A string - obsolete, pass an empty string ("").
+          </li>
+          <li>
+            <strong>true/false</strong>: A boolean - whether email links should
+            be encoded. <br /><strong>true</strong> if email addresses entered
+            in the text element should be encoded using Javascript.<br /><strong
+              >false</strong
+            >
+            if they should be simply output as HTML.
+          </li>
+          <li>
+            <strong>600, 400:</strong> Maximum width and height of the editor
+            window.
+          </li>
+        </ol>
+        <h3>Screenshots</h3>
+        <figure>
+          <img
+            src="../images/wy-long-text.png"
+            alt="The Long Text editor window."
+          />
+          <figcaption>The Long Text editor window.</figcaption>
+        </figure>
+        <h3>Formatting options</h3>
+        <p>
+          The user can use the following formatting options to format the text
+          entered:
+        </p>
+        <table border="0" cellspacing="0" cellpadding="0" id="longtext">
+          <tbody>
+            <tr>
+              <td align="left" valign="top" bgcolor="#CCCCCC">
+                <p>
+                  <b><font color="black">when entering the text</font></b>
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#CCCCCC">
+                <p>
+                  <font color="black"
+                    ><b>the text will be displayed as</b></font
+                  >
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#CCCCCC">
+                <p>
+                  <font color="black"><b> e.g.:</b></font>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>http://www.test.com</p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  A link to www.test.com - the target page will be displayed in
+                  a new browser window (target = "_blank")!
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  <a
+                    href="http://www.test.com"
+                    target="_blank"
+                    class="externalLink"
+                    >http://www.test.com</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <p>test@company.com</p>
+              </td>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <p>
+                  A link to the entered email address (a "mailto" link). The
+                  link might be encoded to keep SPAM spiders from steeling the
+                  email addresses. See
+                  <a href="#hidemaillinks">Encoding mail links</a> for details.
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <p>
+                  <a href="mailto:test@firma.com" class="externalLink"
+                    >test@company.com</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  <nobr>&lt;LINK:someotherpage.php&nbsp;</nobr>Click here to get
+                  to the other page<nobr>&gt;</nobr>
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  The text "Click here to get to the other page" as a link to
+                  "someotherpage.php". The user can also enter full URLs
+                  ("http://xxx.yyy.com/xxx/yyy.html"). Note the space between
+                  the URL and the link text! No new browser window will be
+                  opened - the target page will be displayed in the same window.
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  <a
+                    href="javascript:alert('This link would jump to some other page.');"
+                    class="externalLink"
+                    >Click here to get to the other page</a
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <p><nobr>&lt;BOLD</nobr> Some bold text<nobr>&gt;</nobr></p>
+              </td>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <p>
+                  The text "Some bold text" formatted in bold font (using the
+                  <span class="codeExample">&lt;strong&gt;</span> tag)
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <p><b>Some bold text</b></p>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  <nobr>&lt;EXAMPLE</nobr> Some text in a special style<nobr
+                    >&gt;</nobr
+                  >
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  The text "Some text in a special style" formatted with the CSS
+                  style "EXAMPLE" (using
+                  <span class="codeExample">&lt;span class="EXAMPLE"&gt;</span
+                  >...)
+                </p>
+                <p>
+                  This way you as the web designer can create any CSS style to
+                  be used by the users (that edit the content) - just remember
+                  that the style name must be all uppercase!
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  <span class="styleExample">Some text in a special style</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#EEEEEE"><p>---</p></td>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <p>
+                  A horizontal ruler. The three dashes must appear at the
+                  beginning of a line!
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <hr width="200" />
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  * First list item<br />
+                  ** A subitem
+                  <br />
+                  * Second list item with a quite long text<br />
+                  * Third list item<nobr></nobr>
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  By placing an asterisk (or the bullet symbol) at the beginning
+                  of a text line, this line gets formatted as a bullet list
+                  item. The bullet will be displayed as a small black dot or
+                  (via CSS) as some arbitrary GIF or JPG image. See "<a
+                    href="#listformat"
+                    >Formatting lists</a
+                  >" below.
+                </p>
+                <p>
+                  The user can also span list items across several lines
+                  (inserting line breaks in an item) if the consecutive lines
+                  start with a space character.
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <ul>
+                  <li>
+                    First list item
+                    <ul>
+                      <li>A subitem</li>
+                    </ul>
+                  </li>
+                  <li>Second list item with a quite long text</li>
+                  <li>Third list item<nobr></nobr></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <nobr></nobr>
+                <p>
+                  * First item<br />
+                  &nbsp;&nbsp;This is all part of the first list item.<br />
+                  * Second item
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  You can place several lines of text into a single list item by
+                  placing two spaces at the beginning of the line.
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <ul>
+                  <li>
+                    First item<br />
+                    This is all text of the first list item.
+                  </li>
+                  <li>Second item<nobr></nobr></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <nobr></nobr>
+                <p>
+                  * &lt;BOLD First item&gt;<br />
+                  &nbsp;&nbsp;This is all part of the first list item.<br />
+                  * Second item<br />
+                  ...
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>You can also combine different formatting commands.</p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <ul>
+                  <li>
+                    <strong>First item</strong><br />
+                    This is all text of the first list item.
+                  </li>
+                  <li>Second item<nobr></nobr></li>
+                </ul>
+              </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <p>
+                  + First list item<br />
+                  ++ A subitem <br />
+                  + Second list item with a quite long text<br />
+                  + Third list item<nobr></nobr>
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <p>
+                  By using a "+" (plus) instead of the asterisk, an ordered list
+                  is created. How to list is numbered (and other visual
+                  attributes) depends on the CSS styles for the &lt;ol&gt; and
+                  &lt;li&gt; tags you set up for the page. See "<a
+                    href="#listformat"
+                    >Formatting lists</a
+                  >" below.
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#EEEEEE">
+                <ol
+                  style="
+                    list-style: upper-roman;
+                    margin: 0;
+                    margin-left: 30px;
+                    padding: 0px;
+                  "
+                >
+                  <li>
+                    First list item
+                    <ol
+                      style="
+                        list-style: lower-roman;
+                        margin: 0;
+                        margin-left: 30px;
+                        padding: 0px;
+                      "
+                    >
+                      <li>A&nbsp;subitem</li>
+                    </ol>
+                  </li>
+                  <li>Second list item with a quite long text</li>
+                  <li>Third list item<nobr></nobr></li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  aaa | bbb | ccc<br />
+                  111 | 222 | 333<nobr></nobr>
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <p>
+                  By using the "|" symbol you can create simple tables. The "|"
+                  serves as the column delimiter.
+                </p>
+                <p>
+                  The look of the table must be defined by creating CSS styles
+                  for the &lt;table&gt; and/or &lt;td&gt; tags – see "<a
+                    href="#tableformat"
+                    >Formatting tables</a
+                  >" below.
+                </p>
+              </td>
+              <td align="left" valign="top" bgcolor="#FFFFFF">
+                <table border="0" cellspacing="0" cellpadding="6">
+                  <tbody>
+                    <tr>
+                      <td>aaa</td>
+                      <td>bbb</td>
+                      <td>ccc</td>
+                    </tr>
+                    <tr>
+                      <td>111</td>
+                      <td>222</td>
+                      <td>333</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The formatting option &lt;EXAMPLE Some text in a special style&gt;
+          assumes that you have defined a CSS style ".EXAMPLE" in your
+          page/website. It is important to use only uppercase letters in such
+          CSS styles.
+        </p>
+        <h4>Placing the Long Text element</h4>
+        <p>
+          Please always remember that the Long Text element produces HTML code!
+          When the user creates a bullet list for example the Long Text Elements
+          creates <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> HTML tags.
+          Thus it is important to place the Long Text Element at a position in
+          your page where such HTML tags are allowed!
+        </p>
+        <p>
+          The safest place is inside a
+          <code>&lt;div&gt;</code> tag. Not ideal would be a paragraph (<code
+            >&lt;p&gt;</code
+          >
+          tag) as HTML does not allow bullet lists inside a paragraph.
+        </p>
+        <p>
+          If you find your Long Text element placed inside a
+          <code>&lt;p&gt;</code> tag you can change it into a
+          <code>&lt;div&gt;</code> tag by clicking the &lt;p&gt; tag in the Tag
+          Selector with the right mouse button and choose "Edit Tag...".
+        </p>
+        <h4 id="listformat">Formatting lists</h4>
+        <p>
+          The Long Text Element creates bullet lists by using the
+          <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> HTML tags.
+          Therefore you can format these lists by defining CSS styles for these
+          tags.
+        </p>
+        <p>For example you could create a style:</p>
+        <pre>
+ul {
+  list-style-position: outside;
+  list-style-image: url(bullet.gif);
+}</pre
+        >
+        <p>
+          to define the image "bullet.gif" as the bullet symbol used in all
+          lists.
+        </p>
+        <p>
+          If you want your style to only change the look of lists inside the
+          WebYep Text Element (and not all lists in the page), embed the Text
+          Element in a <code>&lt;div&gt;</code> tag, give that tag a CSS class
+          (class="someclassname") and change the name of the above style from
+          "<code>ul</code>" to "<code>.someclassname ul</code>".
+        </p>
+        <p>
+          To only style list items of a specific indention level, you need to
+          repeat the tag name ("ul") in the CSS style's name (selector):
+        </p>
+        <pre>.someclassname ul ul { .....; }</pre>
+        <p>
+          for instance would only define the style for second level items and
+          deeper, but not the main items.
+        </p>
+        <p>
+          To style <em>ordered lists</em> created with the "+" sign, use the
+          <code>ol</code> tag name instead of <code>ul</code> in the style names
+          above.
+        </p>
+        <h4><a id="tableformat"></a>Formatting tables</h4>
+        <p>
+          To change the look of tables, you simply create the usual CSS styles
+          for the <span class="preInline">&lt;table&gt;</span> and/or
+          <span class="preInline">&lt;td&gt;</span> tag - e.g.:
+        </p>
+        <pre>
+table {
+  margin: 0px;
+  padding: 0px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+td {
+  margin: 0px;
+  padding: 6px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}</pre
+        >
+        <p>
+          If you want your styles to only change the look of tables
+          <em>inside</em> the WebYep Text Element (and not all tables in the
+          page), embed the Text Element in a <code>&lt;div&gt;</code> tag, give
+          that tag a CSS class (<code>class="someclassname"</code>) and change
+          the name of the above styles from <code>table</code> to
+          <code>.someclassname table</code> and from <code>td</code> to
+          <code>.someclassname td</code>.
+        </p>
+        <h3>Attributes of the Long Text element</h3>
+        <h4>Fieldname</h4>
+        <p>
+          A distinctive name for that element. This name will be displayed in
+          the page in edit mode to give the user a hint on what this elements
+          content stands for and to distinguish the different WebYep elements in
+          a page.
+        </p>
+        <h4>Content</h4>
+        <p>
+          When set to "for this doc only" the elements content is unique for
+          this page - even if another element on a different page has the same
+          name. If set to "for all documents" the content will be the same on
+          all pages for elements of this kind that use the same name.
+        </p>
+        <h4>Encode email links</h4>
+        <p>
+          If a user enters an email address into a Long Text Element, WebYep
+          will display it as a clickable link ("mailto" link).
+        </p>
+        <p>
+          If you enable the "Encode Email Links" option, WebYep will
+          <strong>encode</strong> these links to
+          <strong>keep SPAM spiders</strong> from collecting the email
+          addresses.
+        </p>
+        <p>
+          To do so, WebYep uses a Javascript based encoding. If the visitors of
+          your website have <strong>deactivated Javascript</strong>, they will
+          only see these email addresses in the form:
+        </p>
+        <pre>name(_AT_)domain.com</pre>
+        <p>and the email addresses will then not be clickable.</p>
+        <h4>Modal window size</h4>
+        <p class="f-lp">
+          As the developer you can preset the dimensions of the modal window
+          size.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

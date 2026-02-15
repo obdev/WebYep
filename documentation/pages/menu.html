@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="configuration.html">Basic Configuration</a>
+                  </li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li>
+                    <a href="completeoptions.html">Complete Options</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Elements</summary>
+                <ul>
+                  <li><a href="elementsoverview.html">Elements Overview</a></li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html" class="current">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Menu</strong> element</h1>
+        <p>
+          <strong
+            >The Menu Element can be used to build simple menu structures. It is
+            not intended to be used for main navigation, but rather for a
+            subnavigation like for a 'products' submenu.</strong
+          >
+          A click on a Menu Element's item causes it to jump to a configurable
+          "detail" or "target" page. This target page file is always the same,
+          regardless which menu item was clicked, but the contents of its WebYep
+          Elements will be different! For each menu item a "virtual copy" of the
+          target page is created - each such virtual copy can have different
+          content for all the WebYep Elements in it.
+        </p>
+        <p>
+          So by linking a WebYep Menu Element to a page that contains WebYep
+          Elements (by simply setting the "Page" attribute of the Menu Element)
+          you can build a simple navigation. The target page's WebYep Elements
+          (like Long Text or Image Element etc.) will then show different
+          content depending on which menu item was clicked.
+        </p>
+        <h3>The Menu element code</h3>
+        <pre>
+&lt;?php webyep_menu("menu", false, "some_page.php", "_self", "", "", 650, 530); // WebYepV2 ?&gt;</pre
+        >
+        <h3>Arguments for the function call</h3>
+        <ol>
+          <li>
+            <strong>"Fieldname":</strong> A string - the field name for this
+            element.
+          </li>
+          <li>
+            <strong>true/false:</strong> A boolean - the scope for this element.
+            <br />true if the element should have the same content on all pages
+            (global).<br />false if it should have different content on each
+            page it appears on
+          </li>
+          <li>
+            <strong>"some_page.php"</strong>: A string - the URL of a page that
+            the menu's items should link to.
+          </li>
+          <li>
+            <strong>"contentFrame"</strong>: A string (optional) - the name of
+            the frame, that should be the target of the links.<br />Pass an
+            empty string ("") if you're not using frames.
+          </li>
+          <li>
+            <strong>""</strong>: A string - obsolete, pass an empty string ("").
+          </li>
+          <li>
+            <strong>""</strong>: A string - obsolete, pass an empty string ("").
+          </li>
+          <li>
+            <strong>650, 530</strong>: Maximum width and height of the editor
+            window.
+          </li>
+        </ol>
+        <h3>Screenshots</h3>
+        <figure>
+          <img src="../images/wy-menu.png" alt="The Menu editor window." />
+          <figcaption>The Menu editor window.</figcaption>
+        </figure>
+        <h3>Using the Menu element</h3>
+        <p>
+          The menu items can be edited by the user by simply clicking the 'Edit'
+          button beside the menu in the web page (when in edit mode). This will
+          open the Edit Menu Window, in which the user can add or remove menu
+          items, change their order and create simple hierarchies (by placing
+          section titles and indenting items).
+        </p>
+        <h3>Dynamic or static menu</h3>
+        <p>
+          A WebYep Menu is represented as an unordered list using the
+          <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> HTML tags. Submenu
+          trees are represented by nesting such lists. Submenus can be
+          expanded/collapsed by clicking on the submenu's title, if the WebYep
+          Menu is configured to use Javascript (the default) in the WebYep
+          configuration file config-inc.php:
+        </p>
+        <pre>$webyep_sMenuType = "listJS";</pre>
+        <p>
+          Use a value of "list" instead, if you do not want to use Javascript
+          and want a static menu instead.
+        </p>
+        <p>
+          <strong>Note</strong>: The listJS style uses Javascript in backward
+          compatible way. If Javascript is not available, a static menu (with
+          all subtrees expanded) will be presented. This is also to ensure the
+          menu's accessibility.
+        </p>
+        <p>
+          By setting the configuration option
+          <code>$webyep_bAutoCloseMenus</code>
+          to true in the config-inc.php, expanding a menu tree will
+          automatically close all other trees.
+        </p>
+        <p>
+          Likewise, by setting the configuration option
+          <code>$webyep_bRememberOpenMenus</code> to false in the
+          config-inc.php, expanded menu trees will not be saved, when a new page
+          is opened, all trees but the one the page belongs to are closed.
+        </p>
+        <h3>Attributes of the Short Text element</h3>
+        <h4>Fieldname</h4>
+        <p>
+          A distinctive name for that element. This name will be displayed in
+          the page in edit mode to give the user a hint on what this elements
+          content stands for and to distinguish the different WebYep elements in
+          a page.
+        </p>
+        <h4>Content</h4>
+        <p>
+          When set to "for this doc only" the elements content is unique for
+          this page - even if another element on a different page has the same
+          name. If set to "for all documents" the content will be the same on
+          all pages for elements of this kind that use the same name.
+        </p>
+        <h4>Page (URL)</h4>
+        <p>
+          Name (or full URL) of the page that is to be opened when a visitor
+          clicks a menu item. Usually this will be the same page the Menu
+          Element is on (thus "reloading" the same page, just with different
+          content).
+        </p>
+        <h4>Target frame</h4>
+        <p>
+          If you want the target page ("Page" attribute) to opened in a
+          different browser window or frame, set this attribute to the frames
+          name. See the description of the "Page (URL)" attribute above.
+        </p>
+        <p>
+          <strong>Note:</strong> You can manually create links to a menu item's
+          target page by adding the following to the URL of the link:
+        </p>
+        <pre>?DOC_INST=x</pre>
+        <p>where <code>x</code> stands for the ID of the menu item, example:</p>
+        <pre>some_menu_item_page.php?DOC_INST=1</pre>
+        <p>
+          You can find out the ID of a menu item by simply clicking the menu
+          item and observing the URL displayed in your browsers address field.
+          At the end of the displayed URL you should see the
+          <code class="preInline">?DOC_INST=...</code> or similar.
+        </p>
+        <p>
+          The ID of a menu item has nothing to do with its position in the menu
+          (order).
+        </p>
+        <h4>Modal window size</h4>
+        <p>
+          As the developer you can preset the dimensions of the modal window
+          size.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Elements Overview</title>
+    <link rel="stylesheet" href="../code/styles.css" />
+    <script src="../code/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="../index.html">Introduction</a></li>
+            <li><a href="installation.html">Installation &amp; Setup</a></li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li><a href="configuration.html">Basic Configuration</a></li>
+                  <li><a href="multiplelogins.html">Multiple Logins</a></li>
+                  <li><a href="completeoptions.html">Complete Options</a></li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="firststeps.html">First Steps</a></li>
+                  <li><a href="themenu.html">The Menu</a></li>
+                  <li><a href="theloop.html">The Loop</a></li>
+                  <li><a href="backups.html">Backups</a></li>
+                  <li>
+                    <a href="whitelabeledversion.html">White Labeled Version</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details open>
+                <summary class="current">Elements</summary>
+                <ul>
+                  <li>
+                    <a href="elementsoverview.html" class="current"
+                      >Elements Overview</a
+                    >
+                  </li>
+                  <li><a href="initcode.html">Init Code</a></li>
+                  <li><a href="logonbutton.html">Logon Button</a></li>
+                  <li><a href="shorttext.html">Short Text</a></li>
+                  <li><a href="longtext.html">Long Text</a></li>
+                  <li><a href="richtext.html">Rich Text</a></li>
+                  <li><a href="markuptext.html">Markup Text</a></li>
+                  <li><a href="image.html">Image</a></li>
+                  <li><a href="gallery.html">Image Gallery</a></li>
+                  <li><a href="attachment.html">Attachment</a></li>
+                  <li><a href="menu.html">Menu</a></li>
+                  <li><a href="loop.html">Loop</a></li>
+                  <li><a href="readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1><strong>Elements</strong> overview</h1>
+        <p>
+          <strong
+            >WebYep elements are little fragments of PHP code, that are embedded
+            in the page's HTML code.</strong
+          >
+          You can insert them using any code or web page editor that allows
+          inserting PHP code. See the reference for each WebYep element for
+          details.
+        </p>
+        <p>
+          You can format WebYep Elements within your page in the same way as any
+          other item, whether that be text or images. For example, you can
+          format a WebYep Short Text Element like any other regular text, by
+          using CSS.
+        </p>
+        <p>
+          <strong>Important: </strong>Please remember that pages that are to
+          contain WebYep elements must have their filename extension set to
+          '.php' instead of '.html' or something else.
+        </p>
+        <h3>The anatomy of elements</h3>
+        <p>
+          It's not essential to know how WebYep elements work, but you may be
+          interested to learn the basics of what the code does. As is often the
+          case with most PHP code, we start with opening and closing tags:
+        </p>
+        <pre>
+&lt;?php
+
+?></pre
+        >
+        <p>
+          Then we enter the name of the WebYep function we want to
+          <em>call</em>, a pair of brackets and a closing semi-colon:
+        </p>
+        <pre>
+&lt;?php
+  webyep_shortText();
+?></pre
+        >
+        <p>
+          Inside the brackets, we add <em>arguments</em>. These are data values
+          (strings, booleans and numbers) that get sent to WebYep on the
+          backend, containing instructions like the fieldname, whether this a
+          global block or not and the preferred size of the editor window:
+        </p>
+
+        <pre>
+&lt;?php
+  webyep_shortText("Fieldname", false, 550, 240);
+?></pre
+        >
+        <p>
+          Then WebYep knows what editing interface to show and loads the correct
+          content (if content was previously added).
+        </p>
+        <p>
+          Sometimes you will see comments added to WebYep elements like
+          <code>// WebYepV2</code> or <code>// WebYepV3</code>. These are
+          entirely optional and are simply there to denote what WebYep version
+          the element was first shipped in. Over time, the number of WebYep
+          elements has increased and the choice of arguments in the function
+          calls have changed. Hence some are marked in this documentation as
+          'obsolete'. So these comments are provided just to help keep-track of
+          things.
+        </p>
+        <p>
+          To maintain tidy code, you will often see WebYep developers
+          consolidate elements onto a single line like this, as is often shown
+          in this user guide:
+        </p>
+        <pre>
+&lt;?php webyep_shortText("Fieldname", false, 550, 240); // WebYepV2 ?></pre
+        >
+        <p>
+          Elements like the <a href="loop.html">Loop</a> are a little more
+          involved in their structure, because they include 'foreach' functions
+          and need to set sessions. So the above is mostly applicable to the
+          simple elements.
+        </p>
+        <h3>Summary</h3>
+        <ul>
+          <li>WebYep elements are small blocks of PHP code.</li>
+          <li>
+            Simple elements comprise of a function name and pass a set of
+            <em>arguments</em> within brackets.
+          </li>
+          <li>
+            Pages containing WebYep elements need the filename extension '.php'
+            instead of '.html'.
+          </li>
+          <li>
+            You can format WebYep elements like any other content in your page
+            (e.g. placing them inside HTML tags or styling them via CSS).
+          </li>
+        </ul>
+      </main>
+    </div>
+  </body>
+</html>

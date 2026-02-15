@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="VS Code" />
+    <title>Introduction</title>
+    <link rel="stylesheet" href="code/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <button class="btn" data-menu-btn>Menu</button>
+          <ul>
+            <li><a href="index.html" class="current">Introduction</a></li>
+            <li>
+              <a href="pages/installation.html">Installation &amp; Setup</a>
+            </li>
+            <li>
+              <details>
+                <summary>Configuration</summary>
+                <ul>
+                  <li>
+                    <a href="pages/configuration.html">Basic Configuration</a>
+                  </li>
+                  <li>
+                    <a href="pages/multiplelogins.html">Multiple Logins</a>
+                  </li>
+                  <li>
+                    <a href="pages/completeoptions.html">Complete Options</a>
+                  </li>
+                  <li>
+                    <a href="pages/whitelabeledversion.html"
+                      >White Labeled Version</a
+                    >
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Tutorials</summary>
+                <ul>
+                  <li><a href="pages/firststeps.html">First Steps</a></li>
+                  <li><a href="pages/themenu.html">The Menu</a></li>
+                  <li><a href="pages/theloop.html">The Loop</a></li>
+                  <li><a href="pages/backups.html">Backups</a></li>
+                  <li>
+                    <a href="pages/whitelabeledversion.html"
+                      >White Labeled Version</a
+                    >
+                  </li>
+                </ul>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>Elements</summary>
+                <ul>
+                  <li>
+                    <a href="pages/elementsoverview.html">Reference Overview</a>
+                  </li>
+                  <li><a href="pages/initcode.html">The Init Code</a></li>
+                  <li><a href="pages/sessioncode.html">The Session Code</a></li>
+                  <li><a href="pages/logonbutton.html">Logon Button</a></li>
+                  <li><a href="pages/shorttext.html">Short Text</a></li>
+                  <li><a href="pages/longtext.html">Long Text</a></li>
+                  <li><a href="pages/richtext.html">Rich Text</a></li>
+                  <li><a href="pages/markuptext.html">Markup Text</a></li>
+                  <li><a href="pages/image.html">Image</a></li>
+                  <li><a href="pages/gallery.html">Image Gallery</a></li>
+                  <li><a href="pages/attachment.html">Attachment</a></li>
+                  <li><a href="pages/menu.html">Menu</a></li>
+                  <li><a href="pages/loop.html">Loop</a></li>
+                  <li><a href="pages/readmore.html">Read More</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep/archive/refs/heads/master.zip"
+            target="_blank"
+            >Download WebYep</a
+          >
+          <a
+            class="btn"
+            href="https://github.com/maxfancourt/WebYep"
+            target="_blank"
+            >GitHub Project Page</a
+          >
+          <button class="btn" data-print-btn>Print / PDF This Page</button>
+        </div>
+      </aside>
+      <main>
+        <h1>Welcome to <strong>WebYep</strong></h1>
+        <p class="intro-text">
+          <strong
+            >WebYep is an opensource CMS (Content Management System)</strong
+          >. It can be used for people without web design or coding knowledge to
+          safely edit the content of web pages, within their web browser. It can
+          also be used if you need to push content edits remotely to a website.
+        </p>
+        <p>
+          You can use WebYep in as many websites as you like. This is not
+          software that requires you to pay-per-site or signup for a
+          subscription! The content you create or edit with WebYep is always
+          retained under your ownership, and stored on your web server.
+        </p>
+        <p>
+          WebYep uses simple pop-up windows to let you or clients edit content
+          directly on the page. This method of 'in-context editing' (sometimes
+          also called inline editing) keeps the editing interface really fast
+          and intuitive. Unlike some content management systems, WebYep does not
+          take you off to far-distant pages on the backend of your website!
+          Everything happens directly on the page you want to edit.
+        </p>
+        <p>
+          Another main difference to other web content management systems is
+          that you do not need to create your whole website with WebYep. You can
+          take any regular website and just make some parts of some pages
+          editable, by replacing the static content with the appropriate WebYep
+          elements.
+        </p>
+        <p>
+          WebYep can be classed as a 'flat-file CMS'. This means that instead of
+          content being stored inside a complicated database, all the content
+          (and uploaded files like images) are stored in a folder on the web
+          server. A flat-file CMS (like WebYep) is generally easier to setup and
+          manage. Particularly if you want to run backups or move the website to
+          another server.
+        </p>
+        <p>
+          This documentation is intended to give you all necessary information
+          for installing and configuring WebYep on your web server. Plus
+          guidance on the code modifications needed to make sections of web
+          pages editable with WebYep.
+        </p>
+        <p>
+          A basic knowledge of HTML and ability to manage files on a server with
+          FTP is assumed. You can use WebYep with any HTML code editor; like
+          <a href="https://code.visualstudio.com/" target="_blank"
+            >VS&nbsp;Code</a
+          >,
+          <a href="https://www.sublimetext.com/" target="_blank"
+            >Sublime&nbsp;Text</a
+          >, <a href="https://nova.app/">Nova</a>,
+          <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a
+          >, or
+          <a href="https://www.jetbrains.com/webstorm/" target="_blank"
+            >WebStorm</a
+          >. WebYep can also sometimes be used with a small selection of
+          drag-and-drop website builders too, if you prefer using those instead.
+        </p>
+        <p>
+          WebYep is an opensource project. Anybody can fork the code on
+          <a href="https://github.com/maxfancourt/WebYep" target="_blank"
+            >GitHub</a
+          >, to change and improve this CMS. It's not software that one
+          particular company owns and can decide to discontinue or take away
+          from you. WebYep has been in existance since about 2003.
+        </p>
+        <p>
+          We do hope you join the many of us around the globe, who share the
+          passion of building top-notch, modern websites that incorprate WebYep!
+        </p>
+        <p>
+          Next, you may want to read about the
+          <a href="pages/installation.html">installation &amp; setup</a> of
+          WebYep, to get started.
+        </p>
+      </main>
+    </div>
+    <script src="code/scripts.js"></script>
+  </body>
+</html>
