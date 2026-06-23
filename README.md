@@ -1,5 +1,18 @@
-What is WebYep?
-================
+# ⚠️Security Notice
+
+This repository is preserved for historical reference only.
+
+**Do not use WebYep in any public-facing deployment.** Known vulnerabilities include a default admin account with a well-known password, making unmodified installations an easy target for attackers.
+
+If you must run WebYep in a controlled environment:
+
+- Change the admin password immediately
+- Conduct a full security review before any exposure to untrusted networks
+- Accept that undiscovered vulnerabilities will never be patched
+
+
+
+# What is WebYep?
 
 WebYep is Web Content Management System. WebYep is now Open Source. There are
 many WebCMS available, even Open Source, but WebYep is different:
@@ -11,21 +24,11 @@ many WebCMS available, even Open Source, but WebYep is different:
 * No PHP or HTML knowledge required.
 * Comes with Dreamweaver and RapidWeaver plugins.
 
+# What is in this Repository?
 
-What is in this Repository?
-============================
+This git repository contains the source code of WebYep. This code is no longer maintained by Objective Development. If you use any part of it, please be aware that it may contain vulnerabilities.
 
-This git repository contains the source code of WebYep. If you just want to
-install and use WebYep, it's easier to download a package from
-http://www.obdev.at/webyep.
-
-Use this repository if you want to apply patches or change anything in WebYep.
-If you fix any bugs or add features, please send a patch or a pull request to
-Objective Development.
-
-
-Building a WebYep Package from the Source Code
-===============================================
+# Building a WebYep Package from the Source Code
 
 In order to build WebYep from the source code, you need the following
 prerequisites:
@@ -57,9 +60,7 @@ Run the script without parameters to see other build options. Once the script
 has finished, it opens a Finder window with English and German WebYep
 packages, ready for distribution.
 
-
-Tested Versions of Prerequisites
-=================================
+# Tested Versions of Prerequisites
 
 WebYep has a couple of prerequisites for building from the source code (see
 above), and can be integrated with various external packages such as rich text
@@ -79,9 +80,7 @@ For the installation:
  TinyMCE     (unknown)
  Lightbox    (unknown)
 
-
-License
-========
+# License
 
 WebYep is now distributed under the Terms and Conditions of the GNU General
 Public License in version 2 (GPLv2). A copy of these terms and conditions can
@@ -89,4 +88,3 @@ be found in the directory `release-building`:
 
 * `WebYep License Agreement.html` for the English version.
 * `WebYep Lizenzbedingungen.html` for a German translation.
-
